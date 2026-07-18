@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "input_bindings",
-    "lastChangeAt": "2026-07-18T06:03:50.528Z",
-    "version": 18,
+    "lastChangeAt": "2026-07-18T07:08:55.190Z",
+    "version": 20,
     "name": "Input Bindings",
     "description": "Input bindings exported to Godot InputMap setup.",
     "columns": [
@@ -217,7 +217,7 @@
           {
             "columnId": "input_sort_order00000",
             "type": "integer",
-            "value": 0
+            "value": 6
           },
           {
             "columnId": "input_bindings0000000",
@@ -235,7 +235,7 @@
           {
             "columnId": "input_sort_order00000",
             "type": "integer",
-            "value": 0
+            "value": 7
           },
           {
             "columnId": "input_bindings0000000",
