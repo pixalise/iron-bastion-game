@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+const CHISEL_INPUT := preload("res://game_data/input.gd")
 const INPUT_BINDINGS := preload("res://game_data/tables/input_bindings.gd")
 
 @export_node_path("Terrain3D") var terrain_path: NodePath
@@ -23,8 +24,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _update_rotation(delta: float) -> void:
-	var rotation_input := Input.get_action_strength(_action(INPUT_BINDINGS.Id.CAMERA_ROTATE_RIGHT))
-	rotation_input -= Input.get_action_strength(_action(INPUT_BINDINGS.Id.CAMERA_ROTATE_LEFT))
+	var rotation_input := CHISEL_INPUT.get_action_strength(INPUT_BINDINGS.Id.CAMERA_ROTATE_RIGHT)
+	rotation_input -= CHISEL_INPUT.get_action_strength(INPUT_BINDINGS.Id.CAMERA_ROTATE_LEFT)
 
 	if is_zero_approx(rotation_input):
 		return
@@ -35,12 +36,12 @@ func _update_rotation(delta: float) -> void:
 func _update_position(delta: float) -> void:
 	var input_vector := Vector2(
 		(
-			Input.get_action_strength(_action(INPUT_BINDINGS.Id.CAMERA_RIGHT))
-			- Input.get_action_strength(_action(INPUT_BINDINGS.Id.CAMERA_LEFT))
+			CHISEL_INPUT.get_action_strength(INPUT_BINDINGS.Id.CAMERA_RIGHT)
+			- CHISEL_INPUT.get_action_strength(INPUT_BINDINGS.Id.CAMERA_LEFT)
 		),
 		(
-			Input.get_action_strength(_action(INPUT_BINDINGS.Id.CAMERA_FORWARD))
-			- Input.get_action_strength(_action(INPUT_BINDINGS.Id.CAMERA_BACKWARD))
+			CHISEL_INPUT.get_action_strength(INPUT_BINDINGS.Id.CAMERA_FORWARD)
+			- CHISEL_INPUT.get_action_strength(INPUT_BINDINGS.Id.CAMERA_BACKWARD)
 		)
 	)
 
@@ -74,7 +75,3 @@ func _snap_to_terrain() -> void:
 		return
 
 	global_position.y = terrain_height + terrain_height_offset
-
-
-func _action(action_id: int) -> StringName:
-	return StringName(String(INPUT_BINDINGS.SLUGS[action_id]).to_lower())

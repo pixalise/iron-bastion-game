@@ -1,5 +1,6 @@
 extends Camera3D
 
+const CHISEL_INPUT := preload("res://game_data/input.gd")
 const INPUT_BINDINGS := preload("res://game_data/tables/input_bindings.gd")
 
 @export_node_path("Node3D") var follow_target_path: NodePath
@@ -35,12 +36,12 @@ func _physics_process(_delta: float) -> void:
 
 
 func _update_zoom() -> void:
-	if Input.is_action_just_pressed(_action(INPUT_BINDINGS.Id.CAMERA_ZOOM_IN)):
+	if CHISEL_INPUT.is_action_just_pressed(INPUT_BINDINGS.Id.CAMERA_ZOOM_IN):
 		follow_distance = clampf(
 			follow_distance - zoom_step, min_follow_distance, max_follow_distance
 		)
 
-	if Input.is_action_just_pressed(_action(INPUT_BINDINGS.Id.CAMERA_ZOOM_OUT)):
+	if CHISEL_INPUT.is_action_just_pressed(INPUT_BINDINGS.Id.CAMERA_ZOOM_OUT):
 		follow_distance = clampf(
 			follow_distance + zoom_step, min_follow_distance, max_follow_distance
 		)
@@ -56,7 +57,3 @@ func _desired_camera_position() -> Vector3:
 	follow_offset.y = follow_height
 
 	return _follow_target.global_position + follow_offset
-
-
-func _action(action_id: int) -> StringName:
-	return StringName(String(INPUT_BINDINGS.SLUGS[action_id]).to_lower())

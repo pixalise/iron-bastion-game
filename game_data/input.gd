@@ -2,6 +2,16 @@
 class_name ChiselInput
 extends RefCounted
 
+const ACTION_NAMES := [
+	&"camera_left",
+	&"camera_right",
+	&"camera_forward",
+	&"camera_backward",
+	&"camera_rotate_left",
+	&"camera_rotate_right",
+	&"camera_zoom_in",
+	&"camera_zoom_out"
+]
 const KEY_BINDINGS := {
 	"KEY_A": KEY_A,
 	"KEY_B": KEY_B,
@@ -77,17 +87,37 @@ const MOUSE_BINDINGS := {
 }
 
 
+static func action_name(action_id: int) -> StringName:
+	return ACTION_NAMES[action_id]
+
+
+static func get_action_strength(action_id: int) -> float:
+	return Input.get_action_strength(action_name(action_id))
+
+
+static func is_action_pressed(action_id: int) -> bool:
+	return Input.is_action_pressed(action_name(action_id))
+
+
+static func is_action_just_pressed(action_id: int) -> bool:
+	return Input.is_action_just_pressed(action_name(action_id))
+
+
+static func is_action_just_released(action_id: int) -> bool:
+	return Input.is_action_just_released(action_name(action_id))
+
+
 func apply_to_input_map(clear_existing: bool = true) -> void:
-	for index in range(ChiselInputBindings.SLUGS.size()):
-		var action_name := String(ChiselInputBindings.SLUGS[index]).to_lower()
-		if not InputMap.has_action(action_name):
-			InputMap.add_action(action_name)
+	for index in range(ACTION_NAMES.size()):
+		var input_action_name := action_name(index)
+		if not InputMap.has_action(input_action_name):
+			InputMap.add_action(input_action_name)
 		elif clear_existing:
-			InputMap.action_erase_events(action_name)
+			InputMap.action_erase_events(input_action_name)
 		for binding in ChiselInputBindings.BINDINGS[index]:
 			var event: Variant = _event_from_binding(String(binding))
 			if event is InputEvent:
-				InputMap.action_add_event(action_name, event)
+				InputMap.action_add_event(input_action_name, event)
 
 
 func _event_from_binding(binding: String) -> Variant:
