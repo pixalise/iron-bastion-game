@@ -26,7 +26,7 @@ const SLUGS := [
 	"CAMERA_ZOOM_IN",
 	"CAMERA_ZOOM_OUT"
 ]
-const SORT_ORDER := [0, 1, 2, 3, 4, 5, 0, 0]
+const SORT_ORDER := [0, 1, 2, 3, 4, 5, 6, 7]
 const BINDINGS := [
 	["KEY_A", "KEY_LEFT"],
 	["KEY_D", "KEY_RIGHT"],
