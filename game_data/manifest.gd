@@ -2,7 +2,7 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-18T08:16:29.820Z"
+const GENERATED_AT := "2026-07-18T08:32:55.765Z"
 const PROJECT_ID := "zYZtnNUg8uht6fA9MFIkW"
 const PROJECT_NAME := "Iron Bastion"
 const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 2}
