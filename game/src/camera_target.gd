@@ -1,14 +1,25 @@
-extends Node3D
+extends CharacterBody3D
 
 const INPUT_BINDINGS := preload("res://game_data/tables/input_bindings.gd")
 
+@export_node_path("Terrain3D") var terrain_path: NodePath
 @export var move_speed: float = 30.0
 @export var rotation_speed: float = 1.8
+@export var terrain_height_offset: float = 0.0
+
+var _terrain: Terrain3D
+
+
+func _ready() -> void:
+	_resolve_terrain()
+	_snap_to_terrain()
 
 
 func _physics_process(delta: float) -> void:
+	_resolve_terrain()
 	_update_rotation(delta)
 	_update_position(delta)
+	_snap_to_terrain()
 
 
 func _update_rotation(delta: float) -> void:
@@ -42,8 +53,27 @@ func _update_position(delta: float) -> void:
 	var right := global_transform.basis.x
 	var forward := -global_transform.basis.z
 	var move_direction := right * input_vector.x + forward * input_vector.y
+	move_direction.y = 0.0
 
-	global_position += move_direction * move_speed * delta
+	global_position += move_direction.normalized() * move_speed * delta
+
+
+func _resolve_terrain() -> void:
+	if _terrain != null:
+		return
+
+	_terrain = get_node_or_null(terrain_path) as Terrain3D
+
+
+func _snap_to_terrain() -> void:
+	if _terrain == null:
+		return
+
+	var terrain_height := _terrain.data.get_height(global_position)
+	if is_nan(terrain_height):
+		return
+
+	global_position.y = terrain_height + terrain_height_offset
 
 
 func _action(action_id: int) -> StringName:

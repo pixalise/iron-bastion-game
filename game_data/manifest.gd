@@ -2,7 +2,7 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-18T05:49:04.975Z"
+const GENERATED_AT := "2026-07-18T06:03:59.053Z"
 const PROJECT_ID := "zYZtnNUg8uht6fA9MFIkW"
 const PROJECT_NAME := "Iron Bastion"
 const TABLES := {
@@ -11,7 +11,7 @@ const TABLES := {
 		"name": "Input Bindings",
 		"class_name": "ChiselInputBindings",
 		"path": "res://game_data/tables/input_bindings.gd",
-		"rows": 6,
+		"rows": 8,
 		"columns": 2
 	}
 }

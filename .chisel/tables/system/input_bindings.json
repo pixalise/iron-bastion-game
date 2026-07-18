@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "input_bindings",
-    "lastChangeAt": "2026-07-18T05:41:17.328Z",
-    "version": 16,
+    "lastChangeAt": "2026-07-18T06:03:50.528Z",
+    "version": 18,
     "name": "Input Bindings",
     "description": "Input bindings exported to Godot InputMap setup.",
     "columns": [
@@ -206,6 +206,42 @@
             "type": "enumArray",
             "value": [
               "KEY_E"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "VM0GI714-nL3HIyFDP5ww",
+        "slug": "CAMERA_ZOOM_IN",
+        "values": [
+          {
+            "columnId": "input_sort_order00000",
+            "type": "integer",
+            "value": 0
+          },
+          {
+            "columnId": "input_bindings0000000",
+            "type": "enumArray",
+            "value": [
+              "MOUSE_BUTTON_WHEEL_UP"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Q97flvX5hBDPDzQb3rnxd",
+        "slug": "CAMERA_ZOOM_OUT",
+        "values": [
+          {
+            "columnId": "input_sort_order00000",
+            "type": "integer",
+            "value": 0
+          },
+          {
+            "columnId": "input_bindings0000000",
+            "type": "enumArray",
+            "value": [
+              "MOUSE_BUTTON_WHEEL_DOWN"
             ]
           }
         ]
