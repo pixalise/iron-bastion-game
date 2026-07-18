@@ -12,7 +12,7 @@ func _on_body_entered(body: Node3D) -> void:
 		if env:
 			var tween: Tween = get_tree().create_tween()
 			tween.tween_property(env.environment, "ambient_light_energy", .1, .33)
-	
+
 
 func _on_body_exited(body: Node3D) -> void:
 	if body.name == "Player":

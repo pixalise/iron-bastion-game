@@ -1,0 +1,31 @@
+minimum_pre_commit_version: "3.0.0"
+default_install_hook_types:
+  - pre-commit
+
+repos:
+  - repo: local
+    hooks:
+      - id: godot-gdformat
+        name: Godot gdformat
+        entry: gdformat
+        language: python
+        additional_dependencies:
+          - gdtoolkit==4.5.0
+        files: \.gd$
+        exclude: ^addons/
+
+      - id: godot-gdlint
+        name: Godot gdlint
+        entry: gdlint
+        language: python
+        additional_dependencies:
+          - gdtoolkit==4.5.0
+        files: \.gd$
+        exclude: ^addons/
+
+      - id: godot-gdscript-parse
+        name: Godot GDScript parse check
+        entry: python3 scripts/check-gdscript-parse.py
+        language: system
+        files: \.gd$
+        exclude: ^addons/

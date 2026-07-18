@@ -2,12 +2,12 @@ extends CharacterBody3D
 
 const RETARGET_COOLDOWN: float = 1.0
 
-@export var MOVE_SPEED: float = 50.0
+@export var move_speed: float = 50.0
 @export var target: Node3D
 
-@onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
-
 var _retarget_timer: float = 1.0
+
+@onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 
 
 func _ready() -> void:
@@ -23,7 +23,9 @@ func _process(p_delta: float) -> void:
 
 
 func is_on_nav_mesh() -> bool:
-	var closest_point := NavigationServer3D.map_get_closest_point(nav_agent.get_navigation_map(), global_position)
+	var closest_point := NavigationServer3D.map_get_closest_point(
+		nav_agent.get_navigation_map(), global_position
+	)
 	return global_position.distance_squared_to(closest_point) < nav_agent.path_max_distance ** 2
 
 
@@ -34,12 +36,12 @@ func _physics_process(p_delta: float) -> void:
 	else:
 		var next_path_position: Vector3 = nav_agent.get_next_path_position()
 		var current_agent_position: Vector3 = global_position
-		var velocity_xz := (next_path_position - current_agent_position).normalized() * MOVE_SPEED
+		var velocity_xz := (next_path_position - current_agent_position).normalized() * move_speed
 		velocity.x = velocity_xz.x
 		velocity.z = velocity_xz.z
-	
+
 	velocity.y -= 40 * p_delta
-	
+
 	if nav_agent.avoidance_enabled:
 		nav_agent.set_velocity(velocity)
 	else:

@@ -5,7 +5,7 @@ var terrain: Terrain3D
 
 func _ready() -> void:
 	$UI.player = $Player
-		
+
 	if has_node("RunThisSceneLabel3D"):
 		$RunThisSceneLabel3D.queue_free()
 
@@ -20,20 +20,22 @@ func _ready() -> void:
 func create_terrain() -> Terrain3D:
 	# Create textures
 	var green_gr := Gradient.new()
-	green_gr.set_color(0, Color.from_hsv(100./360., .35, .3))
-	green_gr.set_color(1, Color.from_hsv(120./360., .4, .37))
+	green_gr.set_color(0, Color.from_hsv(100. / 360., .35, .3))
+	green_gr.set_color(1, Color.from_hsv(120. / 360., .4, .37))
 	var green_ta: Terrain3DTextureAsset = await create_texture_asset("Grass", green_gr, 1024)
 	green_ta.uv_scale = 0.1
 	green_ta.detiling_rotation = 0.1
 
 	var brown_gr := Gradient.new()
-	brown_gr.set_color(0, Color.from_hsv(30./360., .4, .3))
-	brown_gr.set_color(1, Color.from_hsv(30./360., .4, .4))
+	brown_gr.set_color(0, Color.from_hsv(30. / 360., .4, .3))
+	brown_gr.set_color(1, Color.from_hsv(30. / 360., .4, .4))
 	var brown_ta: Terrain3DTextureAsset = await create_texture_asset("Dirt", brown_gr, 1024)
 	brown_ta.uv_scale = 0.03
 	green_ta.detiling_rotation = 0.1
-	
-	var grass_ma: Terrain3DMeshAsset = create_mesh_asset("Grass", Color.from_hsv(120./360., .4, .37)) 
+
+	var grass_ma: Terrain3DMeshAsset = create_mesh_asset(
+		"Grass", Color.from_hsv(120. / 360., .4, .37)
+	)
 
 	# Create a terrain
 	var terrain := Terrain3D.new()
@@ -77,11 +79,13 @@ func create_terrain() -> Terrain3D:
 	return terrain
 
 
-func create_texture_asset(asset_name: String, gradient: Gradient, texture_size: int = 512) -> Terrain3DTextureAsset:
+func create_texture_asset(
+	asset_name: String, gradient: Gradient, texture_size: int = 512
+) -> Terrain3DTextureAsset:
 	# Create noise map
 	var fnl := FastNoiseLite.new()
 	fnl.frequency = 0.004
-	
+
 	# Create albedo noise texture
 	var alb_noise_tex := NoiseTexture2D.new()
 	alb_noise_tex.width = texture_size
@@ -96,7 +100,7 @@ func create_texture_asset(asset_name: String, gradient: Gradient, texture_size: 
 	for x in alb_noise_img.get_width():
 		for y in alb_noise_img.get_height():
 			var clr: Color = alb_noise_img.get_pixel(x, y)
-			clr.a = clr.v # Noise as height
+			clr.a = clr.v  # Noise as height
 			alb_noise_img.set_pixel(x, y, clr)
 	alb_noise_img.generate_mipmaps()
 	var albedo := ImageTexture.create_from_image(alb_noise_img)
@@ -113,7 +117,7 @@ func create_texture_asset(asset_name: String, gradient: Gradient, texture_size: 
 	for x in nrm_noise_img.get_width():
 		for y in nrm_noise_img.get_height():
 			var normal_rgh: Color = nrm_noise_img.get_pixel(x, y)
-			normal_rgh.a = 0.8 # Roughness
+			normal_rgh.a = 0.8  # Roughness
 			nrm_noise_img.set_pixel(x, y, normal_rgh)
 	nrm_noise_img.generate_mipmaps()
 	var normal := ImageTexture.create_from_image(nrm_noise_img)
