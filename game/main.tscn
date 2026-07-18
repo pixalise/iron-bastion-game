@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://dh6x7bkjfphxx"]
 
+[ext_resource type="Script" uid="uid://ch3dgcvsfrnbr" path="res://game/src/rts_camera.gd" id="1_oa506"]
+[ext_resource type="Script" uid="uid://yjhel3aou3mi" path="res://game/src/camera_target.gd" id="2_jtf2k"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ata60"]
+
 [node name="Main" type="Node" unique_id=1684462396]
+
+[node name="CameraTarget" type="Node3D" parent="." unique_id=1160563253]
+script = ExtResource("2_jtf2k")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=264586491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 95.49678, 0)
+current = true
+script = ExtResource("1_oa506")
+follow_target_path = NodePath("../CameraTarget")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1137389423]
+transform = Transform3D(40, 0, 0, 0, 1, 0, 0, 0, 40, 0, 0, 0)
+mesh = SubResource("PlaneMesh_ata60")

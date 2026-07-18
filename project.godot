@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-InputBootstrap="*res://game/input_bootstrap.gd"
+InputBootstrap="*res://game/src/input_bootstrap.gd"
 
 [dotnet]
 
