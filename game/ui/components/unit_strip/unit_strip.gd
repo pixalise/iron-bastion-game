@@ -1,8 +1,8 @@
 class_name UnitStrip
 extends Control
 
-const UNIT_CARD_SCENE := preload("res://game/ui/unit_strip/unit_card.tscn")
-const UNIT_CARD_COMPOSER := preload("res://game/ui/unit_strip/unit_card_composer.gd")
+const UNIT_CARD_SCENE := preload("res://game/ui/components/unit_strip/unit_card.tscn")
+const UNIT_CARD_COMPOSER := preload("res://game/ui/components/unit_strip/unit_card_composer.gd")
 
 var _cards: HBoxContainer
 

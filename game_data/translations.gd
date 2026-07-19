@@ -14,6 +14,17 @@ class UnitRifleManDescriptionParameters:
 		return {"physical_damage": physical_damage}
 
 
+class TooltipDamageTypeTranslations:
+	func physical_damage() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(
+			ChiselLocalization.Id.TOOLTIP_DAMAGE_TYPE_PHYSICAL_DAMAGE, {}
+		)
+
+
+class TooltipTranslations:
+	var damage_type := TooltipDamageTypeTranslations.new()
+
+
 class UnitRifleManTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_RIFLE_MAN_NAME, {})
@@ -33,3 +44,4 @@ class UnitTranslations:
 
 
 static var unit := UnitTranslations.new()
+static var tooltip := TooltipTranslations.new()

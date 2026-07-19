@@ -15,15 +15,31 @@
     {
       "path": "UNIT.RIFLE_MAN.DESCRIPTION",
       "values": {
-        "en": "The unit does [term:PHYSICIAL_DAMAGE] [icon:PHYSICAL_DAMAGE] {float:physical_damage} [/term] points of damage per shot."
+        "en": "The unit does <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE_TYPE> <icon:PHYSICAL_DAMAGE/> {float:physical_damage} </tooltip></style> points of damage per shot."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "TOOLTIP.DAMAGE_TYPE.PHYSICAL_DAMAGE",
+      "values": {
+        "en": "<style:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/>Physical damage</style> is damage counting from ballistic, blunt force and so on..."
       },
       "placeholders": []
     }
   ],
-  "terms": [
+  "styles": [
     {
-      "slug": "PHYSICIAL_DAMAGE",
-      "color": "#ff0000"
+      "slug": "PHYSICAL_DAMAGE",
+      "color": "#ff0000",
+      "bold": true,
+      "italic": false,
+      "underline": true
+    }
+  ],
+  "tooltips": [
+    {
+      "slug": "PHYSICAL_DAMAGE_TYPE",
+      "key": "TOOLTIP.DAMAGE_TYPE.PHYSICAL_DAMAGE"
     }
   ]
 }

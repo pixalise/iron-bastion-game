@@ -1,3 +1,4 @@
 "keys","en"
 "UNIT.RIFLE_MAN.NAME","Rifle Man"
-"UNIT.RIFLE_MAN.DESCRIPTION","The unit does [term:PHYSICIAL_DAMAGE] [icon:PHYSICAL_DAMAGE] {float:physical_damage} [/term] points of damage per shot."
+"UNIT.RIFLE_MAN.DESCRIPTION","The unit does <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE_TYPE> <icon:PHYSICAL_DAMAGE/> {float:physical_damage} </tooltip></style> points of damage per shot."
+"TOOLTIP.DAMAGE_TYPE.PHYSICAL_DAMAGE","<style:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/>Physical damage</style> is damage counting from ballistic, blunt force and so on..."

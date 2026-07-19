@@ -3,13 +3,14 @@ extends PanelContainer
 
 const CARD_SIZE := Vector2(210, 260)
 const PORTRAIT_SIZE := Vector2(188, 118)
-const INLINE_ICON_SIZE := 16
+const DESCRIPTION_FONT_SIZE := 12
+const LOCALIZED_RICH_TEXT := preload("res://game/ui/components/localized_rich_text.gd")
 
 var portrait: TextureRect
 var small_icon: TextureRect
 var health_bar: ProgressBar
 var name_label: Label
-var description_label: RichTextLabel
+var description_label
 var stat_row: HBoxContainer
 
 var _built := false
@@ -101,12 +102,12 @@ func _build() -> void:
 	name_label.add_theme_color_override("font_color", Color(0.93, 0.88, 0.75, 1.0))
 	root.add_child(name_label)
 
-	description_label = RichTextLabel.new()
-	description_label.bbcode_enabled = true
-	description_label.fit_content = true
-	description_label.scroll_active = false
+	description_label = LOCALIZED_RICH_TEXT.new()
 	description_label.custom_minimum_size = Vector2(PORTRAIT_SIZE.x, 74)
-	description_label.add_theme_font_size_override("normal_font_size", 12)
+	description_label.add_theme_font_size_override("normal_font_size", DESCRIPTION_FONT_SIZE)
+	description_label.add_theme_font_size_override("bold_font_size", DESCRIPTION_FONT_SIZE)
+	description_label.add_theme_font_size_override("italics_font_size", DESCRIPTION_FONT_SIZE)
+	description_label.add_theme_font_size_override("bold_italics_font_size", DESCRIPTION_FONT_SIZE)
 	description_label.add_theme_color_override("default_color", Color(0.86, 0.84, 0.78, 1.0))
 	root.add_child(description_label)
 
@@ -119,10 +120,7 @@ func _build() -> void:
 
 func _apply_data(data: UnitCardData) -> void:
 	name_label.text = data.title.plain_text if data.title != null else "UNKNOWN"
-	description_label.text = (
-		_card_bbcode(data.description.bbcode_text) if data.description != null else ""
-	)
-	description_label.tooltip_text = data.description.plain_text if data.description != null else ""
+	description_label.set_localized_text(data.description)
 	portrait.texture = data.portrait
 	_portrait_placeholder.visible = data.portrait == null
 	_portrait_placeholder.text = name_label.text
@@ -141,7 +139,3 @@ func _panel_style(background: Color, border: Color, border_width: int) -> StyleB
 	style.corner_radius_bottom_right = 2
 	style.corner_radius_bottom_left = 2
 	return style
-
-
-func _card_bbcode(value: String) -> String:
-	return value.replace("[img]", "[img=%dx%d]" % [INLINE_ICON_SIZE, INLINE_ICON_SIZE])

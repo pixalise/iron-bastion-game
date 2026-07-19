@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqjv4swugkww3"]
+[gd_scene format=3 uid="uid://dqjv4swugkww3"]
 
-[ext_resource type="Script" path="res://game/ui/unit_strip/unit_strip.gd" id="1_e6717"]
+[ext_resource type="Script" uid="uid://bl46ypj2rh2ua" path="res://game/ui/components/unit_strip/unit_strip.gd" id="1_e6717"]
 
 [node name="UnitStrip" type="Control" unique_id=614158609]
 layout_mode = 3

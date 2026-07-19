@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dhvbmbhle7ijm"]
 
-[ext_resource type="Script" uid="uid://di6jolto6x4ig" path="res://game/ui/unit_strip/unit_card.gd" id="1_okbui"]
+[ext_resource type="Script" uid="uid://di6jolto6x4ig" path="res://game/ui/components/unit_strip/unit_card.gd" id="1_okbui"]
 
 [node name="UnitCard" type="PanelContainer" unique_id=2004606273]
 anchors_preset = 15
