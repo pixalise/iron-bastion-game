@@ -78,6 +78,15 @@
           "updatedAt": "2026-07-19T08:20:24.968Z"
         }
       ]
+    },
+    {
+      "id": "E17mPOs_V80qCf8VTqARU",
+      "title": "Add UI DSL and building inside of chisel",
+      "completed": false,
+      "priority": "HIGH",
+      "createdAt": "2026-07-19T08:21:50.964Z",
+      "updatedAt": "2026-07-19T08:21:50.964Z",
+      "subitems": []
     }
   ]
 }
