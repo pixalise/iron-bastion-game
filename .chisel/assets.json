@@ -36,6 +36,18 @@
       "id": "FOREST_1_2K",
       "relativePath": ".chisel/assets/HDRI/FOREST_1_2K.exr",
       "formattedBytes": "17.9 MB"
+    },
+    {
+      "category": "UI_ICON",
+      "name": "PHYSICAL_DAMAGE",
+      "note": "Label icon for the physical damage icon",
+      "sizeBytes": 1626670,
+      "width": 2048,
+      "height": 2048,
+      "extension": "png",
+      "id": "PHYSICAL_DAMAGE",
+      "relativePath": ".chisel/assets/UI_ICON/PHYSICAL_DAMAGE.png",
+      "formattedBytes": "1.6 MB"
     }
   ]
 }

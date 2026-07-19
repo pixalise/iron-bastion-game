@@ -2,9 +2,9 @@
 class_name ChiselAssets
 extends RefCounted
 
-enum Id { FOREST_SOIL_1 = 0, FOREST_GRASS_1 = 1, FOREST_1_2K = 2 }
+enum Id { FOREST_SOIL_1 = 0, FOREST_GRASS_1 = 1, FOREST_1_2_K = 2, PHYSICAL_DAMAGE = 3 }
 
-const IDS := ["FOREST_SOIL_1", "FOREST_GRASS_1", "FOREST_1_2K"]
+const IDS := ["FOREST_SOIL_1", "FOREST_GRASS_1", "FOREST_1_2_K", "PHYSICAL_DAMAGE"]
 const BY_ID := {
 	"FOREST_SOIL_1":
 	{
@@ -30,13 +30,22 @@ const BY_ID := {
 		"normal_roughness":
 		"res://game_data/assets/terrain_texture/forest_grass_1/normal_roughness.png"
 	},
-	"FOREST_1_2K":
+	"FOREST_1_2_K":
 	{
 		"category": "hdri",
 		"extension": "exr",
 		"height": 0,
-		"name": "forest_1_2k",
-		"path": "res://game_data/assets/hdri/forest_1_2k.exr",
+		"name": "forest_1_2_k",
+		"path": "res://game_data/assets/hdri/forest_1_2_k.exr",
 		"width": 0
+	},
+	"PHYSICAL_DAMAGE":
+	{
+		"category": "ui_icon",
+		"extension": "png",
+		"height": 2048,
+		"name": "physical_damage",
+		"path": "res://game_data/assets/ui_icon/physical_damage.png",
+		"width": 2048
 	}
 }

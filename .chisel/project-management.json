@@ -8,22 +8,8 @@
       "priority": "MEDIUM",
       "dueDate": "2026-07-26",
       "createdAt": "2026-07-19T08:12:28.564Z",
-      "updatedAt": "2026-07-19T08:19:50.921Z",
+      "updatedAt": "2026-07-19T19:10:19.833Z",
       "subitems": [
-        {
-          "id": "SZGMK7gBrcIiwMhH3EONU",
-          "title": "Create HDRI settings in Chisel",
-          "completed": false,
-          "createdAt": "2026-07-19T08:12:45.247Z",
-          "updatedAt": "2026-07-19T08:12:45.247Z"
-        },
-        {
-          "id": "oQvdPkUAIoGCkdijAYes3",
-          "title": "Create sun settings in Chisel",
-          "completed": false,
-          "createdAt": "2026-07-19T08:12:58.586Z",
-          "updatedAt": "2026-07-19T08:12:58.586Z"
-        },
         {
           "id": "hM0mwb1NAdpXAGrDYVBMD",
           "title": "Create sunny weather",

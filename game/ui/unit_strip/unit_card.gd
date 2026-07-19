@@ -1,0 +1,147 @@
+class_name UnitCard
+extends PanelContainer
+
+const CARD_SIZE := Vector2(210, 260)
+const PORTRAIT_SIZE := Vector2(188, 118)
+const INLINE_ICON_SIZE := 16
+
+var portrait: TextureRect
+var small_icon: TextureRect
+var health_bar: ProgressBar
+var name_label: Label
+var description_label: RichTextLabel
+var stat_row: HBoxContainer
+
+var _built := false
+var _pending_data: UnitCardData
+var _portrait_placeholder: Label
+
+
+func _ready() -> void:
+	_build()
+	if _pending_data != null:
+		_apply_data(_pending_data)
+
+
+func set_data(data: UnitCardData) -> void:
+	_pending_data = data
+	if _built:
+		_apply_data(data)
+
+
+func _build() -> void:
+	if _built:
+		return
+
+	custom_minimum_size = CARD_SIZE
+	size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	size_flags_vertical = Control.SIZE_SHRINK_END
+	add_theme_stylebox_override(
+		"panel", _panel_style(Color(0.08, 0.075, 0.065, 0.94), Color(0.55, 0.46, 0.31, 0.95), 1)
+	)
+
+	var margin := MarginContainer.new()
+	margin.add_theme_constant_override("margin_left", 8)
+	margin.add_theme_constant_override("margin_top", 8)
+	margin.add_theme_constant_override("margin_right", 8)
+	margin.add_theme_constant_override("margin_bottom", 8)
+	add_child(margin)
+
+	var root := VBoxContainer.new()
+	root.add_theme_constant_override("separation", 6)
+	margin.add_child(root)
+
+	var portrait_frame := Control.new()
+	portrait_frame.custom_minimum_size = PORTRAIT_SIZE
+	root.add_child(portrait_frame)
+
+	var portrait_backing := Panel.new()
+	portrait_backing.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	portrait_backing.add_theme_stylebox_override(
+		"panel", _panel_style(Color(0.12, 0.115, 0.1, 1.0), Color(0.42, 0.34, 0.22, 1.0), 1)
+	)
+	portrait_frame.add_child(portrait_backing)
+
+	portrait = TextureRect.new()
+	portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	portrait.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	portrait_frame.add_child(portrait)
+
+	_portrait_placeholder = Label.new()
+	_portrait_placeholder.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_portrait_placeholder.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	_portrait_placeholder.add_theme_color_override("font_color", Color(0.84, 0.78, 0.65, 0.85))
+	_portrait_placeholder.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	portrait_frame.add_child(_portrait_placeholder)
+
+	small_icon = TextureRect.new()
+	small_icon.custom_minimum_size = Vector2(24, 24)
+	small_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	small_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	small_icon.position = Vector2(5, 5)
+	portrait_frame.add_child(small_icon)
+
+	health_bar = ProgressBar.new()
+	health_bar.min_value = 0
+	health_bar.max_value = 100
+	health_bar.value = 100
+	health_bar.show_percentage = false
+	health_bar.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
+	health_bar.offset_left = 5
+	health_bar.offset_right = -5
+	health_bar.offset_top = -15
+	health_bar.offset_bottom = -5
+	portrait_frame.add_child(health_bar)
+
+	name_label = Label.new()
+	name_label.clip_text = true
+	name_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	name_label.add_theme_font_size_override("font_size", 14)
+	name_label.add_theme_color_override("font_color", Color(0.93, 0.88, 0.75, 1.0))
+	root.add_child(name_label)
+
+	description_label = RichTextLabel.new()
+	description_label.bbcode_enabled = true
+	description_label.fit_content = true
+	description_label.scroll_active = false
+	description_label.custom_minimum_size = Vector2(PORTRAIT_SIZE.x, 74)
+	description_label.add_theme_font_size_override("normal_font_size", 12)
+	description_label.add_theme_color_override("default_color", Color(0.86, 0.84, 0.78, 1.0))
+	root.add_child(description_label)
+
+	stat_row = HBoxContainer.new()
+	stat_row.add_theme_constant_override("separation", 4)
+	root.add_child(stat_row)
+
+	_built = true
+
+
+func _apply_data(data: UnitCardData) -> void:
+	name_label.text = data.title.plain_text if data.title != null else "UNKNOWN"
+	description_label.text = (
+		_card_bbcode(data.description.bbcode_text) if data.description != null else ""
+	)
+	description_label.tooltip_text = data.description.plain_text if data.description != null else ""
+	portrait.texture = data.portrait
+	_portrait_placeholder.visible = data.portrait == null
+	_portrait_placeholder.text = name_label.text
+	small_icon.texture = data.small_icon
+	small_icon.visible = data.small_icon != null
+	health_bar.value = clampf(data.health_ratio, 0.0, 1.0) * 100.0
+
+
+func _panel_style(background: Color, border: Color, border_width: int) -> StyleBoxFlat:
+	var style := StyleBoxFlat.new()
+	style.bg_color = background
+	style.border_color = border
+	style.set_border_width_all(border_width)
+	style.corner_radius_top_left = 2
+	style.corner_radius_top_right = 2
+	style.corner_radius_bottom_right = 2
+	style.corner_radius_bottom_left = 2
+	return style
+
+
+func _card_bbcode(value: String) -> String:
+	return value.replace("[img]", "[img=%dx%d]" % [INLINE_ICON_SIZE, INLINE_ICON_SIZE])

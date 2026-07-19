@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 2,
+  "defaultLocale": "en",
+  "locales": [
+    "en"
+  ],
+  "keys": [
+    {
+      "path": "UNIT.RIFLE_MAN.NAME",
+      "values": {
+        "en": "Rifle Man"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "UNIT.RIFLE_MAN.DESCRIPTION",
+      "values": {
+        "en": "The unit does [term:PHYSICIAL_DAMAGE] [icon:PHYSICAL_DAMAGE] {float:physical_damage} [/term] points of damage per shot."
+      },
+      "placeholders": []
+    }
+  ],
+  "terms": [
+    {
+      "slug": "PHYSICIAL_DAMAGE",
+      "color": "#ff0000"
+    }
+  ]
+}
