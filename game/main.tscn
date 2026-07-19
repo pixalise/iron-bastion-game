@@ -6,11 +6,15 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g887i"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_emt18"]
+
 [node name="Main" type="Node" unique_id=1684462396]
 
 [node name="TerrainGenerator" type="Node3D" parent="." unique_id=1137389423]
 script = ExtResource("3_g887i")
 height_scale = 40.0
+flatten_threshold = 0.51
+flatten_softness = 0.081
 
 [node name="CameraTarget" type="CharacterBody3D" parent="." unique_id=1160563253]
 script = ExtResource("2_jtf2k")
@@ -18,6 +22,9 @@ terrain_path = NodePath("../TerrainGenerator/Terrain3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraTarget" unique_id=489417950]
 shape = SubResource("SphereShape3D_g887i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CameraTarget" unique_id=1052462602]
+mesh = SubResource("CapsuleMesh_emt18")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=264586491]
 transform = Transform3D(1, 0, 0, 0, 0.4999979, 0.86602664, 0, -0.86602664, 0.4999979, 0, 95.49678, 0)

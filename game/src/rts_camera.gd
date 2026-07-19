@@ -26,8 +26,7 @@ func _ready() -> void:
 		return
 
 	global_rotation = _locked_rotation()
-	global_position = _base_camera_position()
-	_zoom_distance = _base_focus_distance()
+	_zoom_distance = _initial_zoom_distance()
 	_apply_camera_transform()
 
 
@@ -53,7 +52,7 @@ func _update_zoom() -> void:
 
 func _apply_camera_transform() -> void:
 	global_rotation = _locked_rotation()
-	global_position = _focus_point(_base_camera_position()) - _view_direction() * _zoom_distance
+	global_position = _follow_target.global_position - _view_direction() * _zoom_distance
 
 
 func _base_camera_position() -> Vector3:
@@ -63,26 +62,12 @@ func _base_camera_position() -> Vector3:
 	return _follow_target.global_position + follow_offset
 
 
-func _base_focus_distance() -> float:
+func _initial_zoom_distance() -> float:
 	return clampf(
-		_base_camera_position().distance_to(_focus_point(_base_camera_position())),
+		_base_camera_position().distance_to(_follow_target.global_position),
 		min_follow_distance,
 		max_follow_distance
 	)
-
-
-func _focus_point(camera_position: Vector3) -> Vector3:
-	var direction := _view_direction()
-	if is_zero_approx(direction.y):
-		return _follow_target.global_position
-
-	var distance_to_target_height := (
-		(_follow_target.global_position.y - camera_position.y) / direction.y
-	)
-	if distance_to_target_height <= 0.0:
-		return _follow_target.global_position
-
-	return camera_position + direction * distance_to_target_height
 
 
 func _locked_rotation() -> Vector3:
