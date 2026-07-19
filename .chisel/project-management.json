@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "todos": [
+    {
+      "id": "mRe6y5Tpfq72x1FseG8Xl",
+      "title": "Add weather system - A weather is the combination of HDRI, sun settings and effects",
+      "completed": false,
+      "priority": "MEDIUM",
+      "dueDate": "2026-07-26",
+      "createdAt": "2026-07-19T08:12:28.564Z",
+      "updatedAt": "2026-07-19T08:14:54.918Z",
+      "subitems": [
+        {
+          "id": "SZGMK7gBrcIiwMhH3EONU",
+          "title": "Create HDRI settings in Chisel",
+          "completed": false,
+          "createdAt": "2026-07-19T08:12:45.247Z",
+          "updatedAt": "2026-07-19T08:12:45.247Z"
+        },
+        {
+          "id": "oQvdPkUAIoGCkdijAYes3",
+          "title": "Create sun settings in Chisel",
+          "completed": false,
+          "createdAt": "2026-07-19T08:12:58.586Z",
+          "updatedAt": "2026-07-19T08:12:58.586Z"
+        },
+        {
+          "id": "hM0mwb1NAdpXAGrDYVBMD",
+          "title": "Create sunny weather",
+          "completed": false,
+          "createdAt": "2026-07-19T08:13:21.319Z",
+          "updatedAt": "2026-07-19T08:13:21.319Z"
+        },
+        {
+          "id": "VcA7nPAUPhulE5Yz_j7Mn",
+          "title": "Create cloudy weather",
+          "completed": false,
+          "createdAt": "2026-07-19T08:13:28.179Z",
+          "updatedAt": "2026-07-19T08:13:28.179Z"
+        },
+        {
+          "id": "rMNHliSO79irpRao---du",
+          "title": "Create rain weather",
+          "completed": false,
+          "createdAt": "2026-07-19T08:13:36.379Z",
+          "updatedAt": "2026-07-19T08:13:36.379Z"
+        }
+      ]
+    },
+    {
+      "id": "zHrPg99BusWVuHx_EJypr",
+      "title": "Upgrade current terrain_generator",
+      "completed": false,
+      "priority": "MEDIUM",
+      "dueDate": "2026-07-20",
+      "createdAt": "2026-07-19T08:15:34.207Z",
+      "updatedAt": "2026-07-19T08:17:34.713Z",
+      "subitems": [
+        {
+          "id": "1jrcPX147XVXmbDwfij2N",
+          "title": "Terrain needs to support different surfaces, which will be forwarded to RTS Engine",
+          "completed": false,
+          "createdAt": "2026-07-19T08:16:12.544Z",
+          "updatedAt": "2026-07-19T08:16:21.894Z"
+        },
+        {
+          "id": "SaGUf9f7NYDDHuYM9b9_N",
+          "title": "Terrain config should be used to generate a terrain",
+          "completed": false,
+          "createdAt": "2026-07-19T08:16:53.660Z",
+          "updatedAt": "2026-07-19T08:16:53.660Z"
+        },
+        {
+          "id": "X3fiQvajmEdyKGW9oBoOO",
+          "title": "Enable terrain splatting as part of config",
+          "completed": false,
+          "createdAt": "2026-07-19T08:17:34.703Z",
+          "updatedAt": "2026-07-19T08:17:34.703Z"
+        }
+      ]
+    }
+  ]
+}
