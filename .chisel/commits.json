@@ -2,6 +2,395 @@
   "schemaVersion": 1,
   "commits": [
     {
+      "id": "0t2KVNQWJQTUQPUgCTO9z",
+      "committedAt": "2026-07-19T20:38:52.516Z",
+      "project": {
+        "id": "zYZtnNUg8uht6fA9MFIkW",
+        "name": "Iron Bastion",
+        "description": "First game made in Godot, essential survival RTS with extraction mechanics."
+      },
+      "tables": [
+        {
+          "id": "LNE2qvQb0jxtgiLDUDsq4",
+          "lastChangeAt": "2026-07-19T06:05:02.751Z",
+          "version": 3,
+          "name": "Items",
+          "description": "Items that can be collected and put into the storage carts during an expedition",
+          "columns": [
+            {
+              "id": "O7EQNdvuQCDwHyyE0XOcb",
+              "type": "integer",
+              "name": "price",
+              "defaultValue": 0,
+              "required": true,
+              "unique": false
+            }
+          ],
+          "rows": [],
+          "kind": "user",
+          "isSystemTable": false
+        },
+        {
+          "id": "input_bindings",
+          "lastChangeAt": "2026-07-18T07:08:55.190Z",
+          "version": 20,
+          "name": "Input Bindings",
+          "description": "Input bindings exported to Godot InputMap setup.",
+          "columns": [
+            {
+              "id": "input_sort_order00000",
+              "type": "integer",
+              "name": "sort_order",
+              "defaultValue": 0,
+              "min": 0,
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "input_bindings0000000",
+              "type": "enumArray",
+              "name": "bindings",
+              "defaultValue": [],
+              "max": 8,
+              "possibleValues": [
+                "KEY_A",
+                "KEY_B",
+                "KEY_C",
+                "KEY_D",
+                "KEY_E",
+                "KEY_F",
+                "KEY_G",
+                "KEY_H",
+                "KEY_I",
+                "KEY_J",
+                "KEY_K",
+                "KEY_L",
+                "KEY_M",
+                "KEY_N",
+                "KEY_O",
+                "KEY_P",
+                "KEY_Q",
+                "KEY_R",
+                "KEY_S",
+                "KEY_T",
+                "KEY_U",
+                "KEY_V",
+                "KEY_W",
+                "KEY_X",
+                "KEY_Y",
+                "KEY_Z",
+                "KEY_0",
+                "KEY_1",
+                "KEY_2",
+                "KEY_3",
+                "KEY_4",
+                "KEY_5",
+                "KEY_6",
+                "KEY_7",
+                "KEY_8",
+                "KEY_9",
+                "KEY_F1",
+                "KEY_F2",
+                "KEY_F3",
+                "KEY_F4",
+                "KEY_F5",
+                "KEY_F6",
+                "KEY_F7",
+                "KEY_F8",
+                "KEY_F9",
+                "KEY_F10",
+                "KEY_F11",
+                "KEY_F12",
+                "KEY_ESCAPE",
+                "KEY_SPACE",
+                "KEY_SHIFT",
+                "KEY_CTRL",
+                "KEY_ALT",
+                "KEY_TAB",
+                "KEY_ENTER",
+                "KEY_BACKSPACE",
+                "KEY_UP",
+                "KEY_DOWN",
+                "KEY_LEFT",
+                "KEY_RIGHT",
+                "KEY_MINUS",
+                "KEY_EQUAL",
+                "KEY_KP_ADD",
+                "KEY_KP_SUBTRACT",
+                "MOUSE_BUTTON_LEFT",
+                "MOUSE_BUTTON_RIGHT",
+                "MOUSE_BUTTON_MIDDLE",
+                "MOUSE_BUTTON_WHEEL_UP",
+                "MOUSE_BUTTON_WHEEL_DOWN"
+              ],
+              "required": true,
+              "unique": false
+            }
+          ],
+          "rows": [
+            {
+              "id": "XZSQCYgpTG0RvA0CN7FDQ",
+              "slug": "CAMERA_LEFT",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 0
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_A",
+                    "KEY_LEFT"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "td0XUstN_mdYlZYf8-XXD",
+              "slug": "CAMERA_RIGHT",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_D",
+                    "KEY_RIGHT"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "uDAscR2g6DMBjzb5X0fr7",
+              "slug": "CAMERA_FORWARD",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 2
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_W",
+                    "KEY_UP"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "obCFMwn-sOHY1a7IZy9sb",
+              "slug": "CAMERA_BACKWARD",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 3
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_S",
+                    "KEY_DOWN"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "6sownP-UPKU-D6bDGSKO1",
+              "slug": "CAMERA_ROTATE_LEFT",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 4
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_Q"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1te-XLvsCZeBgg4ckleBX",
+              "slug": "CAMERA_ROTATE_RIGHT",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 5
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_E"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "VM0GI714-nL3HIyFDP5ww",
+              "slug": "CAMERA_ZOOM_IN",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 6
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "MOUSE_BUTTON_WHEEL_UP"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Q97flvX5hBDPDzQb3rnxd",
+              "slug": "CAMERA_ZOOM_OUT",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 7
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "MOUSE_BUTTON_WHEEL_DOWN"
+                  ]
+                }
+              ]
+            }
+          ],
+          "kind": "system",
+          "moduleId": "input",
+          "isSystemTable": true
+        }
+      ],
+      "assets": {
+        "schemaVersion": 1,
+        "assets": [
+          {
+            "category": "TERRAIN_TEXTURE",
+            "name": "FOREST_SOIL_1",
+            "note": "Forest biome",
+            "sizeBytes": 6718779,
+            "width": 1024,
+            "height": 1024,
+            "extension": "gppt",
+            "id": "FOREST_SOIL_1",
+            "relativePath": ".chisel/assets/TERRAIN_TEXTURE/FOREST_SOIL_1.gppt",
+            "formattedBytes": "6.4 MB"
+          },
+          {
+            "category": "TERRAIN_TEXTURE",
+            "name": "FOREST_GRASS_1",
+            "note": "Forest biome",
+            "sizeBytes": 7396446,
+            "width": 1024,
+            "height": 1024,
+            "extension": "gppt",
+            "id": "FOREST_GRASS_1",
+            "relativePath": ".chisel/assets/TERRAIN_TEXTURE/FOREST_GRASS_1.gppt",
+            "formattedBytes": "7.1 MB"
+          },
+          {
+            "category": "HDRI",
+            "name": "FOREST_1_2_K",
+            "note": "CC0: https://polyhaven.com/a/citrus_orchard_road_puresky",
+            "sizeBytes": 18768273,
+            "width": 0,
+            "height": 0,
+            "extension": "exr",
+            "id": "FOREST_1_2_K",
+            "relativePath": ".chisel/assets/HDRI/FOREST_1_2K.exr",
+            "formattedBytes": "17.9 MB"
+          },
+          {
+            "category": "UI_ICON",
+            "name": "PHYSICAL_DAMAGE",
+            "note": "Label icon for the physical damage icon",
+            "sizeBytes": 1626670,
+            "width": 2048,
+            "height": 2048,
+            "extension": "png",
+            "id": "PHYSICAL_DAMAGE",
+            "relativePath": ".chisel/assets/UI_ICON/PHYSICAL_DAMAGE.png",
+            "formattedBytes": "1.6 MB"
+          }
+        ]
+      },
+      "localization": {
+        "schemaVersion": 2,
+        "defaultLocale": "en",
+        "locales": [
+          "en"
+        ],
+        "keys": [
+          {
+            "path": "UNIT.RIFLE_MAN.NAME",
+            "values": {
+              "en": "Rifle Man"
+            },
+            "placeholders": []
+          },
+          {
+            "path": "UNIT.RIFLE_MAN.DESCRIPTION",
+            "values": {
+              "en": "The unit does <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE_TYPE> <icon:PHYSICAL_DAMAGE/> {float:physical_damage} </tooltip></style> points of damage per shot."
+            },
+            "placeholders": []
+          },
+          {
+            "path": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.TITLE",
+            "values": {
+              "en": "Physical damage"
+            },
+            "placeholders": []
+          },
+          {
+            "path": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION",
+            "values": {
+              "en": "Damage counting from ballistic, blunt force and so on..."
+            },
+            "placeholders": []
+          }
+        ],
+        "styles": [
+          {
+            "slug": "PHYSICAL_DAMAGE",
+            "color": "#ff0000",
+            "bold": true,
+            "italic": false,
+            "underline": true
+          }
+        ],
+        "tooltips": [
+          {
+            "slug": "PHYSICAL_DAMAGE_TYPE",
+            "iconAssetId": "PHYSICAL_DAMAGE",
+            "titleKey": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.TITLE",
+            "descriptionKey": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION"
+          }
+        ]
+      }
+    },
+    {
       "id": "P3_3B7pG9bHqGTsvowFMd",
       "committedAt": "2026-07-19T20:02:49.432Z",
       "project": {
@@ -376,7 +765,8 @@
         "tooltips": [
           {
             "slug": "PHYSICAL_DAMAGE_TYPE",
-            "key": "TOOLTIP.DAMAGE_TYPE.PHYSICAL_DAMAGE"
+            "titleKey": "TOOLTIP.DAMAGE_TYPE.PHYSICAL_DAMAGE",
+            "descriptionKey": "TOOLTIP.DAMAGE_TYPE.PHYSICAL_DAMAGE"
           }
         ]
       }
@@ -756,7 +1146,8 @@
         "tooltips": [
           {
             "slug": "PHYSICAL_DAMAGE_TYPE",
-            "key": "TOOLTIP.DAMAGE_TYPE.PHYSICAL_DAMAGE"
+            "titleKey": "TOOLTIP.DAMAGE_TYPE.PHYSICAL_DAMAGE",
+            "descriptionKey": "TOOLTIP.DAMAGE_TYPE.PHYSICAL_DAMAGE"
           }
         ]
       }

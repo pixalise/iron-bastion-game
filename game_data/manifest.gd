@@ -2,7 +2,7 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-19T20:02:50.475Z"
+const GENERATED_AT := "2026-07-19T20:38:53.508Z"
 const PROJECT_ID := "zYZtnNUg8uht6fA9MFIkW"
 const PROJECT_NAME := "Iron Bastion"
 const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 4}
@@ -12,14 +12,14 @@ const LOCALIZATION := {
 	"typed_class_name": "ChiselTranslations",
 	"typed_path": "res://game_data/translations.gd",
 	"csv_path": "res://game_data/localization/translations.csv",
-	"translations": 3,
+	"translations": 4,
 	"locales": 1
 }
 const FILES := [
 	{"bytes": 1464, "hash": "66bb4752", "path": "res://game_data/assets.gd"},
-	{"bytes": 8989, "hash": "85fff779", "path": "res://game_data/localization.gd"},
-	{"bytes": 1295, "hash": "7ba3c360", "path": "res://game_data/translations.gd"},
-	{"bytes": 408, "hash": "80823030", "path": "res://game_data/localization/translations.csv"},
+	{"bytes": 11515, "hash": "4f99bf3e", "path": "res://game_data/localization.gd"},
+	{"bytes": 1469, "hash": "b0cda342", "path": "res://game_data/translations.gd"},
+	{"bytes": 395, "hash": "05f71931", "path": "res://game_data/localization/translations.csv"},
 	{"bytes": 3444, "hash": "bf0b6a02", "path": "res://game_data/input.gd"},
 	{"bytes": 224, "hash": "8f34a4d3", "path": "res://game_data/tables/items.gd"},
 	{"bytes": 803, "hash": "f72cfe90", "path": "res://game_data/tables/input_bindings.gd"}

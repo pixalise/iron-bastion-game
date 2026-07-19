@@ -10,8 +10,7 @@ const FONT_THEME_KEYS := [
 	{"font": "bold_italics_font", "size": "bold_italics_font_size"}
 ]
 
-var _tooltip_text_by_slug: Dictionary = {}
-var _tooltip_bbcode_by_slug: Dictionary = {}
+var _tooltip_content_by_slug: Dictionary = {}
 
 
 func _init() -> void:
@@ -27,8 +26,7 @@ func _ready() -> void:
 
 
 func set_localized_text(value: ChiselLocalization.LocalizedText) -> void:
-	_tooltip_text_by_slug.clear()
-	_tooltip_bbcode_by_slug.clear()
+	_tooltip_content_by_slug.clear()
 
 	if value == null:
 		text = ""
@@ -41,10 +39,7 @@ func set_localized_text(value: ChiselLocalization.LocalizedText) -> void:
 
 
 func _make_custom_tooltip(for_text: String) -> Object:
-	var tooltip_text_value := String(_tooltip_text_by_slug.get(for_text, for_text))
-	var tooltip_bbcode := String(
-		_tooltip_bbcode_by_slug.get(for_text, _bbcode_escape(tooltip_text_value))
-	)
+	var content: Variant = _tooltip_content_by_slug.get(for_text, null)
 
 	var panel := PanelContainer.new()
 	panel.custom_minimum_size = Vector2(TOOLTIP_WIDTH, 0.0)
@@ -57,20 +52,39 @@ func _make_custom_tooltip(for_text: String) -> Object:
 	margin.add_theme_constant_override("margin_bottom", 6)
 	panel.add_child(margin)
 
-	var label := RichTextLabel.new()
-	label.bbcode_enabled = true
-	label.fit_content = true
-	label.scroll_active = false
-	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	label.custom_minimum_size = Vector2(TOOLTIP_WIDTH - 16.0, 0.0)
-	label.text = tooltip_bbcode
-	label.add_theme_font_size_override("normal_font_size", 12)
-	label.add_theme_font_size_override("bold_font_size", 12)
-	label.add_theme_font_size_override("italics_font_size", 12)
-	label.add_theme_font_size_override("bold_italics_font_size", 12)
-	label.add_theme_color_override("default_color", Color(0.9, 0.88, 0.8, 1.0))
-	_apply_underline_offset(label)
-	margin.add_child(label)
+	var content_box := VBoxContainer.new()
+	content_box.add_theme_constant_override("separation", 5)
+	margin.add_child(content_box)
+
+	if content == null:
+		content_box.add_child(_fallback_label(_bbcode_escape(for_text), TOOLTIP_WIDTH - 16.0))
+		return panel
+
+	var icon_path := String(content.icon_path)
+	var title_text: ChiselLocalization.LocalizedText = content.title
+	if not icon_path.is_empty() or not title_text.plain_text.is_empty():
+		var title_row := HBoxContainer.new()
+		title_row.add_theme_constant_override("separation", 6)
+		content_box.add_child(title_row)
+
+		if not icon_path.is_empty():
+			var icon := TextureRect.new()
+			icon.custom_minimum_size = Vector2(18.0, 18.0)
+			icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+			icon.texture = load(icon_path) as Texture2D
+			title_row.add_child(icon)
+
+		if not title_text.plain_text.is_empty():
+			var title_label := _localized_label(title_text, TOOLTIP_WIDTH - 40.0, 13)
+			title_label.add_theme_color_override("default_color", Color(0.98, 0.9, 0.7, 1.0))
+			title_row.add_child(title_label)
+
+	var description_text: ChiselLocalization.LocalizedText = content.description
+	if not description_text.plain_text.is_empty():
+		var description_label := _localized_label(description_text, TOOLTIP_WIDTH - 16.0, 12)
+		description_label.add_theme_color_override("default_color", Color(0.9, 0.88, 0.8, 1.0))
+		content_box.add_child(description_label)
 
 	return panel
 
@@ -82,11 +96,38 @@ func _register_tooltips(value: ChiselLocalization.LocalizedText) -> void:
 		var tooltip_slug := String(span.get("tooltip", ""))
 		if tooltip_slug.is_empty():
 			continue
-		var tooltip_text_value := String(span.get("tooltip_text", ""))
-		_tooltip_text_by_slug[tooltip_slug] = tooltip_text_value
-		_tooltip_bbcode_by_slug[tooltip_slug] = String(
-			span.get("tooltip_bbcode_text", _bbcode_escape(tooltip_text_value))
-		)
+		_tooltip_content_by_slug[tooltip_slug] = value.tooltip_content_for(StringName(tooltip_slug))
+
+
+func _localized_label(
+	value: ChiselLocalization.LocalizedText, minimum_width: float, font_size: int
+) -> LocalizedRichText:
+	var label := LocalizedRichText.new()
+	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	label.custom_minimum_size = Vector2(minimum_width, 0.0)
+	label.add_theme_font_size_override("normal_font_size", font_size)
+	label.add_theme_font_size_override("bold_font_size", font_size)
+	label.add_theme_font_size_override("italics_font_size", font_size)
+	label.add_theme_font_size_override("bold_italics_font_size", font_size)
+	label.set_localized_text(value)
+	return label
+
+
+func _fallback_label(bbcode: String, minimum_width: float) -> RichTextLabel:
+	var label := RichTextLabel.new()
+	label.bbcode_enabled = true
+	label.fit_content = true
+	label.scroll_active = false
+	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	label.custom_minimum_size = Vector2(minimum_width, 0.0)
+	label.text = bbcode
+	label.add_theme_font_size_override("normal_font_size", 12)
+	label.add_theme_font_size_override("bold_font_size", 12)
+	label.add_theme_font_size_override("italics_font_size", 12)
+	label.add_theme_font_size_override("bold_italics_font_size", 12)
+	label.add_theme_color_override("default_color", Color(0.9, 0.88, 0.8, 1.0))
+	_apply_underline_offset(label)
+	return label
 
 
 func _apply_underline_offset(label: RichTextLabel) -> void:

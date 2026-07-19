@@ -20,9 +20,16 @@
       "placeholders": []
     },
     {
-      "path": "TOOLTIP.DAMAGE_TYPE.PHYSICAL_DAMAGE",
+      "path": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.TITLE",
       "values": {
-        "en": "<style:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/>Physical damage</style> is damage counting from ballistic, blunt force and so on..."
+        "en": "Physical damage"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION",
+      "values": {
+        "en": "Damage counting from ballistic, blunt force and so on..."
       },
       "placeholders": []
     }
@@ -39,7 +46,9 @@
   "tooltips": [
     {
       "slug": "PHYSICAL_DAMAGE_TYPE",
-      "key": "TOOLTIP.DAMAGE_TYPE.PHYSICAL_DAMAGE"
+      "iconAssetId": "PHYSICAL_DAMAGE",
+      "titleKey": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.TITLE",
+      "descriptionKey": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION"
     }
   ]
 }

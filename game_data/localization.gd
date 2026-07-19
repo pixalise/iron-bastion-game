@@ -21,27 +21,55 @@ class LocalizedText:
 		_tooltips = next_tooltips
 
 	func tooltip_for(tooltip_slug: StringName) -> String:
-		return String(_tooltips.get(String(tooltip_slug), ""))
+		return tooltip_content_for(tooltip_slug).description.plain_text
+
+	func tooltip_content_for(tooltip_slug: StringName) -> TooltipContent:
+		return _tooltips.get(String(tooltip_slug), TooltipContent.new(tooltip_slug))
+
+
+class TooltipContent:
+	var slug: StringName
+	var icon_path: String
+	var title: LocalizedText
+	var description: LocalizedText
+
+	func _init(
+		next_slug: StringName = &"",
+		next_icon_path: String = "",
+		next_title: LocalizedText = null,
+		next_description: LocalizedText = null
+	) -> void:
+		slug = next_slug
+		icon_path = next_icon_path
+		title = next_title if next_title != null else LocalizedText.new()
+		description = next_description if next_description != null else LocalizedText.new()
 
 
 enum Id {
-	UNIT_RIFLE_MAN_NAME = 0, UNIT_RIFLE_MAN_DESCRIPTION = 1, TOOLTIP_DAMAGE_TYPE_PHYSICAL_DAMAGE = 2
+	UNIT_RIFLE_MAN_NAME = 0,
+	UNIT_RIFLE_MAN_DESCRIPTION = 1,
+	TOOLTIP_PHYSICAL_DAMAGE_TYPE_TITLE = 2,
+	TOOLTIP_PHYSICAL_DAMAGE_TYPE_DESCRIPTION = 3
 }
 
 const DEFAULT_LOCALE := "en"
 const LOCALES := ["en"]
 const KEYS := [
-	"UNIT.RIFLE_MAN.NAME", "UNIT.RIFLE_MAN.DESCRIPTION", "TOOLTIP.DAMAGE_TYPE.PHYSICAL_DAMAGE"
+	"UNIT.RIFLE_MAN.NAME",
+	"UNIT.RIFLE_MAN.DESCRIPTION",
+	"TOOLTIP.PHYSICAL_DAMAGE_TYPE.TITLE",
+	"TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION"
 ]
 const VALUES := {
 	"en":
 	[
 		"Rifle Man",
 		"The unit does <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE_TYPE> <icon:PHYSICAL_DAMAGE/> {float:physical_damage} </tooltip></style> points of damage per shot.",
-		"<style:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/>Physical damage</style> is damage counting from ballistic, blunt force and so on..."
+		"Physical damage",
+		"Damage counting from ballistic, blunt force and so on..."
 	]
 }
-const ICON_SLUGS := [[], ["PHYSICAL_DAMAGE"], ["PHYSICAL_DAMAGE"]]
+const ICON_SLUGS := [[], ["PHYSICAL_DAMAGE"], [], []]
 const ICONS := {
 	"PHYSICAL_DAMAGE":
 	{
@@ -51,17 +79,31 @@ const ICONS := {
 		"height": 2048
 	}
 }
-const PLACEHOLDERS := [[], ["physical_damage"], []]
-const PLACEHOLDER_TYPES := [[], ["float"], []]
+const PLACEHOLDERS := [[], ["physical_damage"], [], []]
+const PLACEHOLDER_TYPES := [[], ["float"], [], []]
 const STYLES := {
 	"PHYSICAL_DAMAGE": {"color": "#ff0000", "bold": true, "italic": false, "underline": true}
 }
-const TOOLTIPS := {"PHYSICAL_DAMAGE_TYPE": {"key_id": Id.TOOLTIP_DAMAGE_TYPE_PHYSICAL_DAMAGE}}
+const TOOLTIPS := {
+	"PHYSICAL_DAMAGE_TYPE":
+	{
+		"title_id": Id.TOOLTIP_PHYSICAL_DAMAGE_TYPE_TITLE,
+		"description_id": Id.TOOLTIP_PHYSICAL_DAMAGE_TYPE_DESCRIPTION,
+		"icon_asset_id": "PHYSICAL_DAMAGE",
+		"icon_path": "res://game_data/assets/ui_icon/physical_damage.png"
+	}
+}
 const CSV_PATH := "res://game_data/localization/translations.csv"
 
 
 static func format(id: int, arguments: Dictionary = {}, locale: String = "") -> LocalizedText:
 	return _format(id, arguments, locale, 0)
+
+
+static func tooltip_content(
+	tooltip_slug: StringName, arguments: Dictionary = {}, locale: String = ""
+) -> TooltipContent:
+	return _tooltip_content(String(tooltip_slug), arguments, _locale_key(locale), 0)
 
 
 static func _format(id: int, arguments: Dictionary, locale: String, depth: int) -> LocalizedText:
@@ -203,22 +245,41 @@ static func _close_tooltip(
 		return
 	var span: Dictionary = active_tooltips.pop_back()
 	var tooltip_slug := String(span.get("tooltip", ""))
-	var tooltip_data: Dictionary = TOOLTIPS.get(tooltip_slug, {})
-	var tooltip_text := LocalizedText.new()
-	var tooltip_id: Variant = tooltip_data.get("key_id", null)
-	if tooltip_id != null and depth < 4:
-		tooltip_text = _format(int(tooltip_id), arguments, locale_key, depth + 1)
-	var tooltip := tooltip_text.plain_text
-	tooltips[tooltip_slug] = tooltip
+	var tooltip_content := _tooltip_content(tooltip_slug, arguments, locale_key, depth)
+	tooltips[tooltip_slug] = tooltip_content
 	spans.append(
 		{
 			"type": "tooltip",
 			"tooltip": tooltip_slug,
 			"start": int(span.get("start", 0)),
 			"end": plain_length,
-			"tooltip_text": tooltip,
-			"tooltip_bbcode_text": tooltip_text.bbcode_text
+			"tooltip_text": tooltip_content.description.plain_text,
+			"tooltip_bbcode_text": tooltip_content.description.bbcode_text,
+			"tooltip_title_text": tooltip_content.title.plain_text,
+			"tooltip_title_bbcode_text": tooltip_content.title.bbcode_text,
+			"tooltip_icon_path": tooltip_content.icon_path
 		}
+	)
+
+
+static func _tooltip_content(
+	tooltip_slug: String, arguments: Dictionary, locale_key: String, depth: int
+) -> TooltipContent:
+	var tooltip_data: Dictionary = TOOLTIPS.get(tooltip_slug, {})
+	var title_text := LocalizedText.new()
+	var description_text := LocalizedText.new()
+	var title_id: Variant = tooltip_data.get("title_id", null)
+	var description_id: Variant = tooltip_data.get("description_id", null)
+	if depth < 4:
+		if title_id != null:
+			title_text = _format(int(title_id), arguments, locale_key, depth + 1)
+		if description_id != null:
+			description_text = _format(int(description_id), arguments, locale_key, depth + 1)
+	return TooltipContent.new(
+		StringName(tooltip_slug),
+		String(tooltip_data.get("icon_path", "")),
+		title_text,
+		description_text
 	)
 
 
