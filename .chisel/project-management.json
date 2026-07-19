@@ -8,7 +8,7 @@
       "priority": "MEDIUM",
       "dueDate": "2026-07-26",
       "createdAt": "2026-07-19T08:12:28.564Z",
-      "updatedAt": "2026-07-19T08:14:54.918Z",
+      "updatedAt": "2026-07-19T08:19:50.921Z",
       "subitems": [
         {
           "id": "SZGMK7gBrcIiwMhH3EONU",
@@ -54,7 +54,7 @@
       "priority": "MEDIUM",
       "dueDate": "2026-07-20",
       "createdAt": "2026-07-19T08:15:34.207Z",
-      "updatedAt": "2026-07-19T08:17:34.713Z",
+      "updatedAt": "2026-07-19T08:20:24.976Z",
       "subitems": [
         {
           "id": "1jrcPX147XVXmbDwfij2N",
@@ -71,11 +71,11 @@
           "updatedAt": "2026-07-19T08:16:53.660Z"
         },
         {
-          "id": "X3fiQvajmEdyKGW9oBoOO",
+          "id": "DddVsCPDOTu7QP4o-JxSv",
           "title": "Enable terrain splatting as part of config",
           "completed": false,
-          "createdAt": "2026-07-19T08:17:34.703Z",
-          "updatedAt": "2026-07-19T08:17:34.703Z"
+          "createdAt": "2026-07-19T08:20:24.968Z",
+          "updatedAt": "2026-07-19T08:20:24.968Z"
         }
       ]
     }
