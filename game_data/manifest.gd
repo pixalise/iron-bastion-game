@@ -2,7 +2,7 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-19T20:38:53.508Z"
+const GENERATED_AT := "2026-07-19T21:13:57.859Z"
 const PROJECT_ID := "zYZtnNUg8uht6fA9MFIkW"
 const PROJECT_NAME := "Iron Bastion"
 const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 4}
@@ -21,7 +21,7 @@ const FILES := [
 	{"bytes": 1469, "hash": "b0cda342", "path": "res://game_data/translations.gd"},
 	{"bytes": 395, "hash": "05f71931", "path": "res://game_data/localization/translations.csv"},
 	{"bytes": 3444, "hash": "bf0b6a02", "path": "res://game_data/input.gd"},
-	{"bytes": 224, "hash": "8f34a4d3", "path": "res://game_data/tables/items.gd"},
+	{"bytes": 265, "hash": "2df9d022", "path": "res://game_data/tables/items.gd"},
 	{"bytes": 803, "hash": "f72cfe90", "path": "res://game_data/tables/input_bindings.gd"}
 ]
 const TABLES := {
@@ -31,7 +31,7 @@ const TABLES := {
 		"class_name": "ChiselItems",
 		"path": "res://game_data/tables/items.gd",
 		"rows": 0,
-		"columns": 1
+		"columns": 3
 	},
 	"input_bindings":
 	{

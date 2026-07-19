@@ -8,4 +8,6 @@ const TABLE_ID := "LNE2qvQb0jxtgiLDUDsq4"
 const TABLE_NAME := "Items"
 const TABLE_KIND := "user"
 const SLUGS := []
+const NAME := []
+const DESCRIPTION := []
 const PRICE := []
