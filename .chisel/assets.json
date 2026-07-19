@@ -24,6 +24,18 @@
       "id": "FOREST_GRASS_1",
       "relativePath": ".chisel/assets/TERRAIN_TEXTURE/FOREST_GRASS_1.gppt",
       "formattedBytes": "7.1 MB"
+    },
+    {
+      "category": "HDRI",
+      "name": "FOREST_1_2K",
+      "note": "CC0: https://polyhaven.com/a/citrus_orchard_road_puresky",
+      "sizeBytes": 18768273,
+      "width": 0,
+      "height": 0,
+      "extension": "exr",
+      "id": "FOREST_1_2K",
+      "relativePath": ".chisel/assets/HDRI/FOREST_1_2K.exr",
+      "formattedBytes": "17.9 MB"
     }
   ]
 }

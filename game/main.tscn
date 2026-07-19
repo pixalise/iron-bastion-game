@@ -3,10 +3,21 @@
 [ext_resource type="Script" uid="uid://ch3dgcvsfrnbr" path="res://game/src/rts_camera.gd" id="1_oa506"]
 [ext_resource type="Script" uid="uid://yjhel3aou3mi" path="res://game/src/camera_target.gd" id="2_jtf2k"]
 [ext_resource type="Script" uid="uid://cc5klwkvtxreb" path="res://game/src/terrain_generator.gd" id="3_g887i"]
+[ext_resource type="Texture2D" uid="uid://2x4cu8in247m" path="res://game_data/assets/hdri/forest_1_2k.exr" id="4_vop5m"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g887i"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_emt18"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_emt18"]
+panorama = ExtResource("4_vop5m")
+
+[sub_resource type="Sky" id="Sky_vop5m"]
+sky_material = SubResource("PanoramaSkyMaterial_emt18")
+
+[sub_resource type="Environment" id="Environment_emt18"]
+background_mode = 2
+sky = SubResource("Sky_vop5m")
 
 [node name="Main" type="Node" unique_id=1684462396]
 
@@ -34,3 +45,6 @@ follow_target_path = NodePath("../CameraTarget")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=979934000]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 149.44751, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=40860364]
+environment = SubResource("Environment_emt18")

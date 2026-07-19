@@ -2,11 +2,19 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-18T08:32:55.765Z"
+const GENERATED_AT := "2026-07-19T07:48:14.753Z"
 const PROJECT_ID := "zYZtnNUg8uht6fA9MFIkW"
 const PROJECT_NAME := "Iron Bastion"
-const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 2}
+const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 3}
 const TABLES := {
+	"LNE2qvQb0jxtgiLDUDsq4":
+	{
+		"name": "Items",
+		"class_name": "ChiselLne2qvqb0jxtgildudsq4",
+		"path": "res://game_data/tables/LNE2qvQb0jxtgiLDUDsq4.gd",
+		"rows": 0,
+		"columns": 1
+	},
 	"input_bindings":
 	{
 		"name": "Input Bindings",

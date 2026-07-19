@@ -2,9 +2,9 @@
 class_name ChiselAssets
 extends RefCounted
 
-enum Id { FOREST_SOIL_1 = 0, FOREST_GRASS_1 = 1 }
+enum Id { FOREST_SOIL_1 = 0, FOREST_GRASS_1 = 1, FOREST_1_2K = 2 }
 
-const IDS := ["FOREST_SOIL_1", "FOREST_GRASS_1"]
+const IDS := ["FOREST_SOIL_1", "FOREST_GRASS_1", "FOREST_1_2K"]
 const BY_ID := {
 	"FOREST_SOIL_1":
 	{
@@ -29,5 +29,14 @@ const BY_ID := {
 		"albedo_height": "res://game_data/assets/terrain_texture/forest_grass_1/albedo_height.png",
 		"normal_roughness":
 		"res://game_data/assets/terrain_texture/forest_grass_1/normal_roughness.png"
+	},
+	"FOREST_1_2K":
+	{
+		"category": "hdri",
+		"extension": "exr",
+		"height": 0,
+		"name": "forest_1_2k",
+		"path": "res://game_data/assets/hdri/forest_1_2k.exr",
+		"width": 0
 	}
 }
