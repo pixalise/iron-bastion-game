@@ -1,29 +1,36 @@
 class_name GameUiTheme
 extends RefCounted
 
-const CARD_BACKGROUND := Color(0.08, 0.075, 0.065, 0.94)
-const CARD_BORDER := Color(0.55, 0.46, 0.31, 0.95)
-const CARD_TEXT := Color(0.93, 0.88, 0.75, 1.0)
-const CARD_MUTED_TEXT := Color(0.86, 0.84, 0.78, 1.0)
-const CARD_PLACEHOLDER_TEXT := Color(0.84, 0.78, 0.65, 0.85)
-const PORTRAIT_BACKGROUND := Color(0.12, 0.115, 0.1, 1.0)
-const PORTRAIT_BORDER := Color(0.42, 0.34, 0.22, 1.0)
+const BACKGROUND := Color(0.08, 0.075, 0.065, 1.0)
+const FOREGROUND := Color(0.93, 0.88, 0.75, 1.0)
+const CARD := Color(0.08, 0.075, 0.065, 0.94)
+const CARD_FOREGROUND := FOREGROUND
+const POPOVER := BACKGROUND
+const POPOVER_FOREGROUND := Color(0.9, 0.88, 0.8, 1.0)
+const PRIMARY := Color(0.7, 0.56, 0.32, 1.0)
+const PRIMARY_FOREGROUND := Color(0.08, 0.075, 0.065, 1.0)
+const SECONDARY := Color(0.12, 0.115, 0.1, 1.0)
+const SECONDARY_FOREGROUND := FOREGROUND
+const MUTED := Color(0.12, 0.115, 0.1, 1.0)
+const MUTED_FOREGROUND := Color(0.84, 0.78, 0.65, 0.85)
+const ACCENT := Color(0.42, 0.34, 0.22, 1.0)
+const ACCENT_FOREGROUND := FOREGROUND
+const BORDER := Color(0.55, 0.46, 0.31, 1.0)
+const RING := PRIMARY
 
-const TOOLTIP_WIDTH := 280.0
-const TOOLTIP_PADDING := 4
-const TOOLTIP_GAP := 4
-const TOOLTIP_TITLE_GAP := 6
-const TOOLTIP_ICON_SIZE := Vector2(18.0, 18.0)
-const TOOLTIP_TITLE_FONT_SIZE := 13
-const TOOLTIP_BODY_FONT_SIZE := 12
-const TOOLTIP_BACKGROUND := Color(0.08, 0.075, 0.065, 1.0)
-const TOOLTIP_BORDER := Color(0.55, 0.46, 0.31, 1.0)
-const TOOLTIP_TITLE_TEXT := Color(0.98, 0.9, 0.7, 1.0)
-const TOOLTIP_BODY_TEXT := Color(0.9, 0.88, 0.8, 1.0)
+const RADIUS_SM := 2
+const RADIUS_MD := 4
+
+const SPACE_1 := 4
+const SPACE_2 := 8
+
+const TEXT_XS := 12
+const TEXT_SM := 13
+const TEXT_BASE := 14
 
 
 static func panel_style(
-	background: Color, border: Color, border_width: int = 1, radius: int = 2
+	background: Color = CARD, border: Color = BORDER, border_width: int = 1, radius: int = RADIUS_SM
 ) -> StyleBoxFlat:
 	var style := StyleBoxFlat.new()
 	style.bg_color = background

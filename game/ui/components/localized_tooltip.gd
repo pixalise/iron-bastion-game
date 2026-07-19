@@ -2,24 +2,24 @@ class_name LocalizedTooltip
 extends PanelContainer
 
 const UI_THEME := preload("res://game/ui/ui_theme.gd")
+const ICON_SIZE := Vector2(18.0, 18.0)
+const WIDTH := 280.0
 
 
 func _init() -> void:
-	custom_minimum_size = Vector2(UI_THEME.TOOLTIP_WIDTH, 0.0)
-	add_theme_stylebox_override(
-		"panel", UI_THEME.panel_style(UI_THEME.TOOLTIP_BACKGROUND, UI_THEME.TOOLTIP_BORDER)
-	)
+	custom_minimum_size = Vector2(WIDTH, 0.0)
+	add_theme_stylebox_override("panel", UI_THEME.panel_style(UI_THEME.POPOVER, UI_THEME.BORDER))
 
 
 func set_tooltip_content(content: Variant) -> void:
 	_clear_children()
 
 	var margin := MarginContainer.new()
-	UI_THEME.set_margin(margin, UI_THEME.TOOLTIP_PADDING)
+	UI_THEME.set_margin(margin, UI_THEME.SPACE_1)
 	add_child(margin)
 
 	var content_box := VBoxContainer.new()
-	content_box.add_theme_constant_override("separation", UI_THEME.TOOLTIP_GAP)
+	content_box.add_theme_constant_override("separation", UI_THEME.SPACE_1)
 	margin.add_child(content_box)
 
 	if content == null:
@@ -33,19 +33,19 @@ func set_tooltip_content(content: Variant) -> void:
 	var description_text: ChiselLocalization.LocalizedText = content.description
 	if not description_text.plain_text.is_empty():
 		var description_label: LocalizedRichText = _localized_label(
-			description_text, _content_width(), UI_THEME.TOOLTIP_BODY_FONT_SIZE
+			description_text, _content_width(), UI_THEME.TEXT_XS
 		)
-		description_label.add_theme_color_override("default_color", UI_THEME.TOOLTIP_BODY_TEXT)
+		description_label.add_theme_color_override("default_color", UI_THEME.POPOVER_FOREGROUND)
 		content_box.add_child(description_label)
 
 
 func _title_row(icon_path: String, title_text: ChiselLocalization.LocalizedText) -> HBoxContainer:
 	var row := HBoxContainer.new()
-	row.add_theme_constant_override("separation", UI_THEME.TOOLTIP_TITLE_GAP)
+	row.add_theme_constant_override("separation", UI_THEME.SPACE_1)
 
 	if not icon_path.is_empty():
 		var icon := TextureRect.new()
-		icon.custom_minimum_size = UI_THEME.TOOLTIP_ICON_SIZE
+		icon.custom_minimum_size = ICON_SIZE
 		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		icon.texture = load(icon_path) as Texture2D
@@ -54,11 +54,11 @@ func _title_row(icon_path: String, title_text: ChiselLocalization.LocalizedText)
 	if not title_text.plain_text.is_empty():
 		var title_width := _content_width()
 		if not icon_path.is_empty():
-			title_width -= UI_THEME.TOOLTIP_ICON_SIZE.x + UI_THEME.TOOLTIP_TITLE_GAP
+			title_width -= ICON_SIZE.x + UI_THEME.SPACE_1
 		var title_label: LocalizedRichText = _localized_label(
-			title_text, title_width, UI_THEME.TOOLTIP_TITLE_FONT_SIZE
+			title_text, title_width, UI_THEME.TEXT_SM
 		)
-		title_label.add_theme_color_override("default_color", UI_THEME.TOOLTIP_TITLE_TEXT)
+		title_label.add_theme_color_override("default_color", UI_THEME.FOREGROUND)
 		row.add_child(title_label)
 
 	return row
@@ -77,7 +77,7 @@ func _localized_label(
 
 
 func _content_width() -> float:
-	return UI_THEME.TOOLTIP_WIDTH - float(UI_THEME.TOOLTIP_PADDING * 2)
+	return WIDTH - float(UI_THEME.SPACE_1 * 2)
 
 
 func _clear_children() -> void:

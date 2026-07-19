@@ -3,7 +3,6 @@ extends PanelContainer
 
 const CARD_SIZE := Vector2(210, 260)
 const PORTRAIT_SIZE := Vector2(188, 118)
-const DESCRIPTION_FONT_SIZE := 12
 const UI_THEME := preload("res://game/ui/ui_theme.gd")
 const LOCALIZED_RICH_TEXT := preload("res://game/ui/components/localized_rich_text.gd")
 
@@ -38,16 +37,14 @@ func _build() -> void:
 	custom_minimum_size = CARD_SIZE
 	size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	size_flags_vertical = Control.SIZE_SHRINK_END
-	add_theme_stylebox_override(
-		"panel", UI_THEME.panel_style(UI_THEME.CARD_BACKGROUND, UI_THEME.CARD_BORDER)
-	)
+	add_theme_stylebox_override("panel", UI_THEME.panel_style(UI_THEME.CARD, UI_THEME.BORDER))
 
 	var margin := MarginContainer.new()
-	UI_THEME.set_margin(margin, 8)
+	UI_THEME.set_margin(margin, UI_THEME.SPACE_2)
 	add_child(margin)
 
 	var root := VBoxContainer.new()
-	root.add_theme_constant_override("separation", 6)
+	root.add_theme_constant_override("separation", UI_THEME.SPACE_1 + 2)
 	margin.add_child(root)
 
 	var portrait_frame := Control.new()
@@ -57,7 +54,7 @@ func _build() -> void:
 	var portrait_backing := Panel.new()
 	portrait_backing.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	portrait_backing.add_theme_stylebox_override(
-		"panel", UI_THEME.panel_style(UI_THEME.PORTRAIT_BACKGROUND, UI_THEME.PORTRAIT_BORDER)
+		"panel", UI_THEME.panel_style(UI_THEME.MUTED, UI_THEME.ACCENT)
 	)
 	portrait_frame.add_child(portrait_backing)
 
@@ -70,7 +67,7 @@ func _build() -> void:
 	_portrait_placeholder = Label.new()
 	_portrait_placeholder.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_portrait_placeholder.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	_portrait_placeholder.add_theme_color_override("font_color", UI_THEME.CARD_PLACEHOLDER_TEXT)
+	_portrait_placeholder.add_theme_color_override("font_color", UI_THEME.MUTED_FOREGROUND)
 	_portrait_placeholder.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	portrait_frame.add_child(_portrait_placeholder)
 
@@ -96,18 +93,18 @@ func _build() -> void:
 	name_label = Label.new()
 	name_label.clip_text = true
 	name_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
-	name_label.add_theme_font_size_override("font_size", 14)
-	name_label.add_theme_color_override("font_color", UI_THEME.CARD_TEXT)
+	name_label.add_theme_font_size_override("font_size", UI_THEME.TEXT_BASE)
+	name_label.add_theme_color_override("font_color", UI_THEME.CARD_FOREGROUND)
 	root.add_child(name_label)
 
 	description_label = LOCALIZED_RICH_TEXT.new()
 	description_label.custom_minimum_size = Vector2(PORTRAIT_SIZE.x, 74)
-	UI_THEME.set_rich_text_font_size(description_label, DESCRIPTION_FONT_SIZE)
-	description_label.add_theme_color_override("default_color", UI_THEME.CARD_MUTED_TEXT)
+	UI_THEME.set_rich_text_font_size(description_label, UI_THEME.TEXT_XS)
+	description_label.add_theme_color_override("default_color", UI_THEME.POPOVER_FOREGROUND)
 	root.add_child(description_label)
 
 	stat_row = HBoxContainer.new()
-	stat_row.add_theme_constant_override("separation", 4)
+	stat_row.add_theme_constant_override("separation", UI_THEME.SPACE_1)
 	root.add_child(stat_row)
 
 	_built = true
