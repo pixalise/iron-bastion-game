@@ -10,6 +10,7 @@
 
 [node name="TerrainGenerator" type="Node3D" parent="." unique_id=1137389423]
 script = ExtResource("3_g887i")
+height_scale = 40.0
 
 [node name="CameraTarget" type="CharacterBody3D" parent="." unique_id=1160563253]
 script = ExtResource("2_jtf2k")
@@ -23,3 +24,6 @@ transform = Transform3D(1, 0, 0, 0, 0.4999979, 0.86602664, 0, -0.86602664, 0.499
 current = true
 script = ExtResource("1_oa506")
 follow_target_path = NodePath("../CameraTarget")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=979934000]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 149.44751, 0)

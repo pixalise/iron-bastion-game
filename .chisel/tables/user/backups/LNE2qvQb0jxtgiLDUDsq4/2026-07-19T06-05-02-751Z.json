@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "LNE2qvQb0jxtgiLDUDsq4",
+    "lastChangeAt": "2026-07-19T06:04:09.039Z",
+    "version": 2,
+    "name": "Items",
+    "description": "Items that can be collected and put into the storage carts during an expedition",
+    "columns": [
+      {
+        "id": "O7EQNdvuQCDwHyyE0XOcb",
+        "type": "string",
+        "name": "name",
+        "defaultValue": "",
+        "required": true,
+        "unique": true
+      }
+    ],
+    "rows": [],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}
