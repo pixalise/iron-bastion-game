@@ -4,6 +4,7 @@ extends PanelContainer
 const CARD_SIZE := Vector2(210, 260)
 const PORTRAIT_SIZE := Vector2(188, 118)
 const DESCRIPTION_FONT_SIZE := 12
+const UI_THEME := preload("res://game/ui/ui_theme.gd")
 const LOCALIZED_RICH_TEXT := preload("res://game/ui/components/localized_rich_text.gd")
 
 var portrait: TextureRect
@@ -38,14 +39,11 @@ func _build() -> void:
 	size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	size_flags_vertical = Control.SIZE_SHRINK_END
 	add_theme_stylebox_override(
-		"panel", _panel_style(Color(0.08, 0.075, 0.065, 0.94), Color(0.55, 0.46, 0.31, 0.95), 1)
+		"panel", UI_THEME.panel_style(UI_THEME.CARD_BACKGROUND, UI_THEME.CARD_BORDER)
 	)
 
 	var margin := MarginContainer.new()
-	margin.add_theme_constant_override("margin_left", 8)
-	margin.add_theme_constant_override("margin_top", 8)
-	margin.add_theme_constant_override("margin_right", 8)
-	margin.add_theme_constant_override("margin_bottom", 8)
+	UI_THEME.set_margin(margin, 8)
 	add_child(margin)
 
 	var root := VBoxContainer.new()
@@ -59,7 +57,7 @@ func _build() -> void:
 	var portrait_backing := Panel.new()
 	portrait_backing.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	portrait_backing.add_theme_stylebox_override(
-		"panel", _panel_style(Color(0.12, 0.115, 0.1, 1.0), Color(0.42, 0.34, 0.22, 1.0), 1)
+		"panel", UI_THEME.panel_style(UI_THEME.PORTRAIT_BACKGROUND, UI_THEME.PORTRAIT_BORDER)
 	)
 	portrait_frame.add_child(portrait_backing)
 
@@ -72,7 +70,7 @@ func _build() -> void:
 	_portrait_placeholder = Label.new()
 	_portrait_placeholder.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_portrait_placeholder.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	_portrait_placeholder.add_theme_color_override("font_color", Color(0.84, 0.78, 0.65, 0.85))
+	_portrait_placeholder.add_theme_color_override("font_color", UI_THEME.CARD_PLACEHOLDER_TEXT)
 	_portrait_placeholder.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	portrait_frame.add_child(_portrait_placeholder)
 
@@ -99,16 +97,13 @@ func _build() -> void:
 	name_label.clip_text = true
 	name_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	name_label.add_theme_font_size_override("font_size", 14)
-	name_label.add_theme_color_override("font_color", Color(0.93, 0.88, 0.75, 1.0))
+	name_label.add_theme_color_override("font_color", UI_THEME.CARD_TEXT)
 	root.add_child(name_label)
 
 	description_label = LOCALIZED_RICH_TEXT.new()
 	description_label.custom_minimum_size = Vector2(PORTRAIT_SIZE.x, 74)
-	description_label.add_theme_font_size_override("normal_font_size", DESCRIPTION_FONT_SIZE)
-	description_label.add_theme_font_size_override("bold_font_size", DESCRIPTION_FONT_SIZE)
-	description_label.add_theme_font_size_override("italics_font_size", DESCRIPTION_FONT_SIZE)
-	description_label.add_theme_font_size_override("bold_italics_font_size", DESCRIPTION_FONT_SIZE)
-	description_label.add_theme_color_override("default_color", Color(0.86, 0.84, 0.78, 1.0))
+	UI_THEME.set_rich_text_font_size(description_label, DESCRIPTION_FONT_SIZE)
+	description_label.add_theme_color_override("default_color", UI_THEME.CARD_MUTED_TEXT)
 	root.add_child(description_label)
 
 	stat_row = HBoxContainer.new()
@@ -127,15 +122,3 @@ func _apply_data(data: UnitCardData) -> void:
 	small_icon.texture = data.small_icon
 	small_icon.visible = data.small_icon != null
 	health_bar.value = clampf(data.health_ratio, 0.0, 1.0) * 100.0
-
-
-func _panel_style(background: Color, border: Color, border_width: int) -> StyleBoxFlat:
-	var style := StyleBoxFlat.new()
-	style.bg_color = background
-	style.border_color = border
-	style.set_border_width_all(border_width)
-	style.corner_radius_top_left = 2
-	style.corner_radius_top_right = 2
-	style.corner_radius_bottom_right = 2
-	style.corner_radius_bottom_left = 2
-	return style

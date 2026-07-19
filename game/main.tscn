@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ch3dgcvsfrnbr" path="res://game/src/rts_camera.gd" id="1_oa506"]
 [ext_resource type="Script" uid="uid://yjhel3aou3mi" path="res://game/src/camera_target.gd" id="2_jtf2k"]
 [ext_resource type="Script" uid="uid://cc5klwkvtxreb" path="res://game/src/terrain_generator.gd" id="3_g887i"]
-[ext_resource type="Texture2D" uid="uid://evgubmwkjw2x" path="res://game_data/assets/hdri/forest_1_2_k.exr" id="4_vop5m"]
+[ext_resource type="Texture2D" uid="uid://bkg4ayu1uxhrc" path="res://game_data/assets/hdri/forest_1_2_k.exr" id="4_vop5m"]
 [ext_resource type="PackedScene" uid="uid://dqjv4swugkww3" path="res://game/ui/components/unit_strip/unit_strip.tscn" id="5_x4mmi"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g887i"]
