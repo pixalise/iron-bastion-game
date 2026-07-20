@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dh6x7bkjfphxx"]
 
-[ext_resource type="Script" uid="uid://ch3dgcvsfrnbr" path="res://game/src/rts_camera.gd" id="1_oa506"]
-[ext_resource type="Script" uid="uid://yjhel3aou3mi" path="res://game/src/camera_target.gd" id="2_jtf2k"]
-[ext_resource type="Script" uid="uid://cc5klwkvtxreb" path="res://game/src/terrain_generator.gd" id="3_g887i"]
-[ext_resource type="Texture2D" uid="uid://bkg4ayu1uxhrc" path="res://game_data/assets/hdri/forest_1_2_k.exr" id="4_vop5m"]
+[ext_resource type="Script" uid="uid://ch3dgcvsfrnbr" path="res://game/scripts/rts_camera.gd" id="1_oa506"]
+[ext_resource type="Script" uid="uid://yjhel3aou3mi" path="res://game/scripts/camera_target.gd" id="2_jtf2k"]
+[ext_resource type="Script" uid="uid://cc5klwkvtxreb" path="res://game/scripts/terrain_generator.gd" id="3_g887i"]
+[ext_resource type="Texture2D" uid="uid://h5f4d0xi4enl" path="res://game_data/assets/hdri/forest_1_2_k.exr" id="4_vop5m"]
 [ext_resource type="PackedScene" uid="uid://dqjv4swugkww3" path="res://game/ui/components/unit_strip/unit_strip.tscn" id="5_x4mmi"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g887i"]
@@ -20,7 +20,7 @@ sky_material = SubResource("PanoramaSkyMaterial_emt18")
 background_mode = 2
 sky = SubResource("Sky_vop5m")
 
-[node name="Main" type="Node" unique_id=1684462396]
+[node name="zoo" type="Node" unique_id=1684462396]
 
 [node name="TerrainGenerator" type="Node3D" parent="." unique_id=1137389423]
 script = ExtResource("3_g887i")

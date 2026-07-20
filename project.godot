@@ -11,13 +11,9 @@ config_version=5
 [application]
 
 config/name="Iron Bastion"
-run/main_scene="uid://dh6x7bkjfphxx"
+run/main_scene="uid://be7chddfpc36u"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-InputBootstrap="*res://game/src/input_bootstrap.gd"
 
 [dotnet]
 

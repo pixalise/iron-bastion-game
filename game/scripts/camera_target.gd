@@ -45,9 +45,7 @@ func _update_position(delta: float) -> void:
 		)
 	)
 
-	if input_vector.length_squared() > 1.0:
-		input_vector = input_vector.normalized()
-
+	input_vector = input_vector.normalized()
 	if input_vector.is_zero_approx():
 		return
 

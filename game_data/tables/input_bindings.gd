@@ -10,7 +10,8 @@ enum Id {
 	CAMERA_ROTATE_LEFT = 4,
 	CAMERA_ROTATE_RIGHT = 5,
 	CAMERA_ZOOM_IN = 6,
-	CAMERA_ZOOM_OUT = 7
+	CAMERA_ZOOM_OUT = 7,
+	ESCAPE = 8
 }
 
 const TABLE_ID := "input_bindings"
@@ -24,9 +25,20 @@ const SLUGS := [
 	"CAMERA_ROTATE_LEFT",
 	"CAMERA_ROTATE_RIGHT",
 	"CAMERA_ZOOM_IN",
-	"CAMERA_ZOOM_OUT"
+	"CAMERA_ZOOM_OUT",
+	"ESCAPE"
 ]
-const SORT_ORDER := [0, 1, 2, 3, 4, 5, 6, 7]
+const SORT_ORDER := [
+	0,
+	1,
+	2,
+	3,
+	4,
+	5,
+	6,
+	7,
+	8
+]
 const BINDINGS := [
 	["KEY_A", "KEY_LEFT"],
 	["KEY_D", "KEY_RIGHT"],
@@ -35,5 +47,6 @@ const BINDINGS := [
 	["KEY_Q"],
 	["KEY_E"],
 	["MOUSE_BUTTON_WHEEL_UP"],
-	["MOUSE_BUTTON_WHEEL_DOWN"]
+	["MOUSE_BUTTON_WHEEL_DOWN"],
+	["KEY_ESCAPE"]
 ]

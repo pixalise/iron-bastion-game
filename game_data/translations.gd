@@ -2,7 +2,6 @@
 class_name ChiselTranslations
 extends RefCounted
 
-
 class UnitRifleManDescriptionParameters:
 	var physical_damage: float = -1.0
 
@@ -13,40 +12,25 @@ class UnitRifleManDescriptionParameters:
 	func to_arguments() -> Dictionary:
 		return {"physical_damage": physical_damage}
 
-
 class TooltipPhysicalDamageTypeTranslations:
 	func title() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.TOOLTIP_PHYSICAL_DAMAGE_TYPE_TITLE, {}
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_PHYSICAL_DAMAGE_TYPE_TITLE, {})
 	func description() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.TOOLTIP_PHYSICAL_DAMAGE_TYPE_DESCRIPTION, {}
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_PHYSICAL_DAMAGE_TYPE_DESCRIPTION, {})
 
 class TooltipTranslations:
 	var physical_damage_type := TooltipPhysicalDamageTypeTranslations.new()
 
-
 class UnitRifleManTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_RIFLE_MAN_NAME, {})
-
-	func description(
-		parameters: UnitRifleManDescriptionParameters = null
-	) -> ChiselLocalization.LocalizedText:
+	func description(parameters: UnitRifleManDescriptionParameters = null) -> ChiselLocalization.LocalizedText:
 		if parameters == null:
 			parameters = UnitRifleManDescriptionParameters.new()
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.UNIT_RIFLE_MAN_DESCRIPTION, parameters.to_arguments()
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_RIFLE_MAN_DESCRIPTION, parameters.to_arguments())
 
 class UnitTranslations:
 	var rifle_man := UnitRifleManTranslations.new()
-
 
 static var unit := UnitTranslations.new()
 static var tooltip := TooltipTranslations.new()

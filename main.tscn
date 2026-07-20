@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cagi73s7gk4px"]
+
+[ext_resource type="Script" uid="uid://cc5klwkvtxreb" path="res://game/scripts/terrain_generator.gd" id="1_lquwl"]
+[ext_resource type="Script" uid="uid://yjhel3aou3mi" path="res://game/scripts/camera_target.gd" id="2_7mycd"]
+[ext_resource type="Script" uid="uid://ch3dgcvsfrnbr" path="res://game/scripts/rts_camera.gd" id="3_272bh"]
+[ext_resource type="Texture2D" uid="uid://h5f4d0xi4enl" path="res://game_data/assets/hdri/forest_1_2_k.exr" id="4_5vw27"]
+[ext_resource type="PackedScene" uid="uid://dqjv4swugkww3" path="res://game/ui/components/unit_strip/unit_strip.tscn" id="5_kek77"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g887i"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_emt18"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_emt18"]
+panorama = ExtResource("4_5vw27")
+
+[sub_resource type="Sky" id="Sky_vop5m"]
+sky_material = SubResource("PanoramaSkyMaterial_emt18")
+
+[sub_resource type="Environment" id="Environment_emt18"]
+background_mode = 2
+sky = SubResource("Sky_vop5m")
+
+[node name="Main" type="Node" unique_id=1684462396]
+
+[node name="TerrainGenerator" type="Node3D" parent="." unique_id=1137389423]
+script = ExtResource("1_lquwl")
+height_scale = 40.0
+flatten_threshold = 0.51
+flatten_softness = 0.081
+
+[node name="CameraTarget" type="CharacterBody3D" parent="." unique_id=1160563253]
+script = ExtResource("2_7mycd")
+terrain_path = NodePath("../TerrainGenerator/Terrain3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraTarget" unique_id=489417950]
+shape = SubResource("SphereShape3D_g887i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CameraTarget" unique_id=1052462602]
+mesh = SubResource("CapsuleMesh_emt18")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=264586491]
+transform = Transform3D(1, 0, 0, 0, 0.4999979, 0.86602664, 0, -0.86602664, 0.4999979, 0, 95.49678, 0)
+current = true
+script = ExtResource("3_272bh")
+follow_target_path = NodePath("../CameraTarget")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=979934000]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 149.44751, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=40860364]
+environment = SubResource("Environment_emt18")
+
+[node name="Control" type="Control" parent="." unique_id=1168119736]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="UnitStrip" parent="Control" unique_id=1410391224 instance=ExtResource("5_kek77")]
+layout_mode = 1
