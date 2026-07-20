@@ -15,22 +15,20 @@ class Components:
 		return button
 
 	static func create_localized_rich_text(
-		value: Variant = null,
+		value: ChiselLocalization.LocalizedText,
 		font_size: int = UI_THEME.TEXT_BASE
 	) -> LocalizedRichText:
 		var label := LOCALIZED_RICH_TEXT_SCRIPT.new() as LocalizedRichText
 		UI_THEME.set_rich_text_font_size(label, font_size)
-		if value != null:
-			label.set_localized_text(value)
+		label.set_localized_text(value)
 		return label
 
-	static func create_localized_tooltip(tooltip_data: Variant = null) -> LocalizedTooltip:
+	static func create_localized_tooltip(tooltip_data: Variant) -> LocalizedTooltip:
 		var tooltip := LOCALIZED_TOOLTIP_SCRIPT.new() as LocalizedTooltip
-		if tooltip_data != null:
-			tooltip.set_tooltip_content(tooltip_data)
+		tooltip.set_tooltip_content(tooltip_data)
 		return tooltip
 
-	static func create_tooltip_target(tooltip_data: Variant = null) -> TooltipTarget:
+	static func create_tooltip_target(tooltip_data: Variant) -> TooltipTarget:
 		var target := TOOLTIP_TARGET_SCRIPT.new() as TooltipTarget
 		target.set_tooltip_content(tooltip_data)
 		return target
@@ -70,15 +68,11 @@ class Widget:
 	func _init(next_node: Node) -> void:
 		node = next_node
 
-	func named(value: String):
-		node.name = value
-		return self
-
 	func child(widget):
 		if widget is Widget:
 			node.add_child(widget.build())
-		elif widget is Node:
-			node.add_child(widget)
+			return self
+		node.add_child(widget)
 		return self
 
 	func children(widgets: Array):
@@ -87,144 +81,142 @@ class Widget:
 		return self
 
 	func full_rect():
-		if node is Control:
-			(node as Control).set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		var control := node as Control
+		control.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 		return self
 
 	func mouse_filter_mode(value: int):
-		if node is Control:
-			(node as Control).mouse_filter = value
+		var control := node as Control
+		control.mouse_filter = value
 		return self
 
 	func text(value: String):
 		if node is RichTextLabel:
 			(node as RichTextLabel).text = value
-		elif node is Label:
+			return self
+		if node is Label:
 			(node as Label).text = value
-		elif node is BaseButton:
-			node.set("text", value)
+			return self
+		var button := node as BaseButton
+		button.set("text", value)
 		return self
 
 	func localized_text(value: Variant):
-		if node.has_method("set_localized_text"):
-			node.call("set_localized_text", value)
+		var label := node as LocalizedRichText
+		label.set_localized_text(value)
 		return self
 
 	func tooltip_text(value: String):
-		if node is Control:
-			(node as Control).tooltip_text = value
+		var control := node as Control
+		control.tooltip_text = value
 		return self
 
 	func tooltip_content(value: Variant):
-		if node.has_method("set_tooltip_content"):
-			node.call("set_tooltip_content", value)
+		if node is LocalizedTooltip:
+			(node as LocalizedTooltip).set_tooltip_content(value)
+			return self
+		if node is TooltipTarget:
+			(node as TooltipTarget).set_tooltip_content(value)
 			return self
 
-		if value == null:
-			return self
-
-		var wrapped_name := node.name
 		var host := Components.create_tooltip_target(value)
-		if not wrapped_name.is_empty():
-			host.name = wrapped_name
-			node.name = wrapped_name + "Content"
 		host.add_child(node)
 		node = host
 		return self
 
 	func color(value: Color):
-		if node is ColorRect:
-			(node as ColorRect).color = value
+		var color_rect := node as ColorRect
+		color_rect.color = value
 		return self
 
 	func center_text():
 		if node is RichTextLabel:
 			(node as RichTextLabel).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		elif node is Label:
-			(node as Label).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+			return self
+		var label := node as Label
+		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		return self
 
 	func font_size(value: int):
 		if node is RichTextLabel:
 			GameUiTheme.set_rich_text_font_size(node as RichTextLabel, value)
-		elif node is Control:
-			(node as Control).add_theme_font_size_override("font_size", value)
+			return self
+		var control := node as Control
+		control.add_theme_font_size_override("font_size", value)
 		return self
 
 	func font_color(value: Color):
 		if node is RichTextLabel:
 			(node as RichTextLabel).add_theme_color_override("default_color", value)
-		elif node is Control:
-			(node as Control).add_theme_color_override("font_color", value)
+			return self
+		var control := node as Control
+		control.add_theme_color_override("font_color", value)
 		return self
 
 	func gap(value: int):
-		if node is BoxContainer:
-			(node as BoxContainer).add_theme_constant_override("separation", value)
+		var box := node as BoxContainer
+		box.add_theme_constant_override("separation", value)
 		return self
 
 	func min_width(value: float):
-		if node is Control:
-			(node as Control).custom_minimum_size.x = value
+		var control := node as Control
+		control.custom_minimum_size.x = value
 		return self
 
 	func min_height(value: float):
-		if node is Control:
-			(node as Control).custom_minimum_size.y = value
+		var control := node as Control
+		control.custom_minimum_size.y = value
 		return self
 
 	func min_size(value: Vector2):
-		if node is Control:
-			(node as Control).custom_minimum_size = value
+		var control := node as Control
+		control.custom_minimum_size = value
 		return self
 
 	func texture(value: Texture2D):
-		if node is TextureRect:
-			(node as TextureRect).texture = value
+		var texture_rect := node as TextureRect
+		texture_rect.texture = value
 		return self
 
 	func texture_path(path: String):
-		if path.is_empty():
-			return texture(null)
 		return texture(load(path) as Texture2D)
 
 	func stretch_mode(value: int):
-		if node is TextureRect:
-			(node as TextureRect).stretch_mode = value
+		var texture_rect := node as TextureRect
+		texture_rect.stretch_mode = value
 		return self
 
 	func expand_mode(value: int):
-		if node is TextureRect:
-			(node as TextureRect).expand_mode = value
+		var texture_rect := node as TextureRect
+		texture_rect.expand_mode = value
 		return self
 
 	func autowrap(mode: int):
 		if node is Label:
 			(node as Label).autowrap_mode = mode
-		elif node is RichTextLabel:
-			(node as RichTextLabel).autowrap_mode = mode
+			return self
+		var rich_text := node as RichTextLabel
+		rich_text.autowrap_mode = mode
 		return self
 
 	func fit_content(value: bool = true):
-		if node is RichTextLabel:
-			(node as RichTextLabel).fit_content = value
+		var rich_text := node as RichTextLabel
+		rich_text.fit_content = value
 		return self
 
 	func bbcode_enabled(value: bool = true):
-		if node is RichTextLabel:
-			(node as RichTextLabel).bbcode_enabled = value
+		var rich_text := node as RichTextLabel
+		rich_text.bbcode_enabled = value
 		return self
 
 	func stylebox(slot: String, style: StyleBox):
-		if node is Control:
-			(node as Control).add_theme_stylebox_override(slot, style)
+		var control := node as Control
+		control.add_theme_stylebox_override(slot, style)
 		return self
 
 	func on_pressed(callback: Callable):
-		if node is BaseButton and callback.is_valid():
-			var button := node as BaseButton
-			if not button.is_connected("pressed", callback):
-				button.pressed.connect(callback)
+		var button := node as BaseButton
+		button.pressed.connect(callback)
 		return self
 
 	func build() -> Node:
@@ -242,7 +234,7 @@ class Builder:
 		return Widget.new(Control.new())
 
 	static func background(color: Color = UI_THEME.BACKGROUND):
-		return Widget.new(ColorRect.new()).named("Background").color(color).full_rect()
+		return Widget.new(ColorRect.new()).color(color).full_rect()
 
 	static func center():
 		return Widget.new(CenterContainer.new()).full_rect()
@@ -267,7 +259,9 @@ class Builder:
 		label.scroll_active = false
 		return Widget.new(label).bbcode_enabled(use_bbcode).fit_content().text(value)
 
-	static func localized_rich_text(value: Variant = null, font_size: int = UI_THEME.TEXT_BASE):
+	static func localized_rich_text(
+		value: ChiselLocalization.LocalizedText, font_size: int = UI_THEME.TEXT_BASE
+	):
 		return Widget.new(Components.create_localized_rich_text(value, font_size))
 
 	static func image(
@@ -297,5 +291,5 @@ class Builder:
 		panel.add_theme_stylebox_override("panel", UI_THEME.card_panel_style(padding))
 		return Widget.new(panel)
 
-	static func tooltip(tooltip_data: Variant = null):
+	static func tooltip(tooltip_data: Variant):
 		return Widget.new(Components.create_localized_tooltip(tooltip_data))

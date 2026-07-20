@@ -12,12 +12,11 @@ var _terrain: Terrain3D
 
 
 func _ready() -> void:
-	_resolve_terrain()
+	_terrain = get_node(terrain_path) as Terrain3D
 	_snap_to_terrain()
 
 
 func _physics_process(delta: float) -> void:
-	_resolve_terrain()
 	_update_rotation(delta)
 	_update_position(delta)
 	_snap_to_terrain()
@@ -56,20 +55,7 @@ func _update_position(delta: float) -> void:
 
 	global_position += move_direction.normalized() * move_speed * delta
 
-
-func _resolve_terrain() -> void:
-	if _terrain != null:
-		return
-
-	_terrain = get_node_or_null(terrain_path) as Terrain3D
-
-
 func _snap_to_terrain() -> void:
-	if _terrain == null:
-		return
-
 	var terrain_height := _terrain.data.get_height(global_position)
-	if is_nan(terrain_height):
-		return
-
+	assert(not is_nan(terrain_height))
 	global_position.y = terrain_height + terrain_height_offset

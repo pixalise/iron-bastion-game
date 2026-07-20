@@ -20,7 +20,5 @@ static func rifle_man_preview() -> UnitCardData:
 static func _load_texture(asset_id: String) -> Texture2D:
 	var asset: Dictionary = ChiselAssets.BY_ID.get(asset_id, {})
 	var path := String(asset.get("path", ""))
-	if path.is_empty():
-		return null
-
+	assert(not path.is_empty())
 	return load(path) as Texture2D

@@ -29,27 +29,14 @@ func _ready() -> void:
 
 func set_localized_text(value: ChiselLocalization.LocalizedText) -> void:
 	_tooltip_content_by_slug.clear()
-
-	if value == null:
-		text = ""
-		tooltip_text = ""
-		return
-
 	_register_tooltips(value)
 	text = value.bbcode_text
 	tooltip_text = ""
 
 
 func _make_custom_tooltip(for_text: String) -> Object:
-	if for_text.is_empty() or not _tooltip_content_by_slug.has(for_text):
-		return _empty_tooltip()
-
-	var tooltip_data: Variant = _tooltip_content_by_slug.get(for_text)
-	if not _has_tooltip_content(tooltip_data):
-		return _empty_tooltip()
-
 	var tooltip := LOCALIZED_TOOLTIP.new()
-	tooltip.set_tooltip_content(tooltip_data)
+	tooltip.set_tooltip_content(_tooltip_content_by_slug[for_text])
 	return tooltip
 
 
@@ -63,25 +50,6 @@ func _register_tooltips(value: ChiselLocalization.LocalizedText) -> void:
 		_tooltip_content_by_slug[tooltip_slug] = value.tooltip_content_for(StringName(tooltip_slug))
 
 
-func _has_tooltip_content(content: Variant) -> bool:
-	if content == null:
-		return false
-	var title_text: ChiselLocalization.LocalizedText = content.title
-	var description_text: ChiselLocalization.LocalizedText = content.description
-	return (
-		not String(content.icon_path).is_empty()
-		or not title_text.plain_text.is_empty()
-		or not description_text.plain_text.is_empty()
-	)
-
-
-func _empty_tooltip() -> Control:
-	var empty := Control.new()
-	empty.custom_minimum_size = Vector2.ZERO
-	empty.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	return empty
-
-
 func _apply_underline_offset(label: RichTextLabel) -> void:
 	for keys in FONT_THEME_KEYS:
 		var font_key := String(keys.get("font", ""))
@@ -89,8 +57,7 @@ func _apply_underline_offset(label: RichTextLabel) -> void:
 		var font := label.get_theme_font(font_key)
 		var font_size := label.get_theme_font_size(size_key)
 		var adjusted_font := _font_with_underline_offset(font, font_size)
-		if adjusted_font != null:
-			label.add_theme_font_override(font_key, adjusted_font)
+		label.add_theme_font_override(font_key, adjusted_font)
 
 
 func _font_with_underline_offset(font: Font, font_size: int) -> Font:

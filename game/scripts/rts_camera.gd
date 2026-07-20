@@ -17,13 +17,9 @@ var _zoom_distance: float = 0.0
 
 
 func _ready() -> void:
-	_follow_target = get_node_or_null(follow_target_path) as Node3D
+	_follow_target = get_node(follow_target_path) as Node3D
 	_locked_pitch = global_rotation.x
 	_locked_roll = global_rotation.z
-
-	if _follow_target == null:
-		push_warning("RTS camera has no follow target.")
-		return
 
 	global_rotation = _locked_rotation()
 	_zoom_distance = _initial_zoom_distance()
@@ -31,9 +27,6 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	if _follow_target == null:
-		return
-
 	_update_zoom()
 	_apply_camera_transform()
 

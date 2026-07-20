@@ -13,25 +13,18 @@ func _ready() -> void:
 
 
 func clear_cards() -> void:
-	if _cards == null:
-		return
 	for child in _cards.get_children():
 		child.queue_free()
 
 
 func add_card(data: UnitCardData) -> UnitCard:
-	if _cards == null:
-		_build()
 	var card := UNIT_CARD_SCENE.instantiate() as UnitCard
-	_cards.add_child(card)
 	card.set_data(data)
+	_cards.add_child(card)
 	return card
 
 
 func _build() -> void:
-	if _cards != null:
-		return
-
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 

@@ -14,18 +14,17 @@ var description_label
 var stat_row: HBoxContainer
 
 var _built := false
-var _pending_data: UnitCardData
+var _data: UnitCardData
 var _portrait_placeholder: Label
 
 
 func _ready() -> void:
 	_build()
-	if _pending_data != null:
-		_apply_data(_pending_data)
+	_apply_data(_data)
 
 
 func set_data(data: UnitCardData) -> void:
-	_pending_data = data
+	_data = data
 	if _built:
 		_apply_data(data)
 
@@ -111,7 +110,7 @@ func _build() -> void:
 
 
 func _apply_data(data: UnitCardData) -> void:
-	name_label.text = data.title.plain_text if data.title != null else "UNKNOWN"
+	name_label.text = data.title.plain_text
 	description_label.set_localized_text(data.description)
 	portrait.texture = data.portrait
 	_portrait_placeholder.visible = data.portrait == null

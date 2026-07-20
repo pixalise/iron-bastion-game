@@ -22,9 +22,6 @@ func set_tooltip_content(tooltip_data: Variant) -> void:
 	content_box.add_theme_constant_override("separation", UI_THEME.SPACE_1)
 	margin.add_child(content_box)
 
-	if tooltip_data == null:
-		return
-
 	var icon_path := String(tooltip_data.icon_path)
 	var title_text: ChiselLocalization.LocalizedText = tooltip_data.title
 	if not icon_path.is_empty() or not title_text.plain_text.is_empty():
