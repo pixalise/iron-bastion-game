@@ -60,236 +60,396 @@ class Components:
 		var width := button.custom_minimum_size.x
 		button.custom_minimum_size = Vector2(width, UI_THEME.button_minimum_height(size))
 
-
-# Code-first widget builder inspired by Flutter's nested widget trees.
-class Widget:
-	var node: Node
-
-	func _init(next_node: Node) -> void:
-		node = next_node
-
-	func child(widget):
-		if widget is Widget:
-			node.add_child(widget.build())
-			return self
-		node.add_child(widget)
-		return self
-
-	func children(widgets: Array):
-		for widget in widgets:
-			child(widget)
-		return self
-
-	func full_rect():
-		var control := node as Control
-		control.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-		return self
-
-	func mouse_filter_mode(value: int):
-		var control := node as Control
-		control.mouse_filter = value
-		return self
-
-	func text(value: String):
-		if node is RichTextLabel:
-			(node as RichTextLabel).text = value
-			return self
-		if node is Label:
-			(node as Label).text = value
-			return self
-		var button := node as BaseButton
-		button.set("text", value)
-		return self
-
-	func localized_text(value: Variant):
-		var label := node as LocalizedRichText
-		label.set_localized_text(value)
-		return self
-
-	func tooltip_text(value: String):
-		var control := node as Control
-		control.tooltip_text = value
-		return self
-
-	func tooltip_content(value: Variant):
-		if node is LocalizedTooltip:
-			(node as LocalizedTooltip).set_tooltip_content(value)
-			return self
-		if node is TooltipTarget:
-			(node as TooltipTarget).set_tooltip_content(value)
-			return self
-
-		var host := Components.create_tooltip_target(value)
-		host.add_child(node)
-		node = host
-		return self
-
-	func color(value: Color):
-		var color_rect := node as ColorRect
-		color_rect.color = value
-		return self
-
-	func center_text():
-		if node is RichTextLabel:
-			(node as RichTextLabel).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-			return self
-		var label := node as Label
-		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		return self
-
-	func font_size(value: int):
-		if node is RichTextLabel:
-			GameUiTheme.set_rich_text_font_size(node as RichTextLabel, value)
-			return self
-		var control := node as Control
-		control.add_theme_font_size_override("font_size", value)
-		return self
-
-	func font_color(value: Color):
-		if node is RichTextLabel:
-			(node as RichTextLabel).add_theme_color_override("default_color", value)
-			return self
-		var control := node as Control
-		control.add_theme_color_override("font_color", value)
-		return self
-
-	func gap(value: int):
-		var box := node as BoxContainer
-		box.add_theme_constant_override("separation", value)
-		return self
-
-	func min_width(value: float):
-		var control := node as Control
-		control.custom_minimum_size.x = value
-		return self
-
-	func min_height(value: float):
-		var control := node as Control
-		control.custom_minimum_size.y = value
-		return self
-
-	func min_size(value: Vector2):
-		var control := node as Control
-		control.custom_minimum_size = value
-		return self
-
-	func texture(value: Texture2D):
-		var texture_rect := node as TextureRect
-		texture_rect.texture = value
-		return self
-
-	func texture_path(path: String):
-		return texture(load(path) as Texture2D)
-
-	func stretch_mode(value: int):
-		var texture_rect := node as TextureRect
-		texture_rect.stretch_mode = value
-		return self
-
-	func expand_mode(value: int):
-		var texture_rect := node as TextureRect
-		texture_rect.expand_mode = value
-		return self
-
-	func autowrap(mode: int):
-		if node is Label:
-			(node as Label).autowrap_mode = mode
-			return self
-		var rich_text := node as RichTextLabel
-		rich_text.autowrap_mode = mode
-		return self
-
-	func fit_content(value: bool = true):
-		var rich_text := node as RichTextLabel
-		rich_text.fit_content = value
-		return self
-
-	func bbcode_enabled(value: bool = true):
-		var rich_text := node as RichTextLabel
-		rich_text.bbcode_enabled = value
-		return self
-
-	func stylebox(slot: String, style: StyleBox):
-		var control := node as Control
-		control.add_theme_stylebox_override(slot, style)
-		return self
-
-	func on_pressed(callback: Callable):
-		var button := node as BaseButton
-		button.pressed.connect(callback)
-		return self
-
-	func build() -> Node:
-		return node
-
-	func mount(parent: Node) -> Node:
-		parent.add_child(node)
-		return node
+enum ThemeColorToken {
+	BACKGROUND,
+	FOREGROUND,
+	CARD,
+	CARD_FOREGROUND,
+	PRIMARY,
+	PRIMARY_FOREGROUND,
+	SECONDARY,
+	SECONDARY_FOREGROUND,
+	MUTED,
+	MUTED_FOREGROUND,
+	ACCENT,
+	ACCENT_FOREGROUND,
+	BORDER,
+	RING,
+}
 
 
-class Builder:
-	const UI_THEME := preload("res://game/ui/ui_theme.gd")
+class EdgeInsets:
+	extends RefCounted
 
-	static func control():
-		return Widget.new(Control.new())
+	var left: int
+	var top: int
+	var right: int
+	var bottom: int
 
-	static func background(color: Color = UI_THEME.BACKGROUND):
-		return Widget.new(ColorRect.new()).color(color).full_rect()
+	func _init(next_left: int, next_top: int, next_right: int, next_bottom: int) -> void:
+		left = next_left
+		top = next_top
+		right = next_right
+		bottom = next_bottom
 
-	static func center():
-		return Widget.new(CenterContainer.new()).full_rect()
+	static func all(value: int) -> EdgeInsets:
+		return EdgeInsets.new(value, value, value, value)
 
-	static func column(separation: int = 0):
-		var widget = Widget.new(VBoxContainer.new())
-		if separation > 0:
-			widget.gap(separation)
-		return widget
+	static func symmetric(horizontal: int = 0, vertical: int = 0) -> EdgeInsets:
+		return EdgeInsets.new(horizontal, vertical, horizontal, vertical)
 
-	static func row(separation: int = 0):
-		var widget = Widget.new(HBoxContainer.new())
-		if separation > 0:
-			widget.gap(separation)
-		return widget
+	static func only(
+		left: int = 0, top: int = 0, right: int = 0, bottom: int = 0
+	) -> EdgeInsets:
+		return EdgeInsets.new(left, top, right, bottom)
 
-	static func label(value: String = ""):
-		return Widget.new(Label.new()).text(value)
+	static func zero() -> EdgeInsets:
+		return EdgeInsets.new(0, 0, 0, 0)
 
-	static func rich_text(value: String = "", use_bbcode: bool = true):
+
+class BoxConstraints:
+	extends RefCounted
+
+	var min_width: float
+	var min_height: float
+
+	func _init(next_min_width: float = 0.0, next_min_height: float = 0.0) -> void:
+		min_width = next_min_width
+		min_height = next_min_height
+
+	static func none() -> BoxConstraints:
+		return BoxConstraints.new()
+
+	static func width(value: float) -> BoxConstraints:
+		return BoxConstraints.new(value, 0.0)
+
+	static func height(value: float) -> BoxConstraints:
+		return BoxConstraints.new(0.0, value)
+
+	static func tight(width: float = 0.0, height: float = 0.0) -> BoxConstraints:
+		return BoxConstraints.new(width, height)
+
+
+class FlexStyle:
+	extends RefCounted
+
+	var gap: int
+
+	func _init(next_gap: int = 0) -> void:
+		gap = next_gap
+
+	static func default_style() -> FlexStyle:
+		return FlexStyle.new(GameUiTheme.SPACE_2)
+
+	static func with_gap(value: int) -> FlexStyle:
+		return FlexStyle.new(value)
+
+
+class TextStyle:
+	extends RefCounted
+
+	var font_size: int
+	var color_token: ThemeColorToken
+	var centered: bool
+	var autowrap: bool
+	var bbcode_enabled: bool
+
+	func _init(
+		next_font_size: int,
+		next_color_token: ThemeColorToken,
+		next_centered: bool = false,
+		next_autowrap: bool = false,
+		next_bbcode_enabled: bool = true
+	) -> void:
+		font_size = next_font_size
+		color_token = next_color_token
+		centered = next_centered
+		autowrap = next_autowrap
+		bbcode_enabled = next_bbcode_enabled
+
+	static func body() -> TextStyle:
+		return TextStyle.new(GameUiTheme.TEXT_BASE, ThemeColorToken.FOREGROUND)
+
+	static func card_body() -> TextStyle:
+		return TextStyle.new(GameUiTheme.TEXT_BASE, ThemeColorToken.CARD_FOREGROUND)
+
+	static func title() -> TextStyle:
+		return TextStyle.new(36, ThemeColorToken.FOREGROUND, true)
+
+
+class ScaffoldStyle:
+	extends RefCounted
+
+	var background_color_token: ThemeColorToken
+
+	func _init(next_background_color_token: ThemeColorToken) -> void:
+		background_color_token = next_background_color_token
+
+	static func default_style() -> ScaffoldStyle:
+		return ScaffoldStyle.new(ThemeColorToken.BACKGROUND)
+
+
+class SurfaceStyle:
+	extends RefCounted
+
+	var background_color_token: ThemeColorToken
+	var border_color_token: ThemeColorToken
+	var border_width: int
+	var radius: int
+	var padding: EdgeInsets
+
+	func _init(
+		next_background_color_token: ThemeColorToken,
+		next_border_color_token: ThemeColorToken,
+		next_border_width: int,
+		next_radius: int,
+		next_padding: EdgeInsets
+	) -> void:
+		background_color_token = next_background_color_token
+		border_color_token = next_border_color_token
+		border_width = next_border_width
+		radius = next_radius
+		padding = next_padding
+
+	static func card(padding: EdgeInsets) -> SurfaceStyle:
+		return SurfaceStyle.new(
+			ThemeColorToken.CARD,
+			ThemeColorToken.BORDER,
+			1,
+			GameUiTheme.RADIUS_MD,
+			padding
+		)
+
+	static func card_default() -> SurfaceStyle:
+		return card(EdgeInsets.all(24))
+
+
+class ImageStyle:
+	extends RefCounted
+
+	var constraints: BoxConstraints
+	var stretch_mode: int
+	var expand_mode: int
+
+	func _init(
+		next_constraints: BoxConstraints,
+		next_stretch_mode: int = TextureRect.STRETCH_KEEP_ASPECT_CENTERED,
+		next_expand_mode: int = TextureRect.EXPAND_IGNORE_SIZE
+	) -> void:
+		constraints = next_constraints
+		stretch_mode = next_stretch_mode
+		expand_mode = next_expand_mode
+
+	static func default_style() -> ImageStyle:
+		return ImageStyle.new(BoxConstraints.none())
+
+	static func constrained(constraints: BoxConstraints) -> ImageStyle:
+		return ImageStyle.new(constraints)
+
+
+class ButtonStyle:
+	extends RefCounted
+
+	var size: GameUiTheme.ButtonSize
+	var constraints: BoxConstraints
+
+	func _init(next_size: GameUiTheme.ButtonSize, next_constraints: BoxConstraints) -> void:
+		size = next_size
+		constraints = next_constraints
+
+	static func default_style() -> ButtonStyle:
+		return ButtonStyle.new(GameUiTheme.ButtonSize.DEFAULT, BoxConstraints.none())
+
+	static func width(value: float) -> ButtonStyle:
+		return ButtonStyle.new(GameUiTheme.ButtonSize.DEFAULT, BoxConstraints.width(value))
+
+	static func constrained(
+		constraints: BoxConstraints,
+		size: GameUiTheme.ButtonSize = GameUiTheme.ButtonSize.DEFAULT
+	) -> ButtonStyle:
+		return ButtonStyle.new(size, constraints)
+
+
+class ThemePalette:
+	extends RefCounted
+
+	static func resolve_color(token: ThemeColorToken) -> Color:
+		match token:
+			ThemeColorToken.BACKGROUND:
+				return GameUiTheme.BACKGROUND
+			ThemeColorToken.FOREGROUND:
+				return GameUiTheme.FOREGROUND
+			ThemeColorToken.CARD:
+				return GameUiTheme.CARD
+			ThemeColorToken.CARD_FOREGROUND:
+				return GameUiTheme.CARD_FOREGROUND
+			ThemeColorToken.PRIMARY:
+				return GameUiTheme.PRIMARY
+			ThemeColorToken.PRIMARY_FOREGROUND:
+				return GameUiTheme.PRIMARY_FOREGROUND
+			ThemeColorToken.SECONDARY:
+				return GameUiTheme.SECONDARY
+			ThemeColorToken.SECONDARY_FOREGROUND:
+				return GameUiTheme.SECONDARY_FOREGROUND
+			ThemeColorToken.MUTED:
+				return GameUiTheme.MUTED
+			ThemeColorToken.MUTED_FOREGROUND:
+				return GameUiTheme.MUTED_FOREGROUND
+			ThemeColorToken.ACCENT:
+				return GameUiTheme.ACCENT
+			ThemeColorToken.ACCENT_FOREGROUND:
+				return GameUiTheme.ACCENT_FOREGROUND
+			ThemeColorToken.BORDER:
+				return GameUiTheme.BORDER
+			ThemeColorToken.RING:
+				return GameUiTheme.RING
+			_:
+				return GameUiTheme.FOREGROUND
+
+
+class Widgets:
+	static func mount(parent: Node, child: Node) -> Node:
+		parent.add_child(child)
+		return child
+
+	static func Scaffold(body: Node, style: ScaffoldStyle) -> Control:
+		var root := Control.new()
+		root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		root.mouse_filter = Control.MOUSE_FILTER_STOP
+
+		var background := ColorRect.new()
+		background.color = ThemePalette.resolve_color(style.background_color_token)
+		background.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		root.add_child(background)
+		root.add_child(body)
+
+		return root
+
+	static func Center(child: Node) -> CenterContainer:
+		var center := CenterContainer.new()
+		center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		center.add_child(child)
+		return center
+
+	static func Column(children: Array, style: FlexStyle) -> VBoxContainer:
+		var column := VBoxContainer.new()
+		if style.gap > 0:
+			column.add_theme_constant_override("separation", style.gap)
+		_append_children(column, children)
+		return column
+
+	static func Row(children: Array, style: FlexStyle) -> HBoxContainer:
+		var row := HBoxContainer.new()
+		if style.gap > 0:
+			row.add_theme_constant_override("separation", style.gap)
+		_append_children(row, children)
+		return row
+
+	static func Card(child: Node, style: SurfaceStyle) -> PanelContainer:
+		var panel := PanelContainer.new()
+		panel.add_theme_stylebox_override("panel", _surface_stylebox(style))
+		panel.add_child(child)
+		return panel
+
+	static func Padding(child: Node, insets: EdgeInsets) -> MarginContainer:
+		var margin := MarginContainer.new()
+		margin.add_theme_constant_override("margin_left", insets.left)
+		margin.add_theme_constant_override("margin_top", insets.top)
+		margin.add_theme_constant_override("margin_right", insets.right)
+		margin.add_theme_constant_override("margin_bottom", insets.bottom)
+		margin.add_child(child)
+		return margin
+
+	static func Margin(child: Node, insets: EdgeInsets) -> MarginContainer:
+		return Padding(child, insets)
+
+	static func SizedBox(child: Control, constraints: BoxConstraints) -> Control:
+		_apply_constraints(child, constraints)
+		return child
+
+	static func Text(
+		value: String,
+		style: TextStyle
+	) -> Label:
+		var label := Label.new()
+		label.text = value
+		label.add_theme_font_size_override("font_size", style.font_size)
+		label.add_theme_color_override("font_color", ThemePalette.resolve_color(style.color_token))
+		if style.centered:
+			label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		if style.autowrap:
+			label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		return label
+
+	static func RichText(
+		value: String,
+		style: TextStyle
+	) -> RichTextLabel:
 		var label := RichTextLabel.new()
 		label.scroll_active = false
-		return Widget.new(label).bbcode_enabled(use_bbcode).fit_content().text(value)
+		label.fit_content = true
+		label.bbcode_enabled = style.bbcode_enabled
+		label.text = value
+		GameUiTheme.set_rich_text_font_size(label, style.font_size)
+		label.add_theme_color_override("default_color", ThemePalette.resolve_color(style.color_token))
+		return label
 
-	static func localized_rich_text(
-		value: ChiselLocalization.LocalizedText, font_size: int = UI_THEME.TEXT_BASE
-	):
-		return Widget.new(Components.create_localized_rich_text(value, font_size))
+	static func LocalizedText(
+		value: ChiselLocalization.LocalizedText,
+		style: TextStyle
+	) -> LocalizedRichText:
+		var label := Components.create_localized_rich_text(value, style.font_size)
+		label.add_theme_color_override(
+			"default_color", ThemePalette.resolve_color(style.color_token)
+		)
+		if style.centered:
+			label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		return label
 
-	static func image(
-		texture: Texture2D = null,
-		minimum_size: Vector2 = Vector2.ZERO,
-		stretch_mode: int = TextureRect.STRETCH_KEEP_ASPECT_CENTERED,
-		expand_mode: int = TextureRect.EXPAND_IGNORE_SIZE
-	):
-		var widget = Widget.new(TextureRect.new())
-		widget.texture(texture).stretch_mode(stretch_mode).expand_mode(expand_mode)
-		if minimum_size != Vector2.ZERO:
-			widget.min_size(minimum_size)
-		return widget
+	static func Image(texture: Texture2D, style: ImageStyle) -> TextureRect:
+		var image := TextureRect.new()
+		image.texture = texture
+		image.stretch_mode = style.stretch_mode
+		image.expand_mode = style.expand_mode
+		_apply_constraints(image, style.constraints)
+		return image
 
-	static func button_default(
-		value: String,
-		size: GameUiTheme.ButtonSize = GameUiTheme.ButtonSize.DEFAULT,
-		on_pressed: Callable = Callable()
-	):
-		var widget = Widget.new(Components.create_button_default(size)).text(value)
-		if on_pressed.is_valid():
-			widget.on_pressed(on_pressed)
-		return widget
+	static func Button(value: String, on_pressed: Callable, style: ButtonStyle) -> Button:
+		var button := Components.create_button_default(style.size)
+		button.text = value
+		button.pressed.connect(on_pressed)
+		_apply_constraints(button, style.constraints)
+		return button
 
-	static func card(padding: int = 24):
-		var panel := PanelContainer.new()
-		panel.add_theme_stylebox_override("panel", UI_THEME.card_panel_style(padding))
-		return Widget.new(panel)
+	static func Tooltip(child: Node, tooltip_data: Variant) -> TooltipTarget:
+		var target := Components.create_tooltip_target(tooltip_data)
+		target.add_child(child)
+		return target
 
-	static func tooltip(tooltip_data: Variant):
-		return Widget.new(Components.create_localized_tooltip(tooltip_data))
+	static func TooltipPanel(tooltip_data: Variant) -> LocalizedTooltip:
+		return Components.create_localized_tooltip(tooltip_data)
+
+	static func _apply_constraints(control: Control, constraints: BoxConstraints) -> void:
+		var size := control.custom_minimum_size
+		if constraints.min_width > 0.0:
+			size.x = constraints.min_width
+		if constraints.min_height > 0.0:
+			size.y = constraints.min_height
+		control.custom_minimum_size = size
+
+	static func _surface_stylebox(style: SurfaceStyle) -> StyleBoxFlat:
+		var stylebox := GameUiTheme.panel_style(
+			ThemePalette.resolve_color(style.background_color_token),
+			ThemePalette.resolve_color(style.border_color_token),
+			style.border_width,
+			style.radius
+		)
+		stylebox.content_margin_left = style.padding.left
+		stylebox.content_margin_top = style.padding.top
+		stylebox.content_margin_right = style.padding.right
+		stylebox.content_margin_bottom = style.padding.bottom
+		return stylebox
+
+	static func _append_children(parent: Node, children: Array) -> void:
+		for child in children:
+			parent.add_child(child)
