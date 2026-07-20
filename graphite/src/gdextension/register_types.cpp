@@ -1,7 +1,6 @@
-#include "register_types.hpp"
+#include "graphite/graphite_world.hpp"
 
-#include "graphite_math.hpp"
-
+#include <godot_cpp/core/class_db.hpp>
 #include <godot_cpp/godot.hpp>
 
 using namespace godot;
@@ -11,7 +10,7 @@ void initialize_graphite(ModuleInitializationLevel level) {
 		return;
 	}
 
-	ClassDB::register_class<GraphiteMath>();
+	ClassDB::register_class<GraphiteWorld>();
 }
 
 void uninitialize_graphite(ModuleInitializationLevel level) {

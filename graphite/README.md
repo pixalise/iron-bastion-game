@@ -53,6 +53,8 @@ Before launch: build graphite
 Once built and loaded by Godot:
 
 ```gdscript
-var math := GraphiteMath.new()
-assert(math.add_numbers(2.0, 3.0) == 5.0)
+var world := GraphiteWorld.new()
+world.configure_navigation_grid(2, 2, 1.0)
+world.set_navigation_cells(PackedByteArray([0, 1, 2, 16]))
+assert(world.get_navigation_cell_count() == 4)
 ```

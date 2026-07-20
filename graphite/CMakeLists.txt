@@ -30,10 +30,10 @@ set(GODOTCPP_USE_HOT_RELOAD ON CACHE BOOL "Enable Godot C++ hot reload support."
 add_subdirectory("${GRAPHITE_GODOT_CPP_DIR}" "${CMAKE_BINARY_DIR}/godot-cpp")
 
 add_library(graphite SHARED
-	include/graphite_math.hpp
-	include/register_types.hpp
-	src/graphite_math.cpp
-	src/register_types.cpp
+	include/graphite/graphite_types.hpp
+	include/graphite/graphite_world.hpp
+	src/gdextension/graphite_world_gd.cpp
+	src/gdextension/register_types.cpp
 )
 
 target_include_directories(graphite PRIVATE include)
