@@ -9,6 +9,7 @@ project(graphite
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(GRAPHITE_GODOT_CPP_DIR "${CMAKE_CURRENT_SOURCE_DIR}/godot-cpp" CACHE PATH
 	"Path to the Godot C++ bindings checkout."
@@ -34,9 +35,13 @@ add_library(graphite SHARED
 	include/graphite/graphite_world.hpp
 	src/gdextension/graphite_world_gd.cpp
 	src/gdextension/register_types.cpp
+	src/core/nav_cell.hpp
 )
 
-target_include_directories(graphite PRIVATE include)
+target_include_directories(graphite PRIVATE
+	include
+	src
+)
 
 if(TARGET godot::cpp)
 	target_link_libraries(graphite PRIVATE godot::cpp)
