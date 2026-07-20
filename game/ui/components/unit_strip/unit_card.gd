@@ -100,7 +100,7 @@ func _build() -> void:
 	description_label = LOCALIZED_RICH_TEXT.new()
 	description_label.custom_minimum_size = Vector2(PORTRAIT_SIZE.x, 74)
 	UI_THEME.set_rich_text_font_size(description_label, UI_THEME.TEXT_XS)
-	description_label.add_theme_color_override("default_color", UI_THEME.POPOVER_FOREGROUND)
+	description_label.add_theme_color_override("default_color", UI_THEME.CARD_FOREGROUND)
 	root.add_child(description_label)
 
 	stat_row = HBoxContainer.new()

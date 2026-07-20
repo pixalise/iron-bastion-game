@@ -8,8 +8,6 @@ const BACKGROUND := Color(0.08, 0.075, 0.065, 1.0)
 const FOREGROUND := Color(0.93, 0.88, 0.75, 1.0)
 const CARD := Color(0.08, 0.075, 0.065, 0.94)
 const CARD_FOREGROUND := FOREGROUND
-const POPOVER := BACKGROUND
-const POPOVER_FOREGROUND := Color(0.9, 0.88, 0.8, 1.0)
 const PRIMARY := Color(0.7, 0.56, 0.32, 1.0)
 const PRIMARY_FOREGROUND := Color(0.08, 0.075, 0.065, 1.0)
 const SECONDARY := Color(0.12, 0.115, 0.1, 1.0)
@@ -44,6 +42,16 @@ static func panel_style(
 	style.corner_radius_top_right = radius
 	style.corner_radius_bottom_right = radius
 	style.corner_radius_bottom_left = radius
+	return style
+
+
+static func card_panel_style(padding: int = 0) -> StyleBoxFlat:
+	var style := panel_style(CARD, BORDER, 1, RADIUS_MD)
+	if padding > 0:
+		style.content_margin_left = padding
+		style.content_margin_top = padding
+		style.content_margin_right = padding
+		style.content_margin_bottom = padding
 	return style
 
 

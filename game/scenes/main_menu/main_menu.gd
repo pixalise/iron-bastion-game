@@ -1,6 +1,7 @@
 extends Control
 
 const UI := preload("res://game/ui/ui.gd")
+const UI_THEME := preload("res://game/ui/ui_theme.gd")
 const ZOO_SCENE := preload("res://game/scenes/zoo/zoo.tscn")
 
 
@@ -9,54 +10,44 @@ func _ready() -> void:
 
 
 func _build() -> void:
-	if has_node("Background"):
+	if has_node("MainMenuRoot"):
 		return
 
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	mouse_filter = Control.MOUSE_FILTER_STOP
 
-	var background := ColorRect.new()
-	background.name = "Background"
-	background.color = Color(0.054902, 0.0745098, 0.109804, 1.0)
-	background.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	add_child(background)
+	var title = UI.Builder.label("Iron Bastion").named("Title").center_text()
+	title.font_size(36).font_color(UI_THEME.FOREGROUND)
 
-	var center := CenterContainer.new()
-	center.name = "CenterContainer"
-	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	add_child(center)
+	var zoo_button = UI.Builder.button_default(
+		"zoo",
+		GameUiTheme.ButtonSize.DEFAULT,
+		_on_zoo_pressed
+	).named("ZooButton")
+	zoo_button.min_width(220)
 
-	var menu_column := VBoxContainer.new()
-	menu_column.name = "MenuColumn"
-	menu_column.add_theme_constant_override("separation", 16)
-	center.add_child(menu_column)
+	var quit_button = UI.Builder.button_default(
+		"quit",
+		GameUiTheme.ButtonSize.DEFAULT,
+		_on_quit_pressed
+	).named("QuitButton")
+	quit_button.min_width(220)
 
-	var title := Label.new()
-	title.name = "Title"
-	title.text = "Iron Bastion"
-	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	title.add_theme_font_size_override("font_size", 36)
-	menu_column.add_child(title)
+	var menu_column = UI.Builder.column(16).named("MenuColumn")
+	menu_column.children([title, zoo_button, quit_button])
 
-	var zoo_button := _create_menu_button("ZooButton", "zoo")
-	zoo_button.pressed.connect(_on_zoo_pressed)
-	menu_column.add_child(zoo_button)
+	var menu_card = UI.Builder.card(28).named("MenuCard")
+	menu_card.child(menu_column)
 
-	var quit_button := _create_menu_button("QuitButton", "quit", GameUiTheme.ButtonVariant.OUTLINE)
-	quit_button.pressed.connect(_on_quit_pressed)
-	menu_column.add_child(quit_button)
+	var center_container = UI.Builder.center().named("CenterContainer")
+	center_container.child(menu_card)
 
-
-func _create_menu_button(
-	button_name: String,
-	label_text: String,
-	variant: GameUiTheme.ButtonVariant = GameUiTheme.ButtonVariant.DEFAULT
-) -> Button:
-	var button := UI.Components.create_button(variant) as Button
-	button.name = button_name
-	button.text = label_text
-	button.custom_minimum_size = Vector2(220, button.custom_minimum_size.y)
-	return button
+	var main_menu_root = UI.Builder.control().named("MainMenuRoot").full_rect()
+	main_menu_root.mouse_filter_mode(Control.MOUSE_FILTER_STOP)
+	main_menu_root.children([
+		UI.Builder.background(UI_THEME.BACKGROUND),
+		center_container,
+	])
+	main_menu_root.mount(self)
 
 
 func _on_zoo_pressed() -> void:

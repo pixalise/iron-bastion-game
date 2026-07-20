@@ -8,7 +8,7 @@ const WIDTH := 280.0
 
 func _init() -> void:
 	custom_minimum_size = Vector2(WIDTH, 0.0)
-	add_theme_stylebox_override("panel", UI_THEME.panel_style(UI_THEME.POPOVER, UI_THEME.BORDER))
+	add_theme_stylebox_override("panel", UI_THEME.card_panel_style())
 
 
 func set_tooltip_content(tooltip_data: Variant) -> void:
@@ -35,7 +35,7 @@ func set_tooltip_content(tooltip_data: Variant) -> void:
 		var description_label: LocalizedRichText = _localized_label(
 			description_text, _content_width(), UI_THEME.TEXT_XS
 		)
-		description_label.add_theme_color_override("default_color", UI_THEME.POPOVER_FOREGROUND)
+		description_label.add_theme_color_override("default_color", UI_THEME.CARD_FOREGROUND)
 		content_box.add_child(description_label)
 
 
@@ -58,7 +58,7 @@ func _title_row(icon_path: String, title_text: ChiselLocalization.LocalizedText)
 		var title_label: LocalizedRichText = _localized_label(
 			title_text, title_width, UI_THEME.TEXT_SM
 		)
-		title_label.add_theme_color_override("default_color", UI_THEME.FOREGROUND)
+		title_label.add_theme_color_override("default_color", UI_THEME.CARD_FOREGROUND)
 		row.add_child(title_label)
 
 	return row
