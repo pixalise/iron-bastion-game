@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Iron Bastion"
 run/main_scene="uid://be7chddfpc36u"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]

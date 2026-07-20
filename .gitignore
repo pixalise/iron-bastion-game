@@ -1,3 +1,11 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Native GDExtension build outputs
+graphite/.sconsign.dblite
+graphite/.sconf_temp/
+graphite/cmake-build-*/
+graphite/build/
+addons/graphite/bin/*
+!addons/graphite/bin/.gdignore
