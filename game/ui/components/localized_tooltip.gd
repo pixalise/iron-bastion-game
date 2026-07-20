@@ -11,7 +11,7 @@ func _init() -> void:
 	add_theme_stylebox_override("panel", UI_THEME.panel_style(UI_THEME.POPOVER, UI_THEME.BORDER))
 
 
-func set_tooltip_content(content: Variant) -> void:
+func set_tooltip_content(tooltip_data: Variant) -> void:
 	_clear_children()
 
 	var margin := MarginContainer.new()
@@ -22,15 +22,15 @@ func set_tooltip_content(content: Variant) -> void:
 	content_box.add_theme_constant_override("separation", UI_THEME.SPACE_1)
 	margin.add_child(content_box)
 
-	if content == null:
+	if tooltip_data == null:
 		return
 
-	var icon_path := String(content.icon_path)
-	var title_text: ChiselLocalization.LocalizedText = content.title
+	var icon_path := String(tooltip_data.icon_path)
+	var title_text: ChiselLocalization.LocalizedText = tooltip_data.title
 	if not icon_path.is_empty() or not title_text.plain_text.is_empty():
 		content_box.add_child(_title_row(icon_path, title_text))
 
-	var description_text: ChiselLocalization.LocalizedText = content.description
+	var description_text: ChiselLocalization.LocalizedText = tooltip_data.description
 	if not description_text.plain_text.is_empty():
 		var description_label: LocalizedRichText = _localized_label(
 			description_text, _content_width(), UI_THEME.TEXT_XS

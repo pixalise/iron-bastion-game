@@ -7,6 +7,7 @@ const CHISEL_INPUT_EXPORT_PATH := "res://game_data/input.gd"
 
 func _ready() -> void:
 	_sync_chisel_input_map()
+	await get_tree().process_frame
 	_load_default_scene()
 
 
@@ -20,4 +21,10 @@ func _sync_chisel_input_map() -> bool:
 
 
 func _load_default_scene() -> void:
+	if load_in_scene == null:
+		push_warning("Bootstrap has no load_in_scene assigned.")
+		return
+
 	var result := get_tree().change_scene_to_packed(load_in_scene)
+	if result != OK:
+		push_error("Failed to change to bootstrap load_in_scene: %s" % error_string(result))

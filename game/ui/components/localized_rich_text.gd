@@ -44,12 +44,12 @@ func _make_custom_tooltip(for_text: String) -> Object:
 	if for_text.is_empty() or not _tooltip_content_by_slug.has(for_text):
 		return _empty_tooltip()
 
-	var content: Variant = _tooltip_content_by_slug.get(for_text)
-	if not _has_tooltip_content(content):
+	var tooltip_data: Variant = _tooltip_content_by_slug.get(for_text)
+	if not _has_tooltip_content(tooltip_data):
 		return _empty_tooltip()
 
 	var tooltip := LOCALIZED_TOOLTIP.new()
-	tooltip.set_tooltip_content(content)
+	tooltip.set_tooltip_content(tooltip_data)
 	return tooltip
 
 
