@@ -2,6 +2,9 @@
 
 Native C++ GDExtension simulation layer for Iron Bastion.
 
+See [PHASE_PLAN.md](PHASE_PLAN.md) for the Phase 1 zoo POC and Phase 2
+data-driven final-form plan.
+
 ## Build
 
 Install the Godot C++ bindings into `graphite/godot-cpp`.
