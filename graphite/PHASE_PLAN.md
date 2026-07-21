@@ -59,15 +59,15 @@ handle = generation << 32 | index
 This lets Graphite reject stale handles after an agent dies and its slot is
 reused.
 
-### Navigation Cells
+### Simulation Cells
 
-The first navigation primitive is a compact cell byte:
+The first grid primitive is a compact simulation cell byte:
 
 ```cpp
-using NavCell = std::uint8_t;
+using SimulationCell = std::uint8_t;
 
-constexpr NavCell TerrainMask = 0x0f;    // bits 0..3
-constexpr NavCell BlockedMask = 1u << 4; // bit 4
+constexpr SimulationCell TerrainMask = 0x0f;    // bits 0..3
+constexpr SimulationCell BlockedMask = 1u << 4; // bit 4
 ```
 
 Suggested terrain values:
@@ -116,9 +116,9 @@ graphite/
       graphite_world_gd.cpp
 
     core/
-      nav_cell.hpp
-      navigation_grid.hpp
-      navigation_grid.cpp
+      simulation_cell.hpp
+      simulation_grid.hpp
+      simulation_grid.cpp
       agent_storage.hpp
       agent_storage.cpp
       sim_world.hpp
@@ -241,8 +241,8 @@ toward this small zoo API:
 ```gdscript
 var world := GraphiteWorld.new()
 
-world.configure_navigation_grid(width, height, cell_size)
-world.set_navigation_cells(cells)
+world.configure_simulation_grid(width, height, cell_size)
+world.set_simulation_cells(cells)
 
 var squad := world.create_squad(team_id)
 var rifleman := world.spawn_agent(GraphiteUnit.RIFLE_MAN, team_id, Vector2(10, 10), squad)

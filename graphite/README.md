@@ -57,7 +57,7 @@ Once built and loaded by Godot:
 
 ```gdscript
 var world := GraphiteWorld.new()
-world.configure_navigation_grid(2, 2, 1.0)
-world.set_navigation_cells(PackedByteArray([0, 1, 2, 16]))
-assert(world.get_navigation_cell_count() == 4)
+world.configure_simulation_grid(2, 2, 1.0)
+world.set_simulation_cells(PackedByteArray([0, 1, 2, 16]))
+assert(world.get_simulation_cell_count() == 4)
 ```
