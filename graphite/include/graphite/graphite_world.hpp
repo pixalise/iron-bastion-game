@@ -15,7 +15,8 @@ protected:
 	static void _bind_methods();
 
 public:
-	void configure_navigation_grid(int width, int height, double cell_size);
+	// The world is normally in 3d, graphite is in 2d
+	void configure_navigation_grid(int width, int height, double cell_size, float origin_x = 0.0, float origin_z = 0.0);
 	void set_navigation_cells(const PackedByteArray &cells);
 	void clear_navigation_grid();
 

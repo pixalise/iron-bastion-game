@@ -44,7 +44,7 @@ void GraphiteWorld::_bind_methods() {
 	);
 }
 
-void GraphiteWorld::configure_navigation_grid(int width, int height, double cell_size) {
+void GraphiteWorld::configure_navigation_grid(int width, int height, double cell_size, float origin_x, float origin_z) {
 	ERR_FAIL_COND_MSG(width <= 0, "Graphite navigation grid width must be greater than zero.");
 	ERR_FAIL_COND_MSG(height <= 0, "Graphite navigation grid height must be greater than zero.");
 	ERR_FAIL_COND_MSG(cell_size <= 0.0, "Graphite navigation grid cell size must be greater than zero.");
@@ -52,6 +52,8 @@ void GraphiteWorld::configure_navigation_grid(int width, int height, double cell
 	navigation_grid_.width = static_cast<std::uint32_t>(width);
 	navigation_grid_.height = static_cast<std::uint32_t>(height);
 	navigation_grid_.cell_size = static_cast<float>(cell_size);
+	navigation_grid_.origin_x = origin_x;
+	navigation_grid_.origin_z = origin_z;
 	navigation_cells_.clear();
 }
 

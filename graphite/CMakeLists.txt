@@ -35,7 +35,6 @@ add_library(graphite SHARED
 	include/graphite/graphite_world.hpp
 	src/gdextension/graphite_world_gd.cpp
 	src/gdextension/register_types.cpp
-	src/core/nav_cell.hpp
 )
 
 target_include_directories(graphite PRIVATE

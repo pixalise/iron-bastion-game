@@ -1,6 +1,9 @@
 #ifndef GRAPHITE_TYPES_HPP
 #define GRAPHITE_TYPES_HPP
 
+#define NAV_CELL_TERRAIN_MASK 0x0fu
+#define NAV_CELL_BLOCKED_MASK (1u << 4)
+
 #include <cstdint>
 #include <limits>
 
@@ -17,9 +20,6 @@ constexpr SquadId InvalidSquadId = std::numeric_limits<SquadId>::max();
 constexpr HordeId InvalidHordeId = std::numeric_limits<HordeId>::max();
 constexpr TeamId InvalidTeamId = std::numeric_limits<TeamId>::max();
 
-constexpr NavCell NavCellTerrainMask = 0x0f;
-constexpr NavCell NavCellBlockedMask = 1u << 4;
-
 enum class TerrainType : std::uint8_t {
 	Normal = 0,
 	Mud = 1,
@@ -28,12 +28,32 @@ enum class TerrainType : std::uint8_t {
 	Unknown = 15,
 };
 
+inline TerrainType terrain_type(const NavCell cell) {
+	return static_cast<TerrainType>(cell & NAV_CELL_TERRAIN_MASK);
+}
+
+inline bool is_blocked(const NavCell cell) {
+	return (cell & NAV_CELL_BLOCKED_MASK) != 0;
+}
+
+inline NavCell make_nav_cell(TerrainType terrain, const bool blocked) {
+	NavCell cell = 0;
+	// Masking via NavCellTerrainMask guarantees only the lower 4 bits
+	cell |= static_cast<NavCell>(terrain) & NAV_CELL_TERRAIN_MASK;
+	if (blocked) {
+		return cell | NAV_CELL_BLOCKED_MASK;
+	}
+	return cell;
+}
+
 struct GridSetup {
 	std::uint32_t width = 0;
 	std::uint32_t height = 0;
 	float cell_size = 1.0f;
+	float origin_x = 0.0f;
+	float origin_z = 0.0f;
 
-	std::uint32_t cell_count() const {
+	[[nodiscard]] std::uint32_t cell_count() const {
 		return width * height;
 	}
 };
