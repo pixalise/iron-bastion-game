@@ -31,8 +31,7 @@ class GraphiteWorld : public RefCounted {
 	[[nodiscard]] PackedByteArray get_navigation_cells() const;
 
   private:
-	graphite::GridSetup m_navigation_grid_;
-	std::vector<graphite::NavCell> m_navigation_cells;
+	graphite::NavigationGrid m_navigation_grid;
 };
 
 } // namespace godot

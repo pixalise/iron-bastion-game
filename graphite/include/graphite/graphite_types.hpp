@@ -46,14 +46,16 @@ inline NavCell make_nav_cell(TerrainType terrain, const bool blocked) {
 	return cell;
 }
 
-struct GridSetup {
+struct NavigationGrid {
 	std::uint32_t width = 0;
 	std::uint32_t height = 0;
 	float cell_size = 1.0f;
 	float origin_x = 0.0f;
 	float origin_z = 0.0f;
+	std::vector<NavCell> cells;
 
 	[[nodiscard]] std::uint32_t cell_count() const { return width * height; }
+	[[nodiscard]] bool is_configured() const { return width > 0 && height > 0 && cell_size > 0.0f; }
 };
 
 } // namespace graphite
