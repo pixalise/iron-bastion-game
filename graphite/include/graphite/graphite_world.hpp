@@ -1,6 +1,8 @@
 #ifndef GRAPHITE_WORLD_HPP
 #define GRAPHITE_WORLD_HPP
 
+#include <vector>
+
 #include "graphite/graphite_types.hpp"
 
 #include <godot_cpp/classes/ref_counted.hpp>
@@ -9,7 +11,7 @@
 namespace godot {
 
 class GraphiteWorld : public RefCounted {
-	GDCLASS(GraphiteWorld, RefCounted)
+	GDCLASS(GraphiteWorld, RefCounted) // NOLINT(*-default-arguments)
 
 protected:
 	static void _bind_methods();
@@ -20,16 +22,16 @@ public:
 	void set_navigation_cells(const PackedByteArray &cells);
 	void clear_navigation_grid();
 
-	bool is_navigation_grid_configured() const;
-	int get_navigation_width() const;
-	int get_navigation_height() const;
-	double get_navigation_cell_size() const;
-	int get_navigation_cell_count() const;
-	PackedByteArray get_navigation_cells() const;
+	[[nodiscard]] bool is_navigation_grid_configured() const;
+	[[nodiscard]] int get_navigation_width() const;
+	[[nodiscard]] int get_navigation_height() const;
+	[[nodiscard]] double get_navigation_cell_size() const;
+	[[nodiscard]] int get_navigation_cell_count() const;
+	[[nodiscard]] PackedByteArray get_navigation_cells() const;
 
 private:
-	graphite::GridSetup navigation_grid_;
-	PackedByteArray navigation_cells_;
+	graphite::GridSetup m_navigation_grid_;
+	std::vector<graphite::NavCell> m_navigation_cells;
 };
 
 } // namespace godot
