@@ -2,6 +2,7 @@
 class_name ChiselTranslations
 extends RefCounted
 
+
 class UnitRifleManDescriptionParameters:
 	var physical_damage: float = -1.0
 
@@ -12,25 +13,158 @@ class UnitRifleManDescriptionParameters:
 	func to_arguments() -> Dictionary:
 		return {"physical_damage": physical_damage}
 
+
+class ItemTestItemTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_TEST_ITEM_NAME, {})
+
+
+class ItemTeddyBearTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_TEDDY_BEAR_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_TEDDY_BEAR_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_TEDDY_BEAR_STORY, {})
+
+
+class ItemUnopenedLiquorTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_UNOPENED_LIQUOR_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_UNOPENED_LIQUOR_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_UNOPENED_LIQUOR_STORY, {})
+
+
+class ItemBowOldFriendTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_BOW_OLD_FRIEND_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_BOW_OLD_FRIEND_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_BOW_OLD_FRIEND_STORY, {})
+
+
+class ItemReinforcedBowTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_REINFORCED_BOW_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_REINFORCED_BOW_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_REINFORCED_BOW_STORY, {})
+
+
+class ItemFireArrowsTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_FIRE_ARROWS_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_FIRE_ARROWS_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_FIRE_ARROWS_STORY, {})
+
+
+class ItemPiercingArrowsTranslations:
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_PIERCING_ARROWS_DESCRIPTION, {})
+
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_PIERCING_ARROWS_NAME, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_PIERCING_ARROWS_STORY, {})
+
+
+class ItemHuntingArrowsTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_HUNTING_ARROWS_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_HUNTING_ARROWS_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_HUNTING_ARROWS_STORY, {})
+
+
+class ItemWaxStringTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_WAX_STRING_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_WAX_STRING_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_WAX_STRING_STORY, {})
+
+
+class ItemOldRevolverTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_OLD_REVOLVER_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_OLD_REVOLVER_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_OLD_REVOLVER_STORY, {})
+
+
+class ItemTranslations:
+	var old_revolver := ItemOldRevolverTranslations.new()
+	var wax_string := ItemWaxStringTranslations.new()
+	var hunting_arrows := ItemHuntingArrowsTranslations.new()
+	var piercing_arrows := ItemPiercingArrowsTranslations.new()
+	var fire_arrows := ItemFireArrowsTranslations.new()
+	var reinforced_bow := ItemReinforcedBowTranslations.new()
+	var bow_old_friend := ItemBowOldFriendTranslations.new()
+	var unopened_liquor := ItemUnopenedLiquorTranslations.new()
+	var teddy_bear := ItemTeddyBearTranslations.new()
+	var test_item := ItemTestItemTranslations.new()
+
+
 class TooltipPhysicalDamageTypeTranslations:
 	func title() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_PHYSICAL_DAMAGE_TYPE_TITLE, {})
+		return ChiselLocalization.format(
+			ChiselLocalization.Id.TOOLTIP_PHYSICAL_DAMAGE_TYPE_TITLE, {}
+		)
+
 	func description() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_PHYSICAL_DAMAGE_TYPE_DESCRIPTION, {})
+		return ChiselLocalization.format(
+			ChiselLocalization.Id.TOOLTIP_PHYSICAL_DAMAGE_TYPE_DESCRIPTION, {}
+		)
+
 
 class TooltipTranslations:
 	var physical_damage_type := TooltipPhysicalDamageTypeTranslations.new()
 
+
 class UnitRifleManTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_RIFLE_MAN_NAME, {})
-	func description(parameters: UnitRifleManDescriptionParameters = null) -> ChiselLocalization.LocalizedText:
+
+	func description(
+		parameters: UnitRifleManDescriptionParameters = null
+	) -> ChiselLocalization.LocalizedText:
 		if parameters == null:
 			parameters = UnitRifleManDescriptionParameters.new()
-		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_RIFLE_MAN_DESCRIPTION, parameters.to_arguments())
+		return ChiselLocalization.format(
+			ChiselLocalization.Id.UNIT_RIFLE_MAN_DESCRIPTION, parameters.to_arguments()
+		)
+
 
 class UnitTranslations:
 	var rifle_man := UnitRifleManTranslations.new()
 
+
 static var unit := UnitTranslations.new()
 static var tooltip := TooltipTranslations.new()
+static var item := ItemTranslations.new()

@@ -3,8 +3,8 @@
   "tables": [
     {
       "id": "LNE2qvQb0jxtgiLDUDsq4",
-      "lastChangeAt": "2026-07-19T21:13:50.977Z",
-      "version": 5,
+      "lastChangeAt": "2026-07-21T13:37:59.442Z",
+      "version": 22,
       "name": "Items",
       "description": "Items that can be collected and put into the storage carts during an expedition",
       "columns": [
@@ -26,14 +26,248 @@
         },
         {
           "id": "O7EQNdvuQCDwHyyE0XOcb",
+          "type": "translationRef",
+          "name": "story",
+          "defaultValue": 0,
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "t9PZkgQ0J2zeLXfL6CWL6",
+          "type": "assetRef",
+          "name": "portrait",
+          "defaultValue": "",
+          "assetCategory": "UI_ICON",
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "EBmVYmt9qDHAnr97lRGk_",
           "type": "integer",
           "name": "price",
           "defaultValue": 0,
           "required": true,
           "unique": false
+        },
+        {
+          "id": "Ir7PPFSYVv76_zcnn6Rph",
+          "type": "text",
+          "name": "modifiers",
+          "defaultValue": "",
+          "maxChars": 250,
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "aFQnJq-GTYI42BdLfWUxz",
+          "type": "enum",
+          "name": "rarity",
+          "defaultValue": "COMMON",
+          "possibleValues": [
+            "COMMON",
+            "UNCOMMON",
+            "RARE",
+            "EPIC",
+            "LEGENDARY"
+          ],
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "3rQ-aJImsSY5l_oipXVO1",
+          "type": "boolean",
+          "name": "allows_multiple",
+          "defaultValue": true,
+          "required": true,
+          "unique": false
         }
       ],
-      "rows": [],
+      "rows": [
+        {
+          "id": "uiO2BxXjPKxG06vjvrgwI",
+          "slug": "OLD_REVOLVER",
+          "values": [
+            {
+              "columnId": "ZSw0d-8zTyLo6RR_ofp0L",
+              "type": "translationRef",
+              "value": "ITEM.OLD_REVOLVER.NAME"
+            },
+            {
+              "columnId": "8TqMQuN-TynstVN9wiK7o",
+              "type": "translationRef",
+              "value": "ITEM.OLD_REVOLVER.DESCRIPTION"
+            },
+            {
+              "columnId": "O7EQNdvuQCDwHyyE0XOcb",
+              "type": "translationRef",
+              "value": "ITEM.OLD_REVOLVER.STORY"
+            },
+            {
+              "columnId": "t9PZkgQ0J2zeLXfL6CWL6",
+              "type": "assetRef",
+              "value": "PHYSICAL_DAMAGE"
+            },
+            {
+              "columnId": "EBmVYmt9qDHAnr97lRGk_",
+              "type": "integer",
+              "value": 0
+            },
+            {
+              "columnId": "Ir7PPFSYVv76_zcnn6Rph",
+              "type": "text",
+              "value": "Increases damage flat by 15%"
+            },
+            {
+              "columnId": "aFQnJq-GTYI42BdLfWUxz",
+              "type": "enum",
+              "value": "COMMON"
+            },
+            {
+              "columnId": "3rQ-aJImsSY5l_oipXVO1",
+              "type": "boolean",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "T4ivAQbOEkLZpzkHd6WYT",
+          "slug": "WAX_STRING",
+          "values": [
+            {
+              "columnId": "ZSw0d-8zTyLo6RR_ofp0L",
+              "type": "translationRef",
+              "value": "ITEM.WAX_STRING.NAME"
+            },
+            {
+              "columnId": "8TqMQuN-TynstVN9wiK7o",
+              "type": "translationRef",
+              "value": "ITEM.WAX_STRING.DESCRIPTION"
+            },
+            {
+              "columnId": "O7EQNdvuQCDwHyyE0XOcb",
+              "type": "translationRef",
+              "value": "ITEM.WAX_STRING.STORY"
+            },
+            {
+              "columnId": "t9PZkgQ0J2zeLXfL6CWL6",
+              "type": "assetRef",
+              "value": "PHYSICAL_DAMAGE"
+            },
+            {
+              "columnId": "EBmVYmt9qDHAnr97lRGk_",
+              "type": "integer",
+              "value": 20
+            },
+            {
+              "columnId": "Ir7PPFSYVv76_zcnn6Rph",
+              "type": "text",
+              "value": "\tIncreases damage flat for string weapon by 15%"
+            },
+            {
+              "columnId": "aFQnJq-GTYI42BdLfWUxz",
+              "type": "enum",
+              "value": "COMMON"
+            },
+            {
+              "columnId": "3rQ-aJImsSY5l_oipXVO1",
+              "type": "boolean",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "WKD79MnuYv66hAkEkTisr",
+          "slug": "HUNTING_ARROWS",
+          "values": [
+            {
+              "columnId": "ZSw0d-8zTyLo6RR_ofp0L",
+              "type": "translationRef",
+              "value": "ITEM.HUNTING_ARROWS.NAME"
+            },
+            {
+              "columnId": "8TqMQuN-TynstVN9wiK7o",
+              "type": "translationRef",
+              "value": "ITEM.HUNTING_ARROWS.DESCRIPTION"
+            },
+            {
+              "columnId": "O7EQNdvuQCDwHyyE0XOcb",
+              "type": "translationRef",
+              "value": "ITEM.HUNTING_ARROWS.STORY"
+            },
+            {
+              "columnId": "t9PZkgQ0J2zeLXfL6CWL6",
+              "type": "assetRef",
+              "value": "HUNTING_ARROWS"
+            },
+            {
+              "columnId": "EBmVYmt9qDHAnr97lRGk_",
+              "type": "integer",
+              "value": 30
+            },
+            {
+              "columnId": "Ir7PPFSYVv76_zcnn6Rph",
+              "type": "text",
+              "value": "Increases damage flat for string weapon by 30% but reduces armor penetration for - 10%"
+            },
+            {
+              "columnId": "aFQnJq-GTYI42BdLfWUxz",
+              "type": "enum",
+              "value": "COMMON"
+            },
+            {
+              "columnId": "3rQ-aJImsSY5l_oipXVO1",
+              "type": "boolean",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "93b0goRTpnd4cwL5n2jUG",
+          "slug": "BOW_OLD_FRIEND",
+          "values": [
+            {
+              "columnId": "ZSw0d-8zTyLo6RR_ofp0L",
+              "type": "translationRef",
+              "value": "ITEM.BOW_OLD_FRIEND.NAME"
+            },
+            {
+              "columnId": "8TqMQuN-TynstVN9wiK7o",
+              "type": "translationRef",
+              "value": "ITEM.BOW_OLD_FRIEND.DESCRIPTION"
+            },
+            {
+              "columnId": "O7EQNdvuQCDwHyyE0XOcb",
+              "type": "translationRef",
+              "value": "ITEM.BOW_OLD_FRIEND.STORY"
+            },
+            {
+              "columnId": "t9PZkgQ0J2zeLXfL6CWL6",
+              "type": "assetRef",
+              "value": "PHYSICAL_DAMAGE"
+            },
+            {
+              "columnId": "EBmVYmt9qDHAnr97lRGk_",
+              "type": "integer",
+              "value": 800
+            },
+            {
+              "columnId": "Ir7PPFSYVv76_zcnn6Rph",
+              "type": "text",
+              "value": "Increases damage flat for string weapons by 30%, armor penetration by 15%, and fire rate by 10%."
+            },
+            {
+              "columnId": "aFQnJq-GTYI42BdLfWUxz",
+              "type": "enum",
+              "value": "COMMON"
+            },
+            {
+              "columnId": "3rQ-aJImsSY5l_oipXVO1",
+              "type": "boolean",
+              "value": false
+            }
+          ]
+        }
+      ],
       "kind": "user",
       "isSystemTable": false
     }

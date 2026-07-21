@@ -32,6 +32,209 @@
         "en": "Damage counting from ballistic, blunt force and so on..."
       },
       "placeholders": []
+    },
+    {
+      "path": "ITEM.OLD_REVOLVER.NAME",
+      "values": {
+        "en": "Old Revolver"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.OLD_REVOLVER.DESCRIPTION",
+      "values": {
+        "en": "<quote>A weapon from the olden era</quote>\nAnd old revolver with a leather handle."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.OLD_REVOLVER.STORY",
+      "values": {
+        "en": ""
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.WAX_STRING.NAME",
+      "values": {
+        "en": "Waxed string "
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.WAX_STRING.DESCRIPTION",
+      "values": {
+        "en": "<quote>Old ways. New prey</quote>\nA simple hemp bowstring treated with beeswax."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.HUNTING_ARROWS.NAME",
+      "values": {
+        "en": "Hunting Arrows"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.HUNTING_ARROWS.DESCRIPTION",
+      "values": {
+        "en": "<quote>Old ways. New prey</quote>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.WAX_STRING.STORY",
+      "values": {
+        "en": ""
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.HUNTING_ARROWS.STORY",
+      "values": {
+        "en": ""
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.PIERCING_ARROWS.DESCRIPTION",
+      "values": {
+        "en": "<quote>Everything has a weakness.</quote>\nNarrow steel-tipped arrows built to punch through armor."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.PIERCING_ARROWS.NAME",
+      "values": {
+        "en": "Piercing Arrows"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.PIERCING_ARROWS.STORY",
+      "values": {
+        "en": ""
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.FIRE_ARROWS.NAME",
+      "values": {
+        "en": "Fire Arrows"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.FIRE_ARROWS.DESCRIPTION",
+      "values": {
+        "en": "<quote>The dead return. Ash does not.</quote>\nArrows wrapped with alcohol-soaked cloth."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.FIRE_ARROWS.STORY",
+      "values": {
+        "en": ""
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.REINFORCED_BOW.NAME",
+      "values": {
+        "en": "Reinforced Bow"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.REINFORCED_BOW.DESCRIPTION",
+      "values": {
+        "en": "<quote>It only needs to outlast us.</quote>\nReinforced with mixed materials to hold greater tension without breaking."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.REINFORCED_BOW.STORY",
+      "values": {
+        "en": ""
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.BOW_OLD_FRIEND.NAME",
+      "values": {
+        "en": "Old Friend"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.BOW_OLD_FRIEND.DESCRIPTION",
+      "values": {
+        "en": "<quote>Come on, old friend. One more hunt.</quote>\nA battle-worn bow that endures impossible tension."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.BOW_OLD_FRIEND.STORY",
+      "values": {
+        "en": "ITEM.BOW_OLD_FRIEND.STORY\nWhen ammunition began to disappear, survivors turned to weapons from older eras. One of them was Old Friend, a bow never meant to survive more than a few months of constant use. It outlived that purpose.\nIts limbs are patched, its frame is cracked, and brass plates hold together places that should have failed years ago. Decorative horns were added as marks of the hunts it survived. Its string has been replaced countless times, each replacement recorded by a small carving near the grip.\nThere is only one Old Friend in the squad, but many still remember its name. Those who fight beside it do so with renewed vigor, driven by the legend carried into battle. \nBring it home and place it in the hands of someone who once knew it, and an old legend may choose to fight again."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.UNOPENED_LIQUOR.NAME",
+      "values": {
+        "en": "Unopened Liquor"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.UNOPENED_LIQUOR.DESCRIPTION",
+      "values": {
+        "en": "<quote>My father poured this on my first winter home.</quote>\nSealed bottles of strong liquor."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.UNOPENED_LIQUOR.STORY",
+      "values": {
+        "en": ""
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.TEDDY_BEAR.NAME",
+      "values": {
+        "en": "Teddy Bear"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.TEDDY_BEAR.DESCRIPTION",
+      "values": {
+        "en": "<quote>I wish I had one as a child.</quote>\nA faded stuffed bear, worn soft from years of being held."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.TEDDY_BEAR.STORY",
+      "values": {
+        "en": "Found beneath the remains of a child’s bed, the bear was strangely untouched by the collapse around it. Its fur is faded, one eye has been sewn back on, and its little vest carries the dust of a home that no longer exists.\n\nSome survivors keep it for the child who lost it. Others hold it for the childhood they never had."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.TEST_ITEM.NAME",
+      "values": {
+        "en": "Test Item 2"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.MAKESHIFT_ARMOR.NAME",
+      "values": {
+        "en": "Makeshift Armor"
+      },
+      "placeholders": []
     }
   ],
   "styles": [

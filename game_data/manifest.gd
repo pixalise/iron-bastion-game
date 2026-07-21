@@ -2,61 +2,39 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-20T14:06:52.207Z"
-const PROJECT_ID := "IlSn4ib8JKnozbdvTOqmJ"
+const GENERATED_AT := "2026-07-21T13:44:49.815Z"
+const PROJECT_ID := "zYZtnNUg8uht6fA9MFIkW"
 const PROJECT_NAME := "Iron Bastion"
-const ASSETS := {
-	"class_name": "ChiselAssets",
-	"path": "res://game_data/assets.gd",
-	"count": 4
-}
+const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 5}
 const LOCALIZATION := {
 	"class_name": "ChiselLocalization",
 	"path": "res://game_data/localization.gd",
 	"typed_class_name": "ChiselTranslations",
 	"typed_path": "res://game_data/translations.gd",
 	"csv_path": "res://game_data/localization/translations.csv",
-	"translations": 4,
+	"translations": 32,
 	"locales": 1
 }
-const FILES := [{
-	"bytes": 1464,
-	"hash": "66bb4752",
-	"path": "res://game_data/assets.gd"
-}, {
-	"bytes": 11515,
-	"hash": "4f99bf3e",
-	"path": "res://game_data/localization.gd"
-}, {
-	"bytes": 1469,
-	"hash": "b0cda342",
-	"path": "res://game_data/translations.gd"
-}, {
-	"bytes": 395,
-	"hash": "05f71931",
-	"path": "res://game_data/localization/translations.csv"
-}, {
-	"bytes": 3429,
-	"hash": "b37e8357",
-	"path": "res://game_data/input.gd"
-}, {
-	"bytes": 265,
-	"hash": "2df9d022",
-	"path": "res://game_data/tables/items.gd"
-}, {
-	"bytes": 848,
-	"hash": "0c19d18a",
-	"path": "res://game_data/tables/input_bindings.gd"
-}]
+const FILES := [
+	{"bytes": 1701, "hash": "ff395be8", "path": "res://game_data/assets.gd"},
+	{"bytes": 15999, "hash": "887c8cce", "path": "res://game_data/localization.gd"},
+	{"bytes": 6398, "hash": "ea895eaa", "path": "res://game_data/translations.gd"},
+	{"bytes": 3394, "hash": "9ac70a27", "path": "res://game_data/localization/translations.csv"},
+	{"bytes": 3429, "hash": "b37e8357", "path": "res://game_data/input.gd"},
+	{"bytes": 1629, "hash": "2d649a8e", "path": "res://game_data/tables/items.gd"},
+	{"bytes": 848, "hash": "0c19d18a", "path": "res://game_data/tables/input_bindings.gd"}
+]
 const TABLES := {
-	"LNE2qvQb0jxtgiLDUDsq4": {
+	"LNE2qvQb0jxtgiLDUDsq4":
+	{
 		"name": "Items",
 		"class_name": "ChiselItems",
 		"path": "res://game_data/tables/items.gd",
-		"rows": 0,
-		"columns": 3
+		"rows": 4,
+		"columns": 8
 	},
-	"input_bindings": {
+	"input_bindings":
+	{
 		"name": "Input Bindings",
 		"class_name": "ChiselInputBindings",
 		"path": "res://game_data/tables/input_bindings.gd",

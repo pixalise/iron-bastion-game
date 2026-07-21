@@ -3,3 +3,46 @@
 "UNIT.RIFLE_MAN.DESCRIPTION","The unit does <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE_TYPE> <icon:PHYSICAL_DAMAGE/> {float:physical_damage} </tooltip></style> points of damage per shot."
 "TOOLTIP.PHYSICAL_DAMAGE_TYPE.TITLE","Physical damage"
 "TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION","Damage counting from ballistic, blunt force and so on..."
+"ITEM.OLD_REVOLVER.NAME","Old Revolver"
+"ITEM.OLD_REVOLVER.DESCRIPTION","<quote>A weapon from the olden era</quote>
+And old revolver with a leather handle."
+"ITEM.OLD_REVOLVER.STORY",""
+"ITEM.WAX_STRING.NAME","Waxed string "
+"ITEM.WAX_STRING.DESCRIPTION","<quote>Old ways. New prey</quote>
+A simple hemp bowstring treated with beeswax."
+"ITEM.HUNTING_ARROWS.NAME","Hunting Arrows"
+"ITEM.HUNTING_ARROWS.DESCRIPTION","<quote>Old ways. New prey</quote>
+Arrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
+"ITEM.WAX_STRING.STORY",""
+"ITEM.HUNTING_ARROWS.STORY",""
+"ITEM.PIERCING_ARROWS.DESCRIPTION","<quote>Everything has a weakness.</quote>
+Narrow steel-tipped arrows built to punch through armor."
+"ITEM.PIERCING_ARROWS.NAME","Piercing Arrows"
+"ITEM.PIERCING_ARROWS.STORY",""
+"ITEM.FIRE_ARROWS.NAME","Fire Arrows"
+"ITEM.FIRE_ARROWS.DESCRIPTION","<quote>The dead return. Ash does not.</quote>
+Arrows wrapped with alcohol-soaked cloth."
+"ITEM.FIRE_ARROWS.STORY",""
+"ITEM.REINFORCED_BOW.NAME","Reinforced Bow"
+"ITEM.REINFORCED_BOW.DESCRIPTION","<quote>It only needs to outlast us.</quote>
+Reinforced with mixed materials to hold greater tension without breaking."
+"ITEM.REINFORCED_BOW.STORY",""
+"ITEM.BOW_OLD_FRIEND.NAME","Old Friend"
+"ITEM.BOW_OLD_FRIEND.DESCRIPTION","<quote>Come on, old friend. One more hunt.</quote>
+A battle-worn bow that endures impossible tension."
+"ITEM.BOW_OLD_FRIEND.STORY","ITEM.BOW_OLD_FRIEND.STORY
+When ammunition began to disappear, survivors turned to weapons from older eras. One of them was Old Friend, a bow never meant to survive more than a few months of constant use. It outlived that purpose.
+Its limbs are patched, its frame is cracked, and brass plates hold together places that should have failed years ago. Decorative horns were added as marks of the hunts it survived. Its string has been replaced countless times, each replacement recorded by a small carving near the grip.
+There is only one Old Friend in the squad, but many still remember its name. Those who fight beside it do so with renewed vigor, driven by the legend carried into battle. 
+Bring it home and place it in the hands of someone who once knew it, and an old legend may choose to fight again."
+"ITEM.UNOPENED_LIQUOR.NAME","Unopened Liquor"
+"ITEM.UNOPENED_LIQUOR.DESCRIPTION","<quote>My father poured this on my first winter home.</quote>
+Sealed bottles of strong liquor."
+"ITEM.UNOPENED_LIQUOR.STORY",""
+"ITEM.TEDDY_BEAR.NAME","Teddy Bear"
+"ITEM.TEDDY_BEAR.DESCRIPTION","<quote>I wish I had one as a child.</quote>
+A faded stuffed bear, worn soft from years of being held."
+"ITEM.TEDDY_BEAR.STORY","Found beneath the remains of a child’s bed, the bear was strangely untouched by the collapse around it. Its fur is faded, one eye has been sewn back on, and its little vest carries the dust of a home that no longer exists.
+
+Some survivors keep it for the child who lost it. Others hold it for the childhood they never had."
+"ITEM.TEST_ITEM.NAME","Test Item 2"

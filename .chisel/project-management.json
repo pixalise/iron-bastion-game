@@ -399,6 +399,44 @@
       "createdAt": "2026-07-19T08:21:50.964Z",
       "updatedAt": "2026-07-19T21:14:40.783Z",
       "subitems": []
+    },
+    {
+      "id": "0UkV1ySV69Ly7GGGGfdRh",
+      "title": "Chisel Final Upgrade",
+      "completed": false,
+      "priority": "URGENT",
+      "createdAt": "2026-07-21T09:35:25.528Z",
+      "updatedAt": "2026-07-21T11:57:06.213Z",
+      "subitems": [
+        {
+          "id": "rh9iBpSLIqgysP_o_pPpq",
+          "title": "Show preview of translation inside of data table",
+          "completed": false,
+          "createdAt": "2026-07-21T09:35:44.132Z",
+          "updatedAt": "2026-07-21T09:35:44.132Z"
+        },
+        {
+          "id": "I82t0OPp5S7fQ9B5WNaYq",
+          "title": "Railroad translation keys into SLUG + \".\"",
+          "completed": false,
+          "createdAt": "2026-07-21T09:36:04.857Z",
+          "updatedAt": "2026-07-21T09:36:04.857Z"
+        },
+        {
+          "id": "vcpblaHenNdAYg-spL6oi",
+          "title": "Add support for 3d model assets in the asset library",
+          "completed": false,
+          "createdAt": "2026-07-21T11:51:35.967Z",
+          "updatedAt": "2026-07-21T11:51:35.967Z"
+        },
+        {
+          "id": "VI4H_lDG-8CDWqWw3CkSn",
+          "title": "Add autosave",
+          "completed": false,
+          "createdAt": "2026-07-21T11:57:06.191Z",
+          "updatedAt": "2026-07-21T11:57:06.191Z"
+        }
+      ]
     }
   ]
 }

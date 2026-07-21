@@ -27,13 +27,13 @@
     },
     {
       "category": "HDRI",
-      "name": "FOREST_1_2K",
+      "name": "FOREST_1_2_K",
       "note": "CC0: https://polyhaven.com/a/citrus_orchard_road_puresky",
       "sizeBytes": 18768273,
       "width": 0,
       "height": 0,
       "extension": "exr",
-      "id": "FOREST_1_2K",
+      "id": "FOREST_1_2_K",
       "relativePath": ".chisel/assets/HDRI/FOREST_1_2K.exr",
       "formattedBytes": "17.9 MB"
     },
@@ -48,6 +48,18 @@
       "id": "PHYSICAL_DAMAGE",
       "relativePath": ".chisel/assets/UI_ICON/PHYSICAL_DAMAGE.png",
       "formattedBytes": "1.6 MB"
+    },
+    {
+      "category": "UI_ICON",
+      "name": "HUNTING_ARROWS",
+      "note": "Item - used for bowman and crossbowman",
+      "sizeBytes": 1952133,
+      "width": 1254,
+      "height": 1254,
+      "extension": "png",
+      "id": "HUNTING_ARROWS",
+      "relativePath": ".chisel/assets/UI_ICON/HUNTING_ARROWS.png",
+      "formattedBytes": "1.9 MB"
     }
   ]
 }

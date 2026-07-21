@@ -2,12 +2,42 @@
 class_name ChiselItems
 extends RefCounted
 
-enum Id {}
+enum Id { OLD_REVOLVER = 0, WAX_STRING = 1, HUNTING_ARROWS = 2, BOW_OLD_FRIEND = 3 }
 
 const TABLE_ID := "LNE2qvQb0jxtgiLDUDsq4"
 const TABLE_NAME := "Items"
 const TABLE_KIND := "user"
-const SLUGS := []
-const NAME := []
-const DESCRIPTION := []
-const PRICE := []
+const SLUGS := ["OLD_REVOLVER", "WAX_STRING", "HUNTING_ARROWS", "BOW_OLD_FRIEND"]
+const NAME := [
+	ChiselLocalization.Id.ITEM_OLD_REVOLVER_NAME,
+	ChiselLocalization.Id.ITEM_WAX_STRING_NAME,
+	ChiselLocalization.Id.ITEM_HUNTING_ARROWS_NAME,
+	ChiselLocalization.Id.ITEM_BOW_OLD_FRIEND_NAME
+]
+const DESCRIPTION := [
+	ChiselLocalization.Id.ITEM_OLD_REVOLVER_DESCRIPTION,
+	ChiselLocalization.Id.ITEM_WAX_STRING_DESCRIPTION,
+	ChiselLocalization.Id.ITEM_HUNTING_ARROWS_DESCRIPTION,
+	ChiselLocalization.Id.ITEM_BOW_OLD_FRIEND_DESCRIPTION
+]
+const STORY := [
+	ChiselLocalization.Id.ITEM_OLD_REVOLVER_STORY,
+	ChiselLocalization.Id.ITEM_WAX_STRING_STORY,
+	ChiselLocalization.Id.ITEM_HUNTING_ARROWS_STORY,
+	ChiselLocalization.Id.ITEM_BOW_OLD_FRIEND_STORY
+]
+const PORTRAIT := [
+	ChiselAssets.Id.PHYSICAL_DAMAGE,
+	ChiselAssets.Id.PHYSICAL_DAMAGE,
+	ChiselAssets.Id.HUNTING_ARROWS,
+	ChiselAssets.Id.PHYSICAL_DAMAGE
+]
+const PRICE := [0, 20, 30, 800]
+const MODIFIERS := [
+	"Increases damage flat by 15%",
+	"\tIncreases damage flat for string weapon by 15%",
+	"Increases damage flat for string weapon by 30% but reduces armor penetration for - 10%",
+	"Increases damage flat for string weapons by 30%, armor penetration by 15%, and fire rate by 10%."
+]
+const RARITY := ["COMMON", "COMMON", "COMMON", "COMMON"]
+const ALLOWS_MULTIPLE := [true, true, true, false]

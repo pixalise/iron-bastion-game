@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "LNE2qvQb0jxtgiLDUDsq4",
+    "lastChangeAt": "2026-07-21T09:37:49.215Z",
+    "version": 11,
+    "name": "Items",
+    "description": "Items that can be collected and put into the storage carts during an expedition",
+    "columns": [
+      {
+        "id": "ZSw0d-8zTyLo6RR_ofp0L",
+        "type": "translationRef",
+        "name": "name",
+        "defaultValue": "",
+        "required": true,
+        "unique": true
+      },
+      {
+        "id": "8TqMQuN-TynstVN9wiK7o",
+        "type": "translationRef",
+        "name": "description",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "O7EQNdvuQCDwHyyE0XOcb",
+        "type": "translationRef",
+        "name": "story",
+        "defaultValue": 0,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "t9PZkgQ0J2zeLXfL6CWL6",
+        "type": "assetRef",
+        "name": "portrait",
+        "defaultValue": "",
+        "assetCategory": "UI_ICON",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "EBmVYmt9qDHAnr97lRGk_",
+        "type": "integer",
+        "name": "price",
+        "defaultValue": 0,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "Ir7PPFSYVv76_zcnn6Rph",
+        "type": "ref",
+        "name": "modifiers",
+        "defaultValue": "",
+        "maxChars": 250,
+        "required": true,
+        "unique": false
+      }
+    ],
+    "rows": [],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}
