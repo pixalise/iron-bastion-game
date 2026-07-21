@@ -235,6 +235,251 @@
         "en": "Makeshift Armor"
       },
       "placeholders": []
+    },
+    {
+      "path": "ITEM.MAKESHIFT_ARMOR.DESCRIPTION",
+      "values": {
+        "en": "<quote>It does not need to look good. It only needs to stop the bite</quote>\nScrap metal and thick fabric tied together into crude protection."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.MAKESHIFT_ARMOR.STORY",
+      "values": {
+        "en": "Built from road signs, leather scraps, and whatever else could be found. It is uncomfortable and heavy, but survivors learned quickly that poor armor was still better than exposed flesh."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.STEEL_ARMOR.NAME",
+      "values": {
+        "en": "Steel Armor"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.STEEL_ARMOR.DESCRIPTION",
+      "values": {
+        "en": "<quote>Make them work for every wound.</quote>\nFitted steel plates offering reliable protection without excessive weight."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.WOODEN_SHIELD.NAME",
+      "values": {
+        "en": "Wooden Shield"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.WOODEN_SHIELD.DESCRIPTION",
+      "values": {
+        "en": "\nA thick wooden shield built to absorb claws, bites, and blunt impacts."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.STEEL_ARMOR.STORY",
+      "values": {
+        "en": "The first sets were recovered from museums, old collections, and forgotten storage rooms. Survivors studied how the plates joined, then rebuilt the design with scavenged tools and steel.\nWhat they created was not antique armor, but a harsher version made for the world that replaced it."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.WOODEN_SHIELD.STORY",
+      "values": {
+        "en": "Made from layered planks, leather straps, and whatever nails could be spared, the wooden shield became a common sight among frontline fighters. It is crude, heavy, and quick to repair, making it ideal for settlements without access to proper metalworking."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.STEEL_SWORD.NAME",
+      "values": {
+        "en": "Steel Sword"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.STEEL_SWORD.DESCRIPTION",
+      "values": {
+        "en": "<quote>Keep swinging until it stops moving.</quote>\nA dependable steel blade made for repeated close combat."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.STEEL_SWORD.STORY",
+      "values": {
+        "en": "Forged from reclaimed steel after ammunition became scarce. Its thick blade is simple, durable, and easy to maintain."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.WHETSTONE.NAME",
+      "values": {
+        "en": "Whetstone"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.WHETSTONE.DESCRIPTION",
+      "values": {
+        "en": "\nA rough stone used to restore damaged blades."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.WHETSTONE.STORY",
+      "values": {
+        "en": ""
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.LEATHER_GRIP.NAME",
+      "values": {
+        "en": "Leather Grip"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.LEATHER_GRIP.DESCRIPTION",
+      "values": {
+        "en": "<quote>Better than losing it mid-swing.</quote>\nA firm leather wrap fitted around a melee weapon’s handle."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.LEATHER_GRIP.STORY",
+      "values": {
+        "en": ""
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.BATTLE_TONIC.NAME",
+      "values": {
+        "en": "Battle Tonic"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.BATTLE_TONIC.DESCRIPTION",
+      "values": {
+        "en": "<quote>Tastes awful.</quote>\nA harsh stimulant brewed to keep fighters moving."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.BATTLE_TONIC.STORY",
+      "values": {
+        "en": "Battle Tonic is a rough replica of an old military stimulant whose formula was lost after the collapse. What survivors make now is the closest they could manage: strong alcohol, bitter herbs, scavenged stimulants, and carefully prepared Berserk Mushrooms.\n\nIt is unstable, unpleasant, and nowhere near the original—but it works."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.BERSERK_MUSHROOMS.NAME",
+      "values": {
+        "en": "Berserk Mushrooms"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.BERSERK_MUSHROOMS.DESCRIPTION",
+      "values": {
+        "en": "<quote>I can hear my blood.</quote>\nWild mushrooms that dull fear and awaken violence."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.BERSERK_MUSHROOMS.STORY",
+      "values": {
+        "en": "These mushrooms are grown in guarded fields high in the mountains, where the cold soil and thin air give them their strange potency. Eaten raw, they cause a violent rush of strength, speed, and aggression, followed by exhaustion and poor judgment.\n\nThey later became the key ingredient in Battle Tonic, where their effects could be controlled—at least slightly."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.POCKET_WATCH.NAME",
+      "values": {
+        "en": "Pocket Watch"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.POCKET_WATCH.DESCRIPTION",
+      "values": {
+        "en": "<quote>It stopped the day the appoclyps started</quote>\nA scratched pocket watch that still keeps time."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.POCKET_WATCH.STORY",
+      "values": {
+        "en": "The watch was carried for years before the collapse, then passed between survivors who kept it wound even when dates stopped meaning anything.\n\nA faded name is engraved inside the lid. No one in the squad recognizes it, but the watch is still carefully set every morning, as though its owner might return to ask the time."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.OLD_MEDAL.NAME",
+      "values": {
+        "en": "Old Medal"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.OLD_MEDAL.DESCRIPTION",
+      "values": {
+        "en": "<quote>They said you were brave, i just wanted you home.</quote>\nA tarnished medal awarded for a forgotten act of courage."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.OLD_MEDAL.STORY",
+      "values": {
+        "en": "The medal has faded and the metal has lost its shine, but the name on the back remains readable. It once belonged to someone praised for standing their ground when others could not.\nThe medal was found inside a small wooden box beside an unopened letter. Looks like the medals owner never came home."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.POSTCARD.NAME",
+      "values": {
+        "en": "Postcard"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.POSTCARD.DESCRIPTION",
+      "values": {
+        "en": "<quote>Wish you were here</quote>\nA faded postcard from a place that may no longer exist."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.POSTCARD.STORY",
+      "values": {
+        "en": "The front shows a bright seaside town beneath a clear summer sky. On the back is a short message promising to visit once work became less busy.\nThe postcard was never sent. Its writer kept it folded inside a coat pocket until the paper softened at the edges. No one knows whether they ever saw the sea again."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.DECK_OF_CARDS.NAME",
+      "values": {
+        "en": "Deck of Cards"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.DECK_OF_CARDS.DESCRIPTION",
+      "values": {
+        "en": "<quote>We always said we would finish the game tomorrow.</quote>\nA worn deck missing several cards."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.DECK_OF_CARDS.STORY",
+      "values": {
+        "en": "The cards are stained, creased, and marked by years of use. Several faces carry names written in faded ink, recording old victories, debts, and jokes. Some look new some look old.\nThe final hand is still tucked beneath the string holding the deck together. No one has moved the cards since the players failed to return."
+      },
+      "placeholders": []
     }
   ],
   "styles": [
