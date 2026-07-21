@@ -4,6 +4,7 @@ const CHISEL_INPUT := preload("res://game_data/input.gd")
 const INPUT_BINDINGS := preload("res://game_data/tables/input_bindings.gd")
 
 @export_node_path("Terrain3D") var terrain_path: NodePath
+@export_node_path("Node3D") var simulation_bootstrap_path: NodePath
 @export var move_speed: float = 30.0
 @export var rotation_speed: float = 1.8
 @export var terrain_height_offset: float = 0.0
@@ -12,11 +13,25 @@ var _terrain: Terrain3D
 
 
 func _ready() -> void:
-	_terrain = get_node(terrain_path) as Terrain3D
-	_snap_to_terrain()
+	if not terrain_path.is_empty():
+		_set_terrain(get_node(terrain_path) as Terrain3D)
+		return
+
+	assert(not simulation_bootstrap_path.is_empty())
+	var simulation_bootstrap := get_node(simulation_bootstrap_path) as Node
+	assert(simulation_bootstrap != null)
+	assert(simulation_bootstrap.has_signal("terrain_generated"))
+	simulation_bootstrap.terrain_generated.connect(_on_terrain_generated)
+
+	var generated_terrain := simulation_bootstrap.get("terrain") as Terrain3D
+	if generated_terrain != null:
+		_set_terrain(generated_terrain)
 
 
 func _physics_process(delta: float) -> void:
+	if _terrain == null:
+		return
+
 	_update_rotation(delta)
 	_update_position(delta)
 	_snap_to_terrain()
@@ -55,7 +70,18 @@ func _update_position(delta: float) -> void:
 
 	global_position += move_direction.normalized() * move_speed * delta
 
+
 func _snap_to_terrain() -> void:
 	var terrain_height := _terrain.data.get_height(global_position)
 	assert(not is_nan(terrain_height))
 	global_position.y = terrain_height + terrain_height_offset
+
+
+func _on_terrain_generated(terrain: Terrain3D, _config: Resource) -> void:
+	_set_terrain(terrain)
+
+
+func _set_terrain(terrain: Terrain3D) -> void:
+	assert(terrain != null)
+	_terrain = terrain
+	_snap_to_terrain()

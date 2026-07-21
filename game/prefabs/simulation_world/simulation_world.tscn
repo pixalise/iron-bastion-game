@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://d11s4e2y2vedl"]
+
+[ext_resource type="Resource" uid="uid://db7tb7r8v52tw" path="res://game/prefabs/simulation_world/default_terrain_config.tres" id="1_nrckf"]
+[ext_resource type="Script" uid="uid://cc5klwkvtxreb" path="res://game/scripts/terrain_generator.gd" id="2_eglls"]
+
+[sub_resource type="GDScript" id="GDScript_nrckf"]
+script/source = "extends Node3D
+
+signal terrain_generated(terrain: Terrain3D, config: Resource)
+
+@export var terrain_config: Resource
+@export_node_path(\"Node3D\") var terrain_generator_path: NodePath = ^\"TerrainGenerator\"
+
+var terrain: Terrain3D
+
+
+func _ready() -> void:
+	assert(terrain_config != null)
+
+	var terrain_generator := get_node(terrain_generator_path) as Node
+	assert(terrain_generator != null)
+	assert(terrain_generator.has_method(\"create_terrain\"))
+
+	terrain = terrain_generator.create_terrain(terrain_config)
+	terrain_generated.emit(terrain, terrain_config)
+"
+
+[node name="SimulationWorld" type="Node3D" unique_id=357388584]
+script = SubResource("GDScript_nrckf")
+terrain_config = ExtResource("1_nrckf")
+
+[node name="TerrainGenerator" type="Node3D" parent="." unique_id=999333091]
+script = ExtResource("2_eglls")
+
+[node name="Simulator" type="Node3D" parent="." unique_id=577241504]

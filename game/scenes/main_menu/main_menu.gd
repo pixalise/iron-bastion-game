@@ -6,8 +6,6 @@ const ZOO_SCENE := preload("res://game/scenes/zoo/zoo.tscn")
 
 func _ready() -> void:
 	_build()
-	var math = GraphiteMath.new()
-	print(math.add_numbers(1.0, 2.0))
 
 
 func _build() -> void:

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TerrainGenerationConfig" format=3 uid="uid://db7tb7r8v52tw"]
+
+[ext_resource type="Script" uid="uid://ssxdfbdbsp0" path="res://game/scripts/terrain_generation_config.gd" id="1_ixsbn"]
+
+[resource]
+script = ExtResource("1_ixsbn")
+height_scale = 24.0
+noise_frequency = 0.021
+flatten_mask_frequency = 0.004
+flatten_mask_seed = 1
+flatten_threshold = 0.44

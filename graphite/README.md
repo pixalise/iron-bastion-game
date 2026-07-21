@@ -32,6 +32,15 @@ Godot loads `addons/graphite/graphite.gdextension` on startup. If the matching s
 library has not been built yet, Godot will fail fast with a missing dynamic library
 error.
 
+From the project root, use the helper script for the usual rebuild loop:
+
+```sh
+scripts/rebuild-graphite.sh
+```
+
+If the Godot editor is already open, restart it after native API renames so
+`ClassDB` sees the new method names.
+
 ## CLion
 
 Open the `graphite` directory as a CMake project:
