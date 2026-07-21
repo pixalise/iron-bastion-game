@@ -13,13 +13,14 @@ namespace godot {
 class GraphiteWorld : public RefCounted {
 	GDCLASS(GraphiteWorld, RefCounted) // NOLINT(*-default-arguments)
 
-protected:
+  protected:
 	static void _bind_methods();
 
-public:
+  public:
 	// The world is normally in 3d, graphite is in 2d
-	void configure_navigation_grid(int width, int height, double cell_size, float origin_x = 0.0, float origin_z = 0.0);
-	void set_navigation_cells(const PackedByteArray &cells);
+	void configure_navigation_grid(int width, int height, double cell_size, float origin_x = 0.0,
+	                               float origin_z = 0.0);
+	void set_navigation_cells(const PackedByteArray& cells);
 	void clear_navigation_grid();
 
 	[[nodiscard]] bool is_navigation_grid_configured() const;
@@ -29,7 +30,7 @@ public:
 	[[nodiscard]] int get_navigation_cell_count() const;
 	[[nodiscard]] PackedByteArray get_navigation_cells() const;
 
-private:
+  private:
 	graphite::GridSetup m_navigation_grid_;
 	std::vector<graphite::NavCell> m_navigation_cells;
 };

@@ -21,11 +21,9 @@ void uninitialize_graphite(ModuleInitializationLevel level) {
 
 extern "C" {
 
-GDExtensionBool GDE_EXPORT graphite_init(
-	GDExtensionInterfaceGetProcAddress get_proc_address,
-	GDExtensionClassLibraryPtr library,
-	GDExtensionInitialization *initialization
-) {
+GDExtensionBool GDE_EXPORT graphite_init(GDExtensionInterfaceGetProcAddress get_proc_address,
+                                         GDExtensionClassLibraryPtr library,
+                                         GDExtensionInitialization* initialization) {
 	GDExtensionBinding::InitObject init_obj(get_proc_address, library, initialization);
 	init_obj.register_initializer(initialize_graphite);
 	init_obj.register_terminator(uninitialize_graphite);

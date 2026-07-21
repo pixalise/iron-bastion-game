@@ -53,9 +53,7 @@ struct GridSetup {
 	float origin_x = 0.0f;
 	float origin_z = 0.0f;
 
-	[[nodiscard]] std::uint32_t cell_count() const {
-		return width * height;
-	}
+	[[nodiscard]] std::uint32_t cell_count() const { return width * height; }
 };
 
 } // namespace graphite
