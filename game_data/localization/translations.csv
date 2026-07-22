@@ -46,3 +46,61 @@ A faded stuffed bear, worn soft from years of being held."
 
 Some survivors keep it for the child who lost it. Others hold it for the childhood they never had."
 "ITEM.TEST_ITEM.NAME","Test Item 2"
+"ITEM.MAKESHIFT_ARMOR.NAME","Makeshift Armor"
+"ITEM.MAKESHIFT_ARMOR.DESCRIPTION","<quote>It does not need to look good. It only needs to stop the bite</quote>
+Scrap metal and thick fabric tied together into crude protection."
+"ITEM.MAKESHIFT_ARMOR.STORY","Built from road signs, leather scraps, and whatever else could be found. It is uncomfortable and heavy, but survivors learned quickly that poor armor was still better than exposed flesh."
+"ITEM.STEEL_ARMOR.NAME","Steel Armor"
+"ITEM.STEEL_ARMOR.DESCRIPTION","<quote>Make them work for every wound.</quote>
+Fitted steel plates offering reliable protection without excessive weight."
+"ITEM.WOODEN_SHIELD.NAME","Wooden Shield"
+"ITEM.WOODEN_SHIELD.DESCRIPTION","
+A thick wooden shield built to absorb claws, bites, and blunt impacts."
+"ITEM.STEEL_ARMOR.STORY","The first sets were recovered from museums, old collections, and forgotten storage rooms. Survivors studied how the plates joined, then rebuilt the design with scavenged tools and steel.
+What they created was not antique armor, but a harsher version made for the world that replaced it."
+"ITEM.WOODEN_SHIELD.STORY","Made from layered planks, leather straps, and whatever nails could be spared, the wooden shield became a common sight among frontline fighters. It is crude, heavy, and quick to repair, making it ideal for settlements without access to proper metalworking."
+"ITEM.STEEL_SWORD.NAME","Steel Sword"
+"ITEM.STEEL_SWORD.DESCRIPTION","<quote>Keep swinging until it stops moving.</quote>
+A dependable steel blade made for repeated close combat."
+"ITEM.STEEL_SWORD.STORY","Forged from reclaimed steel after ammunition became scarce. Its thick blade is simple, durable, and easy to maintain."
+"ITEM.WHETSTONE.NAME","Whetstone"
+"ITEM.WHETSTONE.DESCRIPTION","
+A rough stone used to restore damaged blades."
+"ITEM.WHETSTONE.STORY",""
+"ITEM.LEATHER_GRIP.NAME","Leather Grip"
+"ITEM.LEATHER_GRIP.DESCRIPTION","<quote>Better than losing it mid-swing.</quote>
+A firm leather wrap fitted around a melee weapon’s handle."
+"ITEM.LEATHER_GRIP.STORY",""
+"ITEM.BATTLE_TONIC.NAME","Battle Tonic"
+"ITEM.BATTLE_TONIC.DESCRIPTION","<quote>Tastes awful.</quote>
+A harsh stimulant brewed to keep fighters moving."
+"ITEM.BATTLE_TONIC.STORY","Battle Tonic is a rough replica of an old military stimulant whose formula was lost after the collapse. What survivors make now is the closest they could manage: strong alcohol, bitter herbs, scavenged stimulants, and carefully prepared Berserk Mushrooms.
+
+It is unstable, unpleasant, and nowhere near the original—but it works."
+"ITEM.BERSERK_MUSHROOMS.NAME","Berserk Mushrooms"
+"ITEM.BERSERK_MUSHROOMS.DESCRIPTION","<quote>I can hear my blood.</quote>
+Wild mushrooms that dull fear and awaken violence."
+"ITEM.BERSERK_MUSHROOMS.STORY","These mushrooms are grown in guarded fields high in the mountains, where the cold soil and thin air give them their strange potency. Eaten raw, they cause a violent rush of strength, speed, and aggression, followed by exhaustion and poor judgment.
+
+They later became the key ingredient in Battle Tonic, where their effects could be controlled—at least slightly."
+"ITEM.POCKET_WATCH.NAME","Pocket Watch"
+"ITEM.POCKET_WATCH.DESCRIPTION","<quote>It stopped the day the appoclyps started</quote>
+A scratched pocket watch that still keeps time."
+"ITEM.POCKET_WATCH.STORY","The watch was carried for years before the collapse, then passed between survivors who kept it wound even when dates stopped meaning anything.
+
+A faded name is engraved inside the lid. No one in the squad recognizes it, but the watch is still carefully set every morning, as though its owner might return to ask the time."
+"ITEM.OLD_MEDAL.NAME","Old Medal"
+"ITEM.OLD_MEDAL.DESCRIPTION","<quote>They said you were brave, i just wanted you home.</quote>
+A tarnished medal awarded for a forgotten act of courage."
+"ITEM.OLD_MEDAL.STORY","The medal has faded and the metal has lost its shine, but the name on the back remains readable. It once belonged to someone praised for standing their ground when others could not.
+The medal was found inside a small wooden box beside an unopened letter. Looks like the medals owner never came home."
+"ITEM.POSTCARD.NAME","Postcard"
+"ITEM.POSTCARD.DESCRIPTION","<quote>Wish you were here</quote>
+A faded postcard from a place that may no longer exist."
+"ITEM.POSTCARD.STORY","The front shows a bright seaside town beneath a clear summer sky. On the back is a short message promising to visit once work became less busy.
+The postcard was never sent. Its writer kept it folded inside a coat pocket until the paper softened at the edges. No one knows whether they ever saw the sea again."
+"ITEM.DECK_OF_CARDS.NAME","Deck of Cards"
+"ITEM.DECK_OF_CARDS.DESCRIPTION","<quote>We always said we would finish the game tomorrow.</quote>
+A worn deck missing several cards."
+"ITEM.DECK_OF_CARDS.STORY","The cards are stained, creased, and marked by years of use. Several faces carry names written in faded ink, recording old victories, debts, and jokes. Some look new some look old.
+The final hand is still tucked beneath the string holding the deck together. No one has moved the cards since the players failed to return."

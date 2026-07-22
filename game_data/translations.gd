@@ -14,6 +14,140 @@ class UnitRifleManDescriptionParameters:
 		return {"physical_damage": physical_damage}
 
 
+class ItemDeckOfCardsTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_DECK_OF_CARDS_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_DECK_OF_CARDS_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_DECK_OF_CARDS_STORY, {})
+
+
+class ItemPostcardTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_POSTCARD_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_POSTCARD_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_POSTCARD_STORY, {})
+
+
+class ItemOldMedalTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_OLD_MEDAL_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_OLD_MEDAL_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_OLD_MEDAL_STORY, {})
+
+
+class ItemPocketWatchTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_POCKET_WATCH_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_POCKET_WATCH_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_POCKET_WATCH_STORY, {})
+
+
+class ItemBerserkMushroomsTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_BERSERK_MUSHROOMS_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(
+			ChiselLocalization.Id.ITEM_BERSERK_MUSHROOMS_DESCRIPTION, {}
+		)
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_BERSERK_MUSHROOMS_STORY, {})
+
+
+class ItemBattleTonicTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_BATTLE_TONIC_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_BATTLE_TONIC_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_BATTLE_TONIC_STORY, {})
+
+
+class ItemLeatherGripTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_LEATHER_GRIP_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_LEATHER_GRIP_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_LEATHER_GRIP_STORY, {})
+
+
+class ItemWhetstoneTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_WHETSTONE_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_WHETSTONE_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_WHETSTONE_STORY, {})
+
+
+class ItemSteelSwordTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_STEEL_SWORD_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_STEEL_SWORD_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_STEEL_SWORD_STORY, {})
+
+
+class ItemWoodenShieldTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_WOODEN_SHIELD_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_WOODEN_SHIELD_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_WOODEN_SHIELD_STORY, {})
+
+
+class ItemSteelArmorTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_STEEL_ARMOR_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_STEEL_ARMOR_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_STEEL_ARMOR_STORY, {})
+
+
+class ItemMakeshiftArmorTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_MAKESHIFT_ARMOR_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_MAKESHIFT_ARMOR_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_MAKESHIFT_ARMOR_STORY, {})
+
+
 class ItemTestItemTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_TEST_ITEM_NAME, {})
@@ -129,6 +263,18 @@ class ItemTranslations:
 	var unopened_liquor := ItemUnopenedLiquorTranslations.new()
 	var teddy_bear := ItemTeddyBearTranslations.new()
 	var test_item := ItemTestItemTranslations.new()
+	var makeshift_armor := ItemMakeshiftArmorTranslations.new()
+	var steel_armor := ItemSteelArmorTranslations.new()
+	var wooden_shield := ItemWoodenShieldTranslations.new()
+	var steel_sword := ItemSteelSwordTranslations.new()
+	var whetstone := ItemWhetstoneTranslations.new()
+	var leather_grip := ItemLeatherGripTranslations.new()
+	var battle_tonic := ItemBattleTonicTranslations.new()
+	var berserk_mushrooms := ItemBerserkMushroomsTranslations.new()
+	var pocket_watch := ItemPocketWatchTranslations.new()
+	var old_medal := ItemOldMedalTranslations.new()
+	var postcard := ItemPostcardTranslations.new()
+	var deck_of_cards := ItemDeckOfCardsTranslations.new()
 
 
 class TooltipPhysicalDamageTypeTranslations:
