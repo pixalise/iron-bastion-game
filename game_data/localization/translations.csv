@@ -1,55 +1,44 @@
 "keys","en"
 "UNIT.RIFLE_MAN.NAME","Rifle Man"
-"UNIT.RIFLE_MAN.DESCRIPTION","The unit does <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE_TYPE> <icon:PHYSICAL_DAMAGE/> {float:physical_damage} </tooltip></style> points of<br/>damage per shot."
+"UNIT.RIFLE_MAN.DESCRIPTION","The unit does <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE_TYPE> <icon:PHYSICAL_DAMAGE/> {float:physical_damage} </tooltip></style><br/> points of<br/>damage per shot."
 "TOOLTIP.PHYSICAL_DAMAGE_TYPE.TITLE","Physical damage"
-"TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION","<icon:PHYSICAL_DAMAGE/> <style:PHYSICAL_DAMAGE> Damage coming</style> from ballistic, blunt force and<br/>other variant of physical damage"
+"TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION","<icon:PHYSICAL_DAMAGE/> <style:PHYSICAL_DAMAGE> Damage coming</style><br/> from ballistic, blunt force and<br/>other variant of physical damage"
 "ITEM.OLD_REVOLVER.NAME","Old Revolver"
-"ITEM.OLD_REVOLVER.DESCRIPTION","<style:QUOTE>A weapon from the olden era</style>
-And old revolver with a leather handle."
+"ITEM.OLD_REVOLVER.DESCRIPTION","<style:QUOTE>A weapon from the olden era</style><br/>And old revolver with a leather handle."
 "ITEM.OLD_REVOLVER.STORY",""
 "ITEM.WAX_STRING.NAME","Waxed string "
-"ITEM.WAX_STRING.DESCRIPTION","<style:QUOTE>Old ways. New prey</style>
-A simple hemp bowstring treated with beeswax."
+"ITEM.WAX_STRING.DESCRIPTION","<style:QUOTE>Old ways. New prey</style><br/>A simple hemp bowstring treated with beeswax."
 "ITEM.HUNTING_ARROWS.NAME","Hunting Arrows"
-"ITEM.HUNTING_ARROWS.DESCRIPTION","<style:QUOTE>Old ways. New prey</style>
-Arrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
+"ITEM.HUNTING_ARROWS.DESCRIPTION","<style:QUOTE>Old ways. New prey</style><br/>Arrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
 "ITEM.WAX_STRING.STORY",""
 "ITEM.HUNTING_ARROWS.STORY",""
-"ITEM.PIERCING_ARROWS.DESCRIPTION","<style:QUOTE>Everything has a weakness.</style>
-Narrow steel-tipped arrows built to punch through armor."
+"ITEM.PIERCING_ARROWS.DESCRIPTION","<style:QUOTE>Everything has a weakness.</style><br/>Narrow steel-tipped arrows built to punch through armor."
 "ITEM.PIERCING_ARROWS.NAME","Piercing Arrows"
 "ITEM.PIERCING_ARROWS.STORY",""
 "ITEM.FIRE_ARROWS.NAME","Fire Arrows"
-"ITEM.FIRE_ARROWS.DESCRIPTION","<style:QUOTE>The dead return. Ash does not.</style>
-Arrows wrapped with alcohol-soaked cloth."
+"ITEM.FIRE_ARROWS.DESCRIPTION","<style:QUOTE>The dead return. Ash does not.</style><br/>Arrows wrapped with alcohol-soaked cloth."
 "ITEM.FIRE_ARROWS.STORY",""
 "ITEM.REINFORCED_BOW.NAME","Reinforced Bow"
-"ITEM.REINFORCED_BOW.DESCRIPTION","<style:QUOTE>It only needs to outlast us.</style>
-Reinforced with mixed materials to hold greater tension without breaking."
+"ITEM.REINFORCED_BOW.DESCRIPTION","<style:QUOTE>It only needs to outlast us.</style><br/>Reinforced with mixed materials to hold greater tension without breaking."
 "ITEM.REINFORCED_BOW.STORY",""
 "ITEM.BOW_OLD_FRIEND.NAME","Old Friend"
-"ITEM.BOW_OLD_FRIEND.DESCRIPTION","<style:QUOTE>Come on, old friend. One more hunt.</style>
-A battle-worn bow that endures impossible tension."
+"ITEM.BOW_OLD_FRIEND.DESCRIPTION","<style:QUOTE>Come on, old friend. One more hunt.</style><br/>A battle-worn bow that endures impossible tension."
 "ITEM.BOW_OLD_FRIEND.STORY","When ammunition began to disappear, survivors turned to weapons from older eras. One of them was Old Friend, a bow never meant to survive more than a few months of constant use. It outlived that purpose.
 Its limbs are patched, its frame is cracked, and brass plates hold together places that should have failed years ago. Decorative horns were added as marks of the hunts it survived. Its string has been replaced countless times, each replacement recorded by a small carving near the grip.
 There is only one Old Friend in the squad, but many still remember its name. Those who fight beside it do so with renewed vigor, driven by the legend carried into battle. 
 Bring it home and place it in the hands of someone who once knew it, and an old legend may choose to fight again."
 "ITEM.UNOPENED_LIQUOR.NAME","Unopened Liquor"
-"ITEM.UNOPENED_LIQUOR.DESCRIPTION","<style:QUOTE>My father poured this on my first winter home.</style>
-Sealed bottles of strong liquor."
+"ITEM.UNOPENED_LIQUOR.DESCRIPTION","<style:QUOTE>My father poured this on my first winter home.</style><br/>Sealed bottles of strong liquor."
 "ITEM.UNOPENED_LIQUOR.STORY",""
 "ITEM.TEDDY_BEAR.NAME","<icon:ITEM_TEDDY_BEAR/> Teddy Bear"
-"ITEM.TEDDY_BEAR.DESCRIPTION","<style:QUOTE>I wish I had one as a child.</style>
-A faded stuffed bear, worn soft from years of being held."
+"ITEM.TEDDY_BEAR.DESCRIPTION","<style:QUOTE>I wish I had one as a child.</style><br/>A faded stuffed bear, worn soft from years of being held."
 "ITEM.TEDDY_BEAR.STORY","Found beneath the remains of a child’s bed, the bear was strangely untouched by the collapse around it. Its fur is faded, one eye has been sewn back on, and its little vest carries the dust of a home that no longer exists.
 Some survivors keep it for the children they lost. Others hold it for the childhood they never had."
 "ITEM.MAKESHIFT_ARMOR.NAME","Makeshift Armor"
-"ITEM.MAKESHIFT_ARMOR.DESCRIPTION","<style:QUOTE>It does not need to look good. It only needs to stop the bite</style>
-Scrap metal and thick fabric tied together into crude protection."
+"ITEM.MAKESHIFT_ARMOR.DESCRIPTION","<style:QUOTE>It does not need to look good. It only needs to stop the bite</style><br/>Scrap metal and thick fabric tied together into crude protection."
 "ITEM.MAKESHIFT_ARMOR.STORY","Built from road signs, leather scraps, and whatever else could be found. It is uncomfortable and heavy, but survivors learned quickly that poor armor was still better than exposed flesh."
 "ITEM.STEEL_ARMOR.NAME","Steel Armor"
-"ITEM.STEEL_ARMOR.DESCRIPTION","<style:QUOTE>Make them work for every wound.</style>
-Fitted steel plates offering reliable protection without excessive weight."
+"ITEM.STEEL_ARMOR.DESCRIPTION","<style:QUOTE>Make them work for every wound.</style><br/>Fitted steel plates offering reliable protection without excessive weight."
 "ITEM.WOODEN_SHIELD.NAME","Wooden Shield"
 "ITEM.WOODEN_SHIELD.DESCRIPTION","
 A thick wooden shield built to absorb claws, bites, and blunt impacts."
@@ -57,71 +46,58 @@ A thick wooden shield built to absorb claws, bites, and blunt impacts."
 What they created was not antique armor, but a harsher version made for the world that replaced it."
 "ITEM.WOODEN_SHIELD.STORY","Made from layered planks, leather straps, and whatever nails could be spared, the wooden shield became a common sight among frontline fighters. It is crude, heavy, and quick to repair, making it ideal for settlements without access to proper metalworking."
 "ITEM.STEEL_SWORD.NAME","Steel Sword"
-"ITEM.STEEL_SWORD.DESCRIPTION","<style:QUOTE>Keep swinging until it stops moving.</style>
-A dependable steel blade made for repeated close combat."
+"ITEM.STEEL_SWORD.DESCRIPTION","<style:QUOTE>Keep swinging until it stops moving.</style><br/>A dependable steel blade made for repeated close combat."
 "ITEM.STEEL_SWORD.STORY","Forged from reclaimed steel after ammunition became scarce. Its thick blade is simple, durable, and easy to maintain."
 "ITEM.WHETSTONE.NAME","Whetstone"
 "ITEM.WHETSTONE.DESCRIPTION","
 A rough stone used to restore damaged blades."
 "ITEM.WHETSTONE.STORY",""
 "ITEM.LEATHER_GRIP.NAME","Leather Grip"
-"ITEM.LEATHER_GRIP.DESCRIPTION","<style:QUOTE>Better than losing it mid-swing.</style>
-A firm leather wrap fitted around a melee weapon’s handle."
+"ITEM.LEATHER_GRIP.DESCRIPTION","<style:QUOTE>Better than losing it mid-swing.</style><br/>A firm leather wrap fitted around a melee weapon’s handle."
 "ITEM.LEATHER_GRIP.STORY",""
 "ITEM.BATTLE_TONIC.NAME","Battle Tonic"
-"ITEM.BATTLE_TONIC.DESCRIPTION","<style:QUOTE>Tastes awful.</style>
-A harsh stimulant brewed to keep fighters moving."
+"ITEM.BATTLE_TONIC.DESCRIPTION","<style:QUOTE>Tastes awful.</style><br/>A harsh stimulant brewed to keep fighters moving."
 "ITEM.BATTLE_TONIC.STORY","Battle Tonic is a rough replica of an old military stimulant whose formula was lost after the collapse. What survivors make now is the closest they could manage: strong alcohol, bitter herbs, scavenged stimulants, and carefully prepared Berserk Mushrooms.
 
 It is unstable, unpleasant, and nowhere near the original—but it works."
 "ITEM.BERSERK_MUSHROOMS.NAME","Berserk Mushrooms"
-"ITEM.BERSERK_MUSHROOMS.DESCRIPTION","<style:QUOTE>I can hear my blood.</style>
-Wild mushrooms that dull fear and awaken violence."
+"ITEM.BERSERK_MUSHROOMS.DESCRIPTION","<style:QUOTE>I can hear my blood.</style><br/>Wild mushrooms that dull fear and awaken violence."
 "ITEM.BERSERK_MUSHROOMS.STORY","These mushrooms are grown in guarded fields high in the mountains, where the cold soil and thin air give them their strange potency. Eaten raw, they cause a violent rush of strength, speed, and aggression, followed by exhaustion and poor judgment.
 
 They later became the key ingredient in Battle Tonic, where their effects could be controlled—at least slightly."
 "ITEM.POCKET_WATCH.NAME","Pocket Watch"
-"ITEM.POCKET_WATCH.DESCRIPTION","<style:QUOTE>It stopped the day the appoclyps started</style>
-A scratched pocket watch that still keeps time."
+"ITEM.POCKET_WATCH.DESCRIPTION","<style:QUOTE>It stopped the day the appoclyps started</style><br/>A scratched pocket watch that still keeps time."
 "ITEM.POCKET_WATCH.STORY","The watch was carried for years before the collapse, then passed between survivors who kept it wound even when dates stopped meaning anything.
 
 A faded name is engraved inside the lid. No one in the squad recognizes it, but the watch is still carefully set every morning, as though its owner might return to ask the time."
 "ITEM.OLD_MEDAL.NAME","Old Medal"
-"ITEM.OLD_MEDAL.DESCRIPTION","<style:QUOTE>They said you were brave, i just wanted you home.</style>
-A tarnished medal awarded for a forgotten act of courage."
+"ITEM.OLD_MEDAL.DESCRIPTION","<style:QUOTE>They said you were brave, i just wanted you home.</style><br/>A tarnished medal awarded for a forgotten act of courage."
 "ITEM.OLD_MEDAL.STORY","The medal has faded and the metal has lost its shine, but the name on the back remains readable. It once belonged to someone praised for standing their ground when others could not.
 The medal was found inside a small wooden box beside an unopened letter. Looks like the medals owner never came home."
 "ITEM.POSTCARD.NAME","Postcard"
-"ITEM.POSTCARD.DESCRIPTION","<style:QUOTE>Wish you were here</style>
-A faded postcard from a place that may no longer exist."
+"ITEM.POSTCARD.DESCRIPTION","<style:QUOTE>Wish you were here</style><br/>A faded postcard from a place that may no longer exist."
 "ITEM.POSTCARD.STORY","The front shows a bright seaside town beneath a clear summer sky. On the back is a short message promising to visit once work became less busy.
 The postcard was never sent. Its writer kept it folded inside a coat pocket until the paper softened at the edges. No one knows whether they ever saw the sea again."
 "ITEM.DECK_OF_CARDS.NAME","Deck of Cards"
-"ITEM.DECK_OF_CARDS.DESCRIPTION","<style:QUOTE>We always said we would finish the game tomorrow.</style>
-A worn deck missing several cards."
+"ITEM.DECK_OF_CARDS.DESCRIPTION","<style:QUOTE>We always said we would finish the game tomorrow.</style><br/>A worn deck missing several cards."
 "ITEM.DECK_OF_CARDS.STORY","The cards are stained, creased, and marked by years of use. Several faces carry names written in faded ink, recording old victories, debts, and jokes. Some look new some look old.
 The final hand is still tucked beneath the string holding the deck together. No one has moved the cards since the players failed to return."
 "ITEM.GUITAR.NAME","Guitar"
-"ITEM.GUITAR.DESCRIPTION","<style:QUOTE>For a moment, everything feels normal again.</style>
-A worn acoustic guitar with a warm, uneven sound."
+"ITEM.GUITAR.DESCRIPTION","<style:QUOTE>For a moment, everything feels normal again.</style><br/>A worn acoustic guitar with a warm, uneven sound."
 "ITEM.GUITAR.STORY","The wood is scratched, two tuning pegs have been replaced, and the case has been patched more times than anyone can count.
 It once belonged to someone who played for the others after long shifts and bad news. The songs were simple, but for a few minutes they made the world feel normal again."
 "ITEM.CIGARETTES.NAME","Cigarettes
 "
-"ITEM.CIGARETTES.DESCRIPTION","<style:QUOTE>You said you would quit when things got better.</style>
-A dry pack of cigarettes saved for difficult nights."
+"ITEM.CIGARETTES.DESCRIPTION","<style:QUOTE>You said you would quit when things got better.</style><br/>A dry pack of cigarettes saved for difficult nights."
 "ITEM.CIGARETTES.STORY","The pack was found inside an old jacket. A name and a date are written beneath the lid, along with a promise to quit when better days returned.
 No one knows whether the owner ever managed to stop. The final cigarette remains untouched, saved for a better day that never came."
 "ITEM.BROKEN_MATCHES.NAME","Pile of Broken Matches"
-"ITEM.BROKEN_MATCHES.DESCRIPTION","<style:QUOTE>One of them has to work.</style>
-A loose pile of damaged matches, with only a few still usable."
+"ITEM.BROKEN_MATCHES.DESCRIPTION","<style:QUOTE>One of them has to work.</style><br/>A loose pile of damaged matches, with only a few still usable."
 "ITEM.BROKEN_MATCHES.STORY","Gathered from tables, drawers and pockets, most are snapped, damp, or missing their heads. We still keep them because even one working match can mean warmth, light, or a fire before nightfall."
 "ITEM.MATCHBOOK.NAME","Matchbook"
-"ITEM.MATCHBOOK.DESCRIPTION","<style:QUOTE>A chance to make the dark smaller.</style>
-A small paper matchbook with only a handful of dry matches left."
+"ITEM.MATCHBOOK.DESCRIPTION","<style:QUOTE>A chance to make the dark smaller.</style><br/>A small paper matchbook with only a handful of dry matches left."
 "ITEM.MATCHBOOK.STORY","Used to be, you could get a matchbook almost anywhere, even little roadside stops. Buy something, and they would hand you one with the change.
 People collected them while traveling. Some had famous landmarks on the cover, others showed towns and places no one had ever heard of. Funny thing is, back then they were everywhere. Now even one faded matchbook can feel like a piece of the whole world we lost."
 "ITEM.USED_MATCHBOX.NAME","Used Matchbox"
-"ITEM.USED_MATCHBOX.DESCRIPTION","<style:QUOTE>Enough for weeks</style>
-A worn matchbox with only a few dry matches left."
+"ITEM.USED_MATCHBOX.DESCRIPTION","<style:QUOTE>Enough for weeks</style><br/>A worn matchbox with only a few dry matches left."
 "ITEM.USED_MATCHBOX.STORY",""

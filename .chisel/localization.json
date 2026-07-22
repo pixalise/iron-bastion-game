@@ -15,7 +15,7 @@
     {
       "path": "UNIT.RIFLE_MAN.DESCRIPTION",
       "values": {
-        "en": "The unit does <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE_TYPE> <icon:PHYSICAL_DAMAGE/> {float:physical_damage} </tooltip></style> points of<br/>damage per shot."
+        "en": "The unit does <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE_TYPE> <icon:PHYSICAL_DAMAGE/> {float:physical_damage} </tooltip></style><br/> points of<br/>damage per shot."
       },
       "placeholders": []
     },
@@ -29,7 +29,7 @@
     {
       "path": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION",
       "values": {
-        "en": "<icon:PHYSICAL_DAMAGE/> <style:PHYSICAL_DAMAGE> Damage coming</style> from ballistic, blunt force and<br/>other variant of physical damage"
+        "en": "<icon:PHYSICAL_DAMAGE/> <style:PHYSICAL_DAMAGE> Damage coming</style><br/> from ballistic, blunt force and<br/>other variant of physical damage"
       },
       "placeholders": []
     },
@@ -43,7 +43,7 @@
     {
       "path": "ITEM.OLD_REVOLVER.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>A weapon from the olden era</style>\nAnd old revolver with a leather handle."
+        "en": "<style:QUOTE>A weapon from the olden era</style><br/>And old revolver with a leather handle."
       },
       "placeholders": []
     },
@@ -64,7 +64,7 @@
     {
       "path": "ITEM.WAX_STRING.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>Old ways. New prey</style>\nA simple hemp bowstring treated with beeswax."
+        "en": "<style:QUOTE>Old ways. New prey</style><br/>A simple hemp bowstring treated with beeswax."
       },
       "placeholders": []
     },
@@ -78,7 +78,7 @@
     {
       "path": "ITEM.HUNTING_ARROWS.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>Old ways. New prey</style>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
+        "en": "<style:QUOTE>Old ways. New prey</style><br/>Arrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
       },
       "placeholders": []
     },
@@ -99,7 +99,7 @@
     {
       "path": "ITEM.PIERCING_ARROWS.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>Everything has a weakness.</style>\nNarrow steel-tipped arrows built to punch through armor."
+        "en": "<style:QUOTE>Everything has a weakness.</style><br/>Narrow steel-tipped arrows built to punch through armor."
       },
       "placeholders": []
     },
@@ -127,7 +127,7 @@
     {
       "path": "ITEM.FIRE_ARROWS.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>The dead return. Ash does not.</style>\nArrows wrapped with alcohol-soaked cloth."
+        "en": "<style:QUOTE>The dead return. Ash does not.</style><br/>Arrows wrapped with alcohol-soaked cloth."
       },
       "placeholders": []
     },
@@ -148,7 +148,7 @@
     {
       "path": "ITEM.REINFORCED_BOW.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>It only needs to outlast us.</style>\nReinforced with mixed materials to hold greater tension without breaking."
+        "en": "<style:QUOTE>It only needs to outlast us.</style><br/>Reinforced with mixed materials to hold greater tension without breaking."
       },
       "placeholders": []
     },
@@ -169,7 +169,7 @@
     {
       "path": "ITEM.BOW_OLD_FRIEND.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>Come on, old friend. One more hunt.</style>\nA battle-worn bow that endures impossible tension."
+        "en": "<style:QUOTE>Come on, old friend. One more hunt.</style><br/>A battle-worn bow that endures impossible tension."
       },
       "placeholders": []
     },
@@ -190,7 +190,7 @@
     {
       "path": "ITEM.UNOPENED_LIQUOR.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>My father poured this on my first winter home.</style>\nSealed bottles of strong liquor."
+        "en": "<style:QUOTE>My father poured this on my first winter home.</style><br/>Sealed bottles of strong liquor."
       },
       "placeholders": []
     },
@@ -211,7 +211,7 @@
     {
       "path": "ITEM.TEDDY_BEAR.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>I wish I had one as a child.</style>\nA faded stuffed bear, worn soft from years of being held."
+        "en": "<style:QUOTE>I wish I had one as a child.</style><br/>A faded stuffed bear, worn soft from years of being held."
       },
       "placeholders": []
     },
@@ -232,7 +232,7 @@
     {
       "path": "ITEM.MAKESHIFT_ARMOR.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>It does not need to look good. It only needs to stop the bite</style>\nScrap metal and thick fabric tied together into crude protection."
+        "en": "<style:QUOTE>It does not need to look good. It only needs to stop the bite</style><br/>Scrap metal and thick fabric tied together into crude protection."
       },
       "placeholders": []
     },
@@ -253,7 +253,7 @@
     {
       "path": "ITEM.STEEL_ARMOR.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>Make them work for every wound.</style>\nFitted steel plates offering reliable protection without excessive weight."
+        "en": "<style:QUOTE>Make them work for every wound.</style><br/>Fitted steel plates offering reliable protection without excessive weight."
       },
       "placeholders": []
     },
@@ -295,7 +295,7 @@
     {
       "path": "ITEM.STEEL_SWORD.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>Keep swinging until it stops moving.</style>\nA dependable steel blade made for repeated close combat."
+        "en": "<style:QUOTE>Keep swinging until it stops moving.</style><br/>A dependable steel blade made for repeated close combat."
       },
       "placeholders": []
     },
@@ -337,7 +337,7 @@
     {
       "path": "ITEM.LEATHER_GRIP.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>Better than losing it mid-swing.</style>\nA firm leather wrap fitted around a melee weapon’s handle."
+        "en": "<style:QUOTE>Better than losing it mid-swing.</style><br/>A firm leather wrap fitted around a melee weapon’s handle."
       },
       "placeholders": []
     },
@@ -358,7 +358,7 @@
     {
       "path": "ITEM.BATTLE_TONIC.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>Tastes awful.</style>\nA harsh stimulant brewed to keep fighters moving."
+        "en": "<style:QUOTE>Tastes awful.</style><br/>A harsh stimulant brewed to keep fighters moving."
       },
       "placeholders": []
     },
@@ -379,7 +379,7 @@
     {
       "path": "ITEM.BERSERK_MUSHROOMS.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>I can hear my blood.</style>\nWild mushrooms that dull fear and awaken violence."
+        "en": "<style:QUOTE>I can hear my blood.</style><br/>Wild mushrooms that dull fear and awaken violence."
       },
       "placeholders": []
     },
@@ -400,7 +400,7 @@
     {
       "path": "ITEM.POCKET_WATCH.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>It stopped the day the appoclyps started</style>\nA scratched pocket watch that still keeps time."
+        "en": "<style:QUOTE>It stopped the day the appoclyps started</style><br/>A scratched pocket watch that still keeps time."
       },
       "placeholders": []
     },
@@ -421,7 +421,7 @@
     {
       "path": "ITEM.OLD_MEDAL.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>They said you were brave, i just wanted you home.</style>\nA tarnished medal awarded for a forgotten act of courage."
+        "en": "<style:QUOTE>They said you were brave, i just wanted you home.</style><br/>A tarnished medal awarded for a forgotten act of courage."
       },
       "placeholders": []
     },
@@ -442,7 +442,7 @@
     {
       "path": "ITEM.POSTCARD.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>Wish you were here</style>\nA faded postcard from a place that may no longer exist."
+        "en": "<style:QUOTE>Wish you were here</style><br/>A faded postcard from a place that may no longer exist."
       },
       "placeholders": []
     },
@@ -463,7 +463,7 @@
     {
       "path": "ITEM.DECK_OF_CARDS.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>We always said we would finish the game tomorrow.</style>\nA worn deck missing several cards."
+        "en": "<style:QUOTE>We always said we would finish the game tomorrow.</style><br/>A worn deck missing several cards."
       },
       "placeholders": []
     },
@@ -484,7 +484,7 @@
     {
       "path": "ITEM.GUITAR.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>For a moment, everything feels normal again.</style>\nA worn acoustic guitar with a warm, uneven sound."
+        "en": "<style:QUOTE>For a moment, everything feels normal again.</style><br/>A worn acoustic guitar with a warm, uneven sound."
       },
       "placeholders": []
     },
@@ -505,7 +505,7 @@
     {
       "path": "ITEM.CIGARETTES.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>You said you would quit when things got better.</style>\nA dry pack of cigarettes saved for difficult nights."
+        "en": "<style:QUOTE>You said you would quit when things got better.</style><br/>A dry pack of cigarettes saved for difficult nights."
       },
       "placeholders": []
     },
@@ -526,7 +526,7 @@
     {
       "path": "ITEM.BROKEN_MATCHES.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>One of them has to work.</style>\nA loose pile of damaged matches, with only a few still usable."
+        "en": "<style:QUOTE>One of them has to work.</style><br/>A loose pile of damaged matches, with only a few still usable."
       },
       "placeholders": []
     },
@@ -547,7 +547,7 @@
     {
       "path": "ITEM.MATCHBOOK.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>A chance to make the dark smaller.</style>\nA small paper matchbook with only a handful of dry matches left."
+        "en": "<style:QUOTE>A chance to make the dark smaller.</style><br/>A small paper matchbook with only a handful of dry matches left."
       },
       "placeholders": []
     },
@@ -568,7 +568,7 @@
     {
       "path": "ITEM.USED_MATCHBOX.DESCRIPTION",
       "values": {
-        "en": "<style:QUOTE>Enough for weeks</style>\nA worn matchbox with only a few dry matches left."
+        "en": "<style:QUOTE>Enough for weeks</style><br/>A worn matchbox with only a few dry matches left."
       },
       "placeholders": []
     },
