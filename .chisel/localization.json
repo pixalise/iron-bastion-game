@@ -29,7 +29,7 @@
     {
       "path": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION",
       "values": {
-        "en": "Damage counting from ballistic, blunt force and so on..."
+        "en": "<style:PHYSICAL_DAMAGE> Damage counting</style> from ballistic, blunt force and so on..."
       },
       "placeholders": []
     },
@@ -176,7 +176,7 @@
     {
       "path": "ITEM.BOW_OLD_FRIEND.STORY",
       "values": {
-        "en": "ITEM.BOW_OLD_FRIEND.STORY\nWhen ammunition began to disappear, survivors turned to weapons from older eras. One of them was Old Friend, a bow never meant to survive more than a few months of constant use. It outlived that purpose.\nIts limbs are patched, its frame is cracked, and brass plates hold together places that should have failed years ago. Decorative horns were added as marks of the hunts it survived. Its string has been replaced countless times, each replacement recorded by a small carving near the grip.\nThere is only one Old Friend in the squad, but many still remember its name. Those who fight beside it do so with renewed vigor, driven by the legend carried into battle. \nBring it home and place it in the hands of someone who once knew it, and an old legend may choose to fight again."
+        "en": "When ammunition began to disappear, survivors turned to weapons from older eras. One of them was Old Friend, a bow never meant to survive more than a few months of constant use. It outlived that purpose.\nIts limbs are patched, its frame is cracked, and brass plates hold together places that should have failed years ago. Decorative horns were added as marks of the hunts it survived. Its string has been replaced countless times, each replacement recorded by a small carving near the grip.\nThere is only one Old Friend in the squad, but many still remember its name. Those who fight beside it do so with renewed vigor, driven by the legend carried into battle. \nBring it home and place it in the hands of someone who once knew it, and an old legend may choose to fight again."
       },
       "placeholders": []
     },
@@ -204,7 +204,7 @@
     {
       "path": "ITEM.TEDDY_BEAR.NAME",
       "values": {
-        "en": "<icon:TEDDY_BEAR/> Teddy Bear"
+        "en": "<icon:ITEM_TEDDY_BEAR/> Teddy Bear"
       },
       "placeholders": []
     },
