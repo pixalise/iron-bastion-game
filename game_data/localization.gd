@@ -77,43 +77,57 @@ enum Id {
 	ITEM_TEDDY_BEAR_NAME = 28,
 	ITEM_TEDDY_BEAR_DESCRIPTION = 29,
 	ITEM_TEDDY_BEAR_STORY = 30,
-	ITEM_TEST_ITEM_NAME = 31,
-	ITEM_MAKESHIFT_ARMOR_NAME = 32,
-	ITEM_MAKESHIFT_ARMOR_DESCRIPTION = 33,
-	ITEM_MAKESHIFT_ARMOR_STORY = 34,
-	ITEM_STEEL_ARMOR_NAME = 35,
-	ITEM_STEEL_ARMOR_DESCRIPTION = 36,
-	ITEM_WOODEN_SHIELD_NAME = 37,
-	ITEM_WOODEN_SHIELD_DESCRIPTION = 38,
-	ITEM_STEEL_ARMOR_STORY = 39,
-	ITEM_WOODEN_SHIELD_STORY = 40,
-	ITEM_STEEL_SWORD_NAME = 41,
-	ITEM_STEEL_SWORD_DESCRIPTION = 42,
-	ITEM_STEEL_SWORD_STORY = 43,
-	ITEM_WHETSTONE_NAME = 44,
-	ITEM_WHETSTONE_DESCRIPTION = 45,
-	ITEM_WHETSTONE_STORY = 46,
-	ITEM_LEATHER_GRIP_NAME = 47,
-	ITEM_LEATHER_GRIP_DESCRIPTION = 48,
-	ITEM_LEATHER_GRIP_STORY = 49,
-	ITEM_BATTLE_TONIC_NAME = 50,
-	ITEM_BATTLE_TONIC_DESCRIPTION = 51,
-	ITEM_BATTLE_TONIC_STORY = 52,
-	ITEM_BERSERK_MUSHROOMS_NAME = 53,
-	ITEM_BERSERK_MUSHROOMS_DESCRIPTION = 54,
-	ITEM_BERSERK_MUSHROOMS_STORY = 55,
-	ITEM_POCKET_WATCH_NAME = 56,
-	ITEM_POCKET_WATCH_DESCRIPTION = 57,
-	ITEM_POCKET_WATCH_STORY = 58,
-	ITEM_OLD_MEDAL_NAME = 59,
-	ITEM_OLD_MEDAL_DESCRIPTION = 60,
-	ITEM_OLD_MEDAL_STORY = 61,
-	ITEM_POSTCARD_NAME = 62,
-	ITEM_POSTCARD_DESCRIPTION = 63,
-	ITEM_POSTCARD_STORY = 64,
-	ITEM_DECK_OF_CARDS_NAME = 65,
-	ITEM_DECK_OF_CARDS_DESCRIPTION = 66,
-	ITEM_DECK_OF_CARDS_STORY = 67
+	ITEM_MAKESHIFT_ARMOR_NAME = 31,
+	ITEM_MAKESHIFT_ARMOR_DESCRIPTION = 32,
+	ITEM_MAKESHIFT_ARMOR_STORY = 33,
+	ITEM_STEEL_ARMOR_NAME = 34,
+	ITEM_STEEL_ARMOR_DESCRIPTION = 35,
+	ITEM_WOODEN_SHIELD_NAME = 36,
+	ITEM_WOODEN_SHIELD_DESCRIPTION = 37,
+	ITEM_STEEL_ARMOR_STORY = 38,
+	ITEM_WOODEN_SHIELD_STORY = 39,
+	ITEM_STEEL_SWORD_NAME = 40,
+	ITEM_STEEL_SWORD_DESCRIPTION = 41,
+	ITEM_STEEL_SWORD_STORY = 42,
+	ITEM_WHETSTONE_NAME = 43,
+	ITEM_WHETSTONE_DESCRIPTION = 44,
+	ITEM_WHETSTONE_STORY = 45,
+	ITEM_LEATHER_GRIP_NAME = 46,
+	ITEM_LEATHER_GRIP_DESCRIPTION = 47,
+	ITEM_LEATHER_GRIP_STORY = 48,
+	ITEM_BATTLE_TONIC_NAME = 49,
+	ITEM_BATTLE_TONIC_DESCRIPTION = 50,
+	ITEM_BATTLE_TONIC_STORY = 51,
+	ITEM_BERSERK_MUSHROOMS_NAME = 52,
+	ITEM_BERSERK_MUSHROOMS_DESCRIPTION = 53,
+	ITEM_BERSERK_MUSHROOMS_STORY = 54,
+	ITEM_POCKET_WATCH_NAME = 55,
+	ITEM_POCKET_WATCH_DESCRIPTION = 56,
+	ITEM_POCKET_WATCH_STORY = 57,
+	ITEM_OLD_MEDAL_NAME = 58,
+	ITEM_OLD_MEDAL_DESCRIPTION = 59,
+	ITEM_OLD_MEDAL_STORY = 60,
+	ITEM_POSTCARD_NAME = 61,
+	ITEM_POSTCARD_DESCRIPTION = 62,
+	ITEM_POSTCARD_STORY = 63,
+	ITEM_DECK_OF_CARDS_NAME = 64,
+	ITEM_DECK_OF_CARDS_DESCRIPTION = 65,
+	ITEM_DECK_OF_CARDS_STORY = 66,
+	ITEM_GUITAR_NAME = 67,
+	ITEM_GUITAR_DESCRIPTION = 68,
+	ITEM_GUITAR_STORY = 69,
+	ITEM_CIGARETTES_NAME = 70,
+	ITEM_CIGARETTES_DESCRIPTION = 71,
+	ITEM_CIGARETTES_STORY = 72,
+	ITEM_BROKEN_MATCHES_NAME = 73,
+	ITEM_BROKEN_MATCHES_DESCRIPTION = 74,
+	ITEM_BROKEN_MATCHES_STORY = 75,
+	ITEM_MATCHBOOK_NAME = 76,
+	ITEM_MATCHBOOK_DESCRIPTION = 77,
+	ITEM_MATCHBOOK_STORY = 78,
+	ITEM_USED_MATCHBOX_NAME = 79,
+	ITEM_USED_MATCHBOX_DESCRIPTION = 80,
+	ITEM_USED_MATCHBOX_STORY = 81
 }
 
 const DEFAULT_LOCALE := "en"
@@ -150,7 +164,6 @@ const KEYS := [
 	"ITEM.TEDDY_BEAR.NAME",
 	"ITEM.TEDDY_BEAR.DESCRIPTION",
 	"ITEM.TEDDY_BEAR.STORY",
-	"ITEM.TEST_ITEM.NAME",
 	"ITEM.MAKESHIFT_ARMOR.NAME",
 	"ITEM.MAKESHIFT_ARMOR.DESCRIPTION",
 	"ITEM.MAKESHIFT_ARMOR.STORY",
@@ -186,7 +199,22 @@ const KEYS := [
 	"ITEM.POSTCARD.STORY",
 	"ITEM.DECK_OF_CARDS.NAME",
 	"ITEM.DECK_OF_CARDS.DESCRIPTION",
-	"ITEM.DECK_OF_CARDS.STORY"
+	"ITEM.DECK_OF_CARDS.STORY",
+	"ITEM.GUITAR.NAME",
+	"ITEM.GUITAR.DESCRIPTION",
+	"ITEM.GUITAR.STORY",
+	"ITEM.CIGARETTES.NAME",
+	"ITEM.CIGARETTES.DESCRIPTION",
+	"ITEM.CIGARETTES.STORY",
+	"ITEM.BROKEN_MATCHES.NAME",
+	"ITEM.BROKEN_MATCHES.DESCRIPTION",
+	"ITEM.BROKEN_MATCHES.STORY",
+	"ITEM.MATCHBOOK.NAME",
+	"ITEM.MATCHBOOK.DESCRIPTION",
+	"ITEM.MATCHBOOK.STORY",
+	"ITEM.USED_MATCHBOX.NAME",
+	"ITEM.USED_MATCHBOX.DESCRIPTION",
+	"ITEM.USED_MATCHBOX.STORY"
 ]
 const VALUES := {
 	"en":
@@ -194,7 +222,7 @@ const VALUES := {
 		"Rifle Man",
 		"The unit does <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE_TYPE> <icon:PHYSICAL_DAMAGE/> {float:physical_damage} </tooltip></style> points of damage per shot.",
 		"Physical damage",
-		"Damage counting from ballistic, blunt force and so on...",
+		"<icon:PHYSICAL_DAMAGE/> <style:PHYSICAL_DAMAGE> Damage coming</style> from ballistic, blunt force and other variant of physical damage",
 		"Old Revolver",
 		"<quote>A weapon from the olden era</quote>\nAnd old revolver with a leather handle.",
 		"",
@@ -215,14 +243,13 @@ const VALUES := {
 		"",
 		"Old Friend",
 		"<quote>Come on, old friend. One more hunt.</quote>\nA battle-worn bow that endures impossible tension.",
-		"ITEM.BOW_OLD_FRIEND.STORY\nWhen ammunition began to disappear, survivors turned to weapons from older eras. One of them was Old Friend, a bow never meant to survive more than a few months of constant use. It outlived that purpose.\nIts limbs are patched, its frame is cracked, and brass plates hold together places that should have failed years ago. Decorative horns were added as marks of the hunts it survived. Its string has been replaced countless times, each replacement recorded by a small carving near the grip.\nThere is only one Old Friend in the squad, but many still remember its name. Those who fight beside it do so with renewed vigor, driven by the legend carried into battle. \nBring it home and place it in the hands of someone who once knew it, and an old legend may choose to fight again.",
+		"When ammunition began to disappear, survivors turned to weapons from older eras. One of them was Old Friend, a bow never meant to survive more than a few months of constant use. It outlived that purpose.\nIts limbs are patched, its frame is cracked, and brass plates hold together places that should have failed years ago. Decorative horns were added as marks of the hunts it survived. Its string has been replaced countless times, each replacement recorded by a small carving near the grip.\nThere is only one Old Friend in the squad, but many still remember its name. Those who fight beside it do so with renewed vigor, driven by the legend carried into battle. \nBring it home and place it in the hands of someone who once knew it, and an old legend may choose to fight again.",
 		"Unopened Liquor",
 		"<quote>My father poured this on my first winter home.</quote>\nSealed bottles of strong liquor.",
 		"",
-		"Teddy Bear",
+		"<icon:ITEM_TEDDY_BEAR/> Teddy Bear",
 		"<quote>I wish I had one as a child.</quote>\nA faded stuffed bear, worn soft from years of being held.",
-		"Found beneath the remains of a child’s bed, the bear was strangely untouched by the collapse around it. Its fur is faded, one eye has been sewn back on, and its little vest carries the dust of a home that no longer exists.\n\nSome survivors keep it for the child who lost it. Others hold it for the childhood they never had.",
-		"Test Item 2",
+		"Found beneath the remains of a child’s bed, the bear was strangely untouched by the collapse around it. Its fur is faded, one eye has been sewn back on, and its little vest carries the dust of a home that no longer exists.\nSome survivors keep it for the children they lost. Others hold it for the childhood they never had.",
 		"Makeshift Armor",
 		"<quote>It does not need to look good. It only needs to stop the bite</quote>\nScrap metal and thick fabric tied together into crude protection.",
 		"Built from road signs, leather scraps, and whatever else could be found. It is uncomfortable and heavy, but survivors learned quickly that poor armor was still better than exposed flesh.",
@@ -258,10 +285,27 @@ const VALUES := {
 		"The front shows a bright seaside town beneath a clear summer sky. On the back is a short message promising to visit once work became less busy.\nThe postcard was never sent. Its writer kept it folded inside a coat pocket until the paper softened at the edges. No one knows whether they ever saw the sea again.",
 		"Deck of Cards",
 		"<quote>We always said we would finish the game tomorrow.</quote>\nA worn deck missing several cards.",
-		"The cards are stained, creased, and marked by years of use. Several faces carry names written in faded ink, recording old victories, debts, and jokes. Some look new some look old.\nThe final hand is still tucked beneath the string holding the deck together. No one has moved the cards since the players failed to return."
+		"The cards are stained, creased, and marked by years of use. Several faces carry names written in faded ink, recording old victories, debts, and jokes. Some look new some look old.\nThe final hand is still tucked beneath the string holding the deck together. No one has moved the cards since the players failed to return.",
+		"Guitar",
+		"<quote>For a moment, everything feels normal again.</quote>\nA worn acoustic guitar with a warm, uneven sound.",
+		"The wood is scratched, two tuning pegs have been replaced, and the case has been patched more times than anyone can count.\nIt once belonged to someone who played for the others after long shifts and bad news. The songs were simple, but for a few minutes they made the world feel normal again.",
+		"Cigarettes\n",
+		"<quote>You said you would quit when things got better.</quote>\nA dry pack of cigarettes saved for difficult nights.",
+		"The pack was found inside an old jacket. A name and a date are written beneath the lid, along with a promise to quit when better days returned.\nNo one knows whether the owner ever managed to stop. The final cigarette remains untouched, saved for a better day that never came.",
+		"Pile of Broken Matches",
+		"<quote>One of them has to work.</quote>\nA loose pile of damaged matches, with only a few still usable.",
+		"Gathered from tables, drawers and pockets, most are snapped, damp, or missing their heads. We still keep them because even one working match can mean warmth, light, or a fire before nightfall.",
+		"Matchbook",
+		"<quote>A chance to make the dark smaller.</quote>\nA small paper matchbook with only a handful of dry matches left.",
+		"Used to be, you could get a matchbook almost anywhere, even little roadside stops. Buy something, and they would hand you one with the change.\nPeople collected them while traveling. Some had famous landmarks on the cover, others showed towns and places no one had ever heard of. Funny thing is, back then they were everywhere. Now even one faded matchbook can feel like a piece of the whole world we lost.",
+		"Used Matchbox",
+		"<quote>Enough for weeks</quote>\nA worn matchbox with only a few dry matches left.",
+		""
 	]
 }
 const ICON_SLUGS := [
+	[],
+	["PHYSICAL_DAMAGE"],
 	[],
 	["PHYSICAL_DAMAGE"],
 	[],
@@ -277,6 +321,18 @@ const ICON_SLUGS := [
 	[],
 	[],
 	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	["ITEM_TEDDY_BEAR"],
 	[],
 	[],
 	[],
@@ -345,11 +401,39 @@ const ICONS := {
 		"path": "res://game_data/assets/ui_icon/hunting_arrows.png",
 		"width": 1254,
 		"height": 1254
+	},
+	"ITEM_TEDDY_BEAR":
+	{
+		"asset_id": "ITEM_TEDDY_BEAR",
+		"path": "res://game_data/assets/ui_icon/item_teddy_bear.png",
+		"width": 1024,
+		"height": 1024
+	},
+	"ITEM_MATCHBOX":
+	{
+		"asset_id": "ITEM_MATCHBOX",
+		"path": "res://game_data/assets/ui_icon/item_matchbox.png",
+		"width": 1024,
+		"height": 1024
 	}
 }
 const PLACEHOLDERS := [
 	[],
 	["physical_damage"],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
 	[],
 	[],
 	[],
@@ -485,6 +569,20 @@ const PLACEHOLDER_TYPES := [
 	[],
 	[],
 	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
+	[],
 	[]
 ]
 const STYLES := {
@@ -522,7 +620,7 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 	(
 		regex
 		. compile(
-			"<style:([A-Z][A-Z0-9_]*)>|</style>|<tooltip:([A-Z][A-Z0-9_]*)>|</tooltip>|<icon:([A-Z][A-Z0-9_]*)\\s*/>|\\[icon:([A-Z][A-Z0-9_]*)\\]|\\[term:([A-Z][A-Z0-9_]*)\\]|\\[/term\\]|\\{(int|float|string):([a-z][a-z0-9_]*)\\}"
+			"<style:([A-Z][A-Z0-9_]*)>|</style>|<tooltip:([A-Z][A-Z0-9_]*)>|</tooltip>|<icon:([A-Z][A-Z0-9_]*)\\s*/>|\\{(int|float|string):([a-z][a-z0-9_]*)\\}"
 		)
 	)
 	var cursor := 0
@@ -571,31 +669,9 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 					"path": String(icon.get("path", ""))
 				}
 			)
-		elif token.begins_with("[icon:"):
-			var icon_slug := result.get_string(4)
-			var icon_start := plain.length()
-			plain += _icon_plain(icon_slug)
-			bbcode += _icon_fragment(icon_slug)
-			var icon: Dictionary = ICONS.get(icon_slug, {})
-			spans.append(
-				{
-					"type": "icon",
-					"icon": icon_slug,
-					"start": icon_start,
-					"end": plain.length(),
-					"path": String(icon.get("path", ""))
-				}
-			)
-		elif token.begins_with("[term:"):
-			var style_slug := result.get_string(5)
-			active_styles.append({"style": style_slug, "start": plain.length()})
-			bbcode += _style_open_bbcode(style_slug)
-		elif token == "[/term]":
-			bbcode += _style_close_bbcode(_active_style_slug(active_styles))
-			_close_style(active_styles, spans, plain.length())
 		else:
-			var placeholder_type := result.get_string(6)
-			var placeholder := result.get_string(7)
+			var placeholder_type := result.get_string(4)
+			var placeholder := result.get_string(5)
 			var replacement := str(
 				arguments.get(placeholder, _placeholder_default(placeholder_type))
 			)

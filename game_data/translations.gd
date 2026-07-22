@@ -14,6 +14,61 @@ class UnitRifleManDescriptionParameters:
 		return {"physical_damage": physical_damage}
 
 
+class ItemUsedMatchboxTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_USED_MATCHBOX_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_USED_MATCHBOX_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_USED_MATCHBOX_STORY, {})
+
+
+class ItemMatchbookTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_MATCHBOOK_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_MATCHBOOK_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_MATCHBOOK_STORY, {})
+
+
+class ItemBrokenMatchesTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_BROKEN_MATCHES_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_BROKEN_MATCHES_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_BROKEN_MATCHES_STORY, {})
+
+
+class ItemCigarettesTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_CIGARETTES_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_CIGARETTES_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_CIGARETTES_STORY, {})
+
+
+class ItemGuitarTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_GUITAR_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_GUITAR_DESCRIPTION, {})
+
+	func story() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_GUITAR_STORY, {})
+
+
 class ItemDeckOfCardsTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_DECK_OF_CARDS_NAME, {})
@@ -148,11 +203,6 @@ class ItemMakeshiftArmorTranslations:
 		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_MAKESHIFT_ARMOR_STORY, {})
 
 
-class ItemTestItemTranslations:
-	func name() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_TEST_ITEM_NAME, {})
-
-
 class ItemTeddyBearTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.ITEM_TEDDY_BEAR_NAME, {})
@@ -262,7 +312,6 @@ class ItemTranslations:
 	var bow_old_friend := ItemBowOldFriendTranslations.new()
 	var unopened_liquor := ItemUnopenedLiquorTranslations.new()
 	var teddy_bear := ItemTeddyBearTranslations.new()
-	var test_item := ItemTestItemTranslations.new()
 	var makeshift_armor := ItemMakeshiftArmorTranslations.new()
 	var steel_armor := ItemSteelArmorTranslations.new()
 	var wooden_shield := ItemWoodenShieldTranslations.new()
@@ -275,6 +324,11 @@ class ItemTranslations:
 	var old_medal := ItemOldMedalTranslations.new()
 	var postcard := ItemPostcardTranslations.new()
 	var deck_of_cards := ItemDeckOfCardsTranslations.new()
+	var guitar := ItemGuitarTranslations.new()
+	var cigarettes := ItemCigarettesTranslations.new()
+	var broken_matches := ItemBrokenMatchesTranslations.new()
+	var matchbook := ItemMatchbookTranslations.new()
+	var used_matchbox := ItemUsedMatchboxTranslations.new()
 
 
 class TooltipPhysicalDamageTypeTranslations:

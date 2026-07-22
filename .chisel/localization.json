@@ -29,7 +29,7 @@
     {
       "path": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION",
       "values": {
-        "en": "<style:PHYSICAL_DAMAGE> Damage counting</style> from ballistic, blunt force and so on..."
+        "en": "<icon:PHYSICAL_DAMAGE/> <style:PHYSICAL_DAMAGE> Damage coming</style> from ballistic, blunt force and other variant of physical damage"
       },
       "placeholders": []
     },

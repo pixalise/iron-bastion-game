@@ -3,11 +3,23 @@ class_name ChiselAssets
 extends RefCounted
 
 enum Id {
-	FOREST_SOIL_1 = 0, FOREST_GRASS_1 = 1, FOREST_1_2_K = 2, PHYSICAL_DAMAGE = 3, HUNTING_ARROWS = 4
+	FOREST_SOIL_1 = 0,
+	FOREST_GRASS_1 = 1,
+	FOREST_1_2_K = 2,
+	PHYSICAL_DAMAGE = 3,
+	HUNTING_ARROWS = 4,
+	ITEM_TEDDY_BEAR = 5,
+	ITEM_MATCHBOX = 6
 }
 
 const IDS := [
-	"FOREST_SOIL_1", "FOREST_GRASS_1", "FOREST_1_2_K", "PHYSICAL_DAMAGE", "HUNTING_ARROWS"
+	"FOREST_SOIL_1",
+	"FOREST_GRASS_1",
+	"FOREST_1_2_K",
+	"PHYSICAL_DAMAGE",
+	"HUNTING_ARROWS",
+	"ITEM_TEDDY_BEAR",
+	"ITEM_MATCHBOX"
 ]
 const BY_ID := {
 	"FOREST_SOIL_1":
@@ -60,5 +72,23 @@ const BY_ID := {
 		"name": "hunting_arrows",
 		"path": "res://game_data/assets/ui_icon/hunting_arrows.png",
 		"width": 1254
+	},
+	"ITEM_TEDDY_BEAR":
+	{
+		"category": "ui_icon",
+		"extension": "png",
+		"height": 1024,
+		"name": "item_teddy_bear",
+		"path": "res://game_data/assets/ui_icon/item_teddy_bear.png",
+		"width": 1024
+	},
+	"ITEM_MATCHBOX":
+	{
+		"category": "ui_icon",
+		"extension": "png",
+		"height": 1024,
+		"name": "item_matchbox",
+		"path": "res://game_data/assets/ui_icon/item_matchbox.png",
+		"width": 1024
 	}
 }
