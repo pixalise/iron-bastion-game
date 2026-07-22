@@ -2,6 +2,58 @@
   "schemaVersion": 1,
   "todos": [
     {
+      "id": "0UkV1ySV69Ly7GGGGfdRh",
+      "title": "Chisel Final Upgrade",
+      "completed": false,
+      "priority": "URGENT",
+      "createdAt": "2026-07-21T09:35:25.528Z",
+      "updatedAt": "2026-07-22T13:59:27.491Z",
+      "subitems": [
+        {
+          "id": "rh9iBpSLIqgysP_o_pPpq",
+          "title": "Show preview of translation inside of data table",
+          "completed": false,
+          "createdAt": "2026-07-21T09:35:44.132Z",
+          "updatedAt": "2026-07-21T09:35:44.132Z"
+        },
+        {
+          "id": "I82t0OPp5S7fQ9B5WNaYq",
+          "title": "Railroad translation keys into SLUG + \".\"",
+          "completed": false,
+          "createdAt": "2026-07-21T09:36:04.857Z",
+          "updatedAt": "2026-07-21T09:36:04.857Z"
+        },
+        {
+          "id": "vcpblaHenNdAYg-spL6oi",
+          "title": "Add support for 3d model assets in the asset library",
+          "completed": false,
+          "createdAt": "2026-07-21T11:51:35.967Z",
+          "updatedAt": "2026-07-21T11:51:35.967Z"
+        },
+        {
+          "id": "VI4H_lDG-8CDWqWw3CkSn",
+          "title": "Add autosave",
+          "completed": true,
+          "createdAt": "2026-07-21T11:57:06.191Z",
+          "updatedAt": "2026-07-22T07:10:32.727Z"
+        },
+        {
+          "id": "sIjiA69sC9fL-Tgiq09xk",
+          "title": "Show tooltips for everything on the rows on hower",
+          "completed": false,
+          "createdAt": "2026-07-22T13:58:45.147Z",
+          "updatedAt": "2026-07-22T13:58:45.147Z"
+        },
+        {
+          "id": "kIcrc5bBHhqd3oEkVYkVr",
+          "title": "Allow saving even if row not validated do not export rows that are invalid",
+          "completed": false,
+          "createdAt": "2026-07-22T13:59:27.454Z",
+          "updatedAt": "2026-07-22T13:59:27.454Z"
+        }
+      ]
+    },
+    {
       "id": "mRe6y5Tpfq72x1FseG8Xl",
       "title": "Add weather system - A weather is the combination of HDRI, sun settings and effects",
       "completed": false,
@@ -346,6 +398,16 @@
       ]
     },
     {
+      "id": "E17mPOs_V80qCf8VTqARU",
+      "title": "Add UI DSL and building inside of chisel",
+      "completed": false,
+      "priority": "HIGH",
+      "archivedAt": "2026-07-19T21:14:40.783Z",
+      "createdAt": "2026-07-19T08:21:50.964Z",
+      "updatedAt": "2026-07-19T21:14:40.783Z",
+      "subitems": []
+    },
+    {
       "id": "byFSi3HTr5OZo-MXu8Kds",
       "title": "Godot V1 - HUD, tooltips, content pass, and build pipeline",
       "completed": false,
@@ -387,54 +449,6 @@
           "completed": false,
           "createdAt": "2026-07-19T21:23:17.931Z",
           "updatedAt": "2026-07-19T21:23:17.931Z"
-        }
-      ]
-    },
-    {
-      "id": "E17mPOs_V80qCf8VTqARU",
-      "title": "Add UI DSL and building inside of chisel",
-      "completed": false,
-      "priority": "HIGH",
-      "archivedAt": "2026-07-19T21:14:40.783Z",
-      "createdAt": "2026-07-19T08:21:50.964Z",
-      "updatedAt": "2026-07-19T21:14:40.783Z",
-      "subitems": []
-    },
-    {
-      "id": "0UkV1ySV69Ly7GGGGfdRh",
-      "title": "Chisel Final Upgrade",
-      "completed": false,
-      "priority": "URGENT",
-      "createdAt": "2026-07-21T09:35:25.528Z",
-      "updatedAt": "2026-07-21T11:57:06.213Z",
-      "subitems": [
-        {
-          "id": "rh9iBpSLIqgysP_o_pPpq",
-          "title": "Show preview of translation inside of data table",
-          "completed": false,
-          "createdAt": "2026-07-21T09:35:44.132Z",
-          "updatedAt": "2026-07-21T09:35:44.132Z"
-        },
-        {
-          "id": "I82t0OPp5S7fQ9B5WNaYq",
-          "title": "Railroad translation keys into SLUG + \".\"",
-          "completed": false,
-          "createdAt": "2026-07-21T09:36:04.857Z",
-          "updatedAt": "2026-07-21T09:36:04.857Z"
-        },
-        {
-          "id": "vcpblaHenNdAYg-spL6oi",
-          "title": "Add support for 3d model assets in the asset library",
-          "completed": false,
-          "createdAt": "2026-07-21T11:51:35.967Z",
-          "updatedAt": "2026-07-21T11:51:35.967Z"
-        },
-        {
-          "id": "VI4H_lDG-8CDWqWw3CkSn",
-          "title": "Add autosave",
-          "completed": false,
-          "createdAt": "2026-07-21T11:57:06.191Z",
-          "updatedAt": "2026-07-21T11:57:06.191Z"
         }
       ]
     }

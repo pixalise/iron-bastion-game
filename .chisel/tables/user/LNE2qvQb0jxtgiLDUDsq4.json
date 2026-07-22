@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "LNE2qvQb0jxtgiLDUDsq4",
-    "lastChangeAt": "2026-07-21T13:37:59.442Z",
-    "version": 22,
+    "lastChangeAt": "2026-07-22T13:57:13.423Z",
+    "version": 33,
     "name": "Items",
     "description": "Items that can be collected and put into the storage carts during an expedition",
     "columns": [
@@ -263,6 +263,98 @@
             "columnId": "3rQ-aJImsSY5l_oipXVO1",
             "type": "boolean",
             "value": false
+          }
+        ]
+      },
+      {
+        "id": "7_OLmRm9CtGVM1Z7BFwrR",
+        "slug": "TEDDY_BEAR",
+        "values": [
+          {
+            "columnId": "ZSw0d-8zTyLo6RR_ofp0L",
+            "type": "translationRef",
+            "value": "ITEM.TEDDY_BEAR.NAME"
+          },
+          {
+            "columnId": "8TqMQuN-TynstVN9wiK7o",
+            "type": "translationRef",
+            "value": "ITEM.TEDDY_BEAR.DESCRIPTION"
+          },
+          {
+            "columnId": "O7EQNdvuQCDwHyyE0XOcb",
+            "type": "translationRef",
+            "value": "ITEM.TEDDY_BEAR.STORY"
+          },
+          {
+            "columnId": "t9PZkgQ0J2zeLXfL6CWL6",
+            "type": "assetRef",
+            "value": "ITEM_TEDDY_BEAR"
+          },
+          {
+            "columnId": "EBmVYmt9qDHAnr97lRGk_",
+            "type": "integer",
+            "value": 25
+          },
+          {
+            "columnId": "Ir7PPFSYVv76_zcnn6Rph",
+            "type": "text",
+            "value": "Increases moral and damage for 5%"
+          },
+          {
+            "columnId": "aFQnJq-GTYI42BdLfWUxz",
+            "type": "enum",
+            "value": "COMMON"
+          },
+          {
+            "columnId": "3rQ-aJImsSY5l_oipXVO1",
+            "type": "boolean",
+            "value": true
+          }
+        ]
+      },
+      {
+        "id": "gi5QUux31Luj_EVDqbpQ1",
+        "slug": "MATCH_BOX",
+        "values": [
+          {
+            "columnId": "ZSw0d-8zTyLo6RR_ofp0L",
+            "type": "translationRef",
+            "value": "ITEM.USED_MATCHBOX.NAME"
+          },
+          {
+            "columnId": "8TqMQuN-TynstVN9wiK7o",
+            "type": "translationRef",
+            "value": "ITEM.USED_MATCHBOX.DESCRIPTION"
+          },
+          {
+            "columnId": "O7EQNdvuQCDwHyyE0XOcb",
+            "type": "translationRef",
+            "value": "ITEM.USED_MATCHBOX.STORY"
+          },
+          {
+            "columnId": "t9PZkgQ0J2zeLXfL6CWL6",
+            "type": "assetRef",
+            "value": "ITEM_MATCHBOX"
+          },
+          {
+            "columnId": "EBmVYmt9qDHAnr97lRGk_",
+            "type": "integer",
+            "value": 30
+          },
+          {
+            "columnId": "Ir7PPFSYVv76_zcnn6Rph",
+            "type": "text",
+            "value": "Increases fire damage by 5%"
+          },
+          {
+            "columnId": "aFQnJq-GTYI42BdLfWUxz",
+            "type": "enum",
+            "value": "COMMON"
+          },
+          {
+            "columnId": "3rQ-aJImsSY5l_oipXVO1",
+            "type": "boolean",
+            "value": true
           }
         ]
       }

@@ -204,7 +204,7 @@
     {
       "path": "ITEM.TEDDY_BEAR.NAME",
       "values": {
-        "en": "Teddy Bear"
+        "en": "<icon:TEDDY_BEAR/> Teddy Bear"
       },
       "placeholders": []
     },
@@ -218,14 +218,7 @@
     {
       "path": "ITEM.TEDDY_BEAR.STORY",
       "values": {
-        "en": "Found beneath the remains of a child’s bed, the bear was strangely untouched by the collapse around it. Its fur is faded, one eye has been sewn back on, and its little vest carries the dust of a home that no longer exists.\n\nSome survivors keep it for the child who lost it. Others hold it for the childhood they never had."
-      },
-      "placeholders": []
-    },
-    {
-      "path": "ITEM.TEST_ITEM.NAME",
-      "values": {
-        "en": "Test Item 2"
+        "en": "Found beneath the remains of a child’s bed, the bear was strangely untouched by the collapse around it. Its fur is faded, one eye has been sewn back on, and its little vest carries the dust of a home that no longer exists.\nSome survivors keep it for the children they lost. Others hold it for the childhood they never had."
       },
       "placeholders": []
     },
@@ -478,6 +471,111 @@
       "path": "ITEM.DECK_OF_CARDS.STORY",
       "values": {
         "en": "The cards are stained, creased, and marked by years of use. Several faces carry names written in faded ink, recording old victories, debts, and jokes. Some look new some look old.\nThe final hand is still tucked beneath the string holding the deck together. No one has moved the cards since the players failed to return."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.GUITAR.NAME",
+      "values": {
+        "en": "Guitar"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.GUITAR.DESCRIPTION",
+      "values": {
+        "en": "<quote>For a moment, everything feels normal again.</quote>\nA worn acoustic guitar with a warm, uneven sound."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.GUITAR.STORY",
+      "values": {
+        "en": "The wood is scratched, two tuning pegs have been replaced, and the case has been patched more times than anyone can count.\nIt once belonged to someone who played for the others after long shifts and bad news. The songs were simple, but for a few minutes they made the world feel normal again."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.CIGARETTES.NAME",
+      "values": {
+        "en": "Cigarettes\n"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.CIGARETTES.DESCRIPTION",
+      "values": {
+        "en": "<quote>You said you would quit when things got better.</quote>\nA dry pack of cigarettes saved for difficult nights."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.CIGARETTES.STORY",
+      "values": {
+        "en": "The pack was found inside an old jacket. A name and a date are written beneath the lid, along with a promise to quit when better days returned.\nNo one knows whether the owner ever managed to stop. The final cigarette remains untouched, saved for a better day that never came."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.BROKEN_MATCHES.NAME",
+      "values": {
+        "en": "Pile of Broken Matches"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.BROKEN_MATCHES.DESCRIPTION",
+      "values": {
+        "en": "<quote>One of them has to work.</quote>\nA loose pile of damaged matches, with only a few still usable."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.BROKEN_MATCHES.STORY",
+      "values": {
+        "en": "Gathered from tables, drawers and pockets, most are snapped, damp, or missing their heads. We still keep them because even one working match can mean warmth, light, or a fire before nightfall."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.MATCHBOOK.NAME",
+      "values": {
+        "en": "Matchbook"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.MATCHBOOK.DESCRIPTION",
+      "values": {
+        "en": "<quote>A chance to make the dark smaller.</quote>\nA small paper matchbook with only a handful of dry matches left."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.MATCHBOOK.STORY",
+      "values": {
+        "en": "Used to be, you could get a matchbook almost anywhere, even little roadside stops. Buy something, and they would hand you one with the change.\nPeople collected them while traveling. Some had famous landmarks on the cover, others showed towns and places no one had ever heard of. Funny thing is, back then they were everywhere. Now even one faded matchbook can feel like a piece of the whole world we lost."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.USED_MATCHBOX.NAME",
+      "values": {
+        "en": "Used Matchbox"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.USED_MATCHBOX.DESCRIPTION",
+      "values": {
+        "en": "<quote>Enough for weeks</quote>\nA worn matchbox with only a few dry matches left."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ITEM.USED_MATCHBOX.STORY",
+      "values": {
+        "en": ""
       },
       "placeholders": []
     }

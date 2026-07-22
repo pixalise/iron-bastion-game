@@ -60,6 +60,30 @@
       "id": "HUNTING_ARROWS",
       "relativePath": ".chisel/assets/UI_ICON/HUNTING_ARROWS.png",
       "formattedBytes": "1.9 MB"
+    },
+    {
+      "category": "UI_ICON",
+      "name": "ITEM_TEDDY_BEAR",
+      "note": "Icon for the Teddy Bear\n",
+      "sizeBytes": 635758,
+      "width": 1024,
+      "height": 1024,
+      "extension": "png",
+      "id": "ITEM_TEDDY_BEAR",
+      "relativePath": ".chisel/assets/UI_ICON/ITEM_TEDDY_BEAR.png",
+      "formattedBytes": "620.9 KB"
+    },
+    {
+      "category": "UI_ICON",
+      "name": "ITEM_MATCHBOX",
+      "note": "The ui icon for the matchbox item",
+      "sizeBytes": 710009,
+      "width": 1024,
+      "height": 1024,
+      "extension": "png",
+      "id": "ITEM_MATCHBOX",
+      "relativePath": ".chisel/assets/UI_ICON/ITEM_MATCHBOX.png",
+      "formattedBytes": "693.4 KB"
     }
   ]
 }
