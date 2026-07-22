@@ -2,8 +2,8 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-22T19:22:35.377Z"
-const PROJECT_ID := "zYZtnNUg8uht6fA9MFIkW"
+const GENERATED_AT := "2026-07-22T19:36:55.612Z"
+const PROJECT_ID := "IlSn4ib8JKnozbdvTOqmJ"
 const PROJECT_NAME := "Iron Bastion"
 const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 7}
 const LOCALIZATION := {
@@ -17,22 +17,14 @@ const LOCALIZATION := {
 }
 const FILES := [
 	{"bytes": 2175, "hash": "8d6627f4", "path": "res://game_data/assets.gd"},
-	{"bytes": 25274, "hash": "f4b179fd", "path": "res://game_data/localization.gd"},
+	{"bytes": 25591, "hash": "f6fbdb53", "path": "res://game_data/localization.gd"},
 	{"bytes": 14836, "hash": "003922e0", "path": "res://game_data/translations.gd"},
-	{"bytes": 10813, "hash": "b25c3ae5", "path": "res://game_data/localization/translations.csv"},
+	{"bytes": 10965, "hash": "e42a1f4b", "path": "res://game_data/localization/translations.csv"},
 	{"bytes": 3429, "hash": "b37e8357", "path": "res://game_data/input.gd"},
-	{"bytes": 2168, "hash": "37ec898f", "path": "res://game_data/tables/items.gd"},
-	{"bytes": 848, "hash": "0c19d18a", "path": "res://game_data/tables/input_bindings.gd"}
+	{"bytes": 848, "hash": "0c19d18a", "path": "res://game_data/tables/input_bindings.gd"},
+	{"bytes": 2168, "hash": "37ec898f", "path": "res://game_data/tables/items.gd"}
 ]
 const TABLES := {
-	"LNE2qvQb0jxtgiLDUDsq4":
-	{
-		"name": "Items",
-		"class_name": "ChiselItems",
-		"path": "res://game_data/tables/items.gd",
-		"rows": 6,
-		"columns": 8
-	},
 	"input_bindings":
 	{
 		"name": "Input Bindings",
@@ -40,5 +32,13 @@ const TABLES := {
 		"path": "res://game_data/tables/input_bindings.gd",
 		"rows": 9,
 		"columns": 2
+	},
+	"LNE2qvQb0jxtgiLDUDsq4":
+	{
+		"name": "Items",
+		"class_name": "ChiselItems",
+		"path": "res://game_data/tables/items.gd",
+		"rows": 6,
+		"columns": 8
 	}
 }

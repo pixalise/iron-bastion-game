@@ -7,21 +7,21 @@
       "completed": false,
       "priority": "URGENT",
       "createdAt": "2026-07-21T09:35:25.528Z",
-      "updatedAt": "2026-07-22T13:59:27.491Z",
+      "updatedAt": "2026-07-22T19:30:14.656Z",
       "subitems": [
         {
           "id": "rh9iBpSLIqgysP_o_pPpq",
           "title": "Show preview of translation inside of data table",
           "completed": false,
           "createdAt": "2026-07-21T09:35:44.132Z",
-          "updatedAt": "2026-07-21T09:35:44.132Z"
+          "updatedAt": "2026-07-22T19:30:14.656Z"
         },
         {
           "id": "I82t0OPp5S7fQ9B5WNaYq",
           "title": "Railroad translation keys into SLUG + \".\"",
-          "completed": false,
+          "completed": true,
           "createdAt": "2026-07-21T09:36:04.857Z",
-          "updatedAt": "2026-07-21T09:36:04.857Z"
+          "updatedAt": "2026-07-22T19:23:27.226Z"
         },
         {
           "id": "vcpblaHenNdAYg-spL6oi",

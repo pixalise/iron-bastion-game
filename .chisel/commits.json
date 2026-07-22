@@ -776,7 +776,7 @@
           {
             "path": "ITEM.OLD_REVOLVER.DESCRIPTION",
             "values": {
-              "en": "<quote>A weapon from the olden era</quote>\nAnd old revolver with a leather handle."
+              "en": "<style:QUOTE>A weapon from the olden era</style>\nAnd old revolver with a leather handle."
             },
             "placeholders": []
           },
@@ -797,7 +797,7 @@
           {
             "path": "ITEM.WAX_STRING.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nA simple hemp bowstring treated with beeswax."
+              "en": "<style:QUOTE>Old ways. New prey</style>\nA simple hemp bowstring treated with beeswax."
             },
             "placeholders": []
           },
@@ -811,7 +811,7 @@
           {
             "path": "ITEM.HUNTING_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
+              "en": "<style:QUOTE>Old ways. New prey</style>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
             },
             "placeholders": []
           },
@@ -832,7 +832,7 @@
           {
             "path": "ITEM.PIERCING_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>Everything has a weakness.</quote>\nNarrow steel-tipped arrows built to punch through armor."
+              "en": "<style:QUOTE>Everything has a weakness.</style>\nNarrow steel-tipped arrows built to punch through armor."
             },
             "placeholders": []
           },
@@ -860,7 +860,7 @@
           {
             "path": "ITEM.FIRE_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>The dead return. Ash does not.</quote>\nArrows wrapped with alcohol-soaked cloth."
+              "en": "<style:QUOTE>The dead return. Ash does not.</style>\nArrows wrapped with alcohol-soaked cloth."
             },
             "placeholders": []
           },
@@ -881,7 +881,7 @@
           {
             "path": "ITEM.REINFORCED_BOW.DESCRIPTION",
             "values": {
-              "en": "<quote>It only needs to outlast us.</quote>\nReinforced with mixed materials to hold greater tension without breaking."
+              "en": "<style:QUOTE>It only needs to outlast us.</style>\nReinforced with mixed materials to hold greater tension without breaking."
             },
             "placeholders": []
           },
@@ -902,7 +902,7 @@
           {
             "path": "ITEM.BOW_OLD_FRIEND.DESCRIPTION",
             "values": {
-              "en": "<quote>Come on, old friend. One more hunt.</quote>\nA battle-worn bow that endures impossible tension."
+              "en": "<style:QUOTE>Come on, old friend. One more hunt.</style>\nA battle-worn bow that endures impossible tension."
             },
             "placeholders": []
           },
@@ -923,7 +923,7 @@
           {
             "path": "ITEM.UNOPENED_LIQUOR.DESCRIPTION",
             "values": {
-              "en": "<quote>My father poured this on my first winter home.</quote>\nSealed bottles of strong liquor."
+              "en": "<style:QUOTE>My father poured this on my first winter home.</style>\nSealed bottles of strong liquor."
             },
             "placeholders": []
           },
@@ -944,7 +944,7 @@
           {
             "path": "ITEM.TEDDY_BEAR.DESCRIPTION",
             "values": {
-              "en": "<quote>I wish I had one as a child.</quote>\nA faded stuffed bear, worn soft from years of being held."
+              "en": "<style:QUOTE>I wish I had one as a child.</style>\nA faded stuffed bear, worn soft from years of being held."
             },
             "placeholders": []
           },
@@ -965,7 +965,7 @@
           {
             "path": "ITEM.MAKESHIFT_ARMOR.DESCRIPTION",
             "values": {
-              "en": "<quote>It does not need to look good. It only needs to stop the bite</quote>\nScrap metal and thick fabric tied together into crude protection."
+              "en": "<style:QUOTE>It does not need to look good. It only needs to stop the bite</style>\nScrap metal and thick fabric tied together into crude protection."
             },
             "placeholders": []
           },
@@ -986,7 +986,7 @@
           {
             "path": "ITEM.STEEL_ARMOR.DESCRIPTION",
             "values": {
-              "en": "<quote>Make them work for every wound.</quote>\nFitted steel plates offering reliable protection without excessive weight."
+              "en": "<style:QUOTE>Make them work for every wound.</style>\nFitted steel plates offering reliable protection without excessive weight."
             },
             "placeholders": []
           },
@@ -1028,7 +1028,7 @@
           {
             "path": "ITEM.STEEL_SWORD.DESCRIPTION",
             "values": {
-              "en": "<quote>Keep swinging until it stops moving.</quote>\nA dependable steel blade made for repeated close combat."
+              "en": "<style:QUOTE>Keep swinging until it stops moving.</style>\nA dependable steel blade made for repeated close combat."
             },
             "placeholders": []
           },
@@ -1070,7 +1070,7 @@
           {
             "path": "ITEM.LEATHER_GRIP.DESCRIPTION",
             "values": {
-              "en": "<quote>Better than losing it mid-swing.</quote>\nA firm leather wrap fitted around a melee weapon’s handle."
+              "en": "<style:QUOTE>Better than losing it mid-swing.</style>\nA firm leather wrap fitted around a melee weapon’s handle."
             },
             "placeholders": []
           },
@@ -1091,7 +1091,7 @@
           {
             "path": "ITEM.BATTLE_TONIC.DESCRIPTION",
             "values": {
-              "en": "<quote>Tastes awful.</quote>\nA harsh stimulant brewed to keep fighters moving."
+              "en": "<style:QUOTE>Tastes awful.</style>\nA harsh stimulant brewed to keep fighters moving."
             },
             "placeholders": []
           },
@@ -1112,7 +1112,7 @@
           {
             "path": "ITEM.BERSERK_MUSHROOMS.DESCRIPTION",
             "values": {
-              "en": "<quote>I can hear my blood.</quote>\nWild mushrooms that dull fear and awaken violence."
+              "en": "<style:QUOTE>I can hear my blood.</style>\nWild mushrooms that dull fear and awaken violence."
             },
             "placeholders": []
           },
@@ -1133,7 +1133,7 @@
           {
             "path": "ITEM.POCKET_WATCH.DESCRIPTION",
             "values": {
-              "en": "<quote>It stopped the day the appoclyps started</quote>\nA scratched pocket watch that still keeps time."
+              "en": "<style:QUOTE>It stopped the day the appoclyps started</style>\nA scratched pocket watch that still keeps time."
             },
             "placeholders": []
           },
@@ -1154,7 +1154,7 @@
           {
             "path": "ITEM.OLD_MEDAL.DESCRIPTION",
             "values": {
-              "en": "<quote>They said you were brave, i just wanted you home.</quote>\nA tarnished medal awarded for a forgotten act of courage."
+              "en": "<style:QUOTE>They said you were brave, i just wanted you home.</style>\nA tarnished medal awarded for a forgotten act of courage."
             },
             "placeholders": []
           },
@@ -1175,7 +1175,7 @@
           {
             "path": "ITEM.POSTCARD.DESCRIPTION",
             "values": {
-              "en": "<quote>Wish you were here</quote>\nA faded postcard from a place that may no longer exist."
+              "en": "<style:QUOTE>Wish you were here</style>\nA faded postcard from a place that may no longer exist."
             },
             "placeholders": []
           },
@@ -1196,7 +1196,7 @@
           {
             "path": "ITEM.DECK_OF_CARDS.DESCRIPTION",
             "values": {
-              "en": "<quote>We always said we would finish the game tomorrow.</quote>\nA worn deck missing several cards."
+              "en": "<style:QUOTE>We always said we would finish the game tomorrow.</style>\nA worn deck missing several cards."
             },
             "placeholders": []
           },
@@ -1217,7 +1217,7 @@
           {
             "path": "ITEM.GUITAR.DESCRIPTION",
             "values": {
-              "en": "<quote>For a moment, everything feels normal again.</quote>\nA worn acoustic guitar with a warm, uneven sound."
+              "en": "<style:QUOTE>For a moment, everything feels normal again.</style>\nA worn acoustic guitar with a warm, uneven sound."
             },
             "placeholders": []
           },
@@ -1238,7 +1238,7 @@
           {
             "path": "ITEM.CIGARETTES.DESCRIPTION",
             "values": {
-              "en": "<quote>You said you would quit when things got better.</quote>\nA dry pack of cigarettes saved for difficult nights."
+              "en": "<style:QUOTE>You said you would quit when things got better.</style>\nA dry pack of cigarettes saved for difficult nights."
             },
             "placeholders": []
           },
@@ -1259,7 +1259,7 @@
           {
             "path": "ITEM.BROKEN_MATCHES.DESCRIPTION",
             "values": {
-              "en": "<quote>One of them has to work.</quote>\nA loose pile of damaged matches, with only a few still usable."
+              "en": "<style:QUOTE>One of them has to work.</style>\nA loose pile of damaged matches, with only a few still usable."
             },
             "placeholders": []
           },
@@ -1280,7 +1280,7 @@
           {
             "path": "ITEM.MATCHBOOK.DESCRIPTION",
             "values": {
-              "en": "<quote>A chance to make the dark smaller.</quote>\nA small paper matchbook with only a handful of dry matches left."
+              "en": "<style:QUOTE>A chance to make the dark smaller.</style>\nA small paper matchbook with only a handful of dry matches left."
             },
             "placeholders": []
           },
@@ -1301,7 +1301,7 @@
           {
             "path": "ITEM.USED_MATCHBOX.DESCRIPTION",
             "values": {
-              "en": "<quote>Enough for weeks</quote>\nA worn matchbox with only a few dry matches left."
+              "en": "<style:QUOTE>Enough for weeks</style>\nA worn matchbox with only a few dry matches left."
             },
             "placeholders": []
           },
@@ -1991,7 +1991,7 @@
           {
             "path": "ITEM.OLD_REVOLVER.DESCRIPTION",
             "values": {
-              "en": "<quote>A weapon from the olden era</quote>\nAnd old revolver with a leather handle."
+              "en": "<style:QUOTE>A weapon from the olden era</style>\nAnd old revolver with a leather handle."
             },
             "placeholders": []
           },
@@ -2012,7 +2012,7 @@
           {
             "path": "ITEM.WAX_STRING.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nA simple hemp bowstring treated with beeswax."
+              "en": "<style:QUOTE>Old ways. New prey</style>\nA simple hemp bowstring treated with beeswax."
             },
             "placeholders": []
           },
@@ -2026,7 +2026,7 @@
           {
             "path": "ITEM.HUNTING_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
+              "en": "<style:QUOTE>Old ways. New prey</style>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
             },
             "placeholders": []
           },
@@ -2047,7 +2047,7 @@
           {
             "path": "ITEM.PIERCING_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>Everything has a weakness.</quote>\nNarrow steel-tipped arrows built to punch through armor."
+              "en": "<style:QUOTE>Everything has a weakness.</style>\nNarrow steel-tipped arrows built to punch through armor."
             },
             "placeholders": []
           },
@@ -2075,7 +2075,7 @@
           {
             "path": "ITEM.FIRE_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>The dead return. Ash does not.</quote>\nArrows wrapped with alcohol-soaked cloth."
+              "en": "<style:QUOTE>The dead return. Ash does not.</style>\nArrows wrapped with alcohol-soaked cloth."
             },
             "placeholders": []
           },
@@ -2096,7 +2096,7 @@
           {
             "path": "ITEM.REINFORCED_BOW.DESCRIPTION",
             "values": {
-              "en": "<quote>It only needs to outlast us.</quote>\nReinforced with mixed materials to hold greater tension without breaking."
+              "en": "<style:QUOTE>It only needs to outlast us.</style>\nReinforced with mixed materials to hold greater tension without breaking."
             },
             "placeholders": []
           },
@@ -2117,7 +2117,7 @@
           {
             "path": "ITEM.BOW_OLD_FRIEND.DESCRIPTION",
             "values": {
-              "en": "<quote>Come on, old friend. One more hunt.</quote>\nA battle-worn bow that endures impossible tension."
+              "en": "<style:QUOTE>Come on, old friend. One more hunt.</style>\nA battle-worn bow that endures impossible tension."
             },
             "placeholders": []
           },
@@ -2138,7 +2138,7 @@
           {
             "path": "ITEM.UNOPENED_LIQUOR.DESCRIPTION",
             "values": {
-              "en": "<quote>My father poured this on my first winter home.</quote>\nSealed bottles of strong liquor."
+              "en": "<style:QUOTE>My father poured this on my first winter home.</style>\nSealed bottles of strong liquor."
             },
             "placeholders": []
           },
@@ -2159,7 +2159,7 @@
           {
             "path": "ITEM.TEDDY_BEAR.DESCRIPTION",
             "values": {
-              "en": "<quote>I wish I had one as a child.</quote>\nA faded stuffed bear, worn soft from years of being held."
+              "en": "<style:QUOTE>I wish I had one as a child.</style>\nA faded stuffed bear, worn soft from years of being held."
             },
             "placeholders": []
           },
@@ -2187,7 +2187,7 @@
           {
             "path": "ITEM.MAKESHIFT_ARMOR.DESCRIPTION",
             "values": {
-              "en": "<quote>It does not need to look good. It only needs to stop the bite</quote>\nScrap metal and thick fabric tied together into crude protection."
+              "en": "<style:QUOTE>It does not need to look good. It only needs to stop the bite</style>\nScrap metal and thick fabric tied together into crude protection."
             },
             "placeholders": []
           },
@@ -2208,7 +2208,7 @@
           {
             "path": "ITEM.STEEL_ARMOR.DESCRIPTION",
             "values": {
-              "en": "<quote>Make them work for every wound.</quote>\nFitted steel plates offering reliable protection without excessive weight."
+              "en": "<style:QUOTE>Make them work for every wound.</style>\nFitted steel plates offering reliable protection without excessive weight."
             },
             "placeholders": []
           },
@@ -2250,7 +2250,7 @@
           {
             "path": "ITEM.STEEL_SWORD.DESCRIPTION",
             "values": {
-              "en": "<quote>Keep swinging until it stops moving.</quote>\nA dependable steel blade made for repeated close combat."
+              "en": "<style:QUOTE>Keep swinging until it stops moving.</style>\nA dependable steel blade made for repeated close combat."
             },
             "placeholders": []
           },
@@ -2292,7 +2292,7 @@
           {
             "path": "ITEM.LEATHER_GRIP.DESCRIPTION",
             "values": {
-              "en": "<quote>Better than losing it mid-swing.</quote>\nA firm leather wrap fitted around a melee weapon’s handle."
+              "en": "<style:QUOTE>Better than losing it mid-swing.</style>\nA firm leather wrap fitted around a melee weapon’s handle."
             },
             "placeholders": []
           },
@@ -2313,7 +2313,7 @@
           {
             "path": "ITEM.BATTLE_TONIC.DESCRIPTION",
             "values": {
-              "en": "<quote>Tastes awful.</quote>\nA harsh stimulant brewed to keep fighters moving."
+              "en": "<style:QUOTE>Tastes awful.</style>\nA harsh stimulant brewed to keep fighters moving."
             },
             "placeholders": []
           },
@@ -2334,7 +2334,7 @@
           {
             "path": "ITEM.BERSERK_MUSHROOMS.DESCRIPTION",
             "values": {
-              "en": "<quote>I can hear my blood.</quote>\nWild mushrooms that dull fear and awaken violence."
+              "en": "<style:QUOTE>I can hear my blood.</style>\nWild mushrooms that dull fear and awaken violence."
             },
             "placeholders": []
           },
@@ -2355,7 +2355,7 @@
           {
             "path": "ITEM.POCKET_WATCH.DESCRIPTION",
             "values": {
-              "en": "<quote>It stopped the day the appoclyps started</quote>\nA scratched pocket watch that still keeps time."
+              "en": "<style:QUOTE>It stopped the day the appoclyps started</style>\nA scratched pocket watch that still keeps time."
             },
             "placeholders": []
           },
@@ -2376,7 +2376,7 @@
           {
             "path": "ITEM.OLD_MEDAL.DESCRIPTION",
             "values": {
-              "en": "<quote>They said you were brave, i just wanted you home.</quote>\nA tarnished medal awarded for a forgotten act of courage."
+              "en": "<style:QUOTE>They said you were brave, i just wanted you home.</style>\nA tarnished medal awarded for a forgotten act of courage."
             },
             "placeholders": []
           },
@@ -2397,7 +2397,7 @@
           {
             "path": "ITEM.POSTCARD.DESCRIPTION",
             "values": {
-              "en": "<quote>Wish you were here</quote>\nA faded postcard from a place that may no longer exist."
+              "en": "<style:QUOTE>Wish you were here</style>\nA faded postcard from a place that may no longer exist."
             },
             "placeholders": []
           },
@@ -2418,7 +2418,7 @@
           {
             "path": "ITEM.DECK_OF_CARDS.DESCRIPTION",
             "values": {
-              "en": "<quote>We always said we would finish the game tomorrow.</quote>\nA worn deck missing several cards."
+              "en": "<style:QUOTE>We always said we would finish the game tomorrow.</style>\nA worn deck missing several cards."
             },
             "placeholders": []
           },
@@ -3108,7 +3108,7 @@
           {
             "path": "ITEM.OLD_REVOLVER.DESCRIPTION",
             "values": {
-              "en": "<quote>A weapon from the olden era</quote>\nAnd old revolver with a leather handle."
+              "en": "<style:QUOTE>A weapon from the olden era</style>\nAnd old revolver with a leather handle."
             },
             "placeholders": []
           },
@@ -3129,7 +3129,7 @@
           {
             "path": "ITEM.WAX_STRING.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nA simple hemp bowstring treated with beeswax."
+              "en": "<style:QUOTE>Old ways. New prey</style>\nA simple hemp bowstring treated with beeswax."
             },
             "placeholders": []
           },
@@ -3143,7 +3143,7 @@
           {
             "path": "ITEM.HUNTING_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
+              "en": "<style:QUOTE>Old ways. New prey</style>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
             },
             "placeholders": []
           },
@@ -3164,7 +3164,7 @@
           {
             "path": "ITEM.PIERCING_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>Everything has a weakness.</quote>\nNarrow steel-tipped arrows built to punch through armor."
+              "en": "<style:QUOTE>Everything has a weakness.</style>\nNarrow steel-tipped arrows built to punch through armor."
             },
             "placeholders": []
           },
@@ -3192,7 +3192,7 @@
           {
             "path": "ITEM.FIRE_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>The dead return. Ash does not.</quote>\nArrows wrapped with alcohol-soaked cloth."
+              "en": "<style:QUOTE>The dead return. Ash does not.</style>\nArrows wrapped with alcohol-soaked cloth."
             },
             "placeholders": []
           },
@@ -3213,7 +3213,7 @@
           {
             "path": "ITEM.REINFORCED_BOW.DESCRIPTION",
             "values": {
-              "en": "<quote>It only needs to outlast us.</quote>\nReinforced with mixed materials to hold greater tension without breaking."
+              "en": "<style:QUOTE>It only needs to outlast us.</style>\nReinforced with mixed materials to hold greater tension without breaking."
             },
             "placeholders": []
           },
@@ -3234,7 +3234,7 @@
           {
             "path": "ITEM.BOW_OLD_FRIEND.DESCRIPTION",
             "values": {
-              "en": "<quote>Come on, old friend. One more hunt.</quote>\nA battle-worn bow that endures impossible tension."
+              "en": "<style:QUOTE>Come on, old friend. One more hunt.</style>\nA battle-worn bow that endures impossible tension."
             },
             "placeholders": []
           },
@@ -3255,7 +3255,7 @@
           {
             "path": "ITEM.UNOPENED_LIQUOR.DESCRIPTION",
             "values": {
-              "en": "<quote>My father poured this on my first winter home.</quote>\nSealed bottles of strong liquor."
+              "en": "<style:QUOTE>My father poured this on my first winter home.</style>\nSealed bottles of strong liquor."
             },
             "placeholders": []
           },
@@ -3276,7 +3276,7 @@
           {
             "path": "ITEM.TEDDY_BEAR.DESCRIPTION",
             "values": {
-              "en": "<quote>I wish I had one as a child.</quote>\nA faded stuffed bear, worn soft from years of being held."
+              "en": "<style:QUOTE>I wish I had one as a child.</style>\nA faded stuffed bear, worn soft from years of being held."
             },
             "placeholders": []
           },
@@ -3304,7 +3304,7 @@
           {
             "path": "ITEM.MAKESHIFT_ARMOR.DESCRIPTION",
             "values": {
-              "en": "<quote>It does not need to look good. It only needs to stop the bite</quote>\nScrap metal and thick fabric tied together into crude protection."
+              "en": "<style:QUOTE>It does not need to look good. It only needs to stop the bite</style>\nScrap metal and thick fabric tied together into crude protection."
             },
             "placeholders": []
           },
@@ -3325,7 +3325,7 @@
           {
             "path": "ITEM.STEEL_ARMOR.DESCRIPTION",
             "values": {
-              "en": "<quote>Make them work for every wound.</quote>\nFitted steel plates offering reliable protection without excessive weight."
+              "en": "<style:QUOTE>Make them work for every wound.</style>\nFitted steel plates offering reliable protection without excessive weight."
             },
             "placeholders": []
           },
@@ -3367,7 +3367,7 @@
           {
             "path": "ITEM.STEEL_SWORD.DESCRIPTION",
             "values": {
-              "en": "<quote>Keep swinging until it stops moving.</quote>\nA dependable steel blade made for repeated close combat."
+              "en": "<style:QUOTE>Keep swinging until it stops moving.</style>\nA dependable steel blade made for repeated close combat."
             },
             "placeholders": []
           },
@@ -3409,7 +3409,7 @@
           {
             "path": "ITEM.LEATHER_GRIP.DESCRIPTION",
             "values": {
-              "en": "<quote>Better than losing it mid-swing.</quote>\nA firm leather wrap fitted around a melee weapon’s handle."
+              "en": "<style:QUOTE>Better than losing it mid-swing.</style>\nA firm leather wrap fitted around a melee weapon’s handle."
             },
             "placeholders": []
           },
@@ -3430,7 +3430,7 @@
           {
             "path": "ITEM.BATTLE_TONIC.DESCRIPTION",
             "values": {
-              "en": "<quote>Tastes awful.</quote>\nA harsh stimulant brewed to keep fighters moving."
+              "en": "<style:QUOTE>Tastes awful.</style>\nA harsh stimulant brewed to keep fighters moving."
             },
             "placeholders": []
           },
@@ -3451,7 +3451,7 @@
           {
             "path": "ITEM.BERSERK_MUSHROOMS.DESCRIPTION",
             "values": {
-              "en": "<quote>I can hear my blood.</quote>\nWild mushrooms that dull fear and awaken violence."
+              "en": "<style:QUOTE>I can hear my blood.</style>\nWild mushrooms that dull fear and awaken violence."
             },
             "placeholders": []
           },
@@ -3472,7 +3472,7 @@
           {
             "path": "ITEM.POCKET_WATCH.DESCRIPTION",
             "values": {
-              "en": "<quote>It stopped the day the appoclyps started</quote>\nA scratched pocket watch that still keeps time."
+              "en": "<style:QUOTE>It stopped the day the appoclyps started</style>\nA scratched pocket watch that still keeps time."
             },
             "placeholders": []
           },
@@ -3493,7 +3493,7 @@
           {
             "path": "ITEM.OLD_MEDAL.DESCRIPTION",
             "values": {
-              "en": "<quote>They said you were brave, i just wanted you home.</quote>\nA tarnished medal awarded for a forgotten act of courage."
+              "en": "<style:QUOTE>They said you were brave, i just wanted you home.</style>\nA tarnished medal awarded for a forgotten act of courage."
             },
             "placeholders": []
           },
@@ -3514,7 +3514,7 @@
           {
             "path": "ITEM.POSTCARD.DESCRIPTION",
             "values": {
-              "en": "<quote>Wish you were here</quote>\nA faded postcard from a place that may no longer exist."
+              "en": "<style:QUOTE>Wish you were here</style>\nA faded postcard from a place that may no longer exist."
             },
             "placeholders": []
           },
@@ -3535,7 +3535,7 @@
           {
             "path": "ITEM.DECK_OF_CARDS.DESCRIPTION",
             "values": {
-              "en": "<quote>We always said we would finish the game tomorrow.</quote>\nA worn deck missing several cards."
+              "en": "<style:QUOTE>We always said we would finish the game tomorrow.</style>\nA worn deck missing several cards."
             },
             "placeholders": []
           },
@@ -4225,7 +4225,7 @@
           {
             "path": "ITEM.OLD_REVOLVER.DESCRIPTION",
             "values": {
-              "en": "<quote>A weapon from the olden era</quote>\nAnd old revolver with a leather handle."
+              "en": "<style:QUOTE>A weapon from the olden era</style>\nAnd old revolver with a leather handle."
             },
             "placeholders": []
           },
@@ -4246,7 +4246,7 @@
           {
             "path": "ITEM.WAX_STRING.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nA simple hemp bowstring treated with beeswax."
+              "en": "<style:QUOTE>Old ways. New prey</style>\nA simple hemp bowstring treated with beeswax."
             },
             "placeholders": []
           },
@@ -4260,7 +4260,7 @@
           {
             "path": "ITEM.HUNTING_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
+              "en": "<style:QUOTE>Old ways. New prey</style>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
             },
             "placeholders": []
           },
@@ -4281,7 +4281,7 @@
           {
             "path": "ITEM.PIERCING_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>Everything has a weakness.</quote>\nNarrow steel-tipped arrows built to punch through armor."
+              "en": "<style:QUOTE>Everything has a weakness.</style>\nNarrow steel-tipped arrows built to punch through armor."
             },
             "placeholders": []
           },
@@ -4309,7 +4309,7 @@
           {
             "path": "ITEM.FIRE_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>The dead return. Ash does not.</quote>\nArrows wrapped with alcohol-soaked cloth."
+              "en": "<style:QUOTE>The dead return. Ash does not.</style>\nArrows wrapped with alcohol-soaked cloth."
             },
             "placeholders": []
           },
@@ -4330,7 +4330,7 @@
           {
             "path": "ITEM.REINFORCED_BOW.DESCRIPTION",
             "values": {
-              "en": "<quote>It only needs to outlast us.</quote>\nReinforced with mixed materials to hold greater tension without breaking."
+              "en": "<style:QUOTE>It only needs to outlast us.</style>\nReinforced with mixed materials to hold greater tension without breaking."
             },
             "placeholders": []
           },
@@ -4351,7 +4351,7 @@
           {
             "path": "ITEM.BOW_OLD_FRIEND.DESCRIPTION",
             "values": {
-              "en": "<quote>Come on, old friend. One more hunt.</quote>\nA battle-worn bow that endures impossible tension."
+              "en": "<style:QUOTE>Come on, old friend. One more hunt.</style>\nA battle-worn bow that endures impossible tension."
             },
             "placeholders": []
           },
@@ -4372,7 +4372,7 @@
           {
             "path": "ITEM.UNOPENED_LIQUOR.DESCRIPTION",
             "values": {
-              "en": "<quote>My father poured this on my first winter home.</quote>\nSealed bottles of strong liquor."
+              "en": "<style:QUOTE>My father poured this on my first winter home.</style>\nSealed bottles of strong liquor."
             },
             "placeholders": []
           },
@@ -4393,7 +4393,7 @@
           {
             "path": "ITEM.TEDDY_BEAR.DESCRIPTION",
             "values": {
-              "en": "<quote>I wish I had one as a child.</quote>\nA faded stuffed bear, worn soft from years of being held."
+              "en": "<style:QUOTE>I wish I had one as a child.</style>\nA faded stuffed bear, worn soft from years of being held."
             },
             "placeholders": []
           },
@@ -5027,7 +5027,7 @@
           {
             "path": "ITEM.OLD_REVOLVER.DESCRIPTION",
             "values": {
-              "en": "<quote>A weapon from the olden era</quote>\nAnd old revolver with a leather handle."
+              "en": "<style:QUOTE>A weapon from the olden era</style>\nAnd old revolver with a leather handle."
             },
             "placeholders": []
           },
@@ -5048,7 +5048,7 @@
           {
             "path": "ITEM.WAX_STRING.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nA simple hemp bowstring treated with beeswax."
+              "en": "<style:QUOTE>Old ways. New prey</style>\nA simple hemp bowstring treated with beeswax."
             },
             "placeholders": []
           },
@@ -5062,7 +5062,7 @@
           {
             "path": "ITEM.HUNTING_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
+              "en": "<style:QUOTE>Old ways. New prey</style>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
             },
             "placeholders": []
           },
@@ -5083,7 +5083,7 @@
           {
             "path": "ITEM.PIERCING_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>Everything has a weakness.</quote>\nNarrow steel-tipped arrows built to punch through armor."
+              "en": "<style:QUOTE>Everything has a weakness.</style>\nNarrow steel-tipped arrows built to punch through armor."
             },
             "placeholders": []
           },
@@ -5111,7 +5111,7 @@
           {
             "path": "ITEM.FIRE_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>The dead return. Ash does not.</quote>\nArrows wrapped with alcohol-soaked cloth."
+              "en": "<style:QUOTE>The dead return. Ash does not.</style>\nArrows wrapped with alcohol-soaked cloth."
             },
             "placeholders": []
           },
@@ -5132,7 +5132,7 @@
           {
             "path": "ITEM.REINFORCED_BOW.DESCRIPTION",
             "values": {
-              "en": "<quote>It only needs to outlast us.</quote>\nReinforced with mixed materials to hold greater tension without breaking."
+              "en": "<style:QUOTE>It only needs to outlast us.</style>\nReinforced with mixed materials to hold greater tension without breaking."
             },
             "placeholders": []
           },
@@ -5153,7 +5153,7 @@
           {
             "path": "ITEM.BOW_OLD_FRIEND.DESCRIPTION",
             "values": {
-              "en": "<quote>Come on, old friend. One more hunt.</quote>\nA battle-worn bow that endures impossible tension."
+              "en": "<style:QUOTE>Come on, old friend. One more hunt.</style>\nA battle-worn bow that endures impossible tension."
             },
             "placeholders": []
           },
@@ -5174,7 +5174,7 @@
           {
             "path": "ITEM.UNOPENED_LIQUOR.DESCRIPTION",
             "values": {
-              "en": "<quote>My father poured this on my first winter home.</quote>\nSealed bottles of strong liquor."
+              "en": "<style:QUOTE>My father poured this on my first winter home.</style>\nSealed bottles of strong liquor."
             },
             "placeholders": []
           },
@@ -5195,7 +5195,7 @@
           {
             "path": "ITEM.TEDDY_BEAR.DESCRIPTION",
             "values": {
-              "en": "<quote>I wish I had one as a child.</quote>\nA faded stuffed bear, worn soft from years of being held."
+              "en": "<style:QUOTE>I wish I had one as a child.</style>\nA faded stuffed bear, worn soft from years of being held."
             },
             "placeholders": []
           },
@@ -5822,7 +5822,7 @@
           {
             "path": "ITEM.OLD_REVOLVER.DESCRIPTION",
             "values": {
-              "en": "<quote>A weapon from the olden era</quote>\nAnd old revolver with a leather handle."
+              "en": "<style:QUOTE>A weapon from the olden era</style>\nAnd old revolver with a leather handle."
             },
             "placeholders": []
           },
@@ -5843,7 +5843,7 @@
           {
             "path": "ITEM.WAX_STRING.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nA simple hemp bowstring treated with beeswax."
+              "en": "<style:QUOTE>Old ways. New prey</style>\nA simple hemp bowstring treated with beeswax."
             },
             "placeholders": []
           },
@@ -5857,7 +5857,7 @@
           {
             "path": "ITEM.HUNTING_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
+              "en": "<style:QUOTE>Old ways. New prey</style>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
             },
             "placeholders": []
           },
@@ -5878,7 +5878,7 @@
           {
             "path": "ITEM.PIERCING_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>Everything has a weakness.</quote>\nNarrow steel-tipped arrows built to punch through armor."
+              "en": "<style:QUOTE>Everything has a weakness.</style>\nNarrow steel-tipped arrows built to punch through armor."
             },
             "placeholders": []
           },
@@ -5906,7 +5906,7 @@
           {
             "path": "ITEM.FIRE_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>The dead return. Ash does not.</quote>\nArrows wrapped with alcohol-soaked cloth."
+              "en": "<style:QUOTE>The dead return. Ash does not.</style>\nArrows wrapped with alcohol-soaked cloth."
             },
             "placeholders": []
           },
@@ -5927,7 +5927,7 @@
           {
             "path": "ITEM.REINFORCED_BOW.DESCRIPTION",
             "values": {
-              "en": "<quote>It only needs to outlast us.</quote>\nReinforced with mixed materials to hold greater tension without breaking."
+              "en": "<style:QUOTE>It only needs to outlast us.</style>\nReinforced with mixed materials to hold greater tension without breaking."
             },
             "placeholders": []
           },
@@ -5948,7 +5948,7 @@
           {
             "path": "ITEM.BOW_OLD_FRIEND.DESCRIPTION",
             "values": {
-              "en": "<quote>Come on, old friend. One more hunt.</quote>\nA battle-worn bow that endures impossible tension."
+              "en": "<style:QUOTE>Come on, old friend. One more hunt.</style>\nA battle-worn bow that endures impossible tension."
             },
             "placeholders": []
           },
@@ -6491,7 +6491,7 @@
           {
             "path": "ITEM.OLD_REVOLVER.DESCRIPTION",
             "values": {
-              "en": "<quote>A weapon from the olden era</quote>\nAnd old revolver with a leather handle."
+              "en": "<style:QUOTE>A weapon from the olden era</style>\nAnd old revolver with a leather handle."
             },
             "placeholders": []
           },
@@ -6512,7 +6512,7 @@
           {
             "path": "ITEM.WAX_STRING.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nA simple hemp bowstring treated with beeswax."
+              "en": "<style:QUOTE>Old ways. New prey</style>\nA simple hemp bowstring treated with beeswax."
             },
             "placeholders": []
           },
@@ -6526,7 +6526,7 @@
           {
             "path": "ITEM.HUNTING_ARROWS.DESCRIPTION",
             "values": {
-              "en": "<quote>Old ways. New prey</quote>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
+              "en": "<style:QUOTE>Old ways. New prey</style>\nArrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
             },
             "placeholders": []
           },
@@ -7040,7 +7040,7 @@
           {
             "path": "ITEM.OLD_REVOLVER.DESCRIPTION",
             "values": {
-              "en": "<quote>A weapon from the olden era</quote>\nAnd old revolver with a leather handle."
+              "en": "<style:QUOTE>A weapon from the olden era</style>\nAnd old revolver with a leather handle."
             },
             "placeholders": []
           },
