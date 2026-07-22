@@ -7,7 +7,7 @@
       "completed": false,
       "priority": "URGENT",
       "createdAt": "2026-07-21T09:35:25.528Z",
-      "updatedAt": "2026-07-22T19:30:14.656Z",
+      "updatedAt": "2026-07-22T20:06:11.962Z",
       "subitems": [
         {
           "id": "rh9iBpSLIqgysP_o_pPpq",
@@ -26,9 +26,9 @@
         {
           "id": "vcpblaHenNdAYg-spL6oi",
           "title": "Add support for 3d model assets in the asset library",
-          "completed": false,
+          "completed": true,
           "createdAt": "2026-07-21T11:51:35.967Z",
-          "updatedAt": "2026-07-21T11:51:35.967Z"
+          "updatedAt": "2026-07-22T20:05:44.990Z"
         },
         {
           "id": "VI4H_lDG-8CDWqWw3CkSn",
@@ -39,10 +39,10 @@
         },
         {
           "id": "sIjiA69sC9fL-Tgiq09xk",
-          "title": "Show tooltips for everything on the rows on hower",
+          "title": "Show tooltips for everything on the rows on hover",
           "completed": false,
           "createdAt": "2026-07-22T13:58:45.147Z",
-          "updatedAt": "2026-07-22T13:58:45.147Z"
+          "updatedAt": "2026-07-22T20:06:11.962Z"
         },
         {
           "id": "kIcrc5bBHhqd3oEkVYkVr",
@@ -50,6 +50,155 @@
           "completed": false,
           "createdAt": "2026-07-22T13:59:27.454Z",
           "updatedAt": "2026-07-22T13:59:27.454Z"
+        },
+        {
+          "id": "c1VrsU5sullFsI4uu5rAl",
+          "title": "Rework style editor in localizations",
+          "completed": false,
+          "createdAt": "2026-07-22T20:03:54.390Z",
+          "updatedAt": "2026-07-22T20:04:14.280Z"
+        },
+        {
+          "id": "pUv6Zz6iObz7BZFd14soe",
+          "title": "Rework tooltips editor in localizations",
+          "completed": false,
+          "createdAt": "2026-07-22T20:04:03.372Z",
+          "updatedAt": "2026-07-22T20:04:20.416Z"
+        },
+        {
+          "id": "ltVcFch6Mty8z2uZVogUP",
+          "title": "Add template editor in localizations",
+          "completed": false,
+          "createdAt": "2026-07-22T20:04:33.325Z",
+          "updatedAt": "2026-07-22T20:04:33.325Z"
+        }
+      ]
+    },
+    {
+      "id": "g2KXn8MYwATdt4Rb-8Sg0",
+      "title": "Chisel V1 - finish first-game authoring support",
+      "completed": false,
+      "priority": "HIGH",
+      "createdAt": "2026-07-19T21:23:17.931Z",
+      "updatedAt": "2026-07-22T20:06:37.727Z",
+      "subitems": [
+        {
+          "id": "Gcu6Niw7Wk2DTe0BVi1Gb",
+          "title": "Use ordered project-management todos and subitems to track milestone sequence",
+          "completed": true,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
+        },
+        {
+          "id": "k6OarCQb-EXhx8Vf-CWk6",
+          "title": "Add removal impact before deleting rows, assets, translation keys, and table fields",
+          "completed": false,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
+        },
+        {
+          "id": "Eas4Lgu5Ui0BRcz9Vg-EY",
+          "title": "Complete usage references for tables, localization icons, exported assets, and generated Godot paths",
+          "completed": false,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
+        },
+        {
+          "id": "i4MZpAO_yCVfv6Td-AUi6",
+          "title": "Harden model, audio, video, and font asset categories with metadata, previews, and validation",
+          "completed": false,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
+        },
+        {
+          "id": "CZq2Jes3Sgz9Pax7VeyC_",
+          "title": "Polish Problems/export-blocking messages so every issue points at a concrete fix target",
+          "completed": false,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
+        }
+      ]
+    },
+    {
+      "id": "6TkxDZmyMat3JVr1Mbp8N",
+      "title": "Game V1 - lock the extraction vertical slice scope",
+      "completed": false,
+      "priority": "URGENT",
+      "createdAt": "2026-07-19T21:23:17.931Z",
+      "updatedAt": "2026-07-22T20:06:52.868Z",
+      "subitems": [
+        {
+          "id": "AXo0Hcq1Qex7NZv5VcwAb",
+          "title": "Define the smallest playable loop: train deploys, captures one zone, survives pressure, retreats home",
+          "completed": false,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
+        },
+        {
+          "id": "e0IVl6KWu8Rbr2P_-6Qe2",
+          "title": "Limit V1 content to one train, one cart, two squads, one building, one resource zone, one ruin, and one zombie type",
+          "completed": false,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
+        },
+        {
+          "id": "8VmzFao-Ocv5LXt3Vau8W",
+          "title": "Move commanders, blueprints, co-op, campaign, endless mode, and advanced unit variants out of V1",
+          "completed": false,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
+        },
+        {
+          "id": "czGTj4IUs6P_p0NY-4Ocx",
+          "title": "Write a V1 definition-of-done checklist for a 10-minute expedition",
+          "completed": false,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
+        }
+      ]
+    },
+    {
+      "id": "0Ner7TgsGVnyDPlwGbj2H",
+      "title": "Game V1 - Chisel data model for the extraction loop",
+      "completed": false,
+      "priority": "URGENT",
+      "createdAt": "2026-07-19T21:23:17.931Z",
+      "updatedAt": "2026-07-22T20:07:03.628Z",
+      "subitems": [
+        {
+          "id": "axERh2GSq4NYnzLWq6Jcr",
+          "title": "Create resources table for Basic Supplies, Advanced Components, and safe-zone resources",
+          "completed": false,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
+        },
+        {
+          "id": "4RivBXkwKZr1HTp-Kbn6L",
+          "title": "Create train and cart tables with health, capacity, bonuses, and translation refs",
+          "completed": false,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
+        },
+        {
+          "id": "ZvCPf0EQo2LWlxJUo6Hap",
+          "title": "Create unit, attack, damage type, resistance, and enemy tables from the compact stat format",
+          "completed": false,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
+        },
+        {
+          "id": "2Pgt9ViuIXp-FRnyIbl4J",
+          "title": "Create building, resource zone, ruin, artifact, and expedition objective tables",
+          "completed": false,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
+        },
+        {
+          "id": "XtANdzCOm0JUjvHSm6FZn",
+          "title": "Attach assetRef and translationRef columns everywhere Godot needs readable UI or visuals",
+          "completed": false,
+          "createdAt": "2026-07-19T21:23:17.931Z",
+          "updatedAt": "2026-07-19T21:23:17.931Z"
         }
       ]
     },
@@ -57,10 +206,10 @@
       "id": "mRe6y5Tpfq72x1FseG8Xl",
       "title": "Add weather system - A weather is the combination of HDRI, sun settings and effects",
       "completed": false,
-      "priority": "MEDIUM",
+      "priority": "HIGH",
       "dueDate": "2026-07-26",
       "createdAt": "2026-07-19T08:12:28.564Z",
-      "updatedAt": "2026-07-19T19:10:19.833Z",
+      "updatedAt": "2026-07-22T20:06:43.477Z",
       "subitems": [
         {
           "id": "hM0mwb1NAdpXAGrDYVBMD",
@@ -114,134 +263,6 @@
           "completed": false,
           "createdAt": "2026-07-19T08:20:24.968Z",
           "updatedAt": "2026-07-19T08:20:24.968Z"
-        }
-      ]
-    },
-    {
-      "id": "g2KXn8MYwATdt4Rb-8Sg0",
-      "title": "Chisel V1 - finish first-game authoring support",
-      "completed": false,
-      "priority": "HIGH",
-      "createdAt": "2026-07-19T21:23:17.931Z",
-      "updatedAt": "2026-07-19T21:23:17.931Z",
-      "subitems": [
-        {
-          "id": "Gcu6Niw7Wk2DTe0BVi1Gb",
-          "title": "Use ordered project-management todos and subitems to track milestone sequence",
-          "completed": true,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
-        },
-        {
-          "id": "k6OarCQb-EXhx8Vf-CWk6",
-          "title": "Add removal impact before deleting rows, assets, translation keys, and table fields",
-          "completed": false,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
-        },
-        {
-          "id": "Eas4Lgu5Ui0BRcz9Vg-EY",
-          "title": "Complete usage references for tables, localization icons, exported assets, and generated Godot paths",
-          "completed": false,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
-        },
-        {
-          "id": "i4MZpAO_yCVfv6Td-AUi6",
-          "title": "Harden model, audio, video, and font asset categories with metadata, previews, and validation",
-          "completed": false,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
-        },
-        {
-          "id": "CZq2Jes3Sgz9Pax7VeyC_",
-          "title": "Polish Problems/export-blocking messages so every issue points at a concrete fix target",
-          "completed": false,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
-        }
-      ]
-    },
-    {
-      "id": "6TkxDZmyMat3JVr1Mbp8N",
-      "title": "Game V1 - lock the extraction vertical slice scope",
-      "completed": false,
-      "priority": "URGENT",
-      "createdAt": "2026-07-19T21:23:17.931Z",
-      "updatedAt": "2026-07-19T21:23:17.931Z",
-      "subitems": [
-        {
-          "id": "AXo0Hcq1Qex7NZv5VcwAb",
-          "title": "Define the smallest playable loop: train deploys, captures one zone, survives pressure, retreats home",
-          "completed": false,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
-        },
-        {
-          "id": "e0IVl6KWu8Rbr2P_-6Qe2",
-          "title": "Limit V1 content to one train, one cart, two squads, one building, one resource zone, one ruin, and one zombie type",
-          "completed": false,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
-        },
-        {
-          "id": "8VmzFao-Ocv5LXt3Vau8W",
-          "title": "Move commanders, blueprints, co-op, campaign, endless mode, and advanced unit variants out of V1",
-          "completed": false,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
-        },
-        {
-          "id": "czGTj4IUs6P_p0NY-4Ocx",
-          "title": "Write a V1 definition-of-done checklist for a 10-minute expedition",
-          "completed": false,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
-        }
-      ]
-    },
-    {
-      "id": "0Ner7TgsGVnyDPlwGbj2H",
-      "title": "Game V1 - Chisel data model for the extraction loop",
-      "completed": false,
-      "priority": "URGENT",
-      "createdAt": "2026-07-19T21:23:17.931Z",
-      "updatedAt": "2026-07-19T21:23:17.931Z",
-      "subitems": [
-        {
-          "id": "axERh2GSq4NYnzLWq6Jcr",
-          "title": "Create resources table for Basic Supplies, Advanced Components, and safe-zone resources",
-          "completed": false,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
-        },
-        {
-          "id": "4RivBXkwKZr1HTp-Kbn6L",
-          "title": "Create train and cart tables with health, capacity, bonuses, and translation refs",
-          "completed": false,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
-        },
-        {
-          "id": "ZvCPf0EQo2LWlxJUo6Hap",
-          "title": "Create unit, attack, damage type, resistance, and enemy tables from the compact stat format",
-          "completed": false,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
-        },
-        {
-          "id": "2Pgt9ViuIXp-FRnyIbl4J",
-          "title": "Create building, resource zone, ruin, artifact, and expedition objective tables",
-          "completed": false,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
-        },
-        {
-          "id": "XtANdzCOm0JUjvHSm6FZn",
-          "title": "Attach assetRef and translationRef columns everywhere Godot needs readable UI or visuals",
-          "completed": false,
-          "createdAt": "2026-07-19T21:23:17.931Z",
-          "updatedAt": "2026-07-19T21:23:17.931Z"
         }
       ]
     },
