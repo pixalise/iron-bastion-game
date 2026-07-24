@@ -56,7 +56,11 @@ enum Id {
 	UNIT_PIKEMAN_NAME = 6,
 	UNIT_PIKEMAN_DESCRIPTION = 7,
 	UNIT_KNIGHT_NAME = 8,
-	UNIT_KNIGHT_DESCRIPTION = 9
+	UNIT_KNIGHT_DESCRIPTION = 9,
+	ABILITY_TARGET_PRACTICE_NAME = 10,
+	ABILITY_TARGET_PRACTICE_DESCRIPTION = 11,
+	ABILITY_METEOR_STRIKE_NAME = 12,
+	ABILITY_METEOR_STRIKE_DESCRIPTION = 13
 }
 
 const DEFAULT_LOCALE := "en"
@@ -71,7 +75,11 @@ const KEYS := [
 	"UNIT.PIKEMAN.NAME",
 	"UNIT.PIKEMAN.DESCRIPTION",
 	"UNIT.KNIGHT.NAME",
-	"UNIT.KNIGHT.DESCRIPTION"
+	"UNIT.KNIGHT.DESCRIPTION",
+	"ABILITY.TARGET_PRACTICE.NAME",
+	"ABILITY.TARGET_PRACTICE.DESCRIPTION",
+	"ABILITY.METEOR_STRIKE.NAME",
+	"ABILITY.METEOR_STRIKE.DESCRIPTION"
 ]
 const VALUES := {
 	"en":
@@ -85,7 +93,11 @@ const VALUES := {
 		"Pikeman",
 		"The frontline of the kings army. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in an area of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>.",
 		"Swordman",
-		"They are the first ones to engage the kings enemies. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in the vicinity of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>."
+		"They are the first ones to engage the kings enemies. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in the vicinity of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>.",
+		"Target Practice",
+		"Sharpen aim and battlefield discipline. Improves unit <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> and <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range</tooltip></style>.",
+		"Meteor Strike",
+		"Call down a meteor on the target area, dealing heavy <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> to everything caught in the impact."
 	]
 }
 const ICON_SLUGS := [
@@ -98,7 +110,11 @@ const ICON_SLUGS := [
 	[],
 	["PHYSICAL_DAMAGE", "RANGE"],
 	[],
-	["PHYSICAL_DAMAGE", "RANGE"]
+	["PHYSICAL_DAMAGE", "RANGE"],
+	[],
+	["PHYSICAL_DAMAGE", "RANGE"],
+	[],
+	["PHYSICAL_DAMAGE"]
 ]
 const ICONS := {
 	"KNIGHT":
@@ -142,6 +158,13 @@ const ICONS := {
 		"path": "res://game_data/assets/ui_icon/target_practice.png",
 		"width": 256,
 		"height": 256
+	},
+	"METEOR_STRIKE":
+	{
+		"asset_id": "METEOR_STRIKE",
+		"path": "res://game_data/assets/ui_icon/meteor_strike.png",
+		"width": 256,
+		"height": 256
 	}
 }
 const PLACEHOLDERS := [
@@ -154,10 +177,14 @@ const PLACEHOLDERS := [
 	[],
 	["attack_damage", "attack_range"],
 	[],
-	["attack_damage", "attack_range"]
+	["attack_damage", "attack_range"],
+	[],
+	[],
+	[],
+	[]
 ]
 const PLACEHOLDER_TYPES := [
-	[], ["float", "int"], [], [], [], [], [], ["int", "float"], [], ["int", "float"]
+	[], ["float", "int"], [], [], [], [], [], ["int", "float"], [], ["int", "float"], [], [], [], []
 ]
 const STYLES := {
 	"ATTACK_RANGE": {"color": "#ffffff", "bold": false, "italic": true, "underline": false},

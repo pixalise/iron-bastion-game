@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "45RH7A6GsG12q-v78dmmN",
-    "lastChangeAt": "2026-07-24T19:16:03.286Z",
-    "version": 2,
+    "lastChangeAt": "2026-07-24T20:34:08.776Z",
+    "version": 4,
     "name": "Ability",
     "description": "The abilities table",
     "columns": [
@@ -33,7 +33,50 @@
         "unique": false
       }
     ],
-    "rows": [],
+    "rows": [
+      {
+        "id": "yFvTrYZBZHXvkYwfCZxa7",
+        "slug": "TARGET_PRACTICE",
+        "values": [
+          {
+            "columnId": "kJwcO071TGKOq2eNEyu9-",
+            "type": "translationRef",
+            "value": "ABILITY.TARGET_PRACTICE.NAME"
+          },
+          {
+            "columnId": "2B4QMvLzDqMTWjHnS4mR_",
+            "type": "translationRef",
+            "value": "ABILITY.TARGET_PRACTICE.DESCRIPTION"
+          },
+          {
+            "columnId": "YTrgAl1ByZnP7gIzyej9l",
+            "type": "assetRef",
+            "value": "TARGET_PRACTICE"
+          }
+        ]
+      },
+      {
+        "id": "JOjKHqXJpqICS-qu6uZiy",
+        "slug": "METEOR_STRIKE",
+        "values": [
+          {
+            "columnId": "kJwcO071TGKOq2eNEyu9-",
+            "type": "translationRef",
+            "value": "ABILITY.METEOR_STRIKE.NAME"
+          },
+          {
+            "columnId": "2B4QMvLzDqMTWjHnS4mR_",
+            "type": "translationRef",
+            "value": "ABILITY.METEOR_STRIKE.DESCRIPTION"
+          },
+          {
+            "columnId": "YTrgAl1ByZnP7gIzyej9l",
+            "type": "assetRef",
+            "value": "METEOR_STRIKE"
+          }
+        ]
+      }
+    ],
     "kind": "user",
     "isSystemTable": false
   }

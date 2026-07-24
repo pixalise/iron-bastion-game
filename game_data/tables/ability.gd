@@ -2,13 +2,19 @@
 class_name ChiselAbility
 extends RefCounted
 
-enum Id { INVALID = -1 }
+enum Id { INVALID = -1, TARGET_PRACTICE = 0, METEOR_STRIKE = 1 }
 
 const TABLE_ID := "45RH7A6GsG12q-v78dmmN"
 const TABLE_NAME := "Ability"
 const TABLE_KIND := "user"
-const COUNT := 0
-const SLUGS := []
-const NAME := []
-const DESCRIPTION := []
-const PORTRAIT := []
+const COUNT := 2
+const SLUGS := ["TARGET_PRACTICE", "METEOR_STRIKE"]
+const NAME := [
+	ChiselLocalization.Id.ABILITY_TARGET_PRACTICE_NAME,
+	ChiselLocalization.Id.ABILITY_METEOR_STRIKE_NAME
+]
+const DESCRIPTION := [
+	ChiselLocalization.Id.ABILITY_TARGET_PRACTICE_DESCRIPTION,
+	ChiselLocalization.Id.ABILITY_METEOR_STRIKE_DESCRIPTION
+]
+const PORTRAIT := [ChiselAssets.Id.TARGET_PRACTICE, ChiselAssets.Id.METEOR_STRIKE]

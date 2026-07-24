@@ -74,6 +74,34 @@
         "en": "They are the first ones to engage the kings enemies. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in the vicinity of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>."
       },
       "placeholders": []
+    },
+    {
+      "path": "ABILITY.TARGET_PRACTICE.NAME",
+      "values": {
+        "en": "Target Practice"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ABILITY.TARGET_PRACTICE.DESCRIPTION",
+      "values": {
+        "en": "Sharpen aim and battlefield discipline. Improves unit <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> and <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range</tooltip></style>."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ABILITY.METEOR_STRIKE.NAME",
+      "values": {
+        "en": "Meteor Strike"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "ABILITY.METEOR_STRIKE.DESCRIPTION",
+      "values": {
+        "en": "Call down a meteor on the target area, dealing heavy <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> to everything caught in the impact."
+      },
+      "placeholders": []
     }
   ],
   "styles": [

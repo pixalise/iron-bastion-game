@@ -2,6 +2,7 @@
 class_name ChiselTranslations
 extends RefCounted
 
+
 class UnitArcherDescriptionParameters:
 	var attack_range: float = -1.0
 	var attack_damage: int = -1
@@ -14,6 +15,7 @@ class UnitArcherDescriptionParameters:
 
 	func to_arguments() -> Dictionary:
 		return {"attack_range": attack_range, "attack_damage": attack_damage}
+
 
 class UnitPikemanDescriptionParameters:
 	var attack_damage: int = -1
@@ -28,6 +30,7 @@ class UnitPikemanDescriptionParameters:
 	func to_arguments() -> Dictionary:
 		return {"attack_damage": attack_damage, "attack_range": attack_range}
 
+
 class UnitKnightDescriptionParameters:
 	var attack_damage: int = -1
 	var attack_range: float = -1.0
@@ -41,53 +44,107 @@ class UnitKnightDescriptionParameters:
 	func to_arguments() -> Dictionary:
 		return {"attack_damage": attack_damage, "attack_range": attack_range}
 
+
+class AbilityMeteorStrikeTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ABILITY_METEOR_STRIKE_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(
+			ChiselLocalization.Id.ABILITY_METEOR_STRIKE_DESCRIPTION, {}
+		)
+
+
+class AbilityTargetPracticeTranslations:
+	func name() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.ABILITY_TARGET_PRACTICE_NAME, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(
+			ChiselLocalization.Id.ABILITY_TARGET_PRACTICE_DESCRIPTION, {}
+		)
+
+
+class AbilityTranslations:
+	var target_practice := AbilityTargetPracticeTranslations.new()
+	var meteor_strike := AbilityMeteorStrikeTranslations.new()
+
+
 class TooltipRangeTranslations:
 	func title() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_RANGE_TITLE, {})
+
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_RANGE_DESCRIPTION, {})
+
 
 class TooltipDamagePhyisicalTranslations:
 	func title() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_DAMAGE_PHYISICAL_TITLE, {})
+
 	func description() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_DAMAGE_PHYISICAL_DESCRIPTION, {})
+		return ChiselLocalization.format(
+			ChiselLocalization.Id.TOOLTIP_DAMAGE_PHYISICAL_DESCRIPTION, {}
+		)
+
 
 class TooltipDamageTranslations:
 	var phyisical := TooltipDamagePhyisicalTranslations.new()
+
 
 class TooltipTranslations:
 	var damage := TooltipDamageTranslations.new()
 	var range := TooltipRangeTranslations.new()
 
+
 class UnitKnightTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_KNIGHT_NAME, {})
-	func description(parameters: UnitKnightDescriptionParameters = null) -> ChiselLocalization.LocalizedText:
+
+	func description(
+		parameters: UnitKnightDescriptionParameters = null
+	) -> ChiselLocalization.LocalizedText:
 		if parameters == null:
 			parameters = UnitKnightDescriptionParameters.new()
-		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_KNIGHT_DESCRIPTION, parameters.to_arguments())
+		return ChiselLocalization.format(
+			ChiselLocalization.Id.UNIT_KNIGHT_DESCRIPTION, parameters.to_arguments()
+		)
+
 
 class UnitPikemanTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_PIKEMAN_NAME, {})
-	func description(parameters: UnitPikemanDescriptionParameters = null) -> ChiselLocalization.LocalizedText:
+
+	func description(
+		parameters: UnitPikemanDescriptionParameters = null
+	) -> ChiselLocalization.LocalizedText:
 		if parameters == null:
 			parameters = UnitPikemanDescriptionParameters.new()
-		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_PIKEMAN_DESCRIPTION, parameters.to_arguments())
+		return ChiselLocalization.format(
+			ChiselLocalization.Id.UNIT_PIKEMAN_DESCRIPTION, parameters.to_arguments()
+		)
+
 
 class UnitArcherTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_ARCHER_NAME, {})
-	func description(parameters: UnitArcherDescriptionParameters = null) -> ChiselLocalization.LocalizedText:
+
+	func description(
+		parameters: UnitArcherDescriptionParameters = null
+	) -> ChiselLocalization.LocalizedText:
 		if parameters == null:
 			parameters = UnitArcherDescriptionParameters.new()
-		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_ARCHER_DESCRIPTION, parameters.to_arguments())
+		return ChiselLocalization.format(
+			ChiselLocalization.Id.UNIT_ARCHER_DESCRIPTION, parameters.to_arguments()
+		)
+
 
 class UnitTranslations:
 	var archer := UnitArcherTranslations.new()
 	var pikeman := UnitPikemanTranslations.new()
 	var knight := UnitKnightTranslations.new()
 
+
 static var unit := UnitTranslations.new()
 static var tooltip := TooltipTranslations.new()
+static var ability := AbilityTranslations.new()

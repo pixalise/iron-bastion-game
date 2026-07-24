@@ -2,28 +2,28 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-24T20:22:05.114Z"
+const GENERATED_AT := "2026-07-24T20:34:14.813Z"
 const PROJECT_ID := "lwDBJkZEABItlP3UGvDll"
 const PROJECT_NAME := "Pachingod"
-const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 9}
+const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 10}
 const LOCALIZATION := {
 	"class_name": "ChiselLocalization",
 	"path": "res://game_data/localization.gd",
 	"typed_class_name": "ChiselTranslations",
 	"typed_path": "res://game_data/translations.gd",
 	"csv_path": "res://game_data/localization/translations.csv",
-	"translations": 10,
+	"translations": 14,
 	"locales": 1
 }
 const FILES := [
-	{"bytes": 2497, "hash": "e2b95b02", "path": "res://game_data/assets.gd"},
-	{"bytes": 13177, "hash": "3cedc5b8", "path": "res://game_data/localization.gd"},
-	{"bytes": 3833, "hash": "75db394f", "path": "res://game_data/translations.gd"},
-	{"bytes": 1412, "hash": "cfe46f69", "path": "res://game_data/localization/translations.csv"},
+	{"bytes": 2727, "hash": "a2e9ea2e", "path": "res://game_data/assets.gd"},
+	{"bytes": 14184, "hash": "d22765c2", "path": "res://game_data/localization.gd"},
+	{"bytes": 4703, "hash": "002d723c", "path": "res://game_data/translations.gd"},
+	{"bytes": 2017, "hash": "327d76ef", "path": "res://game_data/localization/translations.csv"},
 	{"bytes": 3310, "hash": "00a525a2", "path": "res://game_data/input.gd"},
 	{"bytes": 316, "hash": "d3c5ccae", "path": "res://game_data/tables/peg.gd"},
 	{"bytes": 925, "hash": "e589c62e", "path": "res://game_data/tables/unit.gd"},
-	{"bytes": 304, "hash": "18c69542", "path": "res://game_data/tables/ability.gd"},
+	{"bytes": 672, "hash": "4ee50c95", "path": "res://game_data/tables/ability.gd"},
 	{"bytes": 329, "hash": "ac021d69", "path": "res://game_data/tables/recipe.gd"},
 	{"bytes": 540, "hash": "7113fff9", "path": "res://game_data/tables/recipe_step.gd"},
 	{"bytes": 510, "hash": "0b8b76a7", "path": "res://game_data/tables/input_bindings.gd"}
@@ -50,7 +50,7 @@ const TABLES := {
 		"name": "Ability",
 		"class_name": "ChiselAbility",
 		"path": "res://game_data/tables/ability.gd",
-		"rows": 0,
+		"rows": 2,
 		"columns": 3
 	},
 	"boRIG5F5aadgs1TVlDgLM":

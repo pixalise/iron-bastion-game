@@ -9,3 +9,7 @@
 "UNIT.PIKEMAN.DESCRIPTION","The frontline of the kings army. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in an area of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>."
 "UNIT.KNIGHT.NAME","Swordman"
 "UNIT.KNIGHT.DESCRIPTION","They are the first ones to engage the kings enemies. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in the vicinity of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>."
+"ABILITY.TARGET_PRACTICE.NAME","Target Practice"
+"ABILITY.TARGET_PRACTICE.DESCRIPTION","Sharpen aim and battlefield discipline. Improves unit <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> and <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range</tooltip></style>."
+"ABILITY.METEOR_STRIKE.NAME","Meteor Strike"
+"ABILITY.METEOR_STRIKE.DESCRIPTION","Call down a meteor on the target area, dealing heavy <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> to everything caught in the impact."

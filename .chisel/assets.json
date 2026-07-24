@@ -108,6 +108,18 @@
       "id": "TARGET_PRACTICE",
       "relativePath": ".chisel/assets/UI_ICON/TARGET_PRACTICE.png",
       "formattedBytes": "46.3 KB"
+    },
+    {
+      "category": "UI_ICON",
+      "name": "METEOR_STRIKE",
+      "note": "Ability",
+      "sizeBytes": 54068,
+      "width": 256,
+      "height": 256,
+      "extension": "png",
+      "id": "METEOR_STRIKE",
+      "relativePath": ".chisel/assets/UI_ICON/METEOR_STRIKE.png",
+      "formattedBytes": "52.8 KB"
     }
   ]
 }
