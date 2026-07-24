@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://4r448vovmq8w" path="res://game/prefabs/lighting_natural.tscn" id="1_dbqkw"]
 [ext_resource type="Script" uid="uid://ds3yty8y5posa" path="res://game/scenes/pachinko/peg_manager.gd" id="2_57nb6"]
 [ext_resource type="PackedScene" uid="uid://cutoimeaj7k3n" path="res://game/scenes/pachinko/peg.tscn" id="3_w5s82"]
+[ext_resource type="PackedScene" uid="uid://canhicqgb2bdm" path="res://game/scenes/pachinko/ball.tscn" id="4_57nb6"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_h4rr5"]
 
@@ -18,14 +19,11 @@ mesh = SubResource("PlaneMesh_h4rr5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3916488, 0)
 script = ExtResource("2_57nb6")
 peg_scene = ExtResource("3_w5s82")
+ball_scene = ExtResource("4_57nb6")
+ball_spawn_position = Vector3(0.02, 0.75, 0.2)
 row_count = 10
 vertical_spacing = 0.5
 peg_z_offset = 0.2
-peg_scale = Vector3(0.2, 0.2, 0.2)
-
-[node name="Peg" parent="." unique_id=163086090 instance=ExtResource("3_w5s82")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0.2)
-visible = false
 
 [node name="LockedCamera" type="Camera3D" parent="." unique_id=1615541042]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.577695)

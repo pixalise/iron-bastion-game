@@ -9,16 +9,13 @@ extends Node3D
 
 @export_category("Board Size")
 @export_range(1, 50, 1) var row_count: int = 12
-@export_range(1, 20, 1) var first_row_peg_count: int = 1
-@export_range(0, 5, 1) var extra_pegs_per_row: int = 1
+@export_range(1, 50, 1) var pegs_per_row: int = 10
 
 @export_category("Peg Spacing")
 @export var horizontal_spacing: float = 0.65
 @export var vertical_spacing: float = 0.55
-
-@export_category("Peg Transform")
+@export_range(0.0, 1.0, 0.05) var odd_row_stagger_ratio: float = 0.5
 @export var peg_z_offset: float = 0.0
-@export var peg_scale: Vector3 = Vector3.ONE
 
 
 func _ready() -> void:
@@ -43,12 +40,13 @@ func generate_peg_board() -> void:
 		return
 
 	for row in range(row_count):
-		var pegs_in_row := first_row_peg_count + row * extra_pegs_per_row
+		var row_width := float(pegs_per_row - 1) * horizontal_spacing
+		var row_stagger := 0.0
+		if row % 2 == 1:
+			row_stagger = horizontal_spacing * odd_row_stagger_ratio
+		var starting_x := -row_width * 0.5 + row_stagger
 
-		var row_width := float(pegs_in_row - 1) * horizontal_spacing
-		var starting_x := -row_width * 0.5
-
-		for column in range(pegs_in_row):
+		for column in range(pegs_per_row):
 			var instance := peg_scene.instantiate()
 
 			if not instance is Node3D:
@@ -60,9 +58,5 @@ func generate_peg_board() -> void:
 			add_child(peg)
 
 			peg.position = Vector3(
-				starting_x + column * horizontal_spacing,
-				-row * vertical_spacing,
-				peg_z_offset
+				starting_x + column * horizontal_spacing, -row * vertical_spacing, peg_z_offset
 			)
-
-			peg.scale = peg_scale
