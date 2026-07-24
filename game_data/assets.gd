@@ -3,18 +3,20 @@ class_name ChiselAssets
 extends RefCounted
 
 enum Id {
-	FOREST_SOIL_1 = 0,
-	FOREST_GRASS_1 = 1,
-	FOREST_1_2_K = 2,
-	KNIGHT = 3,
-	ARCHER = 4,
-	PHYSICAL_DAMAGE = 5,
-	PIKEMAN = 6,
-	RANGE = 7,
-	TARGET_PRACTICE = 8
+	INVALID = 0,
+	FOREST_SOIL_1 = 1,
+	FOREST_GRASS_1 = 2,
+	FOREST_1_2_K = 3,
+	KNIGHT = 4,
+	ARCHER = 5,
+	PHYSICAL_DAMAGE = 6,
+	PIKEMAN = 7,
+	RANGE = 8,
+	TARGET_PRACTICE = 9
 }
 
 const IDS := [
+	"",
 	"FOREST_SOIL_1",
 	"FOREST_GRASS_1",
 	"FOREST_1_2_K",
@@ -26,7 +28,8 @@ const IDS := [
 	"TARGET_PRACTICE"
 ]
 const BY_ID := {
-	"FOREST_SOIL_1": {
+	"FOREST_SOIL_1":
+	{
 		"category": "terrain_texture",
 		"extension": "gppt",
 		"height": 1024,
@@ -34,9 +37,11 @@ const BY_ID := {
 		"path": "res://game_data/assets/terrain_texture/forest_soil_1",
 		"width": 1024,
 		"albedo_height": "res://game_data/assets/terrain_texture/forest_soil_1/albedo_height.png",
-		"normal_roughness": "res://game_data/assets/terrain_texture/forest_soil_1/normal_roughness.png"
+		"normal_roughness":
+		"res://game_data/assets/terrain_texture/forest_soil_1/normal_roughness.png"
 	},
-	"FOREST_GRASS_1": {
+	"FOREST_GRASS_1":
+	{
 		"category": "terrain_texture",
 		"extension": "gppt",
 		"height": 1024,
@@ -44,9 +49,11 @@ const BY_ID := {
 		"path": "res://game_data/assets/terrain_texture/forest_grass_1",
 		"width": 1024,
 		"albedo_height": "res://game_data/assets/terrain_texture/forest_grass_1/albedo_height.png",
-		"normal_roughness": "res://game_data/assets/terrain_texture/forest_grass_1/normal_roughness.png"
+		"normal_roughness":
+		"res://game_data/assets/terrain_texture/forest_grass_1/normal_roughness.png"
 	},
-	"FOREST_1_2_K": {
+	"FOREST_1_2_K":
+	{
 		"category": "hdri",
 		"extension": "exr",
 		"height": 0,
@@ -54,7 +61,8 @@ const BY_ID := {
 		"path": "res://game_data/assets/hdri/forest_1_2_k.exr",
 		"width": 0
 	},
-	"KNIGHT": {
+	"KNIGHT":
+	{
 		"category": "ui_icon",
 		"extension": "png",
 		"height": 256,
@@ -62,7 +70,8 @@ const BY_ID := {
 		"path": "res://game_data/assets/ui_icon/knight.png",
 		"width": 256
 	},
-	"ARCHER": {
+	"ARCHER":
+	{
 		"category": "ui_icon",
 		"extension": "png",
 		"height": 256,
@@ -70,7 +79,8 @@ const BY_ID := {
 		"path": "res://game_data/assets/ui_icon/archer.png",
 		"width": 256
 	},
-	"PHYSICAL_DAMAGE": {
+	"PHYSICAL_DAMAGE":
+	{
 		"category": "ui_icon",
 		"extension": "png",
 		"height": 256,
@@ -78,7 +88,8 @@ const BY_ID := {
 		"path": "res://game_data/assets/ui_icon/physical_damage.png",
 		"width": 256
 	},
-	"PIKEMAN": {
+	"PIKEMAN":
+	{
 		"category": "ui_icon",
 		"extension": "png",
 		"height": 256,
@@ -86,7 +97,8 @@ const BY_ID := {
 		"path": "res://game_data/assets/ui_icon/pikeman.png",
 		"width": 256
 	},
-	"RANGE": {
+	"RANGE":
+	{
 		"category": "ui_icon",
 		"extension": "png",
 		"height": 256,
@@ -94,7 +106,8 @@ const BY_ID := {
 		"path": "res://game_data/assets/ui_icon/range.png",
 		"width": 256
 	},
-	"TARGET_PRACTICE": {
+	"TARGET_PRACTICE":
+	{
 		"category": "ui_icon",
 		"extension": "png",
 		"height": 256,

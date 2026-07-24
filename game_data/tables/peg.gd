@@ -2,13 +2,13 @@
 class_name ChiselPeg
 extends RefCounted
 
-enum Id {}
+enum Id { INVALID = 0 }
 
 const TABLE_ID := "NwZ2PycvCtTXXvZUQWyXB"
 const TABLE_NAME := "Peg"
 const TABLE_KIND := "user"
-const SLUGS := []
-const SYMBOL := []
-const SYMBOL_COLOR := []
-const KIND := []
-const UNIT_REF := []
+const SLUGS := [""]
+const SYMBOL := [ChiselAssets.Id.INVALID]
+const SYMBOL_COLOR := [""]
+const KIND := [""]
+const UNIT_REF := [ChiselUnit.Id.INVALID]
