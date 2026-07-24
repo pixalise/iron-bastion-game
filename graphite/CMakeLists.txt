@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 
 project(graphite
 	VERSION 0.1.0
-	DESCRIPTION "Native C++ GDExtension simulation layer for Iron Bastion."
+	DESCRIPTION "Native C++ GDExtension simulation layer for Pachingod."
 	LANGUAGES CXX
 )
 

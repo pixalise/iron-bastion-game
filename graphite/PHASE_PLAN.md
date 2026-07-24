@@ -1,6 +1,6 @@
 # Graphite Phase Plan
 
-Graphite is the native C++ simulation layer for Iron Bastion. It owns the
+Graphite is the native C++ simulation layer for Pachingod. It owns the
 authoritative runtime facts of the battle: movement, combat, health, deaths,
 commands, observations, and events.
 
@@ -543,7 +543,7 @@ User-facing unit tables reference these system profiles.
 
 ### Phase 2 Attack Slots
 
-Final-form units should support multiple attack slots because Iron Bastion will
+Final-form units should support multiple attack slots because Pachingod will
 have mechs and universal melee fallbacks.
 
 ```json

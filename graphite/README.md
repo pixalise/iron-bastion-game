@@ -1,6 +1,6 @@
 # Graphite
 
-Native C++ GDExtension simulation layer for Iron Bastion.
+Native C++ GDExtension simulation layer for Pachingod.
 
 See [PHASE_PLAN.md](PHASE_PLAN.md) for the Phase 1 zoo POC and Phase 2
 data-driven final-form plan.

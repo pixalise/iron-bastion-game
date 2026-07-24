@@ -4,7 +4,7 @@ extends RefCounted
 
 const GENERATED_AT := "2026-07-24T10:08:36.283Z"
 const PROJECT_ID := "IlSn4ib8JKnozbdvTOqmJ"
-const PROJECT_NAME := "Iron Bastion"
+const PROJECT_NAME := "Pachingod"
 const ASSETS := {
 	"class_name": "ChiselAssets",
 	"path": "res://game_data/assets.gd",

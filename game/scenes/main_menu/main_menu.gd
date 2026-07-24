@@ -33,7 +33,7 @@ func _build() -> void:
 										. Column(
 											[
 												UI.Widgets.Text(
-													"Iron Bastion", UI.TextStyle.title()
+													"Pachingod", UI.TextStyle.title()
 												),
 												UI.Widgets.Button(
 													"zoo",
