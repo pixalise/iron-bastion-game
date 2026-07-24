@@ -1,10 +1,6 @@
 [gd_scene format=3 uid="uid://dpanc0ml5pyca"]
 
-[ext_resource type="PackedScene" uid="uid://4r448vovmq8w" path="res://game/prefabs/lighting_natural.tscn" id="1_pwxwe"]
-[ext_resource type="Script" uid="uid://ds3yty8y5posa" path="res://game/scenes/pachinko/peg_manager.gd" id="2_6grw1"]
-[ext_resource type="PackedScene" uid="uid://cutoimeaj7k3n" path="res://game/scenes/pachinko/peg.tscn" id="3_wrtl7"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_pwxwe"]
+[ext_resource type="PackedScene" uid="uid://clalgbajnquym" path="res://game/scenes/pachinko/pachinko_board.tscn" id="1_pwxwe"]
 
 [node name="Pachinko" type="Node3D" unique_id=978769730]
 
@@ -34,31 +30,8 @@ grow_vertical = 2
 stretch = true
 
 [node name="GameViewport" type="SubViewport" parent="Main/GameViewportContainer" unique_id=192120753]
+handle_input_locally = false
 size = Vector2i(771, 648)
+render_target_update_mode = 4
 
-[node name="GameWorld" type="Node3D" parent="Main/GameViewportContainer/GameViewport" unique_id=2128571776]
-
-[node name="LightingNatural" parent="Main/GameViewportContainer/GameViewport/GameWorld" unique_id=1361342736 instance=ExtResource("1_pwxwe")]
-
-[node name="Background" type="MeshInstance3D" parent="Main/GameViewportContainer/GameViewport/GameWorld" unique_id=979191841]
-transform = Transform3D(7.2087493, 0, 0, 0, -8.689902e-08, -4.4890847, 0, 1.9880177, -1.9622414e-07, 0, 0, 0)
-mesh = SubResource("PlaneMesh_pwxwe")
-
-[node name="PegManager" type="Node3D" parent="Main/GameViewportContainer/GameViewport/GameWorld" unique_id=1604714157]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3916488, 0)
-script = ExtResource("2_6grw1")
-peg_scene = ExtResource("3_wrtl7")
-row_count = 10
-vertical_spacing = 0.5
-peg_z_offset = 0.2
-peg_scale = Vector3(0.2, 0.2, 0.2)
-
-[node name="Peg" parent="Main/GameViewportContainer/GameViewport/GameWorld" unique_id=163086090 instance=ExtResource("3_wrtl7")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0.2)
-visible = false
-
-[node name="LockedCamera" type="Camera3D" parent="Main/GameViewportContainer/GameViewport/GameWorld" unique_id=2081833518]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.577695)
-projection = 1
-size = 7.823
-far = 4011.05
+[node name="PachinkoBoard" parent="Main/GameViewportContainer/GameViewport" unique_id=1501171352 instance=ExtResource("1_pwxwe")]
