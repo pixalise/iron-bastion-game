@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c2gebrjy2u8wb" path="res://game_data/assets/hdri/forest_1_2_k.exr" id="2_s73hd"]
 [ext_resource type="PackedScene" uid="uid://cutoimeaj7k3n" path="res://game/scenes/pachinko/peg.tscn" id="3_w5s82"]
 [ext_resource type="PackedScene" uid="uid://canhicqgb2bdm" path="res://game/scenes/pachinko/ball.tscn" id="4_57nb6"]
+[ext_resource type="Script" uid="uid://ciax474eq1xbj" path="res://game/scenes/pachinko/peg_collector.gd" id="5_55x8y"]
 [ext_resource type="Material" uid="uid://d0hyi5n6ng25w" path="res://demo/assets/materials/M_rock23_black_tp.tres" id="5_w5s82"]
 [ext_resource type="Material" uid="uid://cso4f2iyuxpmc" path="res://demo/assets/materials/M_crystal_purple.tres" id="6_h4rr5"]
 
@@ -22,25 +23,25 @@ sky = SubResource("Sky_u6n7n")
 sky_rotation = Vector3(0, 1.5149457, 0)
 ambient_light_energy = 2.15
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_h4rr5"]
-
 [sub_resource type="BoxMesh" id="BoxMesh_vjcty"]
 size = Vector3(1, 2.786621, 1)
 
 [sub_resource type="PrismMesh" id="PrismMesh_vjcty"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_vjcty"]
+[sub_resource type="BoxMesh" id="BoxMesh_ajglo"]
+size = Vector3(50, 0.2, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vjcty"]
+size = Vector3(50, 0.2, 50)
 
 [sub_resource type="BoxMesh" id="BoxMesh_57nb6"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_h4rr5"]
 
 [node name="PachinkoBoard" type="Node3D" unique_id=1501171352]
 
 [node name="LightingNatural" parent="." unique_id=1361342736 instance=ExtResource("1_dbqkw")]
 environment = SubResource("Environment_55x8y")
-
-[node name="Background" type="MeshInstance3D" parent="." unique_id=791099537]
-transform = Transform3D(7.2087493, 0, 0, 0, -8.689902e-08, -4.4890847, 0, 1.9880177, -1.9622414e-07, 0, 0, 0)
-mesh = SubResource("PlaneMesh_h4rr5")
 
 [node name="Rail" type="MeshInstance3D" parent="." unique_id=154313845]
 transform = Transform3D(7.9175053, 0, 0, 0, 0.12722117, 0, 0, 0, 1, 0, 4.0118914, 0.52308273)
@@ -57,9 +58,15 @@ movement_bounds = NodePath("../Rail")
 [node name="Muzzle" type="Node3D" parent="BallDropper" unique_id=246668579]
 transform = Transform3D(0.99999976, -7.1054274e-15, 0, -1.4210855e-14, 1, 0, 0, 0, 1, -5.2779654e-08, 0.7249236, 0)
 
-[node name="Deadzone" type="MeshInstance3D" parent="." unique_id=860891021]
-transform = Transform3D(14.982463, 0, 0, 0, 0.9999995, 0, 0, 0, 11.481468, 0, -4.9744873, 0)
-mesh = SubResource("PlaneMesh_vjcty")
+[node name="PegCollector" type="Area3D" parent="." unique_id=1662808202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.9744873, 0)
+script = ExtResource("5_55x8y")
+
+[node name="Visualizaiton" type="MeshInstance3D" parent="PegCollector" unique_id=992527374]
+mesh = SubResource("BoxMesh_ajglo")
+
+[node name="CollisionShape" type="CollisionShape3D" parent="PegCollector" unique_id=1959072331]
+shape = SubResource("BoxShape3D_vjcty")
 
 [node name="PegManager" type="Node3D" parent="." unique_id=1909878006 node_paths=PackedStringArray("peg_spawn_area")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9505191, 0)
@@ -113,3 +120,7 @@ mesh = SubResource("BoxMesh_57nb6")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="SceneDressing" unique_id=1218638541]
+
+[node name="Background" type="MeshInstance3D" parent="SceneDressing" unique_id=791099537]
+transform = Transform3D(7.2087493, 0, 0, 0, -8.689902e-08, -4.4890847, 0, 1.9880177, -1.9622414e-07, 0, 0, 0)
+mesh = SubResource("PlaneMesh_h4rr5")
