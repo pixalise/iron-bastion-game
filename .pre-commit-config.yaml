@@ -29,29 +29,3 @@ repos:
         language: system
         files: \.gd$
         exclude: ^addons/
-
-      - id: graphite-clang-format
-        name: Graphite clang-format
-        entry: clang-format -i
-        language: system
-        files: ^graphite/(include|src)/.*\.(cpp|hpp|h)$
-
-      - id: graphite-cmake-configure
-        name: Graphite CMake configure
-        entry: cmake -S graphite -B graphite/cmake-build-debug -G Ninja -DCMAKE_BUILD_TYPE=Debug
-        language: system
-        pass_filenames: false
-        files: ^graphite/(CMakeLists\.txt|include/.*\.(cpp|hpp|h)|src/.*\.(cpp|hpp|h))$
-
-      - id: graphite-clang-tidy
-        name: Graphite clang-tidy
-        entry: bash scripts/check-graphite-clang-tidy.sh
-        language: system
-        files: ^graphite/src/.*\.cpp$
-
-      - id: graphite-cmake-build
-        name: Graphite CMake build
-        entry: cmake --build graphite/cmake-build-debug --target graphite
-        language: system
-        pass_filenames: false
-        files: ^graphite/(CMakeLists\.txt|include/.*\.(cpp|hpp|h)|src/.*\.(cpp|hpp|h))$

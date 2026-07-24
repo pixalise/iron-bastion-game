@@ -36,12 +36,12 @@ const FILES := [{
 	"hash": "a5689d92",
 	"path": "res://game_data/localization/translations.csv"
 }, {
-	"bytes": 3304,
-	"hash": "01e92e2d",
+	"bytes": 3263,
+	"hash": "5026437e",
 	"path": "res://game_data/input.gd"
 }, {
-	"bytes": 455,
-	"hash": "5a9f2445",
+	"bytes": 307,
+	"hash": "1f9160bc",
 	"path": "res://game_data/tables/input_bindings.gd"
 }]
 const TABLES := {
@@ -49,7 +49,7 @@ const TABLES := {
 		"name": "Input Bindings",
 		"class_name": "ChiselInputBindings",
 		"path": "res://game_data/tables/input_bindings.gd",
-		"rows": 3,
+		"rows": 1,
 		"columns": 2
 	}
 }

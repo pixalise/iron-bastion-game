@@ -1,7 +1,6 @@
 extends Control
 
 const UI := preload("res://game/ui/ui.gd")
-const ZOO_SCENE := preload("res://game/scenes/zoo/zoo.tscn")
 
 
 func _ready() -> void:
@@ -36,11 +35,6 @@ func _build() -> void:
 													"Pachingod", UI.TextStyle.title()
 												),
 												UI.Widgets.Button(
-													"zoo",
-													_on_zoo_pressed,
-													UI.ButtonStyle.width(220)
-												),
-												UI.Widgets.Button(
 													"quit",
 													_on_quit_pressed,
 													UI.ButtonStyle.width(220)
@@ -59,11 +53,6 @@ func _build() -> void:
 			)
 		)
 	)
-
-
-func _on_zoo_pressed() -> void:
-	assert(get_tree().change_scene_to_packed(ZOO_SCENE) == OK)
-
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()

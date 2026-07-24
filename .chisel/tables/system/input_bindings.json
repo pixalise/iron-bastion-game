@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "input_bindings",
-    "lastChangeAt": "2026-07-24T10:08:55.405Z",
-    "version": 30,
+    "lastChangeAt": "2026-07-24T10:16:50.000Z",
+    "version": 31,
     "name": "Input Bindings",
     "description": "Input bindings exported to Godot InputMap setup.",
     "columns": [
@@ -99,49 +99,13 @@
     ],
     "rows": [
       {
-        "id": "VM0GI714-nL3HIyFDP5ww",
-        "slug": "CAMERA_ZOOM_IN",
-        "values": [
-          {
-            "columnId": "input_sort_order00000",
-            "type": "integer",
-            "value": 0
-          },
-          {
-            "columnId": "input_bindings0000000",
-            "type": "enumArray",
-            "value": [
-              "MOUSE_BUTTON_WHEEL_UP"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Q97flvX5hBDPDzQb3rnxd",
-        "slug": "CAMERA_ZOOM_OUT",
-        "values": [
-          {
-            "columnId": "input_sort_order00000",
-            "type": "integer",
-            "value": 1
-          },
-          {
-            "columnId": "input_bindings0000000",
-            "type": "enumArray",
-            "value": [
-              "MOUSE_BUTTON_WHEEL_DOWN"
-            ]
-          }
-        ]
-      },
-      {
         "id": "j6xkcM9NVlQkQsQzdxj7h",
         "slug": "ESCAPE",
         "values": [
           {
             "columnId": "input_sort_order00000",
             "type": "integer",
-            "value": 2
+            "value": 0
           },
           {
             "columnId": "input_bindings0000000",

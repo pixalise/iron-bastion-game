@@ -1,3 +1,0 @@
-Checks: '-*,clang-diagnostic-*,clang-analyzer-*'
-WarningsAsErrors: ''
-HeaderFilterRegex: '.*graphite/(include|src)/.*'

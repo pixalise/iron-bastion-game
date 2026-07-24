@@ -3,8 +3,6 @@ class_name ChiselInput
 extends RefCounted
 
 const ACTION_NAMES := [
-	&"camera_zoom_in",
-	&"camera_zoom_out",
 	&"escape"
 ]
 const KEY_BINDINGS := {
