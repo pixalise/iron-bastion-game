@@ -2,10 +2,7 @@
 class_name ChiselInput
 extends RefCounted
 
-const ACTION_NAMES := [
-	&"escape",
-	&"action"
-]
+const ACTION_NAMES := [&"escape", &"action", &"paddle_left", &"paddle_right"]
 const KEY_BINDINGS := {
 	"KEY_A": KEY_A,
 	"KEY_B": KEY_B,
@@ -80,20 +77,26 @@ const MOUSE_BINDINGS := {
 	"MOUSE_BUTTON_WHEEL_DOWN": MOUSE_BUTTON_WHEEL_DOWN
 }
 
+
 static func action_name(action_id: int) -> StringName:
 	return ACTION_NAMES[action_id]
+
 
 static func get_action_strength(action_id: int) -> float:
 	return Input.get_action_strength(action_name(action_id))
 
+
 static func is_action_pressed(action_id: int) -> bool:
 	return Input.is_action_pressed(action_name(action_id))
+
 
 static func is_action_just_pressed(action_id: int) -> bool:
 	return Input.is_action_just_pressed(action_name(action_id))
 
+
 static func is_action_just_released(action_id: int) -> bool:
 	return Input.is_action_just_released(action_name(action_id))
+
 
 func sync_input_map() -> void:
 	InputMap.load_from_project_settings()
@@ -107,6 +110,7 @@ func sync_input_map() -> void:
 			if event is InputEvent:
 				InputMap.action_add_event(input_action_name, event)
 
+
 func _event_from_binding(binding: String) -> Variant:
 	if KEY_BINDINGS.has(binding):
 		return _key(int(KEY_BINDINGS[binding]))
@@ -116,10 +120,12 @@ func _event_from_binding(binding: String) -> Variant:
 	push_warning("Unsupported Chisel input binding: %s" % binding)
 	return null
 
+
 func _key(keycode: int) -> InputEventKey:
 	var event := InputEventKey.new()
 	event.keycode = keycode
 	return event
+
 
 func _mouse_button(button_index: int) -> InputEventMouseButton:
 	var event := InputEventMouseButton.new()

@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "input_bindings",
-    "lastChangeAt": "2026-07-24T10:54:51.349Z",
-    "version": 33,
+    "lastChangeAt": "2026-07-24T15:31:04.321Z",
+    "version": 37,
     "name": "Input Bindings",
     "description": "Input bindings exported to Godot InputMap setup.",
     "columns": [
@@ -130,6 +130,44 @@
             "type": "enumArray",
             "value": [
               "KEY_SPACE"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "6nuOJF2mvFfgI-72b0mgv",
+        "slug": "PADDLE_LEFT",
+        "values": [
+          {
+            "columnId": "input_sort_order00000",
+            "type": "integer",
+            "value": 2
+          },
+          {
+            "columnId": "input_bindings0000000",
+            "type": "enumArray",
+            "value": [
+              "KEY_A",
+              "KEY_LEFT"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "JVbw6RParhAhZdHKKcHju",
+        "slug": "PADDLE_RIGHT",
+        "values": [
+          {
+            "columnId": "input_sort_order00000",
+            "type": "integer",
+            "value": 3
+          },
+          {
+            "columnId": "input_bindings0000000",
+            "type": "enumArray",
+            "value": [
+              "KEY_D",
+              "KEY_RIGHT"
             ]
           }
         ]
