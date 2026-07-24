@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "7evuGaD29l7vxCpjEVxQf",
+    "lastChangeAt": "2026-07-24T19:48:23.230Z",
+    "version": 16,
+    "name": "RecipeStep",
+    "description": "Just a single step in the recipe (either ability, element or unit).",
+    "columns": [
+      {
+        "id": "66vcudyl6-kNv2NIJXv0Q",
+        "type": "ref",
+        "name": "unit",
+        "defaultValue": "",
+        "refTableId": "Jt3iVOYOqHl97phbZEpUi",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "oY63aNZsaN2MklKgGbN7V",
+        "type": "ref",
+        "name": "ability",
+        "defaultValue": "",
+        "refTableId": "45RH7A6GsG12q-v78dmmN",
+        "required": false,
+        "unique": false
+      }
+    ],
+    "rows": [
+      {
+        "id": "ybn4JkxWBJbXyvWIKhB01",
+        "slug": "KNIGHT_STEP",
+        "values": [
+          {
+            "columnId": "66vcudyl6-kNv2NIJXv0Q",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "oY63aNZsaN2MklKgGbN7V",
+            "type": "ref",
+            "value": ""
+          }
+        ]
+      }
+    ],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}

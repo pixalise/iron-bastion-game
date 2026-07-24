@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "boRIG5F5aadgs1TVlDgLM",
+    "lastChangeAt": "2026-07-24T19:42:36.949Z",
+    "version": 1,
+    "name": "Recipe",
+    "description": "A new card recipe connecting things together, literally just a sequence of fields and whatnot.",
+    "columns": [
+      {
+        "id": "J2YBpuo0yWauq5T7hb_Pr",
+        "type": "ref",
+        "name": "result_unit",
+        "defaultValue": "",
+        "refTableId": "Jt3iVOYOqHl97phbZEpUi",
+        "required": false,
+        "unique": false
+      }
+    ],
+    "rows": [],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}

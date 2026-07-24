@@ -134,6 +134,13 @@ const ICONS := {
 		"path": "res://game_data/assets/ui_icon/range.png",
 		"width": 256,
 		"height": 256
+	},
+	"TARGET_PRACTICE":
+	{
+		"asset_id": "TARGET_PRACTICE",
+		"path": "res://game_data/assets/ui_icon/target_practice.png",
+		"width": 256,
+		"height": 256
 	}
 }
 const PLACEHOLDERS := [

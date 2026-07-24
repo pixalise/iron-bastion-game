@@ -2,10 +2,10 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-24T19:05:35.667Z"
+const GENERATED_AT := "2026-07-24T19:48:29.525Z"
 const PROJECT_ID := "lwDBJkZEABItlP3UGvDll"
 const PROJECT_NAME := "Pachingod"
-const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 8}
+const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 9}
 const LOCALIZATION := {
 	"class_name": "ChiselLocalization",
 	"path": "res://game_data/localization.gd",
@@ -16,14 +16,17 @@ const LOCALIZATION := {
 	"locales": 1
 }
 const FILES := [
-	{"bytes": 2254, "hash": "7348c9ac", "path": "res://game_data/assets.gd"},
-	{"bytes": 13190, "hash": "7999db43", "path": "res://game_data/localization.gd"},
-	{"bytes": 3893, "hash": "3adfcf86", "path": "res://game_data/translations.gd"},
-	{"bytes": 1413, "hash": "a79b58d9", "path": "res://game_data/localization/translations.csv"},
-	{"bytes": 3313, "hash": "78468e12", "path": "res://game_data/input.gd"},
+	{"bytes": 2482, "hash": "19f99b4d", "path": "res://game_data/assets.gd"},
+	{"bytes": 13162, "hash": "78f530c3", "path": "res://game_data/localization.gd"},
+	{"bytes": 3833, "hash": "75db394f", "path": "res://game_data/translations.gd"},
+	{"bytes": 1412, "hash": "cfe46f69", "path": "res://game_data/localization/translations.csv"},
+	{"bytes": 3310, "hash": "00a525a2", "path": "res://game_data/input.gd"},
 	{"bytes": 284, "hash": "d3d64e04", "path": "res://game_data/tables/peg.gd"},
-	{"bytes": 850, "hash": "1070e58f", "path": "res://game_data/tables/unit.gd"},
-	{"bytes": 456, "hash": "4a9ce585", "path": "res://game_data/tables/input_bindings.gd"}
+	{"bytes": 893, "hash": "628b6a47", "path": "res://game_data/tables/unit.gd"},
+	{"bytes": 272, "hash": "e4be08b0", "path": "res://game_data/tables/ability.gd"},
+	{"bytes": 297, "hash": "c2bba311", "path": "res://game_data/tables/recipe.gd"},
+	{"bytes": 348, "hash": "f5305a39", "path": "res://game_data/tables/recipe_step.gd"},
+	{"bytes": 478, "hash": "c83a5d5b", "path": "res://game_data/tables/input_bindings.gd"}
 ]
 const TABLES := {
 	"NwZ2PycvCtTXXvZUQWyXB":
@@ -41,6 +44,30 @@ const TABLES := {
 		"path": "res://game_data/tables/unit.gd",
 		"rows": 3,
 		"columns": 8
+	},
+	"45RH7A6GsG12q-v78dmmN":
+	{
+		"name": "Ability",
+		"class_name": "ChiselAbility",
+		"path": "res://game_data/tables/ability.gd",
+		"rows": 0,
+		"columns": 3
+	},
+	"boRIG5F5aadgs1TVlDgLM":
+	{
+		"name": "Recipe",
+		"class_name": "ChiselRecipe",
+		"path": "res://game_data/tables/recipe.gd",
+		"rows": 0,
+		"columns": 4
+	},
+	"7evuGaD29l7vxCpjEVxQf":
+	{
+		"name": "RecipeStep",
+		"class_name": "ChiselRecipestep",
+		"path": "res://game_data/tables/recipe_step.gd",
+		"rows": 1,
+		"columns": 2
 	},
 	"input_bindings":
 	{

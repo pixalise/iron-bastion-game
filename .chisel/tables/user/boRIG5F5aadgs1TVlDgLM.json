@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "boRIG5F5aadgs1TVlDgLM",
+    "lastChangeAt": "2026-07-24T19:46:00.384Z",
+    "version": 5,
+    "name": "Recipe",
+    "description": "A new card recipe connecting things together, literally just a sequence of fields and whatnot.",
+    "columns": [
+      {
+        "id": "J2YBpuo0yWauq5T7hb_Pr",
+        "type": "ref",
+        "name": "result_unit",
+        "defaultValue": "",
+        "refTableId": "Jt3iVOYOqHl97phbZEpUi",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "RqyKDFqhZjlpF8mKlDGCr",
+        "type": "ref",
+        "name": "result_ability",
+        "defaultValue": "",
+        "refTableId": "45RH7A6GsG12q-v78dmmN",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "yaby8JNbFhv16GOsRwZyi",
+        "type": "ref",
+        "name": "step_1",
+        "defaultValue": "",
+        "refTableId": "7evuGaD29l7vxCpjEVxQf",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "ldzZ_fA0iLnPztNVmJcHZ",
+        "type": "ref",
+        "name": "step_2",
+        "defaultValue": "",
+        "refTableId": "7evuGaD29l7vxCpjEVxQf",
+        "required": true,
+        "unique": false
+      }
+    ],
+    "rows": [],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}

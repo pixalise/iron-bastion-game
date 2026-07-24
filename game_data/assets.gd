@@ -10,7 +10,8 @@ enum Id {
 	ARCHER = 4,
 	PHYSICAL_DAMAGE = 5,
 	PIKEMAN = 6,
-	RANGE = 7
+	RANGE = 7,
+	TARGET_PRACTICE = 8
 }
 
 const IDS := [
@@ -21,7 +22,8 @@ const IDS := [
 	"ARCHER",
 	"PHYSICAL_DAMAGE",
 	"PIKEMAN",
-	"RANGE"
+	"RANGE",
+	"TARGET_PRACTICE"
 ]
 const BY_ID := {
 	"FOREST_SOIL_1":
@@ -100,6 +102,15 @@ const BY_ID := {
 		"height": 256,
 		"name": "range",
 		"path": "res://game_data/assets/ui_icon/range.png",
+		"width": 256
+	},
+	"TARGET_PRACTICE":
+	{
+		"category": "ui_icon",
+		"extension": "png",
+		"height": 256,
+		"name": "target_practice",
+		"path": "res://game_data/assets/ui_icon/target_practice.png",
 		"width": 256
 	}
 }
