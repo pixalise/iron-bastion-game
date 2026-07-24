@@ -2,6 +2,961 @@
   "schemaVersion": 1,
   "commits": [
     {
+      "id": "o0zObnt_bxxgUpyINBveS",
+      "committedAt": "2026-07-24T20:46:54.038Z",
+      "project": {
+        "id": "lwDBJkZEABItlP3UGvDll",
+        "name": "Pachingod",
+        "description": ""
+      },
+      "tables": [
+        {
+          "id": "NwZ2PycvCtTXXvZUQWyXB",
+          "lastChangeAt": "2026-07-24T18:33:38.449Z",
+          "version": 10,
+          "name": "Peg",
+          "description": "Definitions and looks for pegs",
+          "columns": [
+            {
+              "id": "6nVQmZKnh_Z2pxSqGLR3j",
+              "type": "assetRef",
+              "name": "symbol",
+              "defaultValue": "",
+              "assetCategory": "UI_ICON",
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "Mpaljf75j2Ey-Q9pq6EkM",
+              "type": "color",
+              "name": "symbol_color",
+              "defaultValue": "#ff3d3d",
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "6hiBQmeanEWbn0NzIWAc-",
+              "type": "enum",
+              "name": "kind",
+              "defaultValue": "UNIT",
+              "possibleValues": [
+                "UNIT",
+                "ABILITY",
+                "GOLD",
+                "ELEMENT"
+              ],
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "glMnfR2szHccrBAWRcAVG",
+              "type": "ref",
+              "name": "unit_ref",
+              "defaultValue": "",
+              "refTableId": "Jt3iVOYOqHl97phbZEpUi",
+              "required": false,
+              "unique": false
+            }
+          ],
+          "rows": [],
+          "kind": "user",
+          "isSystemTable": false
+        },
+        {
+          "id": "Jt3iVOYOqHl97phbZEpUi",
+          "lastChangeAt": "2026-07-24T19:16:21.315Z",
+          "version": 111,
+          "name": "Unit",
+          "description": "The actual ingame units that can be spawned via card",
+          "columns": [
+            {
+              "id": "iw6oxD1p5T8OiA7HotHQo",
+              "type": "translationRef",
+              "name": "name",
+              "defaultValue": "",
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "YEZczD_ighgRhMuR4IpWl",
+              "type": "translationRef",
+              "name": "description",
+              "defaultValue": "",
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "LhoyLbck-c1ppGikN7Zfb",
+              "type": "assetRef",
+              "name": "portrait",
+              "defaultValue": "",
+              "assetCategory": "UI_ICON",
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "4v0ct0ESkxzDSgbMX7GuB",
+              "type": "integer",
+              "name": "max_health",
+              "defaultValue": 100,
+              "min": 10,
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "Jy1sZ_SgOrVRJ2rdPC45b",
+              "type": "range",
+              "name": "physical_armor",
+              "defaultValue": 0,
+              "max": 1,
+              "min": 0,
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "XH8sfq3NulCYzj8oqSkW9",
+              "type": "integer",
+              "name": "attack_damage",
+              "defaultValue": 10,
+              "min": 1,
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "aWJgKYK2dNl0Yk4gwBSx3",
+              "type": "decimal",
+              "name": "attack_rate",
+              "defaultValue": 2,
+              "min": 0,
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "hBbKJ5jA00lDXHfztOQKV",
+              "type": "decimal",
+              "name": "attack_range",
+              "defaultValue": 1.2,
+              "min": 1,
+              "required": true,
+              "unique": false
+            }
+          ],
+          "rows": [
+            {
+              "id": "yxWbfJey2_xgGet6zQIpW",
+              "slug": "ARCHER",
+              "values": [
+                {
+                  "columnId": "iw6oxD1p5T8OiA7HotHQo",
+                  "type": "translationRef",
+                  "value": "UNIT.ARCHER.NAME"
+                },
+                {
+                  "columnId": "YEZczD_ighgRhMuR4IpWl",
+                  "type": "translationRef",
+                  "value": "UNIT.ARCHER.DESCRIPTION"
+                },
+                {
+                  "columnId": "LhoyLbck-c1ppGikN7Zfb",
+                  "type": "assetRef",
+                  "value": "ARCHER"
+                },
+                {
+                  "columnId": "4v0ct0ESkxzDSgbMX7GuB",
+                  "type": "integer",
+                  "value": 80
+                },
+                {
+                  "columnId": "Jy1sZ_SgOrVRJ2rdPC45b",
+                  "type": "range",
+                  "value": 0
+                },
+                {
+                  "columnId": "XH8sfq3NulCYzj8oqSkW9",
+                  "type": "integer",
+                  "value": 15
+                },
+                {
+                  "columnId": "aWJgKYK2dNl0Yk4gwBSx3",
+                  "type": "decimal",
+                  "value": 1.2
+                },
+                {
+                  "columnId": "hBbKJ5jA00lDXHfztOQKV",
+                  "type": "decimal",
+                  "value": 6.4
+                }
+              ]
+            },
+            {
+              "id": "vd0E9l1ELE8VKguTaFgtf",
+              "slug": "PIKEMAN",
+              "values": [
+                {
+                  "columnId": "iw6oxD1p5T8OiA7HotHQo",
+                  "type": "translationRef",
+                  "value": "UNIT.PIKEMAN.NAME"
+                },
+                {
+                  "columnId": "YEZczD_ighgRhMuR4IpWl",
+                  "type": "translationRef",
+                  "value": "UNIT.PIKEMAN.DESCRIPTION"
+                },
+                {
+                  "columnId": "LhoyLbck-c1ppGikN7Zfb",
+                  "type": "assetRef",
+                  "value": "PIKEMAN"
+                },
+                {
+                  "columnId": "4v0ct0ESkxzDSgbMX7GuB",
+                  "type": "integer",
+                  "value": 120
+                },
+                {
+                  "columnId": "Jy1sZ_SgOrVRJ2rdPC45b",
+                  "type": "range",
+                  "value": 0.1
+                },
+                {
+                  "columnId": "XH8sfq3NulCYzj8oqSkW9",
+                  "type": "integer",
+                  "value": 30
+                },
+                {
+                  "columnId": "aWJgKYK2dNl0Yk4gwBSx3",
+                  "type": "decimal",
+                  "value": 1
+                },
+                {
+                  "columnId": "hBbKJ5jA00lDXHfztOQKV",
+                  "type": "decimal",
+                  "value": 2.1
+                }
+              ]
+            },
+            {
+              "id": "XV-4PLyKr8BuMtIg_6mRR",
+              "slug": "KNIGHT",
+              "values": [
+                {
+                  "columnId": "iw6oxD1p5T8OiA7HotHQo",
+                  "type": "translationRef",
+                  "value": "UNIT.KNIGHT.NAME"
+                },
+                {
+                  "columnId": "YEZczD_ighgRhMuR4IpWl",
+                  "type": "translationRef",
+                  "value": "UNIT.KNIGHT.DESCRIPTION"
+                },
+                {
+                  "columnId": "LhoyLbck-c1ppGikN7Zfb",
+                  "type": "assetRef",
+                  "value": "KNIGHT"
+                },
+                {
+                  "columnId": "4v0ct0ESkxzDSgbMX7GuB",
+                  "type": "integer",
+                  "value": 100
+                },
+                {
+                  "columnId": "Jy1sZ_SgOrVRJ2rdPC45b",
+                  "type": "range",
+                  "value": 0.15
+                },
+                {
+                  "columnId": "XH8sfq3NulCYzj8oqSkW9",
+                  "type": "integer",
+                  "value": 20
+                },
+                {
+                  "columnId": "aWJgKYK2dNl0Yk4gwBSx3",
+                  "type": "decimal",
+                  "value": 1.3
+                },
+                {
+                  "columnId": "hBbKJ5jA00lDXHfztOQKV",
+                  "type": "decimal",
+                  "value": 1.7
+                }
+              ]
+            }
+          ],
+          "kind": "user",
+          "isSystemTable": false
+        },
+        {
+          "id": "45RH7A6GsG12q-v78dmmN",
+          "lastChangeAt": "2026-07-24T20:34:08.776Z",
+          "version": 4,
+          "name": "Ability",
+          "description": "The abilities table",
+          "columns": [
+            {
+              "id": "kJwcO071TGKOq2eNEyu9-",
+              "type": "translationRef",
+              "name": "name",
+              "defaultValue": "",
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "2B4QMvLzDqMTWjHnS4mR_",
+              "type": "translationRef",
+              "name": "description",
+              "defaultValue": "",
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "YTrgAl1ByZnP7gIzyej9l",
+              "type": "assetRef",
+              "name": "portrait",
+              "defaultValue": "",
+              "assetCategory": "UI_ICON",
+              "required": true,
+              "unique": false
+            }
+          ],
+          "rows": [
+            {
+              "id": "yFvTrYZBZHXvkYwfCZxa7",
+              "slug": "TARGET_PRACTICE",
+              "values": [
+                {
+                  "columnId": "kJwcO071TGKOq2eNEyu9-",
+                  "type": "translationRef",
+                  "value": "ABILITY.TARGET_PRACTICE.NAME"
+                },
+                {
+                  "columnId": "2B4QMvLzDqMTWjHnS4mR_",
+                  "type": "translationRef",
+                  "value": "ABILITY.TARGET_PRACTICE.DESCRIPTION"
+                },
+                {
+                  "columnId": "YTrgAl1ByZnP7gIzyej9l",
+                  "type": "assetRef",
+                  "value": "TARGET_PRACTICE"
+                }
+              ]
+            },
+            {
+              "id": "JOjKHqXJpqICS-qu6uZiy",
+              "slug": "METEOR_STRIKE",
+              "values": [
+                {
+                  "columnId": "kJwcO071TGKOq2eNEyu9-",
+                  "type": "translationRef",
+                  "value": "ABILITY.METEOR_STRIKE.NAME"
+                },
+                {
+                  "columnId": "2B4QMvLzDqMTWjHnS4mR_",
+                  "type": "translationRef",
+                  "value": "ABILITY.METEOR_STRIKE.DESCRIPTION"
+                },
+                {
+                  "columnId": "YTrgAl1ByZnP7gIzyej9l",
+                  "type": "assetRef",
+                  "value": "METEOR_STRIKE"
+                }
+              ]
+            }
+          ],
+          "kind": "user",
+          "isSystemTable": false
+        },
+        {
+          "id": "boRIG5F5aadgs1TVlDgLM",
+          "lastChangeAt": "2026-07-24T20:46:46.575Z",
+          "version": 21,
+          "name": "Recipe",
+          "description": "A new card recipe connecting things together, literally just a sequence of fields and whatnot.",
+          "columns": [
+            {
+              "id": "yG-CkvNeW1UrqWENY5YbF",
+              "type": "translationRef",
+              "name": "name_template",
+              "defaultValue": "",
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "aNWRfMJDrJHp_LM6bryBO",
+              "type": "translationRef",
+              "name": "description_template",
+              "defaultValue": "",
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "vgPQlszddv5Fndr43bH-x",
+              "type": "translationRef",
+              "name": "portrait_override",
+              "defaultValue": "",
+              "required": false,
+              "unique": false
+            },
+            {
+              "id": "J2YBpuo0yWauq5T7hb_Pr",
+              "type": "ref",
+              "name": "result_unit",
+              "defaultValue": "",
+              "refTableId": "Jt3iVOYOqHl97phbZEpUi",
+              "required": false,
+              "unique": false
+            },
+            {
+              "id": "RqyKDFqhZjlpF8mKlDGCr",
+              "type": "ref",
+              "name": "result_ability",
+              "defaultValue": "",
+              "refTableId": "45RH7A6GsG12q-v78dmmN",
+              "required": false,
+              "unique": false
+            },
+            {
+              "id": "yaby8JNbFhv16GOsRwZyi",
+              "type": "ref",
+              "name": "step_1",
+              "defaultValue": "",
+              "refTableId": "7evuGaD29l7vxCpjEVxQf",
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "ldzZ_fA0iLnPztNVmJcHZ",
+              "type": "ref",
+              "name": "step_2",
+              "defaultValue": "",
+              "refTableId": "7evuGaD29l7vxCpjEVxQf",
+              "required": true,
+              "unique": false
+            }
+          ],
+          "rows": [],
+          "kind": "user",
+          "isSystemTable": false
+        },
+        {
+          "id": "7evuGaD29l7vxCpjEVxQf",
+          "lastChangeAt": "2026-07-24T20:02:02.652Z",
+          "version": 56,
+          "name": "RecipeStep",
+          "description": "Just a single step in the recipe (either ability, element or unit).",
+          "columns": [
+            {
+              "id": "66vcudyl6-kNv2NIJXv0Q",
+              "type": "ref",
+              "name": "unit",
+              "defaultValue": "",
+              "refTableId": "Jt3iVOYOqHl97phbZEpUi",
+              "required": false,
+              "unique": false
+            },
+            {
+              "id": "oY63aNZsaN2MklKgGbN7V",
+              "type": "ref",
+              "name": "ability",
+              "defaultValue": "",
+              "refTableId": "45RH7A6GsG12q-v78dmmN",
+              "required": false,
+              "unique": false
+            }
+          ],
+          "rows": [
+            {
+              "id": "v4tk6K9qKCMddPTEsLDYU",
+              "slug": "KNIGHT_STEP",
+              "values": [
+                {
+                  "columnId": "66vcudyl6-kNv2NIJXv0Q",
+                  "type": "ref",
+                  "value": "KNIGHT"
+                },
+                {
+                  "columnId": "oY63aNZsaN2MklKgGbN7V",
+                  "type": "ref",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "id": "hjcKZXKOCGlZnG-__RT5b",
+              "slug": "ARCHER_STEP",
+              "values": [
+                {
+                  "columnId": "66vcudyl6-kNv2NIJXv0Q",
+                  "type": "ref",
+                  "value": "ARCHER"
+                },
+                {
+                  "columnId": "oY63aNZsaN2MklKgGbN7V",
+                  "type": "ref",
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "id": "0vi_RuZqRBoZSeYCj8zkv",
+              "slug": "PIKEMAN_STEP",
+              "values": [
+                {
+                  "columnId": "66vcudyl6-kNv2NIJXv0Q",
+                  "type": "ref",
+                  "value": "PIKEMAN"
+                },
+                {
+                  "columnId": "oY63aNZsaN2MklKgGbN7V",
+                  "type": "ref",
+                  "value": ""
+                }
+              ]
+            }
+          ],
+          "kind": "user",
+          "isSystemTable": false
+        },
+        {
+          "id": "input_bindings",
+          "lastChangeAt": "2026-07-24T15:31:04.321Z",
+          "version": 37,
+          "name": "Input Bindings",
+          "description": "Input bindings exported to Godot InputMap setup.",
+          "columns": [
+            {
+              "id": "input_sort_order00000",
+              "type": "integer",
+              "name": "sort_order",
+              "defaultValue": 0,
+              "min": 0,
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "input_bindings0000000",
+              "type": "enumArray",
+              "name": "bindings",
+              "defaultValue": [],
+              "max": 8,
+              "possibleValues": [
+                "KEY_A",
+                "KEY_B",
+                "KEY_C",
+                "KEY_D",
+                "KEY_E",
+                "KEY_F",
+                "KEY_G",
+                "KEY_H",
+                "KEY_I",
+                "KEY_J",
+                "KEY_K",
+                "KEY_L",
+                "KEY_M",
+                "KEY_N",
+                "KEY_O",
+                "KEY_P",
+                "KEY_Q",
+                "KEY_R",
+                "KEY_S",
+                "KEY_T",
+                "KEY_U",
+                "KEY_V",
+                "KEY_W",
+                "KEY_X",
+                "KEY_Y",
+                "KEY_Z",
+                "KEY_0",
+                "KEY_1",
+                "KEY_2",
+                "KEY_3",
+                "KEY_4",
+                "KEY_5",
+                "KEY_6",
+                "KEY_7",
+                "KEY_8",
+                "KEY_9",
+                "KEY_F1",
+                "KEY_F2",
+                "KEY_F3",
+                "KEY_F4",
+                "KEY_F5",
+                "KEY_F6",
+                "KEY_F7",
+                "KEY_F8",
+                "KEY_F9",
+                "KEY_F10",
+                "KEY_F11",
+                "KEY_F12",
+                "KEY_ESCAPE",
+                "KEY_SPACE",
+                "KEY_SHIFT",
+                "KEY_CTRL",
+                "KEY_ALT",
+                "KEY_TAB",
+                "KEY_ENTER",
+                "KEY_BACKSPACE",
+                "KEY_UP",
+                "KEY_DOWN",
+                "KEY_LEFT",
+                "KEY_RIGHT",
+                "KEY_MINUS",
+                "KEY_EQUAL",
+                "KEY_KP_ADD",
+                "KEY_KP_SUBTRACT",
+                "MOUSE_BUTTON_LEFT",
+                "MOUSE_BUTTON_RIGHT",
+                "MOUSE_BUTTON_MIDDLE",
+                "MOUSE_BUTTON_WHEEL_UP",
+                "MOUSE_BUTTON_WHEEL_DOWN"
+              ],
+              "required": true,
+              "unique": false
+            }
+          ],
+          "rows": [
+            {
+              "id": "j6xkcM9NVlQkQsQzdxj7h",
+              "slug": "ESCAPE",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 0
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_ESCAPE"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "5GiDUiigGywQV96FBycSj",
+              "slug": "ACTION",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_SPACE"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "6nuOJF2mvFfgI-72b0mgv",
+              "slug": "PADDLE_LEFT",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 2
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_A",
+                    "KEY_LEFT"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "JVbw6RParhAhZdHKKcHju",
+              "slug": "PADDLE_RIGHT",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 3
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_D",
+                    "KEY_RIGHT"
+                  ]
+                }
+              ]
+            }
+          ],
+          "kind": "system",
+          "moduleId": "input",
+          "isSystemTable": true
+        }
+      ],
+      "assets": {
+        "schemaVersion": 1,
+        "assets": [
+          {
+            "category": "TERRAIN_TEXTURE",
+            "name": "FOREST_SOIL_1",
+            "note": "Forest biome",
+            "sizeBytes": 6718779,
+            "width": 1024,
+            "height": 1024,
+            "extension": "gppt",
+            "id": "FOREST_SOIL_1",
+            "relativePath": ".chisel/assets/TERRAIN_TEXTURE/FOREST_SOIL_1.gppt",
+            "formattedBytes": "6.4 MB"
+          },
+          {
+            "category": "TERRAIN_TEXTURE",
+            "name": "FOREST_GRASS_1",
+            "note": "Forest biome",
+            "sizeBytes": 7396446,
+            "width": 1024,
+            "height": 1024,
+            "extension": "gppt",
+            "id": "FOREST_GRASS_1",
+            "relativePath": ".chisel/assets/TERRAIN_TEXTURE/FOREST_GRASS_1.gppt",
+            "formattedBytes": "7.1 MB"
+          },
+          {
+            "category": "HDRI",
+            "name": "FOREST_1_2_K",
+            "note": "CC0: https://polyhaven.com/a/citrus_orchard_road_puresky",
+            "sizeBytes": 18768273,
+            "width": 0,
+            "height": 0,
+            "extension": "exr",
+            "id": "FOREST_1_2_K",
+            "relativePath": ".chisel/assets/HDRI/FOREST_1_2K.exr",
+            "formattedBytes": "17.9 MB"
+          },
+          {
+            "category": "UI_ICON",
+            "name": "KNIGHT",
+            "note": "Unit",
+            "sizeBytes": 67303,
+            "width": 256,
+            "height": 256,
+            "extension": "png",
+            "id": "KNIGHT",
+            "relativePath": ".chisel/assets/UI_ICON/KNIGHT.png",
+            "formattedBytes": "65.7 KB"
+          },
+          {
+            "category": "UI_ICON",
+            "name": "ARCHER",
+            "note": "Unit",
+            "sizeBytes": 61485,
+            "width": 256,
+            "height": 256,
+            "extension": "png",
+            "id": "ARCHER",
+            "relativePath": ".chisel/assets/UI_ICON/ARCHER.png",
+            "formattedBytes": "60.0 KB"
+          },
+          {
+            "category": "UI_ICON",
+            "name": "PHYSICAL_DAMAGE",
+            "note": "Tooltip",
+            "sizeBytes": 65371,
+            "width": 256,
+            "height": 256,
+            "extension": "png",
+            "id": "PHYSICAL_DAMAGE",
+            "relativePath": ".chisel/assets/UI_ICON/PHYSICAL_DAMAGE.png",
+            "formattedBytes": "63.8 KB"
+          },
+          {
+            "category": "UI_ICON",
+            "name": "PIKEMAN",
+            "note": "Unit",
+            "sizeBytes": 59456,
+            "width": 256,
+            "height": 256,
+            "extension": "png",
+            "id": "PIKEMAN",
+            "relativePath": ".chisel/assets/UI_ICON/PIKEMAN.png",
+            "formattedBytes": "58.1 KB"
+          },
+          {
+            "category": "UI_ICON",
+            "name": "RANGE",
+            "note": "Tooltip",
+            "sizeBytes": 69047,
+            "width": 256,
+            "height": 256,
+            "extension": "png",
+            "id": "RANGE",
+            "relativePath": ".chisel/assets/UI_ICON/RANGE.png",
+            "formattedBytes": "67.4 KB"
+          },
+          {
+            "category": "UI_ICON",
+            "name": "TARGET_PRACTICE",
+            "note": "Ability",
+            "sizeBytes": 47373,
+            "width": 256,
+            "height": 256,
+            "extension": "png",
+            "id": "TARGET_PRACTICE",
+            "relativePath": ".chisel/assets/UI_ICON/TARGET_PRACTICE.png",
+            "formattedBytes": "46.3 KB"
+          },
+          {
+            "category": "UI_ICON",
+            "name": "METEOR_STRIKE",
+            "note": "Ability",
+            "sizeBytes": 54068,
+            "width": 256,
+            "height": 256,
+            "extension": "png",
+            "id": "METEOR_STRIKE",
+            "relativePath": ".chisel/assets/UI_ICON/METEOR_STRIKE.png",
+            "formattedBytes": "52.8 KB"
+          }
+        ]
+      },
+      "localization": {
+        "schemaVersion": 2,
+        "defaultLocale": "en",
+        "locales": [
+          "en"
+        ],
+        "keys": [
+          {
+            "path": "UNIT.ARCHER.NAME",
+            "values": {
+              "en": "Archer"
+            },
+            "placeholders": []
+          },
+          {
+            "path": "UNIT.ARCHER.DESCRIPTION",
+            "values": {
+              "en": "The backbone of every military. Has an outstanding <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range of {float:attack_range}</tooltip></style> and deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style>."
+            },
+            "placeholders": []
+          },
+          {
+            "path": "TOOLTIP.DAMAGE.PHYISICAL.TITLE",
+            "values": {
+              "en": "Physical Damage"
+            },
+            "placeholders": []
+          },
+          {
+            "path": "TOOLTIP.DAMAGE.PHYISICAL.DESCRIPTION",
+            "values": {
+              "en": "<style:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> Physical damage</style> is any kind of damage that is dealt with regular weapons."
+            },
+            "placeholders": []
+          },
+          {
+            "path": "TOOLTIP.RANGE.TITLE",
+            "values": {
+              "en": "Range"
+            },
+            "placeholders": []
+          },
+          {
+            "path": "TOOLTIP.RANGE.DESCRIPTION",
+            "values": {
+              "en": "<style:ATTACK_RANGE><icon:RANGE/> Range</style> is how far a unit can reach when attacking."
+            },
+            "placeholders": []
+          },
+          {
+            "path": "UNIT.PIKEMAN.NAME",
+            "values": {
+              "en": "Pikeman"
+            },
+            "placeholders": []
+          },
+          {
+            "path": "UNIT.PIKEMAN.DESCRIPTION",
+            "values": {
+              "en": "The frontline of the kings army. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in an area of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>."
+            },
+            "placeholders": []
+          },
+          {
+            "path": "UNIT.KNIGHT.NAME",
+            "values": {
+              "en": "Swordman"
+            },
+            "placeholders": []
+          },
+          {
+            "path": "UNIT.KNIGHT.DESCRIPTION",
+            "values": {
+              "en": "They are the first ones to engage the kings enemies. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in the vicinity of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>."
+            },
+            "placeholders": []
+          },
+          {
+            "path": "ABILITY.TARGET_PRACTICE.NAME",
+            "values": {
+              "en": "Target Practice"
+            },
+            "placeholders": []
+          },
+          {
+            "path": "ABILITY.TARGET_PRACTICE.DESCRIPTION",
+            "values": {
+              "en": "Sharpen aim and battlefield discipline. Improves unit <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> and <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range</tooltip></style>."
+            },
+            "placeholders": []
+          },
+          {
+            "path": "ABILITY.METEOR_STRIKE.NAME",
+            "values": {
+              "en": "Meteor Strike"
+            },
+            "placeholders": []
+          },
+          {
+            "path": "ABILITY.METEOR_STRIKE.DESCRIPTION",
+            "values": {
+              "en": "Call down a meteor on the target area, dealing heavy <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> to everything caught in the impact."
+            },
+            "placeholders": []
+          }
+        ],
+        "styles": [
+          {
+            "slug": "ATTACK_RANGE",
+            "color": "#ffffff",
+            "bold": false,
+            "italic": true,
+            "underline": false
+          },
+          {
+            "slug": "PHYSICAL_DAMAGE",
+            "color": "#ff0000",
+            "bold": true,
+            "italic": false,
+            "underline": false
+          }
+        ],
+        "tooltips": [
+          {
+            "slug": "PHYSICAL_DAMAGE",
+            "iconAssetId": "PHYSICAL_DAMAGE",
+            "titleKey": "TOOLTIP.DAMAGE.PHYISICAL.TITLE",
+            "descriptionKey": "TOOLTIP.DAMAGE.PHYISICAL.DESCRIPTION"
+          },
+          {
+            "slug": "RANGE",
+            "iconAssetId": "RANGE",
+            "titleKey": "TOOLTIP.RANGE.TITLE",
+            "descriptionKey": "TOOLTIP.RANGE.DESCRIPTION"
+          }
+        ]
+      }
+    },
+    {
       "id": "5Ptac4tW8rRuENQ66bxAS",
       "committedAt": "2026-07-24T20:34:14.304Z",
       "project": {
@@ -14413,871 +15368,6 @@
             "path": "ITEM.DECK_OF_CARDS.STORY",
             "values": {
               "en": "The cards are stained, creased, and marked by years of use. Several faces carry names written in faded ink, recording old victories, debts, and jokes. Some look new some look old.\nThe final hand is still tucked beneath the string holding the deck together. No one has moved the cards since the players failed to return."
-            },
-            "placeholders": []
-          }
-        ],
-        "styles": [
-          {
-            "slug": "PHYSICAL_DAMAGE",
-            "color": "#ff0000",
-            "bold": true,
-            "italic": false,
-            "underline": true
-          }
-        ],
-        "tooltips": [
-          {
-            "slug": "PHYSICAL_DAMAGE_TYPE",
-            "iconAssetId": "PHYSICAL_DAMAGE",
-            "titleKey": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.TITLE",
-            "descriptionKey": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION"
-          }
-        ]
-      }
-    },
-    {
-      "id": "TkVTEdDxddjJIvT0qlj0F",
-      "committedAt": "2026-07-21T13:38:16.537Z",
-      "project": {
-        "id": "zYZtnNUg8uht6fA9MFIkW",
-        "name": "Iron Bastion",
-        "description": "First game made in Godot, essential survival RTS with extraction mechanics."
-      },
-      "tables": [
-        {
-          "id": "LNE2qvQb0jxtgiLDUDsq4",
-          "lastChangeAt": "2026-07-21T13:37:59.442Z",
-          "version": 22,
-          "name": "Items",
-          "description": "Items that can be collected and put into the storage carts during an expedition",
-          "columns": [
-            {
-              "id": "ZSw0d-8zTyLo6RR_ofp0L",
-              "type": "translationRef",
-              "name": "name",
-              "defaultValue": "",
-              "required": true,
-              "unique": true
-            },
-            {
-              "id": "8TqMQuN-TynstVN9wiK7o",
-              "type": "translationRef",
-              "name": "description",
-              "defaultValue": "",
-              "required": true,
-              "unique": false
-            },
-            {
-              "id": "O7EQNdvuQCDwHyyE0XOcb",
-              "type": "translationRef",
-              "name": "story",
-              "defaultValue": 0,
-              "required": true,
-              "unique": false
-            },
-            {
-              "id": "t9PZkgQ0J2zeLXfL6CWL6",
-              "type": "assetRef",
-              "name": "portrait",
-              "defaultValue": "",
-              "assetCategory": "UI_ICON",
-              "required": true,
-              "unique": false
-            },
-            {
-              "id": "EBmVYmt9qDHAnr97lRGk_",
-              "type": "integer",
-              "name": "price",
-              "defaultValue": 0,
-              "required": true,
-              "unique": false
-            },
-            {
-              "id": "Ir7PPFSYVv76_zcnn6Rph",
-              "type": "text",
-              "name": "modifiers",
-              "defaultValue": "",
-              "maxChars": 250,
-              "required": true,
-              "unique": false
-            },
-            {
-              "id": "aFQnJq-GTYI42BdLfWUxz",
-              "type": "enum",
-              "name": "rarity",
-              "defaultValue": "COMMON",
-              "possibleValues": [
-                "COMMON",
-                "UNCOMMON",
-                "RARE",
-                "EPIC",
-                "LEGENDARY"
-              ],
-              "required": true,
-              "unique": false
-            },
-            {
-              "id": "3rQ-aJImsSY5l_oipXVO1",
-              "type": "boolean",
-              "name": "allows_multiple",
-              "defaultValue": true,
-              "required": true,
-              "unique": false
-            }
-          ],
-          "rows": [
-            {
-              "id": "uiO2BxXjPKxG06vjvrgwI",
-              "slug": "OLD_REVOLVER",
-              "values": [
-                {
-                  "columnId": "ZSw0d-8zTyLo6RR_ofp0L",
-                  "type": "translationRef",
-                  "value": "ITEM.OLD_REVOLVER.NAME"
-                },
-                {
-                  "columnId": "8TqMQuN-TynstVN9wiK7o",
-                  "type": "translationRef",
-                  "value": "ITEM.OLD_REVOLVER.DESCRIPTION"
-                },
-                {
-                  "columnId": "O7EQNdvuQCDwHyyE0XOcb",
-                  "type": "translationRef",
-                  "value": "ITEM.OLD_REVOLVER.STORY"
-                },
-                {
-                  "columnId": "t9PZkgQ0J2zeLXfL6CWL6",
-                  "type": "assetRef",
-                  "value": "PHYSICAL_DAMAGE"
-                },
-                {
-                  "columnId": "EBmVYmt9qDHAnr97lRGk_",
-                  "type": "integer",
-                  "value": 0
-                },
-                {
-                  "columnId": "Ir7PPFSYVv76_zcnn6Rph",
-                  "type": "text",
-                  "value": "Increases damage flat by 15%"
-                },
-                {
-                  "columnId": "aFQnJq-GTYI42BdLfWUxz",
-                  "type": "enum",
-                  "value": "COMMON"
-                },
-                {
-                  "columnId": "3rQ-aJImsSY5l_oipXVO1",
-                  "type": "boolean",
-                  "value": true
-                }
-              ]
-            },
-            {
-              "id": "T4ivAQbOEkLZpzkHd6WYT",
-              "slug": "WAX_STRING",
-              "values": [
-                {
-                  "columnId": "ZSw0d-8zTyLo6RR_ofp0L",
-                  "type": "translationRef",
-                  "value": "ITEM.WAX_STRING.NAME"
-                },
-                {
-                  "columnId": "8TqMQuN-TynstVN9wiK7o",
-                  "type": "translationRef",
-                  "value": "ITEM.WAX_STRING.DESCRIPTION"
-                },
-                {
-                  "columnId": "O7EQNdvuQCDwHyyE0XOcb",
-                  "type": "translationRef",
-                  "value": "ITEM.WAX_STRING.STORY"
-                },
-                {
-                  "columnId": "t9PZkgQ0J2zeLXfL6CWL6",
-                  "type": "assetRef",
-                  "value": "PHYSICAL_DAMAGE"
-                },
-                {
-                  "columnId": "EBmVYmt9qDHAnr97lRGk_",
-                  "type": "integer",
-                  "value": 20
-                },
-                {
-                  "columnId": "Ir7PPFSYVv76_zcnn6Rph",
-                  "type": "text",
-                  "value": "\tIncreases damage flat for string weapon by 15%"
-                },
-                {
-                  "columnId": "aFQnJq-GTYI42BdLfWUxz",
-                  "type": "enum",
-                  "value": "COMMON"
-                },
-                {
-                  "columnId": "3rQ-aJImsSY5l_oipXVO1",
-                  "type": "boolean",
-                  "value": true
-                }
-              ]
-            },
-            {
-              "id": "WKD79MnuYv66hAkEkTisr",
-              "slug": "HUNTING_ARROWS",
-              "values": [
-                {
-                  "columnId": "ZSw0d-8zTyLo6RR_ofp0L",
-                  "type": "translationRef",
-                  "value": "ITEM.HUNTING_ARROWS.NAME"
-                },
-                {
-                  "columnId": "8TqMQuN-TynstVN9wiK7o",
-                  "type": "translationRef",
-                  "value": "ITEM.HUNTING_ARROWS.DESCRIPTION"
-                },
-                {
-                  "columnId": "O7EQNdvuQCDwHyyE0XOcb",
-                  "type": "translationRef",
-                  "value": "ITEM.HUNTING_ARROWS.STORY"
-                },
-                {
-                  "columnId": "t9PZkgQ0J2zeLXfL6CWL6",
-                  "type": "assetRef",
-                  "value": "HUNTING_ARROWS"
-                },
-                {
-                  "columnId": "EBmVYmt9qDHAnr97lRGk_",
-                  "type": "integer",
-                  "value": 30
-                },
-                {
-                  "columnId": "Ir7PPFSYVv76_zcnn6Rph",
-                  "type": "text",
-                  "value": "Increases damage flat for string weapon by 30% but reduces armor penetration for - 10%"
-                },
-                {
-                  "columnId": "aFQnJq-GTYI42BdLfWUxz",
-                  "type": "enum",
-                  "value": "COMMON"
-                },
-                {
-                  "columnId": "3rQ-aJImsSY5l_oipXVO1",
-                  "type": "boolean",
-                  "value": true
-                }
-              ]
-            },
-            {
-              "id": "93b0goRTpnd4cwL5n2jUG",
-              "slug": "BOW_OLD_FRIEND",
-              "values": [
-                {
-                  "columnId": "ZSw0d-8zTyLo6RR_ofp0L",
-                  "type": "translationRef",
-                  "value": "ITEM.BOW_OLD_FRIEND.NAME"
-                },
-                {
-                  "columnId": "8TqMQuN-TynstVN9wiK7o",
-                  "type": "translationRef",
-                  "value": "ITEM.BOW_OLD_FRIEND.DESCRIPTION"
-                },
-                {
-                  "columnId": "O7EQNdvuQCDwHyyE0XOcb",
-                  "type": "translationRef",
-                  "value": "ITEM.BOW_OLD_FRIEND.STORY"
-                },
-                {
-                  "columnId": "t9PZkgQ0J2zeLXfL6CWL6",
-                  "type": "assetRef",
-                  "value": "PHYSICAL_DAMAGE"
-                },
-                {
-                  "columnId": "EBmVYmt9qDHAnr97lRGk_",
-                  "type": "integer",
-                  "value": 800
-                },
-                {
-                  "columnId": "Ir7PPFSYVv76_zcnn6Rph",
-                  "type": "text",
-                  "value": "Increases damage flat for string weapons by 30%, armor penetration by 15%, and fire rate by 10%."
-                },
-                {
-                  "columnId": "aFQnJq-GTYI42BdLfWUxz",
-                  "type": "enum",
-                  "value": "COMMON"
-                },
-                {
-                  "columnId": "3rQ-aJImsSY5l_oipXVO1",
-                  "type": "boolean",
-                  "value": false
-                }
-              ]
-            }
-          ],
-          "kind": "user",
-          "isSystemTable": false
-        },
-        {
-          "id": "input_bindings",
-          "lastChangeAt": "2026-07-20T13:34:06.659Z",
-          "version": 21,
-          "name": "Input Bindings",
-          "description": "Input bindings exported to Godot InputMap setup.",
-          "columns": [
-            {
-              "id": "input_sort_order00000",
-              "type": "integer",
-              "name": "sort_order",
-              "defaultValue": 0,
-              "min": 0,
-              "required": true,
-              "unique": false
-            },
-            {
-              "id": "input_bindings0000000",
-              "type": "enumArray",
-              "name": "bindings",
-              "defaultValue": [],
-              "max": 8,
-              "possibleValues": [
-                "KEY_A",
-                "KEY_B",
-                "KEY_C",
-                "KEY_D",
-                "KEY_E",
-                "KEY_F",
-                "KEY_G",
-                "KEY_H",
-                "KEY_I",
-                "KEY_J",
-                "KEY_K",
-                "KEY_L",
-                "KEY_M",
-                "KEY_N",
-                "KEY_O",
-                "KEY_P",
-                "KEY_Q",
-                "KEY_R",
-                "KEY_S",
-                "KEY_T",
-                "KEY_U",
-                "KEY_V",
-                "KEY_W",
-                "KEY_X",
-                "KEY_Y",
-                "KEY_Z",
-                "KEY_0",
-                "KEY_1",
-                "KEY_2",
-                "KEY_3",
-                "KEY_4",
-                "KEY_5",
-                "KEY_6",
-                "KEY_7",
-                "KEY_8",
-                "KEY_9",
-                "KEY_F1",
-                "KEY_F2",
-                "KEY_F3",
-                "KEY_F4",
-                "KEY_F5",
-                "KEY_F6",
-                "KEY_F7",
-                "KEY_F8",
-                "KEY_F9",
-                "KEY_F10",
-                "KEY_F11",
-                "KEY_F12",
-                "KEY_ESCAPE",
-                "KEY_SPACE",
-                "KEY_SHIFT",
-                "KEY_CTRL",
-                "KEY_ALT",
-                "KEY_TAB",
-                "KEY_ENTER",
-                "KEY_BACKSPACE",
-                "KEY_UP",
-                "KEY_DOWN",
-                "KEY_LEFT",
-                "KEY_RIGHT",
-                "KEY_MINUS",
-                "KEY_EQUAL",
-                "KEY_KP_ADD",
-                "KEY_KP_SUBTRACT",
-                "MOUSE_BUTTON_LEFT",
-                "MOUSE_BUTTON_RIGHT",
-                "MOUSE_BUTTON_MIDDLE",
-                "MOUSE_BUTTON_WHEEL_UP",
-                "MOUSE_BUTTON_WHEEL_DOWN"
-              ],
-              "required": true,
-              "unique": false
-            }
-          ],
-          "rows": [
-            {
-              "id": "XZSQCYgpTG0RvA0CN7FDQ",
-              "slug": "CAMERA_LEFT",
-              "values": [
-                {
-                  "columnId": "input_sort_order00000",
-                  "type": "integer",
-                  "value": 0
-                },
-                {
-                  "columnId": "input_bindings0000000",
-                  "type": "enumArray",
-                  "value": [
-                    "KEY_A",
-                    "KEY_LEFT"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "td0XUstN_mdYlZYf8-XXD",
-              "slug": "CAMERA_RIGHT",
-              "values": [
-                {
-                  "columnId": "input_sort_order00000",
-                  "type": "integer",
-                  "value": 1
-                },
-                {
-                  "columnId": "input_bindings0000000",
-                  "type": "enumArray",
-                  "value": [
-                    "KEY_D",
-                    "KEY_RIGHT"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "uDAscR2g6DMBjzb5X0fr7",
-              "slug": "CAMERA_FORWARD",
-              "values": [
-                {
-                  "columnId": "input_sort_order00000",
-                  "type": "integer",
-                  "value": 2
-                },
-                {
-                  "columnId": "input_bindings0000000",
-                  "type": "enumArray",
-                  "value": [
-                    "KEY_W",
-                    "KEY_UP"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "obCFMwn-sOHY1a7IZy9sb",
-              "slug": "CAMERA_BACKWARD",
-              "values": [
-                {
-                  "columnId": "input_sort_order00000",
-                  "type": "integer",
-                  "value": 3
-                },
-                {
-                  "columnId": "input_bindings0000000",
-                  "type": "enumArray",
-                  "value": [
-                    "KEY_S",
-                    "KEY_DOWN"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "6sownP-UPKU-D6bDGSKO1",
-              "slug": "CAMERA_ROTATE_LEFT",
-              "values": [
-                {
-                  "columnId": "input_sort_order00000",
-                  "type": "integer",
-                  "value": 4
-                },
-                {
-                  "columnId": "input_bindings0000000",
-                  "type": "enumArray",
-                  "value": [
-                    "KEY_Q"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "1te-XLvsCZeBgg4ckleBX",
-              "slug": "CAMERA_ROTATE_RIGHT",
-              "values": [
-                {
-                  "columnId": "input_sort_order00000",
-                  "type": "integer",
-                  "value": 5
-                },
-                {
-                  "columnId": "input_bindings0000000",
-                  "type": "enumArray",
-                  "value": [
-                    "KEY_E"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "VM0GI714-nL3HIyFDP5ww",
-              "slug": "CAMERA_ZOOM_IN",
-              "values": [
-                {
-                  "columnId": "input_sort_order00000",
-                  "type": "integer",
-                  "value": 6
-                },
-                {
-                  "columnId": "input_bindings0000000",
-                  "type": "enumArray",
-                  "value": [
-                    "MOUSE_BUTTON_WHEEL_UP"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "Q97flvX5hBDPDzQb3rnxd",
-              "slug": "CAMERA_ZOOM_OUT",
-              "values": [
-                {
-                  "columnId": "input_sort_order00000",
-                  "type": "integer",
-                  "value": 7
-                },
-                {
-                  "columnId": "input_bindings0000000",
-                  "type": "enumArray",
-                  "value": [
-                    "MOUSE_BUTTON_WHEEL_DOWN"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "j6xkcM9NVlQkQsQzdxj7h",
-              "slug": "ESCAPE",
-              "values": [
-                {
-                  "columnId": "input_sort_order00000",
-                  "type": "integer",
-                  "value": 8
-                },
-                {
-                  "columnId": "input_bindings0000000",
-                  "type": "enumArray",
-                  "value": [
-                    "KEY_ESCAPE"
-                  ]
-                }
-              ]
-            }
-          ],
-          "kind": "system",
-          "moduleId": "input",
-          "isSystemTable": true
-        }
-      ],
-      "assets": {
-        "schemaVersion": 1,
-        "assets": [
-          {
-            "category": "TERRAIN_TEXTURE",
-            "name": "FOREST_SOIL_1",
-            "note": "Forest biome",
-            "sizeBytes": 6718779,
-            "width": 1024,
-            "height": 1024,
-            "extension": "gppt",
-            "id": "FOREST_SOIL_1",
-            "relativePath": ".chisel/assets/TERRAIN_TEXTURE/FOREST_SOIL_1.gppt",
-            "formattedBytes": "6.4 MB"
-          },
-          {
-            "category": "TERRAIN_TEXTURE",
-            "name": "FOREST_GRASS_1",
-            "note": "Forest biome",
-            "sizeBytes": 7396446,
-            "width": 1024,
-            "height": 1024,
-            "extension": "gppt",
-            "id": "FOREST_GRASS_1",
-            "relativePath": ".chisel/assets/TERRAIN_TEXTURE/FOREST_GRASS_1.gppt",
-            "formattedBytes": "7.1 MB"
-          },
-          {
-            "category": "HDRI",
-            "name": "FOREST_1_2_K",
-            "note": "CC0: https://polyhaven.com/a/citrus_orchard_road_puresky",
-            "sizeBytes": 18768273,
-            "width": 0,
-            "height": 0,
-            "extension": "exr",
-            "id": "FOREST_1_2_K",
-            "relativePath": ".chisel/assets/HDRI/FOREST_1_2K.exr",
-            "formattedBytes": "17.9 MB"
-          },
-          {
-            "category": "UI_ICON",
-            "name": "PHYSICAL_DAMAGE",
-            "note": "Label icon for the physical damage icon",
-            "sizeBytes": 1626670,
-            "width": 2048,
-            "height": 2048,
-            "extension": "png",
-            "id": "PHYSICAL_DAMAGE",
-            "relativePath": ".chisel/assets/UI_ICON/PHYSICAL_DAMAGE.png",
-            "formattedBytes": "1.6 MB"
-          },
-          {
-            "category": "UI_ICON",
-            "name": "HUNTING_ARROWS",
-            "note": "Item - used for bowman and crossbowman",
-            "sizeBytes": 1952133,
-            "width": 1254,
-            "height": 1254,
-            "extension": "png",
-            "id": "HUNTING_ARROWS",
-            "relativePath": ".chisel/assets/UI_ICON/HUNTING_ARROWS.png",
-            "formattedBytes": "1.9 MB"
-          }
-        ]
-      },
-      "localization": {
-        "schemaVersion": 2,
-        "defaultLocale": "en",
-        "locales": [
-          "en"
-        ],
-        "keys": [
-          {
-            "path": "UNIT.RIFLE_MAN.NAME",
-            "values": {
-              "en": "Rifle Man"
-            },
-            "placeholders": []
-          },
-          {
-            "path": "UNIT.RIFLE_MAN.DESCRIPTION",
-            "values": {
-              "en": "The unit does <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE_TYPE> <icon:PHYSICAL_DAMAGE/> {float:physical_damage} </tooltip></style><br/> points of damage per shot."
-            },
-            "placeholders": []
-          },
-          {
-            "path": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.TITLE",
-            "values": {
-              "en": "Physical damage"
-            },
-            "placeholders": []
-          },
-          {
-            "path": "TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION",
-            "values": {
-              "en": "Damage counting from ballistic, blunt force and so on..."
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.OLD_REVOLVER.NAME",
-            "values": {
-              "en": "Old Revolver"
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.OLD_REVOLVER.DESCRIPTION",
-            "values": {
-              "en": "<style:QUOTE>A weapon from the olden era</style><br/>And old revolver with a leather handle."
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.OLD_REVOLVER.STORY",
-            "values": {
-              "en": ""
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.WAX_STRING.NAME",
-            "values": {
-              "en": "Waxed string "
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.WAX_STRING.DESCRIPTION",
-            "values": {
-              "en": "<style:QUOTE>Old ways. New prey</style><br/>A simple hemp bowstring treated with beeswax."
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.HUNTING_ARROWS.NAME",
-            "values": {
-              "en": "Hunting Arrows"
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.HUNTING_ARROWS.DESCRIPTION",
-            "values": {
-              "en": "<style:QUOTE>Old ways. New prey</style><br/>Arrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse"
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.WAX_STRING.STORY",
-            "values": {
-              "en": ""
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.HUNTING_ARROWS.STORY",
-            "values": {
-              "en": ""
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.PIERCING_ARROWS.DESCRIPTION",
-            "values": {
-              "en": "<style:QUOTE>Everything has a weakness.</style><br/>Narrow steel-tipped arrows built to punch through armor."
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.PIERCING_ARROWS.NAME",
-            "values": {
-              "en": "Piercing Arrows"
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.PIERCING_ARROWS.STORY",
-            "values": {
-              "en": ""
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.FIRE_ARROWS.NAME",
-            "values": {
-              "en": "Fire Arrows"
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.FIRE_ARROWS.DESCRIPTION",
-            "values": {
-              "en": "<style:QUOTE>The dead return. Ash does not.</style><br/>Arrows wrapped with alcohol-soaked cloth."
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.FIRE_ARROWS.STORY",
-            "values": {
-              "en": ""
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.REINFORCED_BOW.NAME",
-            "values": {
-              "en": "Reinforced Bow"
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.REINFORCED_BOW.DESCRIPTION",
-            "values": {
-              "en": "<style:QUOTE>It only needs to outlast us.</style><br/>Reinforced with mixed materials to hold greater tension without breaking."
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.REINFORCED_BOW.STORY",
-            "values": {
-              "en": ""
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.BOW_OLD_FRIEND.NAME",
-            "values": {
-              "en": "Old Friend"
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.BOW_OLD_FRIEND.DESCRIPTION",
-            "values": {
-              "en": "<style:QUOTE>Come on, old friend. One more hunt.</style><br/>A battle-worn bow that endures impossible tension."
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.BOW_OLD_FRIEND.STORY",
-            "values": {
-              "en": "ITEM.BOW_OLD_FRIEND.STORY\nWhen ammunition began to disappear, survivors turned to weapons from older eras. One of them was Old Friend, a bow never meant to survive more than a few months of constant use. It outlived that purpose.\nIts limbs are patched, its frame is cracked, and brass plates hold together places that should have failed years ago. Decorative horns were added as marks of the hunts it survived. Its string has been replaced countless times, each replacement recorded by a small carving near the grip.\nThere is only one Old Friend in the squad, but many still remember its name. Those who fight beside it do so with renewed vigor, driven by the legend carried into battle. \nBring it home and place it in the hands of someone who once knew it, and an old legend may choose to fight again."
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.UNOPENED_LIQUOR.NAME",
-            "values": {
-              "en": "Unopened Liquor"
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.UNOPENED_LIQUOR.DESCRIPTION",
-            "values": {
-              "en": "<style:QUOTE>My father poured this on my first winter home.</style><br/>Sealed bottles of strong liquor."
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.UNOPENED_LIQUOR.STORY",
-            "values": {
-              "en": ""
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.TEDDY_BEAR.NAME",
-            "values": {
-              "en": "Teddy Bear"
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.TEDDY_BEAR.DESCRIPTION",
-            "values": {
-              "en": "<style:QUOTE>I wish I had one as a child.</style><br/>A faded stuffed bear, worn soft from years of being held."
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.TEDDY_BEAR.STORY",
-            "values": {
-              "en": "Found beneath the remains of a child’s bed, the bear was strangely untouched by the collapse around it. Its fur is faded, one eye has been sewn back on, and its little vest carries the dust of a home that no longer exists.\n\nSome survivors keep it for the child who lost it. Others hold it for the childhood they never had."
-            },
-            "placeholders": []
-          },
-          {
-            "path": "ITEM.TEST_ITEM.NAME",
-            "values": {
-              "en": "Test Item 2"
             },
             "placeholders": []
           }

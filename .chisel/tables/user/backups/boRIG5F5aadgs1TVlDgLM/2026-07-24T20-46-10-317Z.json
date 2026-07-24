@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "boRIG5F5aadgs1TVlDgLM",
-    "lastChangeAt": "2026-07-24T20:46:46.575Z",
-    "version": 21,
+    "lastChangeAt": "2026-07-24T20:45:45.379Z",
+    "version": 18,
     "name": "Recipe",
     "description": "A new card recipe connecting things together, literally just a sequence of fields and whatnot.",
     "columns": [
@@ -13,22 +13,6 @@
         "name": "name_template",
         "defaultValue": "",
         "required": true,
-        "unique": false
-      },
-      {
-        "id": "aNWRfMJDrJHp_LM6bryBO",
-        "type": "translationRef",
-        "name": "description_template",
-        "defaultValue": "",
-        "required": true,
-        "unique": false
-      },
-      {
-        "id": "vgPQlszddv5Fndr43bH-x",
-        "type": "translationRef",
-        "name": "portrait_override",
-        "defaultValue": "",
-        "required": false,
         "unique": false
       },
       {
