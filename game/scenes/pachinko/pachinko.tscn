@@ -8,25 +8,41 @@
 
 [node name="Pachinko" type="Node3D" unique_id=978769730]
 
-[node name="LockedCamera" type="Camera3D" parent="." unique_id=2081833518]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.577695)
-projection = 1
-size = 7.823
-far = 4011.05
-
-[node name="UI" type="Control" parent="." unique_id=1896838073]
+[node name="Main" type="Control" parent="." unique_id=1896838073]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="LightingNatural" parent="." unique_id=1361342736 instance=ExtResource("1_pwxwe")]
+[node name="LeftPanel" type="Panel" parent="Main" unique_id=2128105117]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.33
+anchor_bottom = 1.0
+grow_vertical = 2
 
-[node name="Background" type="MeshInstance3D" parent="." unique_id=979191841]
+[node name="GameViewportContainer" type="SubViewportContainer" parent="Main" unique_id=782297777]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.33
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameViewport" type="SubViewport" parent="Main/GameViewportContainer" unique_id=192120753]
+
+[node name="GameWorld" type="Node3D" parent="Main/GameViewportContainer/GameViewport" unique_id=2128571776]
+
+[node name="LightingNatural" parent="Main/GameViewportContainer/GameViewport/GameWorld" unique_id=1361342736 instance=ExtResource("1_pwxwe")]
+
+[node name="Background" type="MeshInstance3D" parent="Main/GameViewportContainer/GameViewport/GameWorld" unique_id=979191841]
 transform = Transform3D(7.2087493, 0, 0, 0, -8.689902e-08, -4.4890847, 0, 1.9880177, -1.9622414e-07, 0, 0, 0)
 mesh = SubResource("PlaneMesh_pwxwe")
 
-[node name="PegManager" type="Node3D" parent="." unique_id=1604714157]
+[node name="PegManager" type="Node3D" parent="Main/GameViewportContainer/GameViewport/GameWorld" unique_id=1604714157]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3916488, 0)
 script = ExtResource("2_6grw1")
 peg_scene = ExtResource("3_wrtl7")
@@ -35,6 +51,12 @@ vertical_spacing = 0.5
 peg_z_offset = 0.2
 peg_scale = Vector3(0.2, 0.2, 0.2)
 
-[node name="Peg" parent="." unique_id=163086090 instance=ExtResource("3_wrtl7")]
+[node name="Peg" parent="Main/GameViewportContainer/GameViewport/GameWorld" unique_id=163086090 instance=ExtResource("3_wrtl7")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0.2)
 visible = false
+
+[node name="LockedCamera" type="Camera3D" parent="Main/GameViewportContainer/GameViewport/GameWorld" unique_id=2081833518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.577695)
+projection = 1
+size = 7.823
+far = 4011.05
