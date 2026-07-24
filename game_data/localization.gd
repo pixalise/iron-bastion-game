@@ -50,10 +50,12 @@ enum Id {
 	UNIT_ARCHER_DESCRIPTION = 1,
 	TOOLTIP_DAMAGE_PHYISICAL_TITLE = 2,
 	TOOLTIP_DAMAGE_PHYISICAL_DESCRIPTION = 3,
-	UNIT_PIKEMAN_NAME = 4,
-	UNIT_PIKEMAN_DESCRIPTION = 5,
-	UNIT_KNIGHT_NAME = 6,
-	UNIT_KNIGHT_DESCRIPTION = 7
+	TOOLTIP_RANGE_TITLE = 4,
+	TOOLTIP_RANGE_DESCRIPTION = 5,
+	UNIT_PIKEMAN_NAME = 6,
+	UNIT_PIKEMAN_DESCRIPTION = 7,
+	UNIT_KNIGHT_NAME = 8,
+	UNIT_KNIGHT_DESCRIPTION = 9
 }
 
 const DEFAULT_LOCALE := "en"
@@ -63,6 +65,8 @@ const KEYS := [
 	"UNIT.ARCHER.DESCRIPTION",
 	"TOOLTIP.DAMAGE.PHYISICAL.TITLE",
 	"TOOLTIP.DAMAGE.PHYISICAL.DESCRIPTION",
+	"TOOLTIP.RANGE.TITLE",
+	"TOOLTIP.RANGE.DESCRIPTION",
 	"UNIT.PIKEMAN.NAME",
 	"UNIT.PIKEMAN.DESCRIPTION",
 	"UNIT.KNIGHT.NAME",
@@ -72,16 +76,18 @@ const VALUES := {
 	"en":
 	[
 		"Archer",
-		"The backbone of every military. Has an outstanding range of {float:attack_range} and deals {int:attack_damage} of physical damage.",
-		"Phyisical Damage",
-		"Phyisical damage is any kind of damage that is dealt with regular weapons.",
+		"The backbone of every military. Has an outstanding <style:ATTACK_RANGE><tooltip:RANGE>range of {float:attack_range}</tooltip></style> and deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE>{int:attack_damage} of physical damage</tooltip></style>.",
+		"Physical Damage",
+		"Physical damage is any kind of damage that is dealt with regular weapons.",
+		"Range",
+		"How far a unit can reach when attacking.",
 		"Pikeman",
-		"The frontline of the kings army. Deals {int:attack_damage} of physical damage in an area of {float:attack_range}.",
+		"The frontline of the kings army. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE>{int:attack_damage} of physical damage</tooltip></style> in an area of <style:ATTACK_RANGE><tooltip:RANGE>{float:attack_range}</tooltip></style>.",
 		"Swordman",
-		"They are the first ones to engage the kings enemies. Deals {int:attack_damage} of physical damage in the vicinity of {float:attack_range}."
+		"They are the first ones to engage the kings enemies. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE>{int:attack_damage} of physical damage</tooltip></style> in the vicinity of <style:ATTACK_RANGE><tooltip:RANGE>{float:attack_range}</tooltip></style>."
 	]
 }
-const ICON_SLUGS := [[], [], [], [], [], [], [], []]
+const ICON_SLUGS := [[], [], [], [], [], [], [], [], [], []]
 const ICONS := {
 	"KNIGHT":
 	{
@@ -110,6 +116,13 @@ const ICONS := {
 		"path": "res://game_data/assets/ui_icon/pikeman.png",
 		"width": 256,
 		"height": 256
+	},
+	"RANGE":
+	{
+		"asset_id": "RANGE",
+		"path": "res://game_data/assets/ui_icon/range.png",
+		"width": 256,
+		"height": 256
 	}
 }
 const PLACEHOLDERS := [
@@ -118,24 +131,33 @@ const PLACEHOLDERS := [
 	[],
 	[],
 	[],
+	[],
+	[],
 	["attack_damage", "attack_range"],
 	[],
 	["attack_damage", "attack_range"]
 ]
 const PLACEHOLDER_TYPES := [
-	[], ["float", "int"], [], [], [], ["int", "float"], [], ["int", "float"]
+	[], ["float", "int"], [], [], [], [], [], ["int", "float"], [], ["int", "float"]
 ]
 const STYLES := {
-	"ATTACK_RANGE": {"color": "#ffffff", "bold": true, "italic": false, "underline": false},
-	"PHYSICAL_DAMAGE": {"color": "", "bold": false, "italic": false, "underline": false}
+	"ATTACK_RANGE": {"color": "#ffffff", "bold": false, "italic": true, "underline": false},
+	"PHYSICAL_DAMAGE": {"color": "#ff0000", "bold": true, "italic": false, "underline": false}
 }
 const TOOLTIPS := {
 	"PHYSICAL_DAMAGE":
 	{
 		"title_id": Id.TOOLTIP_DAMAGE_PHYISICAL_TITLE,
 		"description_id": Id.TOOLTIP_DAMAGE_PHYISICAL_DESCRIPTION,
-		"icon_asset_id": "",
-		"icon_path": ""
+		"icon_asset_id": "PHYSICAL_DAMAGE",
+		"icon_path": "res://game_data/assets/ui_icon/physical_damage.png"
+	},
+	"RANGE":
+	{
+		"title_id": Id.TOOLTIP_RANGE_TITLE,
+		"description_id": Id.TOOLTIP_RANGE_DESCRIPTION,
+		"icon_asset_id": "RANGE",
+		"icon_path": "res://game_data/assets/ui_icon/range.png"
 	}
 }
 const CSV_PATH := "res://game_data/localization/translations.csv"

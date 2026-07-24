@@ -84,6 +84,18 @@
       "id": "PIKEMAN",
       "relativePath": ".chisel/assets/UI_ICON/PIKEMAN.png",
       "formattedBytes": "58.1 KB"
+    },
+    {
+      "category": "UI_ICON",
+      "name": "RANGE",
+      "note": "Tooltip",
+      "sizeBytes": 69047,
+      "width": 256,
+      "height": 256,
+      "extension": "png",
+      "id": "RANGE",
+      "relativePath": ".chisel/assets/UI_ICON/RANGE.png",
+      "formattedBytes": "67.4 KB"
     }
   ]
 }

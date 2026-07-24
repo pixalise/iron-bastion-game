@@ -15,21 +15,35 @@
     {
       "path": "UNIT.ARCHER.DESCRIPTION",
       "values": {
-        "en": "The backbone of every military. Has an outstanding range of {float:attack_range} and deals {int:attack_damage} of physical damage."
+        "en": "The backbone of every military. Has an outstanding <style:ATTACK_RANGE><tooltip:RANGE>range of {float:attack_range}</tooltip></style> and deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE>{int:attack_damage} of physical damage</tooltip></style>."
       },
       "placeholders": []
     },
     {
       "path": "TOOLTIP.DAMAGE.PHYISICAL.TITLE",
       "values": {
-        "en": "Phyisical Damage"
+        "en": "Physical Damage"
       },
       "placeholders": []
     },
     {
       "path": "TOOLTIP.DAMAGE.PHYISICAL.DESCRIPTION",
       "values": {
-        "en": "Phyisical damage is any kind of damage that is dealt with regular weapons."
+        "en": "Physical damage is any kind of damage that is dealt with regular weapons."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "TOOLTIP.RANGE.TITLE",
+      "values": {
+        "en": "Range"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "TOOLTIP.RANGE.DESCRIPTION",
+      "values": {
+        "en": "How far a unit can reach when attacking."
       },
       "placeholders": []
     },
@@ -43,7 +57,7 @@
     {
       "path": "UNIT.PIKEMAN.DESCRIPTION",
       "values": {
-        "en": "The frontline of the kings army. Deals {int:attack_damage} of physical damage in an area of {float:attack_range}."
+        "en": "The frontline of the kings army. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE>{int:attack_damage} of physical damage</tooltip></style> in an area of <style:ATTACK_RANGE><tooltip:RANGE>{float:attack_range}</tooltip></style>."
       },
       "placeholders": []
     },
@@ -57,7 +71,7 @@
     {
       "path": "UNIT.KNIGHT.DESCRIPTION",
       "values": {
-        "en": "They are the first ones to engage the kings enemies. Deals {int:attack_damage} of physical damage in the vicinity of {float:attack_range}."
+        "en": "They are the first ones to engage the kings enemies. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE>{int:attack_damage} of physical damage</tooltip></style> in the vicinity of <style:ATTACK_RANGE><tooltip:RANGE>{float:attack_range}</tooltip></style>."
       },
       "placeholders": []
     }
@@ -84,6 +98,12 @@
       "iconAssetId": "PHYSICAL_DAMAGE",
       "titleKey": "TOOLTIP.DAMAGE.PHYISICAL.TITLE",
       "descriptionKey": "TOOLTIP.DAMAGE.PHYISICAL.DESCRIPTION"
+    },
+    {
+      "slug": "RANGE",
+      "iconAssetId": "RANGE",
+      "titleKey": "TOOLTIP.RANGE.TITLE",
+      "descriptionKey": "TOOLTIP.RANGE.DESCRIPTION"
     }
   ]
 }

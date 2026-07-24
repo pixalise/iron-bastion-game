@@ -2,27 +2,27 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-24T18:47:47.765Z"
+const GENERATED_AT := "2026-07-24T19:05:35.667Z"
 const PROJECT_ID := "lwDBJkZEABItlP3UGvDll"
 const PROJECT_NAME := "Pachingod"
-const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 7}
+const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 8}
 const LOCALIZATION := {
 	"class_name": "ChiselLocalization",
 	"path": "res://game_data/localization.gd",
 	"typed_class_name": "ChiselTranslations",
 	"typed_path": "res://game_data/translations.gd",
 	"csv_path": "res://game_data/localization/translations.csv",
-	"translations": 8,
+	"translations": 10,
 	"locales": 1
 }
 const FILES := [
-	{"bytes": 2052, "hash": "5361d36e", "path": "res://game_data/assets.gd"},
-	{"bytes": 11757, "hash": "8e036be1", "path": "res://game_data/localization.gd"},
-	{"bytes": 3477, "hash": "608bcd06", "path": "res://game_data/translations.gd"},
-	{"bytes": 736, "hash": "2ab88c12", "path": "res://game_data/localization/translations.csv"},
+	{"bytes": 2242, "hash": "34d5d5fe", "path": "res://game_data/assets.gd"},
+	{"bytes": 12685, "hash": "0c4c4220", "path": "res://game_data/localization.gd"},
+	{"bytes": 3833, "hash": "75db394f", "path": "res://game_data/translations.gd"},
+	{"bytes": 1192, "hash": "57d8e553", "path": "res://game_data/localization/translations.csv"},
 	{"bytes": 3310, "hash": "00a525a2", "path": "res://game_data/input.gd"},
 	{"bytes": 284, "hash": "d3d64e04", "path": "res://game_data/tables/peg.gd"},
-	{"bytes": 849, "hash": "ca3303f8", "path": "res://game_data/tables/unit.gd"},
+	{"bytes": 888, "hash": "95da4d9d", "path": "res://game_data/tables/unit.gd"},
 	{"bytes": 478, "hash": "c83a5d5b", "path": "res://game_data/tables/input_bindings.gd"}
 ]
 const TABLES := {
@@ -40,7 +40,7 @@ const TABLES := {
 		"class_name": "ChiselUnit",
 		"path": "res://game_data/tables/unit.gd",
 		"rows": 3,
-		"columns": 7
+		"columns": 8
 	},
 	"input_bindings":
 	{

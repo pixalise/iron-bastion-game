@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "Jt3iVOYOqHl97phbZEpUi",
-    "lastChangeAt": "2026-07-24T18:47:41.927Z",
-    "version": 30,
+    "lastChangeAt": "2026-07-24T19:05:19.379Z",
+    "version": 35,
     "name": "Unit",
     "description": "The actual ingame units that can be spawned via card",
     "columns": [
@@ -38,6 +38,16 @@
         "name": "max_health",
         "defaultValue": 100,
         "min": 10,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "Jy1sZ_SgOrVRJ2rdPC45b",
+        "type": "range",
+        "name": "physical_armor",
+        "defaultValue": 0,
+        "max": 1,
+        "min": 0,
         "required": true,
         "unique": false
       },
@@ -95,6 +105,11 @@
             "value": 80
           },
           {
+            "columnId": "Jy1sZ_SgOrVRJ2rdPC45b",
+            "type": "range",
+            "value": 0
+          },
+          {
             "columnId": "XH8sfq3NulCYzj8oqSkW9",
             "type": "integer",
             "value": 15
@@ -136,6 +151,11 @@
             "value": 120
           },
           {
+            "columnId": "Jy1sZ_SgOrVRJ2rdPC45b",
+            "type": "range",
+            "value": 0
+          },
+          {
             "columnId": "XH8sfq3NulCYzj8oqSkW9",
             "type": "integer",
             "value": 30
@@ -175,6 +195,11 @@
             "columnId": "4v0ct0ESkxzDSgbMX7GuB",
             "type": "integer",
             "value": 100
+          },
+          {
+            "columnId": "Jy1sZ_SgOrVRJ2rdPC45b",
+            "type": "range",
+            "value": 1
           },
           {
             "columnId": "XH8sfq3NulCYzj8oqSkW9",

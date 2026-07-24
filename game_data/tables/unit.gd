@@ -20,6 +20,7 @@ const DESCRIPTION := [
 ]
 const PORTRAIT := [ChiselAssets.Id.ARCHER, ChiselAssets.Id.PIKEMAN, ChiselAssets.Id.KNIGHT]
 const MAX_HEALTH := [80, 120, 100]
+const PHYSICAL_ARMOR := [0, 0, 1]
 const ATTACK_DAMAGE := [15, 30, 20]
 const ATTACK_RATE := [1.2, 1, 1.3]
 const ATTACK_RANGE := [6.4, 2.1, 1.7]

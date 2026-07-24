@@ -45,6 +45,14 @@ class UnitKnightDescriptionParameters:
 		return {"attack_damage": attack_damage, "attack_range": attack_range}
 
 
+class TooltipRangeTranslations:
+	func title() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_RANGE_TITLE, {})
+
+	func description() -> ChiselLocalization.LocalizedText:
+		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_RANGE_DESCRIPTION, {})
+
+
 class TooltipDamagePhyisicalTranslations:
 	func title() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_DAMAGE_PHYISICAL_TITLE, {})
@@ -61,6 +69,7 @@ class TooltipDamageTranslations:
 
 class TooltipTranslations:
 	var damage := TooltipDamageTranslations.new()
+	var range := TooltipRangeTranslations.new()
 
 
 class UnitKnightTranslations:
