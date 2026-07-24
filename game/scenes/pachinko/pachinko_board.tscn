@@ -29,12 +29,13 @@ mesh = SubResource("PlaneMesh_h4rr5")
 transform = Transform3D(7.9175053, 0, 0, 0, 0.12722117, 0, 0, 0, 1, 0, 4.0118914, 0.52308273)
 mesh = SubResource("BoxMesh_vjcty")
 
-[node name="BallDropper" type="MeshInstance3D" parent="." unique_id=648420085 node_paths=PackedStringArray("muzzle")]
+[node name="BallDropper" type="MeshInstance3D" parent="." unique_id=648420085 node_paths=PackedStringArray("muzzle", "movement_bounds")]
 transform = Transform3D(-0.678774, -4.941954e-08, 0, 5.934031e-08, -0.56529367, 0, 0, 0, 0.57865167, 0, 3.7312045, 0.5071318)
 mesh = SubResource("PrismMesh_vjcty")
 script = ExtResource("2_ik8qh")
 muzzle = NodePath("Muzzle")
 ball_scene = ExtResource("4_57nb6")
+movement_bounds = NodePath("../Rail")
 
 [node name="Muzzle" type="Node3D" parent="BallDropper" unique_id=246668579]
 transform = Transform3D(0.99999976, -7.1054274e-15, 0, -1.4210855e-14, 1, 0, 0, 0, 1, -5.2779654e-08, 0.7249236, 0)
