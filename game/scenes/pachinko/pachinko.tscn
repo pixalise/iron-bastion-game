@@ -31,8 +31,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+stretch = true
 
 [node name="GameViewport" type="SubViewport" parent="Main/GameViewportContainer" unique_id=192120753]
+size = Vector2i(771, 648)
 
 [node name="GameWorld" type="Node3D" parent="Main/GameViewportContainer/GameViewport" unique_id=2128571776]
 
