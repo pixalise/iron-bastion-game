@@ -2,11 +2,11 @@
 class_name ChiselRecipestep
 extends RefCounted
 
-enum Id { KNIGHT_STEP = 0 }
+enum Id {}
 
 const TABLE_ID := "7evuGaD29l7vxCpjEVxQf"
 const TABLE_NAME := "RecipeStep"
 const TABLE_KIND := "user"
-const SLUGS := ["KNIGHT_STEP"]
-const UNIT := [ChiselUnit.Id.COLUMN_VALUE]
-const ABILITY := [ChiselAbility.Id.COLUMN_VALUE]
+const SLUGS := []
+const UNIT := []
+const ABILITY := []

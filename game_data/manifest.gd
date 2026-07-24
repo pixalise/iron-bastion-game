@@ -2,7 +2,7 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-24T19:48:29.525Z"
+const GENERATED_AT := "2026-07-24T19:50:03.752Z"
 const PROJECT_ID := "lwDBJkZEABItlP3UGvDll"
 const PROJECT_NAME := "Pachingod"
 const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 9}
@@ -25,7 +25,7 @@ const FILES := [
 	{"bytes": 893, "hash": "628b6a47", "path": "res://game_data/tables/unit.gd"},
 	{"bytes": 272, "hash": "e4be08b0", "path": "res://game_data/tables/ability.gd"},
 	{"bytes": 297, "hash": "c2bba311", "path": "res://game_data/tables/recipe.gd"},
-	{"bytes": 348, "hash": "f5305a39", "path": "res://game_data/tables/recipe_step.gd"},
+	{"bytes": 253, "hash": "36c12cfc", "path": "res://game_data/tables/recipe_step.gd"},
 	{"bytes": 478, "hash": "c83a5d5b", "path": "res://game_data/tables/input_bindings.gd"}
 ]
 const TABLES := {
@@ -66,7 +66,7 @@ const TABLES := {
 		"name": "RecipeStep",
 		"class_name": "ChiselRecipestep",
 		"path": "res://game_data/tables/recipe_step.gd",
-		"rows": 1,
+		"rows": 0,
 		"columns": 2
 	},
 	"input_bindings":
