@@ -2,6 +2,207 @@
   "schemaVersion": 1,
   "commits": [
     {
+      "id": "D3rz80lAQ7ed8cRCkHekh",
+      "committedAt": "2026-07-24T10:54:55.863Z",
+      "project": {
+        "id": "IlSn4ib8JKnozbdvTOqmJ",
+        "name": "Iron Bastion",
+        "description": "First game made in Godot, essential survival RTS with extraction mechanics."
+      },
+      "tables": [
+        {
+          "id": "input_bindings",
+          "lastChangeAt": "2026-07-24T10:54:51.349Z",
+          "version": 33,
+          "name": "Input Bindings",
+          "description": "Input bindings exported to Godot InputMap setup.",
+          "columns": [
+            {
+              "id": "input_sort_order00000",
+              "type": "integer",
+              "name": "sort_order",
+              "defaultValue": 0,
+              "min": 0,
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "input_bindings0000000",
+              "type": "enumArray",
+              "name": "bindings",
+              "defaultValue": [],
+              "max": 8,
+              "possibleValues": [
+                "KEY_A",
+                "KEY_B",
+                "KEY_C",
+                "KEY_D",
+                "KEY_E",
+                "KEY_F",
+                "KEY_G",
+                "KEY_H",
+                "KEY_I",
+                "KEY_J",
+                "KEY_K",
+                "KEY_L",
+                "KEY_M",
+                "KEY_N",
+                "KEY_O",
+                "KEY_P",
+                "KEY_Q",
+                "KEY_R",
+                "KEY_S",
+                "KEY_T",
+                "KEY_U",
+                "KEY_V",
+                "KEY_W",
+                "KEY_X",
+                "KEY_Y",
+                "KEY_Z",
+                "KEY_0",
+                "KEY_1",
+                "KEY_2",
+                "KEY_3",
+                "KEY_4",
+                "KEY_5",
+                "KEY_6",
+                "KEY_7",
+                "KEY_8",
+                "KEY_9",
+                "KEY_F1",
+                "KEY_F2",
+                "KEY_F3",
+                "KEY_F4",
+                "KEY_F5",
+                "KEY_F6",
+                "KEY_F7",
+                "KEY_F8",
+                "KEY_F9",
+                "KEY_F10",
+                "KEY_F11",
+                "KEY_F12",
+                "KEY_ESCAPE",
+                "KEY_SPACE",
+                "KEY_SHIFT",
+                "KEY_CTRL",
+                "KEY_ALT",
+                "KEY_TAB",
+                "KEY_ENTER",
+                "KEY_BACKSPACE",
+                "KEY_UP",
+                "KEY_DOWN",
+                "KEY_LEFT",
+                "KEY_RIGHT",
+                "KEY_MINUS",
+                "KEY_EQUAL",
+                "KEY_KP_ADD",
+                "KEY_KP_SUBTRACT",
+                "MOUSE_BUTTON_LEFT",
+                "MOUSE_BUTTON_RIGHT",
+                "MOUSE_BUTTON_MIDDLE",
+                "MOUSE_BUTTON_WHEEL_UP",
+                "MOUSE_BUTTON_WHEEL_DOWN"
+              ],
+              "required": true,
+              "unique": false
+            }
+          ],
+          "rows": [
+            {
+              "id": "j6xkcM9NVlQkQsQzdxj7h",
+              "slug": "ESCAPE",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 0
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_ESCAPE"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "5GiDUiigGywQV96FBycSj",
+              "slug": "ACTION",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_SPACE"
+                  ]
+                }
+              ]
+            }
+          ],
+          "kind": "system",
+          "moduleId": "input",
+          "isSystemTable": true
+        }
+      ],
+      "assets": {
+        "schemaVersion": 1,
+        "assets": [
+          {
+            "category": "TERRAIN_TEXTURE",
+            "name": "FOREST_SOIL_1",
+            "note": "Forest biome",
+            "sizeBytes": 6718779,
+            "width": 1024,
+            "height": 1024,
+            "extension": "gppt",
+            "id": "FOREST_SOIL_1",
+            "relativePath": ".chisel/assets/TERRAIN_TEXTURE/FOREST_SOIL_1.gppt",
+            "formattedBytes": "6.4 MB"
+          },
+          {
+            "category": "TERRAIN_TEXTURE",
+            "name": "FOREST_GRASS_1",
+            "note": "Forest biome",
+            "sizeBytes": 7396446,
+            "width": 1024,
+            "height": 1024,
+            "extension": "gppt",
+            "id": "FOREST_GRASS_1",
+            "relativePath": ".chisel/assets/TERRAIN_TEXTURE/FOREST_GRASS_1.gppt",
+            "formattedBytes": "7.1 MB"
+          },
+          {
+            "category": "HDRI",
+            "name": "FOREST_1_2_K",
+            "note": "CC0: https://polyhaven.com/a/citrus_orchard_road_puresky",
+            "sizeBytes": 18768273,
+            "width": 0,
+            "height": 0,
+            "extension": "exr",
+            "id": "FOREST_1_2_K",
+            "relativePath": ".chisel/assets/HDRI/FOREST_1_2K.exr",
+            "formattedBytes": "17.9 MB"
+          }
+        ]
+      },
+      "localization": {
+        "schemaVersion": 2,
+        "defaultLocale": "en",
+        "locales": [
+          "en"
+        ],
+        "keys": [],
+        "styles": [],
+        "tooltips": []
+      }
+    },
+    {
       "id": "w49hHFoyk_Ktwu8YvjCNZ",
       "committedAt": "2026-07-24T10:08:35.399Z",
       "project": {

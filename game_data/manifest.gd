@@ -2,9 +2,9 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-24T10:08:36.283Z"
+const GENERATED_AT := "2026-07-24T10:54:56.917Z"
 const PROJECT_ID := "IlSn4ib8JKnozbdvTOqmJ"
-const PROJECT_NAME := "Pachingod"
+const PROJECT_NAME := "Iron Bastion"
 const ASSETS := {
 	"class_name": "ChiselAssets",
 	"path": "res://game_data/assets.gd",
@@ -36,12 +36,12 @@ const FILES := [{
 	"hash": "a5689d92",
 	"path": "res://game_data/localization/translations.csv"
 }, {
-	"bytes": 3263,
-	"hash": "5026437e",
+	"bytes": 3275,
+	"hash": "f4baaaa1",
 	"path": "res://game_data/input.gd"
 }, {
-	"bytes": 307,
-	"hash": "1f9160bc",
+	"bytes": 351,
+	"hash": "b581e5d7",
 	"path": "res://game_data/tables/input_bindings.gd"
 }]
 const TABLES := {
@@ -49,7 +49,7 @@ const TABLES := {
 		"name": "Input Bindings",
 		"class_name": "ChiselInputBindings",
 		"path": "res://game_data/tables/input_bindings.gd",
-		"rows": 1,
+		"rows": 2,
 		"columns": 2
 	}
 }

@@ -3,7 +3,8 @@ class_name ChiselInput
 extends RefCounted
 
 const ACTION_NAMES := [
-	&"escape"
+	&"escape",
+	&"action"
 ]
 const KEY_BINDINGS := {
 	"KEY_A": KEY_A,

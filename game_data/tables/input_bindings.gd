@@ -3,18 +3,22 @@ class_name ChiselInputBindings
 extends RefCounted
 
 enum Id {
-	ESCAPE = 0
+	ESCAPE = 0,
+	ACTION = 1
 }
 
 const TABLE_ID := "input_bindings"
 const TABLE_NAME := "Input Bindings"
 const TABLE_KIND := "system"
 const SLUGS := [
-	"ESCAPE"
+	"ESCAPE",
+	"ACTION"
 ]
 const SORT_ORDER := [
-	0
+	0,
+	1
 ]
 const BINDINGS := [
-	["KEY_ESCAPE"]
+	["KEY_ESCAPE"],
+	["KEY_SPACE"]
 ]

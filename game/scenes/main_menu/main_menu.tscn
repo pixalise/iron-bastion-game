@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bi50qkwdipgl2"]
 
 [ext_resource type="Script" uid="uid://biwalhnptpwn4" path="res://game/scenes/main_menu/main_menu.gd" id="1_trmxd"]
+[ext_resource type="PackedScene" uid="uid://dpanc0ml5pyca" path="res://game/scenes/pachinko/pachinko.tscn" id="2_aagy0"]
 
 [node name="MainMenu" type="Control" unique_id=1782497639]
 layout_mode = 3
@@ -10,3 +11,4 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_trmxd")
+start_game_scene = ExtResource("2_aagy0")

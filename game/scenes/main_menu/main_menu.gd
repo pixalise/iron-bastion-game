@@ -2,6 +2,8 @@ extends Control
 
 const UI := preload("res://game/ui/ui.gd")
 
+@export var start_game_scene: PackedScene
+
 
 func _ready() -> void:
 	_build()
@@ -35,6 +37,11 @@ func _build() -> void:
 													"Pachingod", UI.TextStyle.title()
 												),
 												UI.Widgets.Button(
+													"start game",
+													_on_start_game_pressed,
+													UI.ButtonStyle.width(220)
+												),
+												UI.Widgets.Button(
 													"quit",
 													_on_quit_pressed,
 													UI.ButtonStyle.width(220)
@@ -54,5 +61,10 @@ func _build() -> void:
 		)
 	)
 
+
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_start_game_pressed() -> void:
+	assert(get_tree().change_scene_to_packed(start_game_scene) == OK)
