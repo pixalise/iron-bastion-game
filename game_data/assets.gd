@@ -3,20 +3,19 @@ class_name ChiselAssets
 extends RefCounted
 
 enum Id {
-	INVALID = 0,
-	FOREST_SOIL_1 = 1,
-	FOREST_GRASS_1 = 2,
-	FOREST_1_2_K = 3,
-	KNIGHT = 4,
-	ARCHER = 5,
-	PHYSICAL_DAMAGE = 6,
-	PIKEMAN = 7,
-	RANGE = 8,
-	TARGET_PRACTICE = 9
+	INVALID = -1,
+	FOREST_SOIL_1 = 0,
+	FOREST_GRASS_1 = 1,
+	FOREST_1_2_K = 2,
+	KNIGHT = 3,
+	ARCHER = 4,
+	PHYSICAL_DAMAGE = 5,
+	PIKEMAN = 6,
+	RANGE = 7,
+	TARGET_PRACTICE = 8
 }
 
 const IDS := [
-	"",
 	"FOREST_SOIL_1",
 	"FOREST_GRASS_1",
 	"FOREST_1_2_K",

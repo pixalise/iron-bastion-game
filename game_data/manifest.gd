@@ -2,7 +2,7 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-24T20:09:12.979Z"
+const GENERATED_AT := "2026-07-24T20:22:05.114Z"
 const PROJECT_ID := "lwDBJkZEABItlP3UGvDll"
 const PROJECT_NAME := "Pachingod"
 const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 9}
@@ -16,17 +16,17 @@ const LOCALIZATION := {
 	"locales": 1
 }
 const FILES := [
-	{"bytes": 2501, "hash": "08e305c0", "path": "res://game_data/assets.gd"},
-	{"bytes": 13162, "hash": "78f530c3", "path": "res://game_data/localization.gd"},
+	{"bytes": 2497, "hash": "e2b95b02", "path": "res://game_data/assets.gd"},
+	{"bytes": 13177, "hash": "3cedc5b8", "path": "res://game_data/localization.gd"},
 	{"bytes": 3833, "hash": "75db394f", "path": "res://game_data/translations.gd"},
 	{"bytes": 1412, "hash": "cfe46f69", "path": "res://game_data/localization/translations.csv"},
-	{"bytes": 3319, "hash": "e568a5fa", "path": "res://game_data/input.gd"},
-	{"bytes": 363, "hash": "41c8113d", "path": "res://game_data/tables/peg.gd"},
-	{"bytes": 968, "hash": "84148b97", "path": "res://game_data/tables/unit.gd"},
-	{"bytes": 327, "hash": "a8fd55ca", "path": "res://game_data/tables/ability.gd"},
-	{"bytes": 427, "hash": "34a7175b", "path": "res://game_data/tables/recipe.gd"},
-	{"bytes": 578, "hash": "35d1679d", "path": "res://game_data/tables/recipe_step.gd"},
-	{"bytes": 506, "hash": "f933b215", "path": "res://game_data/tables/input_bindings.gd"}
+	{"bytes": 3310, "hash": "00a525a2", "path": "res://game_data/input.gd"},
+	{"bytes": 316, "hash": "d3c5ccae", "path": "res://game_data/tables/peg.gd"},
+	{"bytes": 925, "hash": "e589c62e", "path": "res://game_data/tables/unit.gd"},
+	{"bytes": 304, "hash": "18c69542", "path": "res://game_data/tables/ability.gd"},
+	{"bytes": 329, "hash": "ac021d69", "path": "res://game_data/tables/recipe.gd"},
+	{"bytes": 540, "hash": "7113fff9", "path": "res://game_data/tables/recipe_step.gd"},
+	{"bytes": 510, "hash": "0b8b76a7", "path": "res://game_data/tables/input_bindings.gd"}
 ]
 const TABLES := {
 	"NwZ2PycvCtTXXvZUQWyXB":

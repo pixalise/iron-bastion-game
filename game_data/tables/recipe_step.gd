@@ -2,18 +2,12 @@
 class_name ChiselRecipestep
 extends RefCounted
 
-enum Id { INVALID = 0, KNIGHT_STEP = 1, ARCHER_STEP = 2, PIKEMAN_STEP = 3 }
+enum Id { INVALID = -1, KNIGHT_STEP = 0, ARCHER_STEP = 1, PIKEMAN_STEP = 2 }
 
 const TABLE_ID := "7evuGaD29l7vxCpjEVxQf"
 const TABLE_NAME := "RecipeStep"
 const TABLE_KIND := "user"
-const SLUGS := ["", "KNIGHT_STEP", "ARCHER_STEP", "PIKEMAN_STEP"]
-const UNIT := [
-	ChiselUnit.Id.INVALID, ChiselUnit.Id.KNIGHT, ChiselUnit.Id.ARCHER, ChiselUnit.Id.PIKEMAN
-]
-const ABILITY := [
-	ChiselAbility.Id.INVALID,
-	ChiselAbility.Id.INVALID,
-	ChiselAbility.Id.INVALID,
-	ChiselAbility.Id.INVALID
-]
+const COUNT := 3
+const SLUGS := ["KNIGHT_STEP", "ARCHER_STEP", "PIKEMAN_STEP"]
+const UNIT := [ChiselUnit.Id.KNIGHT, ChiselUnit.Id.ARCHER, ChiselUnit.Id.PIKEMAN]
+const ABILITY := [ChiselAbility.Id.INVALID, ChiselAbility.Id.INVALID, ChiselAbility.Id.INVALID]

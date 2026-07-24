@@ -2,7 +2,7 @@
 class_name ChiselInput
 extends RefCounted
 
-const ACTION_NAMES := [&"", &"escape", &"action", &"paddle_left", &"paddle_right"]
+const ACTION_NAMES := [&"escape", &"action", &"paddle_left", &"paddle_right"]
 const KEY_BINDINGS := {
 	"KEY_A": KEY_A,
 	"KEY_B": KEY_B,
@@ -100,7 +100,7 @@ static func is_action_just_released(action_id: int) -> bool:
 
 func sync_input_map() -> void:
 	InputMap.load_from_project_settings()
-	for index in range(1, ACTION_NAMES.size()):
+	for index in range(ACTION_NAMES.size()):
 		var input_action_name := action_name(index)
 		if InputMap.has_action(input_action_name):
 			InputMap.erase_action(input_action_name)

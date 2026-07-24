@@ -2,12 +2,13 @@
 class_name ChiselAbility
 extends RefCounted
 
-enum Id { INVALID = 0 }
+enum Id { INVALID = -1 }
 
 const TABLE_ID := "45RH7A6GsG12q-v78dmmN"
 const TABLE_NAME := "Ability"
 const TABLE_KIND := "user"
-const SLUGS := [""]
-const NAME := [-1]
-const DESCRIPTION := [-1]
-const PORTRAIT := [ChiselAssets.Id.INVALID]
+const COUNT := 0
+const SLUGS := []
+const NAME := []
+const DESCRIPTION := []
+const PORTRAIT := []
