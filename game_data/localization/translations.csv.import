@@ -6,10 +6,7 @@ uid="uid://dk8cq2m0jnuom"
 
 [deps]
 
-files=["res://game_data/localization/translations.en.translation"]
-
 source_file="res://game_data/localization/translations.csv"
-dest_files=["res://game_data/localization/translations.en.translation"]
 
 [params]
 

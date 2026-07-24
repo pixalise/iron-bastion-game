@@ -43,7 +43,9 @@ Spend Gold to improve the machine:
 
 - Buy new modules
 - Buy new balls
+- Buy Kingdom buildings for bottom buckets
 - Upgrade modules
+- Upgrade buildings
 - Modify the board
 - Reroll the shop
 - Buy consumable balls
@@ -58,6 +60,7 @@ Modify the board:
 - Upgrade a module
 - Replace the ball loadout
 - Unlock a socket
+- Place or upgrade a building in a bottom bucket
 
 ### 4. Launch
 
@@ -70,6 +73,7 @@ During a launch:
 - Sequences are recorded
 - Cards are generated
 - Resources are earned
+- Bottom buckets resolve building bonuses
 - The machine gains XP
 
 The machine should become increasingly chaotic as the run progresses.
@@ -112,6 +116,7 @@ Victory can grant:
 - Gold
 - A new module
 - A new ball
+- A new building
 - An upgrade
 - A recipe
 - A relic
@@ -221,6 +226,45 @@ Earth -> Engineer -> Siege -> Fortified Bombardment
 Longer sequences unlock more specialized cards, but longer is not always
 stronger. Different encounters require different recipes.
 
+## Bottom Buckets
+
+The bottom of the board starts as a set of simple empty buckets. Early in a run,
+balls falling into buckets only resolve the cards and resources already created
+by the machine.
+
+As the player earns Gold, buckets become valuable real estate. The Kingdom sells
+buildings that can be installed in bottom buckets, turning the resolution layer
+into another engineering decision instead of wasted board space.
+
+Buildings do not replace the machine language. They modify the outcome after a
+ball finishes its path.
+
+Examples:
+
+- Barracks: add Militia cards when a ball lands here
+- Archery Range: copy the next Archer card generated this launch
+- Treasury: convert bucket hits into extra Gold
+- Workshop: add machine XP or upgrade tokens
+- Chapel: improve Holy or Priest recipes
+- Market: improve shop rerolls or future building offers
+
+Players can own multiple copies of the same building up to a per-building copy
+cap. Copies let a player commit hard to a plan, while caps prevent one building
+from consuming the whole bottom row forever.
+
+Buildings can be upgraded. Upgrades should change behavior or scaling, not only
+increase numbers. Example upgrades include:
+
+- Wider bucket
+- Double trigger on rare sequences
+- Better reward when the landing ball has a matching element
+- Add a specific symbol to the next sequence
+- Store one unused trigger for the next launch
+
+This makes the bottom of the board part of the machine. Pegs and modules define
+the sentence. Buckets and buildings decide how valuable the sentence becomes
+when the ball finally lands.
+
 ## Combat
 
 Combat takes place across three independent lanes:
@@ -257,6 +301,9 @@ Gold comes from combat and machine economy. The shop can sell:
 - Balls
 - Modules
 - Module upgrades
+- Buildings
+- Building upgrades
+- Bucket unlocks
 - Sockets
 - Rerolls
 - Temporary buffs
@@ -278,6 +325,8 @@ Runs unlock possibilities rather than simple stat increases:
 - New balls
 - New recipes
 - New elements
+- New buildings
+- New building upgrades
 - New relics
 - New board archetypes
 
@@ -392,19 +441,22 @@ The upcoming encounter contains:
 - Goblin Swarm
 - Demon Hunter Elite
 
-The player buys a Fire Ball, a Split Ball, and a new Archer module. Thirty balls
-flood the machine during the launch. Several split and begin a chain reaction.
+The player buys a Fire Ball, a Split Ball, a new Archer module, and an Archery
+Range building for one bottom bucket. Thirty balls flood the machine during the
+launch. Several split and begin a chain reaction. Two balls land in the upgraded
+Archery Range, copying the best Archer results.
 
 The machine generates:
 
 - Fire Archer
+- Fire Archer copy
 - Hell Knight
 - Burning Volley
 - Infernal Bombardment
 
 The machine levels up and the player chooses Chain Reactions. Combat begins, the
-generated deck defeats the wave, and the player earns Gold and new modules. The
-machine becomes more powerful for the next encounter.
+generated deck defeats the wave, and the player earns Gold, new modules, and a
+building upgrade. The machine becomes more powerful for the next encounter.
 
 ## Prototype Scope
 
@@ -419,6 +471,8 @@ Prototype content:
 - Three elements
 - Three physics modules
 - Three ball types
+- Four bottom buckets
+- Six Kingdom buildings
 - Approximately twelve recipes
 - Twenty cards
 - Three combat lanes
@@ -433,6 +487,10 @@ Everything else comes after the core loop is validated.
 - The machine, not direct card drafting, is the deckbuilder.
 - Scouting must provide enough information to engineer deliberately.
 - Physics chaos must still produce understandable cause and effect.
+- Bottom buckets should become meaningful strategic real estate, not passive
+  score bins.
+- Buildings should amplify machine results, not replace the machine as the
+  source of cards.
 - Combat supports the machine-building decisions instead of competing with
   them for complexity.
 - New content should create routing, sequencing, or tactical possibilities
