@@ -5,25 +5,16 @@ extends RefCounted
 enum Id {
 	FOREST_SOIL_1 = 0,
 	FOREST_GRASS_1 = 1,
-	FOREST_1_2_K = 2,
-	PHYSICAL_DAMAGE = 3,
-	HUNTING_ARROWS = 4,
-	ITEM_TEDDY_BEAR = 5,
-	ITEM_MATCHBOX = 6
+	FOREST_1_2_K = 2
 }
 
 const IDS := [
 	"FOREST_SOIL_1",
 	"FOREST_GRASS_1",
-	"FOREST_1_2_K",
-	"PHYSICAL_DAMAGE",
-	"HUNTING_ARROWS",
-	"ITEM_TEDDY_BEAR",
-	"ITEM_MATCHBOX"
+	"FOREST_1_2_K"
 ]
 const BY_ID := {
-	"FOREST_SOIL_1":
-	{
+	"FOREST_SOIL_1": {
 		"category": "terrain_texture",
 		"extension": "gppt",
 		"height": 1024,
@@ -31,11 +22,9 @@ const BY_ID := {
 		"path": "res://game_data/assets/terrain_texture/forest_soil_1",
 		"width": 1024,
 		"albedo_height": "res://game_data/assets/terrain_texture/forest_soil_1/albedo_height.png",
-		"normal_roughness":
-		"res://game_data/assets/terrain_texture/forest_soil_1/normal_roughness.png"
+		"normal_roughness": "res://game_data/assets/terrain_texture/forest_soil_1/normal_roughness.png"
 	},
-	"FOREST_GRASS_1":
-	{
+	"FOREST_GRASS_1": {
 		"category": "terrain_texture",
 		"extension": "gppt",
 		"height": 1024,
@@ -43,52 +32,14 @@ const BY_ID := {
 		"path": "res://game_data/assets/terrain_texture/forest_grass_1",
 		"width": 1024,
 		"albedo_height": "res://game_data/assets/terrain_texture/forest_grass_1/albedo_height.png",
-		"normal_roughness":
-		"res://game_data/assets/terrain_texture/forest_grass_1/normal_roughness.png"
+		"normal_roughness": "res://game_data/assets/terrain_texture/forest_grass_1/normal_roughness.png"
 	},
-	"FOREST_1_2_K":
-	{
+	"FOREST_1_2_K": {
 		"category": "hdri",
 		"extension": "exr",
 		"height": 0,
 		"name": "forest_1_2_k",
 		"path": "res://game_data/assets/hdri/forest_1_2_k.exr",
 		"width": 0
-	},
-	"PHYSICAL_DAMAGE":
-	{
-		"category": "ui_icon",
-		"extension": "png",
-		"height": 2048,
-		"name": "physical_damage",
-		"path": "res://game_data/assets/ui_icon/physical_damage.png",
-		"width": 2048
-	},
-	"HUNTING_ARROWS":
-	{
-		"category": "ui_icon",
-		"extension": "png",
-		"height": 1254,
-		"name": "hunting_arrows",
-		"path": "res://game_data/assets/ui_icon/hunting_arrows.png",
-		"width": 1254
-	},
-	"ITEM_TEDDY_BEAR":
-	{
-		"category": "ui_icon",
-		"extension": "png",
-		"height": 1024,
-		"name": "item_teddy_bear",
-		"path": "res://game_data/assets/ui_icon/item_teddy_bear.png",
-		"width": 1024
-	},
-	"ITEM_MATCHBOX":
-	{
-		"category": "ui_icon",
-		"extension": "png",
-		"height": 1024,
-		"name": "item_matchbox",
-		"path": "res://game_data/assets/ui_icon/item_matchbox.png",
-		"width": 1024
 	}
 }

@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "input_bindings",
-    "lastChangeAt": "2026-07-20T13:34:06.659Z",
-    "version": 21,
+    "lastChangeAt": "2026-07-24T10:08:55.405Z",
+    "version": 30,
     "name": "Input Bindings",
     "description": "Input bindings exported to Godot InputMap setup.",
     "columns": [
@@ -99,125 +99,13 @@
     ],
     "rows": [
       {
-        "id": "XZSQCYgpTG0RvA0CN7FDQ",
-        "slug": "CAMERA_LEFT",
-        "values": [
-          {
-            "columnId": "input_sort_order00000",
-            "type": "integer",
-            "value": 0
-          },
-          {
-            "columnId": "input_bindings0000000",
-            "type": "enumArray",
-            "value": [
-              "KEY_A",
-              "KEY_LEFT"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "td0XUstN_mdYlZYf8-XXD",
-        "slug": "CAMERA_RIGHT",
-        "values": [
-          {
-            "columnId": "input_sort_order00000",
-            "type": "integer",
-            "value": 1
-          },
-          {
-            "columnId": "input_bindings0000000",
-            "type": "enumArray",
-            "value": [
-              "KEY_D",
-              "KEY_RIGHT"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "uDAscR2g6DMBjzb5X0fr7",
-        "slug": "CAMERA_FORWARD",
-        "values": [
-          {
-            "columnId": "input_sort_order00000",
-            "type": "integer",
-            "value": 2
-          },
-          {
-            "columnId": "input_bindings0000000",
-            "type": "enumArray",
-            "value": [
-              "KEY_W",
-              "KEY_UP"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "obCFMwn-sOHY1a7IZy9sb",
-        "slug": "CAMERA_BACKWARD",
-        "values": [
-          {
-            "columnId": "input_sort_order00000",
-            "type": "integer",
-            "value": 3
-          },
-          {
-            "columnId": "input_bindings0000000",
-            "type": "enumArray",
-            "value": [
-              "KEY_S",
-              "KEY_DOWN"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "6sownP-UPKU-D6bDGSKO1",
-        "slug": "CAMERA_ROTATE_LEFT",
-        "values": [
-          {
-            "columnId": "input_sort_order00000",
-            "type": "integer",
-            "value": 4
-          },
-          {
-            "columnId": "input_bindings0000000",
-            "type": "enumArray",
-            "value": [
-              "KEY_Q"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1te-XLvsCZeBgg4ckleBX",
-        "slug": "CAMERA_ROTATE_RIGHT",
-        "values": [
-          {
-            "columnId": "input_sort_order00000",
-            "type": "integer",
-            "value": 5
-          },
-          {
-            "columnId": "input_bindings0000000",
-            "type": "enumArray",
-            "value": [
-              "KEY_E"
-            ]
-          }
-        ]
-      },
-      {
         "id": "VM0GI714-nL3HIyFDP5ww",
         "slug": "CAMERA_ZOOM_IN",
         "values": [
           {
             "columnId": "input_sort_order00000",
             "type": "integer",
-            "value": 6
+            "value": 0
           },
           {
             "columnId": "input_bindings0000000",
@@ -235,7 +123,7 @@
           {
             "columnId": "input_sort_order00000",
             "type": "integer",
-            "value": 7
+            "value": 1
           },
           {
             "columnId": "input_bindings0000000",
@@ -253,7 +141,7 @@
           {
             "columnId": "input_sort_order00000",
             "type": "integer",
-            "value": 8
+            "value": 2
           },
           {
             "columnId": "input_bindings0000000",

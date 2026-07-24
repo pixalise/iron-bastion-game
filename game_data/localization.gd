@@ -2,19 +2,13 @@
 class_name ChiselLocalization
 extends RefCounted
 
-
 class LocalizedText:
 	var plain_text: String
 	var bbcode_text: String
 	var spans: Array[Dictionary]
 	var _tooltips: Dictionary
 
-	func _init(
-		next_plain_text: String = "",
-		next_bbcode_text: String = "",
-		next_spans: Array[Dictionary] = [],
-		next_tooltips: Dictionary = {}
-	) -> void:
+	func _init(next_plain_text: String = "", next_bbcode_text: String = "", next_spans: Array[Dictionary] = [], next_tooltips: Dictionary = {}) -> void:
 		plain_text = next_plain_text
 		bbcode_text = next_bbcode_text
 		spans = next_spans
@@ -26,590 +20,39 @@ class LocalizedText:
 	func tooltip_content_for(tooltip_slug: StringName) -> TooltipContent:
 		return _tooltips.get(String(tooltip_slug), TooltipContent.new(tooltip_slug))
 
-
 class TooltipContent:
 	var slug: StringName
 	var icon_path: String
 	var title: LocalizedText
 	var description: LocalizedText
 
-	func _init(
-		next_slug: StringName = &"",
-		next_icon_path: String = "",
-		next_title: LocalizedText = null,
-		next_description: LocalizedText = null
-	) -> void:
+	func _init(next_slug: StringName = &"", next_icon_path: String = "", next_title: LocalizedText = null, next_description: LocalizedText = null) -> void:
 		slug = next_slug
 		icon_path = next_icon_path
 		title = next_title if next_title != null else LocalizedText.new()
 		description = next_description if next_description != null else LocalizedText.new()
 
-
-enum Id {
-	UNIT_RIFLE_MAN_NAME = 0,
-	UNIT_RIFLE_MAN_DESCRIPTION = 1,
-	TOOLTIP_PHYSICAL_DAMAGE_TYPE_TITLE = 2,
-	TOOLTIP_PHYSICAL_DAMAGE_TYPE_DESCRIPTION = 3,
-	ITEM_OLD_REVOLVER_NAME = 4,
-	ITEM_OLD_REVOLVER_DESCRIPTION = 5,
-	ITEM_OLD_REVOLVER_STORY = 6,
-	ITEM_WAX_STRING_NAME = 7,
-	ITEM_WAX_STRING_DESCRIPTION = 8,
-	ITEM_HUNTING_ARROWS_NAME = 9,
-	ITEM_HUNTING_ARROWS_DESCRIPTION = 10,
-	ITEM_WAX_STRING_STORY = 11,
-	ITEM_HUNTING_ARROWS_STORY = 12,
-	ITEM_PIERCING_ARROWS_DESCRIPTION = 13,
-	ITEM_PIERCING_ARROWS_NAME = 14,
-	ITEM_PIERCING_ARROWS_STORY = 15,
-	ITEM_FIRE_ARROWS_NAME = 16,
-	ITEM_FIRE_ARROWS_DESCRIPTION = 17,
-	ITEM_FIRE_ARROWS_STORY = 18,
-	ITEM_REINFORCED_BOW_NAME = 19,
-	ITEM_REINFORCED_BOW_DESCRIPTION = 20,
-	ITEM_REINFORCED_BOW_STORY = 21,
-	ITEM_BOW_OLD_FRIEND_NAME = 22,
-	ITEM_BOW_OLD_FRIEND_DESCRIPTION = 23,
-	ITEM_BOW_OLD_FRIEND_STORY = 24,
-	ITEM_UNOPENED_LIQUOR_NAME = 25,
-	ITEM_UNOPENED_LIQUOR_DESCRIPTION = 26,
-	ITEM_UNOPENED_LIQUOR_STORY = 27,
-	ITEM_TEDDY_BEAR_NAME = 28,
-	ITEM_TEDDY_BEAR_DESCRIPTION = 29,
-	ITEM_TEDDY_BEAR_STORY = 30,
-	ITEM_MAKESHIFT_ARMOR_NAME = 31,
-	ITEM_MAKESHIFT_ARMOR_DESCRIPTION = 32,
-	ITEM_MAKESHIFT_ARMOR_STORY = 33,
-	ITEM_STEEL_ARMOR_NAME = 34,
-	ITEM_STEEL_ARMOR_DESCRIPTION = 35,
-	ITEM_WOODEN_SHIELD_NAME = 36,
-	ITEM_WOODEN_SHIELD_DESCRIPTION = 37,
-	ITEM_STEEL_ARMOR_STORY = 38,
-	ITEM_WOODEN_SHIELD_STORY = 39,
-	ITEM_STEEL_SWORD_NAME = 40,
-	ITEM_STEEL_SWORD_DESCRIPTION = 41,
-	ITEM_STEEL_SWORD_STORY = 42,
-	ITEM_WHETSTONE_NAME = 43,
-	ITEM_WHETSTONE_DESCRIPTION = 44,
-	ITEM_WHETSTONE_STORY = 45,
-	ITEM_LEATHER_GRIP_NAME = 46,
-	ITEM_LEATHER_GRIP_DESCRIPTION = 47,
-	ITEM_LEATHER_GRIP_STORY = 48,
-	ITEM_BATTLE_TONIC_NAME = 49,
-	ITEM_BATTLE_TONIC_DESCRIPTION = 50,
-	ITEM_BATTLE_TONIC_STORY = 51,
-	ITEM_BERSERK_MUSHROOMS_NAME = 52,
-	ITEM_BERSERK_MUSHROOMS_DESCRIPTION = 53,
-	ITEM_BERSERK_MUSHROOMS_STORY = 54,
-	ITEM_POCKET_WATCH_NAME = 55,
-	ITEM_POCKET_WATCH_DESCRIPTION = 56,
-	ITEM_POCKET_WATCH_STORY = 57,
-	ITEM_OLD_MEDAL_NAME = 58,
-	ITEM_OLD_MEDAL_DESCRIPTION = 59,
-	ITEM_OLD_MEDAL_STORY = 60,
-	ITEM_POSTCARD_NAME = 61,
-	ITEM_POSTCARD_DESCRIPTION = 62,
-	ITEM_POSTCARD_STORY = 63,
-	ITEM_DECK_OF_CARDS_NAME = 64,
-	ITEM_DECK_OF_CARDS_DESCRIPTION = 65,
-	ITEM_DECK_OF_CARDS_STORY = 66,
-	ITEM_GUITAR_NAME = 67,
-	ITEM_GUITAR_DESCRIPTION = 68,
-	ITEM_GUITAR_STORY = 69,
-	ITEM_CIGARETTES_NAME = 70,
-	ITEM_CIGARETTES_DESCRIPTION = 71,
-	ITEM_CIGARETTES_STORY = 72,
-	ITEM_BROKEN_MATCHES_NAME = 73,
-	ITEM_BROKEN_MATCHES_DESCRIPTION = 74,
-	ITEM_BROKEN_MATCHES_STORY = 75,
-	ITEM_MATCHBOOK_NAME = 76,
-	ITEM_MATCHBOOK_DESCRIPTION = 77,
-	ITEM_MATCHBOOK_STORY = 78,
-	ITEM_USED_MATCHBOX_NAME = 79,
-	ITEM_USED_MATCHBOX_DESCRIPTION = 80,
-	ITEM_USED_MATCHBOX_STORY = 81
-}
+enum Id {}
 
 const DEFAULT_LOCALE := "en"
 const LOCALES := ["en"]
-const KEYS := [
-	"UNIT.RIFLE_MAN.NAME",
-	"UNIT.RIFLE_MAN.DESCRIPTION",
-	"TOOLTIP.PHYSICAL_DAMAGE_TYPE.TITLE",
-	"TOOLTIP.PHYSICAL_DAMAGE_TYPE.DESCRIPTION",
-	"ITEM.OLD_REVOLVER.NAME",
-	"ITEM.OLD_REVOLVER.DESCRIPTION",
-	"ITEM.OLD_REVOLVER.STORY",
-	"ITEM.WAX_STRING.NAME",
-	"ITEM.WAX_STRING.DESCRIPTION",
-	"ITEM.HUNTING_ARROWS.NAME",
-	"ITEM.HUNTING_ARROWS.DESCRIPTION",
-	"ITEM.WAX_STRING.STORY",
-	"ITEM.HUNTING_ARROWS.STORY",
-	"ITEM.PIERCING_ARROWS.DESCRIPTION",
-	"ITEM.PIERCING_ARROWS.NAME",
-	"ITEM.PIERCING_ARROWS.STORY",
-	"ITEM.FIRE_ARROWS.NAME",
-	"ITEM.FIRE_ARROWS.DESCRIPTION",
-	"ITEM.FIRE_ARROWS.STORY",
-	"ITEM.REINFORCED_BOW.NAME",
-	"ITEM.REINFORCED_BOW.DESCRIPTION",
-	"ITEM.REINFORCED_BOW.STORY",
-	"ITEM.BOW_OLD_FRIEND.NAME",
-	"ITEM.BOW_OLD_FRIEND.DESCRIPTION",
-	"ITEM.BOW_OLD_FRIEND.STORY",
-	"ITEM.UNOPENED_LIQUOR.NAME",
-	"ITEM.UNOPENED_LIQUOR.DESCRIPTION",
-	"ITEM.UNOPENED_LIQUOR.STORY",
-	"ITEM.TEDDY_BEAR.NAME",
-	"ITEM.TEDDY_BEAR.DESCRIPTION",
-	"ITEM.TEDDY_BEAR.STORY",
-	"ITEM.MAKESHIFT_ARMOR.NAME",
-	"ITEM.MAKESHIFT_ARMOR.DESCRIPTION",
-	"ITEM.MAKESHIFT_ARMOR.STORY",
-	"ITEM.STEEL_ARMOR.NAME",
-	"ITEM.STEEL_ARMOR.DESCRIPTION",
-	"ITEM.WOODEN_SHIELD.NAME",
-	"ITEM.WOODEN_SHIELD.DESCRIPTION",
-	"ITEM.STEEL_ARMOR.STORY",
-	"ITEM.WOODEN_SHIELD.STORY",
-	"ITEM.STEEL_SWORD.NAME",
-	"ITEM.STEEL_SWORD.DESCRIPTION",
-	"ITEM.STEEL_SWORD.STORY",
-	"ITEM.WHETSTONE.NAME",
-	"ITEM.WHETSTONE.DESCRIPTION",
-	"ITEM.WHETSTONE.STORY",
-	"ITEM.LEATHER_GRIP.NAME",
-	"ITEM.LEATHER_GRIP.DESCRIPTION",
-	"ITEM.LEATHER_GRIP.STORY",
-	"ITEM.BATTLE_TONIC.NAME",
-	"ITEM.BATTLE_TONIC.DESCRIPTION",
-	"ITEM.BATTLE_TONIC.STORY",
-	"ITEM.BERSERK_MUSHROOMS.NAME",
-	"ITEM.BERSERK_MUSHROOMS.DESCRIPTION",
-	"ITEM.BERSERK_MUSHROOMS.STORY",
-	"ITEM.POCKET_WATCH.NAME",
-	"ITEM.POCKET_WATCH.DESCRIPTION",
-	"ITEM.POCKET_WATCH.STORY",
-	"ITEM.OLD_MEDAL.NAME",
-	"ITEM.OLD_MEDAL.DESCRIPTION",
-	"ITEM.OLD_MEDAL.STORY",
-	"ITEM.POSTCARD.NAME",
-	"ITEM.POSTCARD.DESCRIPTION",
-	"ITEM.POSTCARD.STORY",
-	"ITEM.DECK_OF_CARDS.NAME",
-	"ITEM.DECK_OF_CARDS.DESCRIPTION",
-	"ITEM.DECK_OF_CARDS.STORY",
-	"ITEM.GUITAR.NAME",
-	"ITEM.GUITAR.DESCRIPTION",
-	"ITEM.GUITAR.STORY",
-	"ITEM.CIGARETTES.NAME",
-	"ITEM.CIGARETTES.DESCRIPTION",
-	"ITEM.CIGARETTES.STORY",
-	"ITEM.BROKEN_MATCHES.NAME",
-	"ITEM.BROKEN_MATCHES.DESCRIPTION",
-	"ITEM.BROKEN_MATCHES.STORY",
-	"ITEM.MATCHBOOK.NAME",
-	"ITEM.MATCHBOOK.DESCRIPTION",
-	"ITEM.MATCHBOOK.STORY",
-	"ITEM.USED_MATCHBOX.NAME",
-	"ITEM.USED_MATCHBOX.DESCRIPTION",
-	"ITEM.USED_MATCHBOX.STORY"
-]
+const KEYS := []
 const VALUES := {
-	"en":
-	[
-		"Rifle Man",
-		"The unit does <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE_TYPE> <icon:PHYSICAL_DAMAGE/> {float:physical_damage} </tooltip></style><br/> points of<br/>damage per shot.",
-		"Physical damage",
-		"<icon:PHYSICAL_DAMAGE/> <style:PHYSICAL_DAMAGE> Damage coming</style><br/> from ballistic, blunt force and<br/>other variant of physical damage",
-		"Old Revolver",
-		"<style:QUOTE>A weapon from the olden era</style><br/>And old revolver with a leather handle.",
-		"",
-		"Waxed string ",
-		"<style:QUOTE>Old ways. New prey</style><br/>A simple hemp bowstring treated with beeswax.",
-		"Hunting Arrows",
-		"<style:QUOTE>Old ways. New prey</style><br/>Arrows fitted with broad hunting tips. - pircing Made for beasts, proven on worse",
-		"",
-		"",
-		"<style:QUOTE>Everything has a weakness.</style><br/>Narrow steel-tipped arrows built to punch through armor.",
-		"Piercing Arrows",
-		"",
-		"Fire Arrows",
-		"<style:QUOTE>The dead return. Ash does not.</style><br/>Arrows wrapped with alcohol-soaked cloth.",
-		"",
-		"Reinforced Bow",
-		"<style:QUOTE>It only needs to outlast us.</style><br/>Reinforced with mixed materials to hold greater tension without breaking.",
-		"",
-		"Old Friend",
-		"<style:QUOTE>Come on, old friend. One more hunt.</style><br/>A battle-worn bow that endures impossible tension.",
-		"When ammunition began to disappear, survivors turned to weapons from older eras. One of them was Old Friend, a bow never meant to survive more than a few months of constant use. It outlived that purpose.\nIts limbs are patched, its frame is cracked, and brass plates hold together places that should have failed years ago. Decorative horns were added as marks of the hunts it survived. Its string has been replaced countless times, each replacement recorded by a small carving near the grip.\nThere is only one Old Friend in the squad, but many still remember its name. Those who fight beside it do so with renewed vigor, driven by the legend carried into battle. \nBring it home and place it in the hands of someone who once knew it, and an old legend may choose to fight again.",
-		"Unopened Liquor",
-		"<style:QUOTE>My father poured this on my first winter home.</style><br/>Sealed bottles of strong liquor.",
-		"",
-		"<icon:ITEM_TEDDY_BEAR/> Teddy Bear",
-		"<style:QUOTE>I wish I had one as a child.</style><br/>A faded stuffed bear, worn soft from years of being held.",
-		"Found beneath the remains of a child’s bed, the bear was strangely untouched by the collapse around it. Its fur is faded, one eye has been sewn back on, and its little vest carries the dust of a home that no longer exists.\nSome survivors keep it for the children they lost. Others hold it for the childhood they never had.",
-		"Makeshift Armor",
-		"<style:QUOTE>It does not need to look good. It only needs to stop the bite</style><br/>Scrap metal and thick fabric tied together into crude protection.",
-		"Built from road signs, leather scraps, and whatever else could be found. It is uncomfortable and heavy, but survivors learned quickly that poor armor was still better than exposed flesh.",
-		"Steel Armor",
-		"<style:QUOTE>Make them work for every wound.</style><br/>Fitted steel plates offering reliable protection without excessive weight.",
-		"Wooden Shield",
-		"\nA thick wooden shield built to absorb claws, bites, and blunt impacts.",
-		"The first sets were recovered from museums, old collections, and forgotten storage rooms. Survivors studied how the plates joined, then rebuilt the design with scavenged tools and steel.\nWhat they created was not antique armor, but a harsher version made for the world that replaced it.",
-		"Made from layered planks, leather straps, and whatever nails could be spared, the wooden shield became a common sight among frontline fighters. It is crude, heavy, and quick to repair, making it ideal for settlements without access to proper metalworking.",
-		"Steel Sword",
-		"<style:QUOTE>Keep swinging until it stops moving.</style><br/>A dependable steel blade made for repeated close combat.",
-		"Forged from reclaimed steel after ammunition became scarce. Its thick blade is simple, durable, and easy to maintain.",
-		"Whetstone",
-		"\nA rough stone used to restore damaged blades.",
-		"",
-		"Leather Grip",
-		"<style:QUOTE>Better than losing it mid-swing.</style><br/>A firm leather wrap fitted around a melee weapon’s handle.",
-		"",
-		"Battle Tonic",
-		"<style:QUOTE>Tastes awful.</style><br/>A harsh stimulant brewed to keep fighters moving.",
-		"Battle Tonic is a rough replica of an old military stimulant whose formula was lost after the collapse. What survivors make now is the closest they could manage: strong alcohol, bitter herbs, scavenged stimulants, and carefully prepared Berserk Mushrooms.\n\nIt is unstable, unpleasant, and nowhere near the original—but it works.",
-		"Berserk Mushrooms",
-		"<style:QUOTE>I can hear my blood.</style><br/>Wild mushrooms that dull fear and awaken violence.",
-		"These mushrooms are grown in guarded fields high in the mountains, where the cold soil and thin air give them their strange potency. Eaten raw, they cause a violent rush of strength, speed, and aggression, followed by exhaustion and poor judgment.\n\nThey later became the key ingredient in Battle Tonic, where their effects could be controlled—at least slightly.",
-		"Pocket Watch",
-		"<style:QUOTE>It stopped the day the appoclyps started</style><br/>A scratched pocket watch that still keeps time.",
-		"The watch was carried for years before the collapse, then passed between survivors who kept it wound even when dates stopped meaning anything.\n\nA faded name is engraved inside the lid. No one in the squad recognizes it, but the watch is still carefully set every morning, as though its owner might return to ask the time.",
-		"Old Medal",
-		"<style:QUOTE>They said you were brave, i just wanted you home.</style><br/>A tarnished medal awarded for a forgotten act of courage.",
-		"The medal has faded and the metal has lost its shine, but the name on the back remains readable. It once belonged to someone praised for standing their ground when others could not.\nThe medal was found inside a small wooden box beside an unopened letter. Looks like the medals owner never came home.",
-		"Postcard",
-		"<style:QUOTE>Wish you were here</style><br/>A faded postcard from a place that may no longer exist.",
-		"The front shows a bright seaside town beneath a clear summer sky. On the back is a short message promising to visit once work became less busy.\nThe postcard was never sent. Its writer kept it folded inside a coat pocket until the paper softened at the edges. No one knows whether they ever saw the sea again.",
-		"Deck of Cards",
-		"<style:QUOTE>We always said we would finish the game tomorrow.</style><br/>A worn deck missing several cards.",
-		"The cards are stained, creased, and marked by years of use. Several faces carry names written in faded ink, recording old victories, debts, and jokes. Some look new some look old.\nThe final hand is still tucked beneath the string holding the deck together. No one has moved the cards since the players failed to return.",
-		"Guitar",
-		"<style:QUOTE>For a moment, everything feels normal again.</style><br/>A worn acoustic guitar with a warm, uneven sound.",
-		"The wood is scratched, two tuning pegs have been replaced, and the case has been patched more times than anyone can count.\nIt once belonged to someone who played for the others after long shifts and bad news. The songs were simple, but for a few minutes they made the world feel normal again.",
-		"Cigarettes\n",
-		"<style:QUOTE>You said you would quit when things got better.</style><br/>A dry pack of cigarettes saved for difficult nights.",
-		"The pack was found inside an old jacket. A name and a date are written beneath the lid, along with a promise to quit when better days returned.\nNo one knows whether the owner ever managed to stop. The final cigarette remains untouched, saved for a better day that never came.",
-		"Pile of Broken Matches",
-		"<style:QUOTE>One of them has to work.</style><br/>A loose pile of damaged matches, with only a few still usable.",
-		"Gathered from tables, drawers and pockets, most are snapped, damp, or missing their heads. We still keep them because even one working match can mean warmth, light, or a fire before nightfall.",
-		"Matchbook",
-		"<style:QUOTE>A chance to make the dark smaller.</style><br/>A small paper matchbook with only a handful of dry matches left.",
-		"Used to be, you could get a matchbook almost anywhere, even little roadside stops. Buy something, and they would hand you one with the change.\nPeople collected them while traveling. Some had famous landmarks on the cover, others showed towns and places no one had ever heard of. Funny thing is, back then they were everywhere. Now even one faded matchbook can feel like a piece of the whole world we lost.",
-		"Used Matchbox",
-		"<style:QUOTE>Enough for weeks</style><br/>A worn matchbox with only a few dry matches left.",
-		""
-	]
+	"en": []
 }
-const ICON_SLUGS := [
-	[],
-	["PHYSICAL_DAMAGE"],
-	[],
-	["PHYSICAL_DAMAGE"],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	["ITEM_TEDDY_BEAR"],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[]
-]
-const ICONS := {
-	"PHYSICAL_DAMAGE":
-	{
-		"asset_id": "PHYSICAL_DAMAGE",
-		"path": "res://game_data/assets/ui_icon/physical_damage.png",
-		"width": 2048,
-		"height": 2048
-	},
-	"HUNTING_ARROWS":
-	{
-		"asset_id": "HUNTING_ARROWS",
-		"path": "res://game_data/assets/ui_icon/hunting_arrows.png",
-		"width": 1254,
-		"height": 1254
-	},
-	"ITEM_TEDDY_BEAR":
-	{
-		"asset_id": "ITEM_TEDDY_BEAR",
-		"path": "res://game_data/assets/ui_icon/item_teddy_bear.png",
-		"width": 1024,
-		"height": 1024
-	},
-	"ITEM_MATCHBOX":
-	{
-		"asset_id": "ITEM_MATCHBOX",
-		"path": "res://game_data/assets/ui_icon/item_matchbox.png",
-		"width": 1024,
-		"height": 1024
-	}
-}
-const PLACEHOLDERS := [
-	[],
-	["physical_damage"],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[]
-]
-const PLACEHOLDER_TYPES := [
-	[],
-	["float"],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[]
-]
-const STYLES := {
-	"PHYSICAL_DAMAGE": {"color": "#ff0000", "bold": true, "italic": false, "underline": true},
-	"QUOTE": {"color": "", "bold": false, "italic": true, "underline": false}
-}
-const TOOLTIPS := {
-	"PHYSICAL_DAMAGE_TYPE":
-	{
-		"title_id": Id.TOOLTIP_PHYSICAL_DAMAGE_TYPE_TITLE,
-		"description_id": Id.TOOLTIP_PHYSICAL_DAMAGE_TYPE_DESCRIPTION,
-		"icon_asset_id": "PHYSICAL_DAMAGE",
-		"icon_path": "res://game_data/assets/ui_icon/physical_damage.png"
-	}
-}
+const ICON_SLUGS := []
+const ICONS := {}
+const PLACEHOLDERS := []
+const PLACEHOLDER_TYPES := []
+const STYLES := {}
+const TOOLTIPS := {}
 const CSV_PATH := "res://game_data/localization/translations.csv"
-
 
 static func format(id: int, arguments: Dictionary = {}, locale: String = "") -> LocalizedText:
 	return _format(id, arguments, locale, 0)
 
-
-static func tooltip_content(
-	tooltip_slug: StringName, arguments: Dictionary = {}, locale: String = ""
-) -> TooltipContent:
+static func tooltip_content(tooltip_slug: StringName, arguments: Dictionary = {}, locale: String = "") -> TooltipContent:
 	return _tooltip_content(String(tooltip_slug), arguments, _locale_key(locale), 0)
-
 
 static func _format(id: int, arguments: Dictionary, locale: String, depth: int) -> LocalizedText:
 	if id < 0 or id >= KEYS.size():
@@ -618,12 +61,7 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 	var templates: Array = VALUES.get(locale_key, VALUES[DEFAULT_LOCALE])
 	var template := String(templates[id])
 	var regex := RegEx.new()
-	(
-		regex
-		. compile(
-			"<style:([A-Z][A-Z0-9_]*)>|</style>|<tooltip:([A-Z][A-Z0-9_]*)>|</tooltip>|<br\\s*/>|<icon:([A-Z][A-Z0-9_]*)\\s*/>|\\{(int|float|string):([a-z][a-z0-9_]*)\\}"
-		)
-	)
+	regex.compile("<style:([A-Z][A-Z0-9_]*)>|</style>|<tooltip:([A-Z][A-Z0-9_]*)>|</tooltip>|<br\\s*/>|<icon:([A-Z][A-Z0-9_]*)\\s*/>|\\{(int|float|string):([a-z][a-z0-9_]*)\\}")
 	var cursor := 0
 	var plain := ""
 	var bbcode := ""
@@ -640,21 +78,25 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 		var token := result.get_string(0)
 		if token.begins_with("<style:"):
 			var style_slug := result.get_string(1)
-			active_styles.append({"style": style_slug, "start": plain.length()})
+			active_styles.append({
+				"style": style_slug,
+				"start": plain.length()
+			})
 			bbcode += _style_open_bbcode(style_slug)
 		elif token == "</style>":
 			bbcode += _style_close_bbcode(_active_style_slug(active_styles))
 			_close_style(active_styles, spans, plain.length())
 		elif token.begins_with("<tooltip:"):
 			var tooltip_slug := result.get_string(2)
-			active_tooltips.append({"tooltip": tooltip_slug, "start": plain.length()})
+			active_tooltips.append({
+				"tooltip": tooltip_slug,
+				"start": plain.length()
+			})
 			bbcode += _tooltip_open_bbcode(tooltip_slug)
 		elif token == "</tooltip>":
 			if not active_tooltips.is_empty():
 				bbcode += _tooltip_close_bbcode()
-			_close_tooltip(
-				active_tooltips, spans, tooltips, plain.length(), arguments, locale_key, depth
-			)
+			_close_tooltip(active_tooltips, spans, tooltips, plain.length(), arguments, locale_key, depth)
 		elif token.begins_with("<br"):
 			plain += "\n"
 			bbcode += "\n"
@@ -664,21 +106,17 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 			plain += _icon_plain(icon_slug)
 			bbcode += _icon_fragment(icon_slug)
 			var icon: Dictionary = ICONS.get(icon_slug, {})
-			spans.append(
-				{
-					"type": "icon",
-					"icon": icon_slug,
-					"start": icon_start,
-					"end": plain.length(),
-					"path": String(icon.get("path", ""))
-				}
-			)
+			spans.append({
+				"type": "icon",
+				"icon": icon_slug,
+				"start": icon_start,
+				"end": plain.length(),
+				"path": String(icon.get("path", ""))
+			})
 		else:
 			var placeholder_type := result.get_string(4)
 			var placeholder := result.get_string(5)
-			var replacement := str(
-				arguments.get(placeholder, _placeholder_default(placeholder_type))
-			)
+			var replacement := str(arguments.get(placeholder, _placeholder_default(placeholder_type)))
 			plain += replacement
 			bbcode += _bbcode_escape(replacement)
 		cursor = end
@@ -688,69 +126,48 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 	bbcode += _bbcode_escape(suffix)
 	while active_tooltips.size() > 0:
 		bbcode += _tooltip_close_bbcode()
-		_close_tooltip(
-			active_tooltips, spans, tooltips, plain.length(), arguments, locale_key, depth
-		)
+		_close_tooltip(active_tooltips, spans, tooltips, plain.length(), arguments, locale_key, depth)
 	while active_styles.size() > 0:
 		bbcode += _style_close_bbcode(_active_style_slug(active_styles))
 		_close_style(active_styles, spans, plain.length())
 	return LocalizedText.new(plain, bbcode, spans, tooltips)
 
-
-static func _close_style(
-	active_styles: Array[Dictionary], spans: Array[Dictionary], plain_length: int
-) -> void:
+static func _close_style(active_styles: Array[Dictionary], spans: Array[Dictionary], plain_length: int) -> void:
 	if active_styles.is_empty():
 		return
 	var span: Dictionary = active_styles.pop_back()
 	var style_slug := String(span.get("style", ""))
-	spans.append(
-		{
-			"type": "style",
-			"style": style_slug,
-			"start": int(span.get("start", 0)),
-			"end": plain_length,
-			"color": _style_color(style_slug),
-			"bold": _style_bold(style_slug),
-			"italic": _style_italic(style_slug),
-			"underline": _style_underline(style_slug)
-		}
-	)
+	spans.append({
+		"type": "style",
+		"style": style_slug,
+		"start": int(span.get("start", 0)),
+		"end": plain_length,
+		"color": _style_color(style_slug),
+		"bold": _style_bold(style_slug),
+		"italic": _style_italic(style_slug),
+		"underline": _style_underline(style_slug)
+	})
 
-
-static func _close_tooltip(
-	active_tooltips: Array[Dictionary],
-	spans: Array[Dictionary],
-	tooltips: Dictionary,
-	plain_length: int,
-	arguments: Dictionary,
-	locale_key: String,
-	depth: int
-) -> void:
+static func _close_tooltip(active_tooltips: Array[Dictionary], spans: Array[Dictionary], tooltips: Dictionary, plain_length: int, arguments: Dictionary, locale_key: String, depth: int) -> void:
 	if active_tooltips.is_empty():
 		return
 	var span: Dictionary = active_tooltips.pop_back()
 	var tooltip_slug := String(span.get("tooltip", ""))
 	var tooltip_content := _tooltip_content(tooltip_slug, arguments, locale_key, depth)
 	tooltips[tooltip_slug] = tooltip_content
-	spans.append(
-		{
-			"type": "tooltip",
-			"tooltip": tooltip_slug,
-			"start": int(span.get("start", 0)),
-			"end": plain_length,
-			"tooltip_text": tooltip_content.description.plain_text,
-			"tooltip_bbcode_text": tooltip_content.description.bbcode_text,
-			"tooltip_title_text": tooltip_content.title.plain_text,
-			"tooltip_title_bbcode_text": tooltip_content.title.bbcode_text,
-			"tooltip_icon_path": tooltip_content.icon_path
-		}
-	)
+	spans.append({
+		"type": "tooltip",
+		"tooltip": tooltip_slug,
+		"start": int(span.get("start", 0)),
+		"end": plain_length,
+		"tooltip_text": tooltip_content.description.plain_text,
+		"tooltip_bbcode_text": tooltip_content.description.bbcode_text,
+		"tooltip_title_text": tooltip_content.title.plain_text,
+		"tooltip_title_bbcode_text": tooltip_content.title.bbcode_text,
+		"tooltip_icon_path": tooltip_content.icon_path
+	})
 
-
-static func _tooltip_content(
-	tooltip_slug: String, arguments: Dictionary, locale_key: String, depth: int
-) -> TooltipContent:
+static func _tooltip_content(tooltip_slug: String, arguments: Dictionary, locale_key: String, depth: int) -> TooltipContent:
 	var tooltip_data: Dictionary = TOOLTIPS.get(tooltip_slug, {})
 	var title_text := LocalizedText.new()
 	var description_text := LocalizedText.new()
@@ -761,13 +178,7 @@ static func _tooltip_content(
 			title_text = _format(int(title_id), arguments, locale_key, depth + 1)
 		if description_id != null:
 			description_text = _format(int(description_id), arguments, locale_key, depth + 1)
-	return TooltipContent.new(
-		StringName(tooltip_slug),
-		String(tooltip_data.get("icon_path", "")),
-		title_text,
-		description_text
-	)
-
+	return TooltipContent.new(StringName(tooltip_slug), String(tooltip_data.get("icon_path", "")), title_text, description_text)
 
 static func _style_open_bbcode(style_slug: String) -> String:
 	var tags := ""
@@ -782,7 +193,6 @@ static func _style_open_bbcode(style_slug: String) -> String:
 		tags += "[u]"
 	return tags
 
-
 static func _style_close_bbcode(style_slug: String) -> String:
 	var tags := ""
 	if _style_underline(style_slug):
@@ -796,14 +206,11 @@ static func _style_close_bbcode(style_slug: String) -> String:
 		tags += "[/color]"
 	return tags
 
-
 static func _tooltip_open_bbcode(tooltip_slug: String) -> String:
 	return "[hint=%s]" % tooltip_slug
 
-
 static func _tooltip_close_bbcode() -> String:
 	return "[/hint]"
-
 
 static func _icon_fragment(icon_slug: String) -> String:
 	var icon: Dictionary = ICONS.get(icon_slug, {})
@@ -812,36 +219,29 @@ static func _icon_fragment(icon_slug: String) -> String:
 		return _bbcode_escape(_icon_plain(icon_slug))
 	return "[img=16x16]%s[/img]" % _bbcode_escape(icon_path)
 
-
 static func _icon_plain(icon_slug: String) -> String:
 	return "[%s]" % icon_slug
-
 
 static func _active_style_slug(active_styles: Array[Dictionary]) -> String:
 	if active_styles.is_empty():
 		return ""
 	return String(active_styles[active_styles.size() - 1].get("style", ""))
 
-
 static func _style_color(style_slug: String) -> String:
 	var style: Dictionary = STYLES.get(style_slug, {})
 	return String(style.get("color", ""))
-
 
 static func _style_bold(style_slug: String) -> bool:
 	var style: Dictionary = STYLES.get(style_slug, {})
 	return bool(style.get("bold", false))
 
-
 static func _style_italic(style_slug: String) -> bool:
 	var style: Dictionary = STYLES.get(style_slug, {})
 	return bool(style.get("italic", false))
 
-
 static func _style_underline(style_slug: String) -> bool:
 	var style: Dictionary = STYLES.get(style_slug, {})
 	return bool(style.get("underline", false))
-
 
 static func _placeholder_default(placeholder_type: String) -> Variant:
 	if placeholder_type == "int":
@@ -849,7 +249,6 @@ static func _placeholder_default(placeholder_type: String) -> Variant:
 	if placeholder_type == "float":
 		return -1.0
 	return "UNKNOWN"
-
 
 static func _locale_key(locale: String) -> String:
 	if not locale.is_empty() and VALUES.has(locale):
@@ -861,7 +260,6 @@ static func _locale_key(locale: String) -> String:
 	if VALUES.has(base_locale):
 		return base_locale
 	return DEFAULT_LOCALE
-
 
 static func _bbcode_escape(value: String) -> String:
 	return value.replace("[", "\\[").replace("]", "\\]")

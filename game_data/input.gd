@@ -3,12 +3,6 @@ class_name ChiselInput
 extends RefCounted
 
 const ACTION_NAMES := [
-	&"camera_left",
-	&"camera_right",
-	&"camera_forward",
-	&"camera_backward",
-	&"camera_rotate_left",
-	&"camera_rotate_right",
 	&"camera_zoom_in",
 	&"camera_zoom_out",
 	&"escape"

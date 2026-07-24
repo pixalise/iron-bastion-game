@@ -36,54 +36,6 @@
       "id": "FOREST_1_2_K",
       "relativePath": ".chisel/assets/HDRI/FOREST_1_2K.exr",
       "formattedBytes": "17.9 MB"
-    },
-    {
-      "category": "UI_ICON",
-      "name": "PHYSICAL_DAMAGE",
-      "note": "Label icon for the physical damage icon",
-      "sizeBytes": 1626670,
-      "width": 2048,
-      "height": 2048,
-      "extension": "png",
-      "id": "PHYSICAL_DAMAGE",
-      "relativePath": ".chisel/assets/UI_ICON/PHYSICAL_DAMAGE.png",
-      "formattedBytes": "1.6 MB"
-    },
-    {
-      "category": "UI_ICON",
-      "name": "HUNTING_ARROWS",
-      "note": "Item - used for bowman and crossbowman",
-      "sizeBytes": 1952133,
-      "width": 1254,
-      "height": 1254,
-      "extension": "png",
-      "id": "HUNTING_ARROWS",
-      "relativePath": ".chisel/assets/UI_ICON/HUNTING_ARROWS.png",
-      "formattedBytes": "1.9 MB"
-    },
-    {
-      "category": "UI_ICON",
-      "name": "ITEM_TEDDY_BEAR",
-      "note": "Icon for the Teddy Bear\n",
-      "sizeBytes": 635758,
-      "width": 1024,
-      "height": 1024,
-      "extension": "png",
-      "id": "ITEM_TEDDY_BEAR",
-      "relativePath": ".chisel/assets/UI_ICON/ITEM_TEDDY_BEAR.png",
-      "formattedBytes": "620.9 KB"
-    },
-    {
-      "category": "UI_ICON",
-      "name": "ITEM_MATCHBOX",
-      "note": "The ui icon for the matchbox item",
-      "sizeBytes": 710009,
-      "width": 1024,
-      "height": 1024,
-      "extension": "png",
-      "id": "ITEM_MATCHBOX",
-      "relativePath": ".chisel/assets/UI_ICON/ITEM_MATCHBOX.png",
-      "formattedBytes": "693.4 KB"
     }
   ]
 }

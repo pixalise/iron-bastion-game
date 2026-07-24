@@ -3,49 +3,25 @@ class_name ChiselInputBindings
 extends RefCounted
 
 enum Id {
-	CAMERA_LEFT = 0,
-	CAMERA_RIGHT = 1,
-	CAMERA_FORWARD = 2,
-	CAMERA_BACKWARD = 3,
-	CAMERA_ROTATE_LEFT = 4,
-	CAMERA_ROTATE_RIGHT = 5,
-	CAMERA_ZOOM_IN = 6,
-	CAMERA_ZOOM_OUT = 7,
-	ESCAPE = 8
+	CAMERA_ZOOM_IN = 0,
+	CAMERA_ZOOM_OUT = 1,
+	ESCAPE = 2
 }
 
 const TABLE_ID := "input_bindings"
 const TABLE_NAME := "Input Bindings"
 const TABLE_KIND := "system"
 const SLUGS := [
-	"CAMERA_LEFT",
-	"CAMERA_RIGHT",
-	"CAMERA_FORWARD",
-	"CAMERA_BACKWARD",
-	"CAMERA_ROTATE_LEFT",
-	"CAMERA_ROTATE_RIGHT",
 	"CAMERA_ZOOM_IN",
 	"CAMERA_ZOOM_OUT",
 	"ESCAPE"
 ]
 const SORT_ORDER := [
-	0,
-	1,
-	2,
-	3,
-	4,
-	5,
 	6,
 	7,
 	8
 ]
 const BINDINGS := [
-	["KEY_A", "KEY_LEFT"],
-	["KEY_D", "KEY_RIGHT"],
-	["KEY_W", "KEY_UP"],
-	["KEY_S", "KEY_DOWN"],
-	["KEY_Q"],
-	["KEY_E"],
 	["MOUSE_BUTTON_WHEEL_UP"],
 	["MOUSE_BUTTON_WHEEL_DOWN"],
 	["KEY_ESCAPE"]
