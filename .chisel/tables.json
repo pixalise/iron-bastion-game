@@ -55,8 +55,8 @@
     },
     {
       "id": "Jt3iVOYOqHl97phbZEpUi",
-      "lastChangeAt": "2026-07-24T19:05:19.379Z",
-      "version": 35,
+      "lastChangeAt": "2026-07-24T19:16:21.315Z",
+      "version": 111,
       "name": "Unit",
       "description": "The actual ingame units that can be spawned via card",
       "columns": [
@@ -206,7 +206,7 @@
             {
               "columnId": "Jy1sZ_SgOrVRJ2rdPC45b",
               "type": "range",
-              "value": 0
+              "value": 0.1
             },
             {
               "columnId": "XH8sfq3NulCYzj8oqSkW9",
@@ -252,7 +252,7 @@
             {
               "columnId": "Jy1sZ_SgOrVRJ2rdPC45b",
               "type": "range",
-              "value": 1
+              "value": 0.15
             },
             {
               "columnId": "XH8sfq3NulCYzj8oqSkW9",
@@ -272,6 +272,43 @@
           ]
         }
       ],
+      "kind": "user",
+      "isSystemTable": false
+    },
+    {
+      "id": "45RH7A6GsG12q-v78dmmN",
+      "lastChangeAt": "2026-07-24T19:16:03.286Z",
+      "version": 2,
+      "name": "Ability",
+      "description": "The abilities table",
+      "columns": [
+        {
+          "id": "kJwcO071TGKOq2eNEyu9-",
+          "type": "translationRef",
+          "name": "name",
+          "defaultValue": "",
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "2B4QMvLzDqMTWjHnS4mR_",
+          "type": "translationRef",
+          "name": "description",
+          "defaultValue": "",
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "YTrgAl1ByZnP7gIzyej9l",
+          "type": "assetRef",
+          "name": "portrait",
+          "defaultValue": "",
+          "assetCategory": "UI_ICON",
+          "required": true,
+          "unique": false
+        }
+      ],
+      "rows": [],
       "kind": "user",
       "isSystemTable": false
     }

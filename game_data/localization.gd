@@ -76,18 +76,29 @@ const VALUES := {
 	"en":
 	[
 		"Archer",
-		"The backbone of every military. Has an outstanding <style:ATTACK_RANGE><tooltip:RANGE>range of {float:attack_range}</tooltip></style> and deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE>{int:attack_damage} of physical damage</tooltip></style>.",
+		"The backbone of every military. Has an outstanding <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range of {float:attack_range}</tooltip></style> and deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style>.",
 		"Physical Damage",
-		"Physical damage is any kind of damage that is dealt with regular weapons.",
+		"<style:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> Physical damage</style> is any kind of damage that is dealt with regular weapons.",
 		"Range",
-		"How far a unit can reach when attacking.",
+		"<style:ATTACK_RANGE><icon:RANGE/> Range</style> is how far a unit can reach when attacking.",
 		"Pikeman",
-		"The frontline of the kings army. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE>{int:attack_damage} of physical damage</tooltip></style> in an area of <style:ATTACK_RANGE><tooltip:RANGE>{float:attack_range}</tooltip></style>.",
+		"The frontline of the kings army. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in an area of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>.",
 		"Swordman",
-		"They are the first ones to engage the kings enemies. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE>{int:attack_damage} of physical damage</tooltip></style> in the vicinity of <style:ATTACK_RANGE><tooltip:RANGE>{float:attack_range}</tooltip></style>."
+		"They are the first ones to engage the kings enemies. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in the vicinity of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>."
 	]
 }
-const ICON_SLUGS := [[], [], [], [], [], [], [], [], [], []]
+const ICON_SLUGS := [
+	[],
+	["RANGE", "PHYSICAL_DAMAGE"],
+	[],
+	["PHYSICAL_DAMAGE"],
+	[],
+	["RANGE"],
+	[],
+	["PHYSICAL_DAMAGE", "RANGE"],
+	[],
+	["PHYSICAL_DAMAGE", "RANGE"]
+]
 const ICONS := {
 	"KNIGHT":
 	{

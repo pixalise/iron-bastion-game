@@ -96,6 +96,18 @@
       "id": "RANGE",
       "relativePath": ".chisel/assets/UI_ICON/RANGE.png",
       "formattedBytes": "67.4 KB"
+    },
+    {
+      "category": "UI_ICON",
+      "name": "TARGET_PRACTICE",
+      "note": "Ability",
+      "sizeBytes": 47373,
+      "width": 256,
+      "height": 256,
+      "extension": "png",
+      "id": "TARGET_PRACTICE",
+      "relativePath": ".chisel/assets/UI_ICON/TARGET_PRACTICE.png",
+      "formattedBytes": "46.3 KB"
     }
   ]
 }
