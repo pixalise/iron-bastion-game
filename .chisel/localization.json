@@ -4,7 +4,86 @@
   "locales": [
     "en"
   ],
-  "keys": [],
-  "styles": [],
-  "tooltips": []
+  "keys": [
+    {
+      "path": "UNIT.ARCHER.NAME",
+      "values": {
+        "en": "Archer"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "UNIT.ARCHER.DESCRIPTION",
+      "values": {
+        "en": "The backbone of every military. Has an outstanding range of {float:attack_range} and deals {int:attack_damage} of physical damage."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "TOOLTIP.DAMAGE.PHYISICAL.TITLE",
+      "values": {
+        "en": "Phyisical Damage"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "TOOLTIP.DAMAGE.PHYISICAL.DESCRIPTION",
+      "values": {
+        "en": "Phyisical damage is any kind of damage that is dealt with regular weapons."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "UNIT.PIKEMAN.NAME",
+      "values": {
+        "en": "Pikeman"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "UNIT.PIKEMAN.DESCRIPTION",
+      "values": {
+        "en": "The frontline of the kings army. Deals {int:attack_damage} of physical damage in an area of {float:attack_range}."
+      },
+      "placeholders": []
+    },
+    {
+      "path": "UNIT.KNIGHT.NAME",
+      "values": {
+        "en": "Swordman"
+      },
+      "placeholders": []
+    },
+    {
+      "path": "UNIT.KNIGHT.DESCRIPTION",
+      "values": {
+        "en": "They are the first ones to engage the kings enemies. Deals {int:attack_damage} of physical damage in the vicinity of {float:attack_range}."
+      },
+      "placeholders": []
+    }
+  ],
+  "styles": [
+    {
+      "slug": "ATTACK_RANGE",
+      "color": "#ffffff",
+      "bold": false,
+      "italic": true,
+      "underline": false
+    },
+    {
+      "slug": "PHYSICAL_DAMAGE",
+      "color": "#ff0000",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    }
+  ],
+  "tooltips": [
+    {
+      "slug": "PHYSICAL_DAMAGE",
+      "iconAssetId": "PHYSICAL_DAMAGE",
+      "titleKey": "TOOLTIP.DAMAGE.PHYISICAL.TITLE",
+      "descriptionKey": "TOOLTIP.DAMAGE.PHYISICAL.DESCRIPTION"
+    }
+  ]
 }

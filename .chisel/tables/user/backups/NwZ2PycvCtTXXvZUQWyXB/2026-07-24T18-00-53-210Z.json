@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "NwZ2PycvCtTXXvZUQWyXB",
+    "lastChangeAt": "2026-07-24T17:58:34.153Z",
+    "version": 1,
+    "name": "Peg",
+    "description": "",
+    "columns": [],
+    "rows": [],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}

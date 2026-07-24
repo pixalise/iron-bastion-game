@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "Jt3iVOYOqHl97phbZEpUi",
+    "lastChangeAt": "2026-07-24T18:47:41.927Z",
+    "version": 30,
+    "name": "Unit",
+    "description": "The actual ingame units that can be spawned via card",
+    "columns": [
+      {
+        "id": "iw6oxD1p5T8OiA7HotHQo",
+        "type": "translationRef",
+        "name": "name",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "YEZczD_ighgRhMuR4IpWl",
+        "type": "translationRef",
+        "name": "description",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "LhoyLbck-c1ppGikN7Zfb",
+        "type": "assetRef",
+        "name": "portrait",
+        "defaultValue": "",
+        "assetCategory": "UI_ICON",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "4v0ct0ESkxzDSgbMX7GuB",
+        "type": "integer",
+        "name": "max_health",
+        "defaultValue": 100,
+        "min": 10,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "XH8sfq3NulCYzj8oqSkW9",
+        "type": "integer",
+        "name": "attack_damage",
+        "defaultValue": 10,
+        "min": 1,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "aWJgKYK2dNl0Yk4gwBSx3",
+        "type": "decimal",
+        "name": "attack_rate",
+        "defaultValue": 2,
+        "min": 0,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "hBbKJ5jA00lDXHfztOQKV",
+        "type": "decimal",
+        "name": "attack_range",
+        "defaultValue": 1.2,
+        "min": 1,
+        "required": true,
+        "unique": false
+      }
+    ],
+    "rows": [
+      {
+        "id": "yxWbfJey2_xgGet6zQIpW",
+        "slug": "ARCHER",
+        "values": [
+          {
+            "columnId": "iw6oxD1p5T8OiA7HotHQo",
+            "type": "translationRef",
+            "value": "UNIT.ARCHER.NAME"
+          },
+          {
+            "columnId": "YEZczD_ighgRhMuR4IpWl",
+            "type": "translationRef",
+            "value": "UNIT.ARCHER.DESCRIPTION"
+          },
+          {
+            "columnId": "LhoyLbck-c1ppGikN7Zfb",
+            "type": "assetRef",
+            "value": "ARCHER"
+          },
+          {
+            "columnId": "4v0ct0ESkxzDSgbMX7GuB",
+            "type": "integer",
+            "value": 80
+          },
+          {
+            "columnId": "XH8sfq3NulCYzj8oqSkW9",
+            "type": "integer",
+            "value": 15
+          },
+          {
+            "columnId": "aWJgKYK2dNl0Yk4gwBSx3",
+            "type": "decimal",
+            "value": 1.2
+          },
+          {
+            "columnId": "hBbKJ5jA00lDXHfztOQKV",
+            "type": "decimal",
+            "value": 6.4
+          }
+        ]
+      },
+      {
+        "id": "vd0E9l1ELE8VKguTaFgtf",
+        "slug": "PIKEMAN",
+        "values": [
+          {
+            "columnId": "iw6oxD1p5T8OiA7HotHQo",
+            "type": "translationRef",
+            "value": "UNIT.PIKEMAN.NAME"
+          },
+          {
+            "columnId": "YEZczD_ighgRhMuR4IpWl",
+            "type": "translationRef",
+            "value": "UNIT.PIKEMAN.DESCRIPTION"
+          },
+          {
+            "columnId": "LhoyLbck-c1ppGikN7Zfb",
+            "type": "assetRef",
+            "value": "PIKEMAN"
+          },
+          {
+            "columnId": "4v0ct0ESkxzDSgbMX7GuB",
+            "type": "integer",
+            "value": 120
+          },
+          {
+            "columnId": "XH8sfq3NulCYzj8oqSkW9",
+            "type": "integer",
+            "value": 30
+          },
+          {
+            "columnId": "aWJgKYK2dNl0Yk4gwBSx3",
+            "type": "decimal",
+            "value": 1
+          },
+          {
+            "columnId": "hBbKJ5jA00lDXHfztOQKV",
+            "type": "decimal",
+            "value": 2.1
+          }
+        ]
+      },
+      {
+        "id": "XV-4PLyKr8BuMtIg_6mRR",
+        "slug": "KNIGHT",
+        "values": [
+          {
+            "columnId": "iw6oxD1p5T8OiA7HotHQo",
+            "type": "translationRef",
+            "value": "UNIT.KNIGHT.NAME"
+          },
+          {
+            "columnId": "YEZczD_ighgRhMuR4IpWl",
+            "type": "translationRef",
+            "value": "UNIT.KNIGHT.DESCRIPTION"
+          },
+          {
+            "columnId": "LhoyLbck-c1ppGikN7Zfb",
+            "type": "assetRef",
+            "value": "KNIGHT"
+          },
+          {
+            "columnId": "4v0ct0ESkxzDSgbMX7GuB",
+            "type": "integer",
+            "value": 100
+          },
+          {
+            "columnId": "XH8sfq3NulCYzj8oqSkW9",
+            "type": "integer",
+            "value": 20
+          },
+          {
+            "columnId": "aWJgKYK2dNl0Yk4gwBSx3",
+            "type": "decimal",
+            "value": 1.3
+          },
+          {
+            "columnId": "hBbKJ5jA00lDXHfztOQKV",
+            "type": "decimal",
+            "value": 1.7
+          }
+        ]
+      }
+    ],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}

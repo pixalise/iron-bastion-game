@@ -2,28 +2,46 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-24T15:34:15.086Z"
+const GENERATED_AT := "2026-07-24T18:47:47.765Z"
 const PROJECT_ID := "lwDBJkZEABItlP3UGvDll"
 const PROJECT_NAME := "Pachingod"
-const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 3}
+const ASSETS := {"class_name": "ChiselAssets", "path": "res://game_data/assets.gd", "count": 7}
 const LOCALIZATION := {
 	"class_name": "ChiselLocalization",
 	"path": "res://game_data/localization.gd",
 	"typed_class_name": "ChiselTranslations",
 	"typed_path": "res://game_data/translations.gd",
 	"csv_path": "res://game_data/localization/translations.csv",
-	"translations": 0,
+	"translations": 8,
 	"locales": 1
 }
 const FILES := [
-	{"bytes": 1222, "hash": "3873f972", "path": "res://game_data/assets.gd"},
-	{"bytes": 9636, "hash": "c6fb4bf6", "path": "res://game_data/localization.gd"},
-	{"bytes": 89, "hash": "6278cb2e", "path": "res://game_data/translations.gd"},
-	{"bytes": 11, "hash": "a5689d92", "path": "res://game_data/localization/translations.csv"},
+	{"bytes": 2052, "hash": "5361d36e", "path": "res://game_data/assets.gd"},
+	{"bytes": 11757, "hash": "8e036be1", "path": "res://game_data/localization.gd"},
+	{"bytes": 3477, "hash": "608bcd06", "path": "res://game_data/translations.gd"},
+	{"bytes": 736, "hash": "2ab88c12", "path": "res://game_data/localization/translations.csv"},
 	{"bytes": 3310, "hash": "00a525a2", "path": "res://game_data/input.gd"},
+	{"bytes": 284, "hash": "d3d64e04", "path": "res://game_data/tables/peg.gd"},
+	{"bytes": 849, "hash": "ca3303f8", "path": "res://game_data/tables/unit.gd"},
 	{"bytes": 478, "hash": "c83a5d5b", "path": "res://game_data/tables/input_bindings.gd"}
 ]
 const TABLES := {
+	"NwZ2PycvCtTXXvZUQWyXB":
+	{
+		"name": "Peg",
+		"class_name": "ChiselPeg",
+		"path": "res://game_data/tables/peg.gd",
+		"rows": 0,
+		"columns": 4
+	},
+	"Jt3iVOYOqHl97phbZEpUi":
+	{
+		"name": "Unit",
+		"class_name": "ChiselUnit",
+		"path": "res://game_data/tables/unit.gd",
+		"rows": 3,
+		"columns": 7
+	},
 	"input_bindings":
 	{
 		"name": "Input Bindings",

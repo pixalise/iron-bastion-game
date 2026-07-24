@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "Jt3iVOYOqHl97phbZEpUi",
+    "lastChangeAt": "2026-07-24T18:05:43.531Z",
+    "version": 3,
+    "name": "Unit",
+    "description": "The actual ingame units that can be spawned via card",
+    "columns": [
+      {
+        "id": "iw6oxD1p5T8OiA7HotHQo",
+        "type": "translationRef",
+        "name": "name",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "YEZczD_ighgRhMuR4IpWl",
+        "type": "translationRef",
+        "name": "description",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "LhoyLbck-c1ppGikN7Zfb",
+        "type": "assetRef",
+        "name": "portrait",
+        "defaultValue": "",
+        "assetCategory": "UI_ICON",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "4v0ct0ESkxzDSgbMX7GuB",
+        "type": "integer",
+        "name": "max_health",
+        "defaultValue": 100,
+        "min": 10,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "XH8sfq3NulCYzj8oqSkW9",
+        "type": "integer",
+        "name": "attack_damage",
+        "defaultValue": 10,
+        "min": 1,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "aWJgKYK2dNl0Yk4gwBSx3",
+        "type": "decimal",
+        "name": "attack_rate",
+        "defaultValue": 2,
+        "min": 0,
+        "required": true,
+        "unique": false
+      }
+    ],
+    "rows": [],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}

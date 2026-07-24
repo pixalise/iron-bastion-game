@@ -2,13 +2,19 @@
 class_name ChiselLocalization
 extends RefCounted
 
+
 class LocalizedText:
 	var plain_text: String
 	var bbcode_text: String
 	var spans: Array[Dictionary]
 	var _tooltips: Dictionary
 
-	func _init(next_plain_text: String = "", next_bbcode_text: String = "", next_spans: Array[Dictionary] = [], next_tooltips: Dictionary = {}) -> void:
+	func _init(
+		next_plain_text: String = "",
+		next_bbcode_text: String = "",
+		next_spans: Array[Dictionary] = [],
+		next_tooltips: Dictionary = {}
+	) -> void:
 		plain_text = next_plain_text
 		bbcode_text = next_bbcode_text
 		spans = next_spans
@@ -20,39 +26,130 @@ class LocalizedText:
 	func tooltip_content_for(tooltip_slug: StringName) -> TooltipContent:
 		return _tooltips.get(String(tooltip_slug), TooltipContent.new(tooltip_slug))
 
+
 class TooltipContent:
 	var slug: StringName
 	var icon_path: String
 	var title: LocalizedText
 	var description: LocalizedText
 
-	func _init(next_slug: StringName = &"", next_icon_path: String = "", next_title: LocalizedText = null, next_description: LocalizedText = null) -> void:
+	func _init(
+		next_slug: StringName = &"",
+		next_icon_path: String = "",
+		next_title: LocalizedText = null,
+		next_description: LocalizedText = null
+	) -> void:
 		slug = next_slug
 		icon_path = next_icon_path
 		title = next_title if next_title != null else LocalizedText.new()
 		description = next_description if next_description != null else LocalizedText.new()
 
-enum Id {}
+
+enum Id {
+	UNIT_ARCHER_NAME = 0,
+	UNIT_ARCHER_DESCRIPTION = 1,
+	TOOLTIP_DAMAGE_PHYISICAL_TITLE = 2,
+	TOOLTIP_DAMAGE_PHYISICAL_DESCRIPTION = 3,
+	UNIT_PIKEMAN_NAME = 4,
+	UNIT_PIKEMAN_DESCRIPTION = 5,
+	UNIT_KNIGHT_NAME = 6,
+	UNIT_KNIGHT_DESCRIPTION = 7
+}
 
 const DEFAULT_LOCALE := "en"
 const LOCALES := ["en"]
-const KEYS := []
+const KEYS := [
+	"UNIT.ARCHER.NAME",
+	"UNIT.ARCHER.DESCRIPTION",
+	"TOOLTIP.DAMAGE.PHYISICAL.TITLE",
+	"TOOLTIP.DAMAGE.PHYISICAL.DESCRIPTION",
+	"UNIT.PIKEMAN.NAME",
+	"UNIT.PIKEMAN.DESCRIPTION",
+	"UNIT.KNIGHT.NAME",
+	"UNIT.KNIGHT.DESCRIPTION"
+]
 const VALUES := {
-	"en": []
+	"en":
+	[
+		"Archer",
+		"The backbone of every military. Has an outstanding range of {float:attack_range} and deals {int:attack_damage} of physical damage.",
+		"Phyisical Damage",
+		"Phyisical damage is any kind of damage that is dealt with regular weapons.",
+		"Pikeman",
+		"The frontline of the kings army. Deals {int:attack_damage} of physical damage in an area of {float:attack_range}.",
+		"Swordman",
+		"They are the first ones to engage the kings enemies. Deals {int:attack_damage} of physical damage in the vicinity of {float:attack_range}."
+	]
 }
-const ICON_SLUGS := []
-const ICONS := {}
-const PLACEHOLDERS := []
-const PLACEHOLDER_TYPES := []
-const STYLES := {}
-const TOOLTIPS := {}
+const ICON_SLUGS := [[], [], [], [], [], [], [], []]
+const ICONS := {
+	"KNIGHT":
+	{
+		"asset_id": "KNIGHT",
+		"path": "res://game_data/assets/ui_icon/knight.png",
+		"width": 256,
+		"height": 256
+	},
+	"ARCHER":
+	{
+		"asset_id": "ARCHER",
+		"path": "res://game_data/assets/ui_icon/archer.png",
+		"width": 256,
+		"height": 256
+	},
+	"PHYSICAL_DAMAGE":
+	{
+		"asset_id": "PHYSICAL_DAMAGE",
+		"path": "res://game_data/assets/ui_icon/physical_damage.png",
+		"width": 256,
+		"height": 256
+	},
+	"PIKEMAN":
+	{
+		"asset_id": "PIKEMAN",
+		"path": "res://game_data/assets/ui_icon/pikeman.png",
+		"width": 256,
+		"height": 256
+	}
+}
+const PLACEHOLDERS := [
+	[],
+	["attack_range", "attack_damage"],
+	[],
+	[],
+	[],
+	["attack_damage", "attack_range"],
+	[],
+	["attack_damage", "attack_range"]
+]
+const PLACEHOLDER_TYPES := [
+	[], ["float", "int"], [], [], [], ["int", "float"], [], ["int", "float"]
+]
+const STYLES := {
+	"ATTACK_RANGE": {"color": "#ffffff", "bold": true, "italic": false, "underline": false},
+	"PHYSICAL_DAMAGE": {"color": "", "bold": false, "italic": false, "underline": false}
+}
+const TOOLTIPS := {
+	"PHYSICAL_DAMAGE":
+	{
+		"title_id": Id.TOOLTIP_DAMAGE_PHYISICAL_TITLE,
+		"description_id": Id.TOOLTIP_DAMAGE_PHYISICAL_DESCRIPTION,
+		"icon_asset_id": "",
+		"icon_path": ""
+	}
+}
 const CSV_PATH := "res://game_data/localization/translations.csv"
+
 
 static func format(id: int, arguments: Dictionary = {}, locale: String = "") -> LocalizedText:
 	return _format(id, arguments, locale, 0)
 
-static func tooltip_content(tooltip_slug: StringName, arguments: Dictionary = {}, locale: String = "") -> TooltipContent:
+
+static func tooltip_content(
+	tooltip_slug: StringName, arguments: Dictionary = {}, locale: String = ""
+) -> TooltipContent:
 	return _tooltip_content(String(tooltip_slug), arguments, _locale_key(locale), 0)
+
 
 static func _format(id: int, arguments: Dictionary, locale: String, depth: int) -> LocalizedText:
 	if id < 0 or id >= KEYS.size():
@@ -61,7 +158,12 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 	var templates: Array = VALUES.get(locale_key, VALUES[DEFAULT_LOCALE])
 	var template := String(templates[id])
 	var regex := RegEx.new()
-	regex.compile("<style:([A-Z][A-Z0-9_]*)>|</style>|<tooltip:([A-Z][A-Z0-9_]*)>|</tooltip>|<br\\s*/>|<icon:([A-Z][A-Z0-9_]*)\\s*/>|\\{(int|float|string):([a-z][a-z0-9_]*)\\}")
+	(
+		regex
+		. compile(
+			"<style:([A-Z][A-Z0-9_]*)>|</style>|<tooltip:([A-Z][A-Z0-9_]*)>|</tooltip>|<br\\s*/>|<icon:([A-Z][A-Z0-9_]*)\\s*/>|\\{(int|float|string):([a-z][a-z0-9_]*)\\}"
+		)
+	)
 	var cursor := 0
 	var plain := ""
 	var bbcode := ""
@@ -78,25 +180,21 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 		var token := result.get_string(0)
 		if token.begins_with("<style:"):
 			var style_slug := result.get_string(1)
-			active_styles.append({
-				"style": style_slug,
-				"start": plain.length()
-			})
+			active_styles.append({"style": style_slug, "start": plain.length()})
 			bbcode += _style_open_bbcode(style_slug)
 		elif token == "</style>":
 			bbcode += _style_close_bbcode(_active_style_slug(active_styles))
 			_close_style(active_styles, spans, plain.length())
 		elif token.begins_with("<tooltip:"):
 			var tooltip_slug := result.get_string(2)
-			active_tooltips.append({
-				"tooltip": tooltip_slug,
-				"start": plain.length()
-			})
+			active_tooltips.append({"tooltip": tooltip_slug, "start": plain.length()})
 			bbcode += _tooltip_open_bbcode(tooltip_slug)
 		elif token == "</tooltip>":
 			if not active_tooltips.is_empty():
 				bbcode += _tooltip_close_bbcode()
-			_close_tooltip(active_tooltips, spans, tooltips, plain.length(), arguments, locale_key, depth)
+			_close_tooltip(
+				active_tooltips, spans, tooltips, plain.length(), arguments, locale_key, depth
+			)
 		elif token.begins_with("<br"):
 			plain += "\n"
 			bbcode += "\n"
@@ -106,17 +204,21 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 			plain += _icon_plain(icon_slug)
 			bbcode += _icon_fragment(icon_slug)
 			var icon: Dictionary = ICONS.get(icon_slug, {})
-			spans.append({
-				"type": "icon",
-				"icon": icon_slug,
-				"start": icon_start,
-				"end": plain.length(),
-				"path": String(icon.get("path", ""))
-			})
+			spans.append(
+				{
+					"type": "icon",
+					"icon": icon_slug,
+					"start": icon_start,
+					"end": plain.length(),
+					"path": String(icon.get("path", ""))
+				}
+			)
 		else:
 			var placeholder_type := result.get_string(4)
 			var placeholder := result.get_string(5)
-			var replacement := str(arguments.get(placeholder, _placeholder_default(placeholder_type)))
+			var replacement := str(
+				arguments.get(placeholder, _placeholder_default(placeholder_type))
+			)
 			plain += replacement
 			bbcode += _bbcode_escape(replacement)
 		cursor = end
@@ -126,48 +228,69 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 	bbcode += _bbcode_escape(suffix)
 	while active_tooltips.size() > 0:
 		bbcode += _tooltip_close_bbcode()
-		_close_tooltip(active_tooltips, spans, tooltips, plain.length(), arguments, locale_key, depth)
+		_close_tooltip(
+			active_tooltips, spans, tooltips, plain.length(), arguments, locale_key, depth
+		)
 	while active_styles.size() > 0:
 		bbcode += _style_close_bbcode(_active_style_slug(active_styles))
 		_close_style(active_styles, spans, plain.length())
 	return LocalizedText.new(plain, bbcode, spans, tooltips)
 
-static func _close_style(active_styles: Array[Dictionary], spans: Array[Dictionary], plain_length: int) -> void:
+
+static func _close_style(
+	active_styles: Array[Dictionary], spans: Array[Dictionary], plain_length: int
+) -> void:
 	if active_styles.is_empty():
 		return
 	var span: Dictionary = active_styles.pop_back()
 	var style_slug := String(span.get("style", ""))
-	spans.append({
-		"type": "style",
-		"style": style_slug,
-		"start": int(span.get("start", 0)),
-		"end": plain_length,
-		"color": _style_color(style_slug),
-		"bold": _style_bold(style_slug),
-		"italic": _style_italic(style_slug),
-		"underline": _style_underline(style_slug)
-	})
+	spans.append(
+		{
+			"type": "style",
+			"style": style_slug,
+			"start": int(span.get("start", 0)),
+			"end": plain_length,
+			"color": _style_color(style_slug),
+			"bold": _style_bold(style_slug),
+			"italic": _style_italic(style_slug),
+			"underline": _style_underline(style_slug)
+		}
+	)
 
-static func _close_tooltip(active_tooltips: Array[Dictionary], spans: Array[Dictionary], tooltips: Dictionary, plain_length: int, arguments: Dictionary, locale_key: String, depth: int) -> void:
+
+static func _close_tooltip(
+	active_tooltips: Array[Dictionary],
+	spans: Array[Dictionary],
+	tooltips: Dictionary,
+	plain_length: int,
+	arguments: Dictionary,
+	locale_key: String,
+	depth: int
+) -> void:
 	if active_tooltips.is_empty():
 		return
 	var span: Dictionary = active_tooltips.pop_back()
 	var tooltip_slug := String(span.get("tooltip", ""))
 	var tooltip_content := _tooltip_content(tooltip_slug, arguments, locale_key, depth)
 	tooltips[tooltip_slug] = tooltip_content
-	spans.append({
-		"type": "tooltip",
-		"tooltip": tooltip_slug,
-		"start": int(span.get("start", 0)),
-		"end": plain_length,
-		"tooltip_text": tooltip_content.description.plain_text,
-		"tooltip_bbcode_text": tooltip_content.description.bbcode_text,
-		"tooltip_title_text": tooltip_content.title.plain_text,
-		"tooltip_title_bbcode_text": tooltip_content.title.bbcode_text,
-		"tooltip_icon_path": tooltip_content.icon_path
-	})
+	spans.append(
+		{
+			"type": "tooltip",
+			"tooltip": tooltip_slug,
+			"start": int(span.get("start", 0)),
+			"end": plain_length,
+			"tooltip_text": tooltip_content.description.plain_text,
+			"tooltip_bbcode_text": tooltip_content.description.bbcode_text,
+			"tooltip_title_text": tooltip_content.title.plain_text,
+			"tooltip_title_bbcode_text": tooltip_content.title.bbcode_text,
+			"tooltip_icon_path": tooltip_content.icon_path
+		}
+	)
 
-static func _tooltip_content(tooltip_slug: String, arguments: Dictionary, locale_key: String, depth: int) -> TooltipContent:
+
+static func _tooltip_content(
+	tooltip_slug: String, arguments: Dictionary, locale_key: String, depth: int
+) -> TooltipContent:
 	var tooltip_data: Dictionary = TOOLTIPS.get(tooltip_slug, {})
 	var title_text := LocalizedText.new()
 	var description_text := LocalizedText.new()
@@ -178,7 +301,13 @@ static func _tooltip_content(tooltip_slug: String, arguments: Dictionary, locale
 			title_text = _format(int(title_id), arguments, locale_key, depth + 1)
 		if description_id != null:
 			description_text = _format(int(description_id), arguments, locale_key, depth + 1)
-	return TooltipContent.new(StringName(tooltip_slug), String(tooltip_data.get("icon_path", "")), title_text, description_text)
+	return TooltipContent.new(
+		StringName(tooltip_slug),
+		String(tooltip_data.get("icon_path", "")),
+		title_text,
+		description_text
+	)
+
 
 static func _style_open_bbcode(style_slug: String) -> String:
 	var tags := ""
@@ -193,6 +322,7 @@ static func _style_open_bbcode(style_slug: String) -> String:
 		tags += "[u]"
 	return tags
 
+
 static func _style_close_bbcode(style_slug: String) -> String:
 	var tags := ""
 	if _style_underline(style_slug):
@@ -206,11 +336,14 @@ static func _style_close_bbcode(style_slug: String) -> String:
 		tags += "[/color]"
 	return tags
 
+
 static func _tooltip_open_bbcode(tooltip_slug: String) -> String:
 	return "[hint=%s]" % tooltip_slug
 
+
 static func _tooltip_close_bbcode() -> String:
 	return "[/hint]"
+
 
 static func _icon_fragment(icon_slug: String) -> String:
 	var icon: Dictionary = ICONS.get(icon_slug, {})
@@ -219,29 +352,36 @@ static func _icon_fragment(icon_slug: String) -> String:
 		return _bbcode_escape(_icon_plain(icon_slug))
 	return "[img=16x16]%s[/img]" % _bbcode_escape(icon_path)
 
+
 static func _icon_plain(icon_slug: String) -> String:
 	return "[%s]" % icon_slug
+
 
 static func _active_style_slug(active_styles: Array[Dictionary]) -> String:
 	if active_styles.is_empty():
 		return ""
 	return String(active_styles[active_styles.size() - 1].get("style", ""))
 
+
 static func _style_color(style_slug: String) -> String:
 	var style: Dictionary = STYLES.get(style_slug, {})
 	return String(style.get("color", ""))
+
 
 static func _style_bold(style_slug: String) -> bool:
 	var style: Dictionary = STYLES.get(style_slug, {})
 	return bool(style.get("bold", false))
 
+
 static func _style_italic(style_slug: String) -> bool:
 	var style: Dictionary = STYLES.get(style_slug, {})
 	return bool(style.get("italic", false))
 
+
 static func _style_underline(style_slug: String) -> bool:
 	var style: Dictionary = STYLES.get(style_slug, {})
 	return bool(style.get("underline", false))
+
 
 static func _placeholder_default(placeholder_type: String) -> Variant:
 	if placeholder_type == "int":
@@ -249,6 +389,7 @@ static func _placeholder_default(placeholder_type: String) -> Variant:
 	if placeholder_type == "float":
 		return -1.0
 	return "UNKNOWN"
+
 
 static func _locale_key(locale: String) -> String:
 	if not locale.is_empty() and VALUES.has(locale):
@@ -260,6 +401,7 @@ static func _locale_key(locale: String) -> String:
 	if VALUES.has(base_locale):
 		return base_locale
 	return DEFAULT_LOCALE
+
 
 static func _bbcode_escape(value: String) -> String:
 	return value.replace("[", "\\[").replace("]", "\\]")

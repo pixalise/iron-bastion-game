@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "NwZ2PycvCtTXXvZUQWyXB",
+    "lastChangeAt": "2026-07-24T18:01:34.868Z",
+    "version": 3,
+    "name": "Peg",
+    "description": "Definitions and looks for pegs",
+    "columns": [
+      {
+        "id": "6nVQmZKnh_Z2pxSqGLR3j",
+        "type": "assetRef",
+        "name": "symbol",
+        "defaultValue": "",
+        "assetCategory": "IMAGE",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "Mpaljf75j2Ey-Q9pq6EkM",
+        "type": "color",
+        "name": "symbol_color",
+        "defaultValue": "#ff3d3d",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "ih0tmth48pfIPCKvZQx81",
+        "type": "enum",
+        "name": "kind",
+        "defaultValue": "UNIT",
+        "possibleValues": [
+          "UNIT",
+          "ABILITY",
+          "ELEMENT",
+          "ENHANCEMENT"
+        ],
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "VEGIhjk8Gtz-JZ_W77Bbx",
+        "type": "string",
+        "name": "effect_id",
+        "defaultValue": "",
+        "required": false,
+        "unique": false
+      }
+    ],
+    "rows": [],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}

@@ -36,6 +36,54 @@
       "id": "FOREST_1_2_K",
       "relativePath": ".chisel/assets/HDRI/FOREST_1_2K.exr",
       "formattedBytes": "17.9 MB"
+    },
+    {
+      "category": "UI_ICON",
+      "name": "KNIGHT",
+      "note": "Unit",
+      "sizeBytes": 67303,
+      "width": 256,
+      "height": 256,
+      "extension": "png",
+      "id": "KNIGHT",
+      "relativePath": ".chisel/assets/UI_ICON/KNIGHT.png",
+      "formattedBytes": "65.7 KB"
+    },
+    {
+      "category": "UI_ICON",
+      "name": "ARCHER",
+      "note": "Unit",
+      "sizeBytes": 61485,
+      "width": 256,
+      "height": 256,
+      "extension": "png",
+      "id": "ARCHER",
+      "relativePath": ".chisel/assets/UI_ICON/ARCHER.png",
+      "formattedBytes": "60.0 KB"
+    },
+    {
+      "category": "UI_ICON",
+      "name": "PHYSICAL_DAMAGE",
+      "note": "Tooltip",
+      "sizeBytes": 65371,
+      "width": 256,
+      "height": 256,
+      "extension": "png",
+      "id": "PHYSICAL_DAMAGE",
+      "relativePath": ".chisel/assets/UI_ICON/PHYSICAL_DAMAGE.png",
+      "formattedBytes": "63.8 KB"
+    },
+    {
+      "category": "UI_ICON",
+      "name": "PIKEMAN",
+      "note": "Unit",
+      "sizeBytes": 59456,
+      "width": 256,
+      "height": 256,
+      "extension": "png",
+      "id": "PIKEMAN",
+      "relativePath": ".chisel/assets/UI_ICON/PIKEMAN.png",
+      "formattedBytes": "58.1 KB"
     }
   ]
 }
