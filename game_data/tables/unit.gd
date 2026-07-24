@@ -2,12 +2,20 @@
 class_name ChiselUnit
 extends RefCounted
 
-enum Id { ARCHER = 0, PIKEMAN = 1, KNIGHT = 2 }
+enum Id {
+	ARCHER = 0,
+	PIKEMAN = 1,
+	KNIGHT = 2
+}
 
 const TABLE_ID := "Jt3iVOYOqHl97phbZEpUi"
 const TABLE_NAME := "Unit"
 const TABLE_KIND := "user"
-const SLUGS := ["ARCHER", "PIKEMAN", "KNIGHT"]
+const SLUGS := [
+	"ARCHER",
+	"PIKEMAN",
+	"KNIGHT"
+]
 const NAME := [
 	ChiselLocalization.Id.UNIT_ARCHER_NAME,
 	ChiselLocalization.Id.UNIT_PIKEMAN_NAME,
@@ -18,9 +26,33 @@ const DESCRIPTION := [
 	ChiselLocalization.Id.UNIT_PIKEMAN_DESCRIPTION,
 	ChiselLocalization.Id.UNIT_KNIGHT_DESCRIPTION
 ]
-const PORTRAIT := [ChiselAssets.Id.ARCHER, ChiselAssets.Id.PIKEMAN, ChiselAssets.Id.KNIGHT]
-const MAX_HEALTH := [80, 120, 100]
-const PHYSICAL_ARMOR := [0, 0.1, 0.15]
-const ATTACK_DAMAGE := [15, 30, 20]
-const ATTACK_RATE := [1.2, 1, 1.3]
-const ATTACK_RANGE := [6.4, 2.1, 1.7]
+const PORTRAIT := [
+	ChiselAssets.Id.ARCHER,
+	ChiselAssets.Id.PIKEMAN,
+	ChiselAssets.Id.KNIGHT
+]
+const MAX_HEALTH := [
+	80,
+	120,
+	100
+]
+const PHYSICAL_ARMOR := [
+	0,
+	0.1,
+	0.15
+]
+const ATTACK_DAMAGE := [
+	15,
+	30,
+	20
+]
+const ATTACK_RATE := [
+	1.2,
+	1,
+	1.3
+]
+const ATTACK_RANGE := [
+	6.4,
+	2.1,
+	1.7
+]

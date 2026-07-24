@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "7evuGaD29l7vxCpjEVxQf",
-    "lastChangeAt": "2026-07-24T19:49:59.770Z",
-    "version": 17,
+    "lastChangeAt": "2026-07-24T20:02:02.652Z",
+    "version": 56,
     "name": "RecipeStep",
     "description": "Just a single step in the recipe (either ability, element or unit).",
     "columns": [
@@ -26,7 +26,56 @@
         "unique": false
       }
     ],
-    "rows": [],
+    "rows": [
+      {
+        "id": "v4tk6K9qKCMddPTEsLDYU",
+        "slug": "KNIGHT_STEP",
+        "values": [
+          {
+            "columnId": "66vcudyl6-kNv2NIJXv0Q",
+            "type": "ref",
+            "value": "KNIGHT"
+          },
+          {
+            "columnId": "oY63aNZsaN2MklKgGbN7V",
+            "type": "ref",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "id": "hjcKZXKOCGlZnG-__RT5b",
+        "slug": "ARCHER_STEP",
+        "values": [
+          {
+            "columnId": "66vcudyl6-kNv2NIJXv0Q",
+            "type": "ref",
+            "value": "ARCHER"
+          },
+          {
+            "columnId": "oY63aNZsaN2MklKgGbN7V",
+            "type": "ref",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "id": "0vi_RuZqRBoZSeYCj8zkv",
+        "slug": "PIKEMAN_STEP",
+        "values": [
+          {
+            "columnId": "66vcudyl6-kNv2NIJXv0Q",
+            "type": "ref",
+            "value": "PIKEMAN"
+          },
+          {
+            "columnId": "oY63aNZsaN2MklKgGbN7V",
+            "type": "ref",
+            "value": ""
+          }
+        ]
+      }
+    ],
     "kind": "user",
     "isSystemTable": false
   }
