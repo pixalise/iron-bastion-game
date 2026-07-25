@@ -194,24 +194,33 @@ Aspects are authored fantasy forces. They do not create generic adjective-unit
 results by themselves. A unit or ability plus an aspect must resolve through an
 authored recipe, or the aspect only contributes through its explicit modifiers.
 
-Core aspect examples:
+Launch aspects start as a clear good-vs-dark structure: three Heroic Prime
+Aspects and three Dark Prime Aspects. Each aspect owns three gameplay roles, so
+the first set covers the fundamental launch space without implying these are
+the only powers in the world.
 
-- Ignivar: flame, fury, destruction
-- Solenne: light, law, restoration
-- Veyr: beasts, instinct, transformation
-- Aelith: fae bargains, illusions, fate
-- Nharos: shadow, decay, secrecy
+Heroic Prime Aspects:
+
+- Ember: aggression, sacrifice, burst
+- Radiance: protection, restoration, order
+- Wild: growth, mobility, numbers
+
+Dark Prime Aspects:
+
+- Blight: decay, attrition, infection
+- Dread: fear, disruption, deception
+- Dominion: control, suppression, fortification
 
 Examples:
 
 ```text
-Soldier Ball + Veyr -> Beast Warrior
-Archer Ball + Solenne -> Elven Archer
-Meteor Strike Ball + Solenne -> Solar Judgment
-Target Practice Ball + Aelith -> Fae Drill
+Soldier Ball + Wild -> Beast Warrior
+Archer Ball + Radiance -> Elven Archer
+Meteor Strike Ball + Ember -> Cinderfall
+Target Practice Ball + Dread -> False Orders
 ```
 
-No generic "Veyr Soldier" or "Solenne Archer" is created unless that result is
+No generic "Wild Soldier" or "Radiance Archer" is created unless that result is
 an authored unit or ability.
 
 ### Enhancement Pegs
@@ -259,7 +268,7 @@ Utility pegs produce economy:
 Special pegs introduce late-game mechanics:
 
 - Echo
-- Wild
+- Wildcard
 - Memory
 - Repeat
 - Seal
@@ -273,9 +282,9 @@ results.
 Examples:
 
 ```text
-Archer Ball + Solenne -> Elven Archer
-Soldier Ball + Veyr -> Beast Warrior
-Meteor Strike Ball + Solenne -> Solar Judgment
+Archer Ball + Radiance -> Elven Archer
+Soldier Ball + Wild -> Beast Warrior
+Meteor Strike Ball + Ember -> Cinderfall
 Archer Ball + Unit Increase + Damage Multiplier -> stronger Archer Squad
 ```
 
@@ -300,9 +309,9 @@ The resolver works in this order:
 5. Apply enhancement modifiers to the result.
 6. Apply bottom bucket and building bonuses.
 
-Aspects do not create free permutations. If `Archer Ball + Solenne` should make
+Aspects do not create free permutations. If `Archer Ball + Radiance` should make
 Elven Archer, Elven Archer is an authored unit and the recipe points to it. If
-`Meteor Strike Ball + Solenne` should make Solar Judgment, Solar Judgment is an
+`Meteor Strike Ball + Ember` should make Cinderfall, Cinderfall is an
 authored ability and the recipe points to it.
 
 Generic templates are still useful, but they describe result patterns rather
@@ -346,7 +355,7 @@ Examples:
 - Archery Range: copy the next Archer card generated this launch
 - Treasury: convert bucket hits into extra Gold
 - Workshop: add machine XP or upgrade tokens
-- Chapel: improve Solenne recipes
+- Chapel: improve Radiance recipes
 - Market: improve shop rerolls or future building offers
 
 Players can own multiple copies of the same building up to a per-building copy
@@ -550,10 +559,10 @@ The upcoming encounter contains:
 - Goblin Swarm
 - Demon Hunter Elite
 
-The player buys two Archer Balls, a Split Ball, an Ignivar aspect peg, a Damage
+The player buys two Archer Balls, a Split Ball, an Ember aspect peg, a Damage
 Multiplier enhancement peg, and an Archery Range building for one bottom bucket.
 Thirty balls flood the machine during the launch. Several split and begin a
-chain reaction. Two Archer Balls hit Ignivar and the upgraded Archery Range
+chain reaction. Two Archer Balls hit Ember and the upgraded Archery Range
 copies the best Archer result.
 
 The machine generates:
@@ -579,7 +588,7 @@ Prototype content:
 - One board: Kingdom
 - Three unit ball identities
 - Two ability ball identities
-- Five aspects
+- Six aspects
 - Three enhancement pegs
 - Three physics pegs
 - Three special ball types
