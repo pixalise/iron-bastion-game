@@ -2,11 +2,48 @@
   "schemaVersion": 1,
   "table": {
     "id": "yh7aOYkekni1eI81UEqzn",
-    "lastChangeAt": "2026-07-25T11:17:12.991Z",
-    "version": 1,
+    "lastChangeAt": "2026-07-25T12:17:25.665Z",
+    "version": 2,
     "name": "Ball",
     "description": "Balls",
     "columns": [
+      {
+        "id": "RApKUcl-cbADtkv08wwf5",
+        "type": "translationRef",
+        "name": "name",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "j7I3lm6INwodVtcW2WKSD",
+        "type": "translationRef",
+        "name": "description",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "YFqKtfvRUIexvt1NpMsba",
+        "type": "assetRef",
+        "name": "portrait",
+        "defaultValue": "",
+        "assetCategory": "UI_ICON",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "_hpTdR7IZEurgiCgefHtv",
+        "type": "enum",
+        "name": "kind",
+        "defaultValue": "UNIT",
+        "possibleValues": [
+          "UNIT",
+          "ABILITY"
+        ],
+        "required": true,
+        "unique": false
+      },
       {
         "id": "A5znOVYXnijQKRgzhIHTi",
         "type": "ref",
@@ -22,14 +59,6 @@
         "name": "ability",
         "defaultValue": "",
         "refTableId": "45RH7A6GsG12q-v78dmmN",
-        "required": false,
-        "unique": false
-      },
-      {
-        "id": "bd26Yy4xNlqoTiYYjBhJy",
-        "type": "enum",
-        "name": "special",
-        "defaultValue": "",
         "required": false,
         "unique": false
       }

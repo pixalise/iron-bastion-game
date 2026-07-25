@@ -3,8 +3,8 @@
   "tables": [
     {
       "id": "NwZ2PycvCtTXXvZUQWyXB",
-      "lastChangeAt": "2026-07-25T12:04:01.078Z",
-      "version": 11,
+      "lastChangeAt": "2026-07-25T12:17:25.665Z",
+      "version": 12,
       "name": "Peg",
       "description": "Definitions and looks for pegs",
       "columns": [
@@ -101,6 +101,15 @@
             "SEAL"
           ],
           "required": false,
+          "unique": false
+        },
+        {
+          "id": "R6kzDSrijkkFD9inspFXa",
+          "type": "integer",
+          "name": "max_level",
+          "defaultValue": 1,
+          "min": 1,
+          "required": true,
           "unique": false
         }
       ],
@@ -380,8 +389,8 @@
     },
     {
       "id": "45RH7A6GsG12q-v78dmmN",
-      "lastChangeAt": "2026-07-25T12:07:48.376Z",
-      "version": 6,
+      "lastChangeAt": "2026-07-25T12:17:25.665Z",
+      "version": 7,
       "name": "Ability",
       "description": "The abilities table",
       "columns": [
@@ -415,6 +424,63 @@
           "type": "integer",
           "name": "command_cost",
           "defaultValue": 1,
+          "min": 0,
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "sPC5LWRUpY5RNIot4aChk",
+          "type": "enum",
+          "name": "effect_key",
+          "defaultValue": "NONE",
+          "possibleValues": [
+            "NONE",
+            "TARGET_PRACTICE",
+            "METEOR_STRIKE"
+          ],
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "gVCOkD9PHf7LhEFduBKTJ",
+          "type": "enum",
+          "name": "targeting",
+          "defaultValue": "NONE",
+          "possibleValues": [
+            "NONE",
+            "SELF",
+            "ALLY",
+            "ENEMY",
+            "AREA",
+            "LANE",
+            "GLOBAL"
+          ],
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "eGf_84mCxk10pUvFWTCAq",
+          "type": "integer",
+          "name": "base_damage",
+          "defaultValue": 0,
+          "min": 0,
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "nmg-Y9vcMGXwZi1yXmqXs",
+          "type": "decimal",
+          "name": "area_radius",
+          "defaultValue": 0,
+          "min": 0,
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "nJe2unfXMeiqZz2hESNF4",
+          "type": "decimal",
+          "name": "duration",
+          "defaultValue": 0,
           "min": 0,
           "required": true,
           "unique": false
@@ -469,8 +535,8 @@
     },
     {
       "id": "boRIG5F5aadgs1TVlDgLM",
-      "lastChangeAt": "2026-07-24T20:56:17.049Z",
-      "version": 22,
+      "lastChangeAt": "2026-07-25T12:17:25.665Z",
+      "version": 23,
       "name": "Recipe",
       "description": "A new card recipe connecting things together, literally just a sequence of fields and whatnot.",
       "columns": [
@@ -509,6 +575,60 @@
           "refTableId": "7evuGaD29l7vxCpjEVxQf",
           "required": true,
           "unique": false
+        },
+        {
+          "id": "XmUZmSpQfMDgXsg_QR1R3",
+          "type": "ref",
+          "name": "step_3",
+          "defaultValue": "",
+          "refTableId": "7evuGaD29l7vxCpjEVxQf",
+          "required": false,
+          "unique": false
+        },
+        {
+          "id": "6yInavJeBdm65L0l7ImX9",
+          "type": "ref",
+          "name": "step_4",
+          "defaultValue": "",
+          "refTableId": "7evuGaD29l7vxCpjEVxQf",
+          "required": false,
+          "unique": false
+        },
+        {
+          "id": "5mN5q1cp1naVMMk-hliPs",
+          "type": "ref",
+          "name": "step_5",
+          "defaultValue": "",
+          "refTableId": "7evuGaD29l7vxCpjEVxQf",
+          "required": false,
+          "unique": false
+        },
+        {
+          "id": "VphUFug8E_lbq-9TEa_bc",
+          "type": "integer",
+          "name": "offer_priority",
+          "defaultValue": 0,
+          "min": 0,
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "gMw6m_MdSWI9Ol7h6_vn9",
+          "type": "integer",
+          "name": "recipe_tier",
+          "defaultValue": 1,
+          "min": 1,
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "ELQSmCT62WzJk1WXNLFlj",
+          "type": "integer",
+          "name": "command_cost_delta",
+          "defaultValue": 0,
+          "min": 0,
+          "required": true,
+          "unique": false
         }
       ],
       "rows": [],
@@ -517,10 +637,10 @@
     },
     {
       "id": "7evuGaD29l7vxCpjEVxQf",
-      "lastChangeAt": "2026-07-25T11:51:40.000Z",
-      "version": 57,
+      "lastChangeAt": "2026-07-25T12:17:25.665Z",
+      "version": 58,
       "name": "RecipeStep",
-      "description": "Just a single step in the recipe (either ability, element or unit).",
+      "description": "Just a single step in the recipe (either ability, aspect, modifier or unit).",
       "columns": [
         {
           "id": "66vcudyl6-kNv2NIJXv0Q",
@@ -734,12 +854,212 @@
       "isSystemTable": false
     },
     {
-      "id": "yh7aOYkekni1eI81UEqzn",
-      "lastChangeAt": "2026-07-25T11:17:12.991Z",
+      "id": "3D2vwVj1UZD_4WoiWoczH",
+      "lastChangeAt": "2026-07-25T12:17:25.665Z",
       "version": 1,
+      "name": "Building",
+      "description": "Bucket buildings that modify the result after a ball finishes its path.",
+      "columns": [
+        {
+          "id": "cKJ5yrO5D2fOBGmpoiOJP",
+          "type": "translationRef",
+          "name": "name",
+          "defaultValue": "",
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "HXxMly1y_fxPGltIe5Hwy",
+          "type": "translationRef",
+          "name": "description",
+          "defaultValue": "",
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "38LpBx7x4mpH0zaSNOTmE",
+          "type": "assetRef",
+          "name": "portrait",
+          "defaultValue": "",
+          "assetCategory": "UI_ICON",
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "edqeVfoPCriTTgCQvca6O",
+          "type": "enum",
+          "name": "effect_key",
+          "defaultValue": "NONE",
+          "possibleValues": [
+            "NONE",
+            "ADD_CARD",
+            "COPY_RESULT",
+            "ADD_GOLD",
+            "ADD_MACHINE_XP",
+            "IMPROVE_ASPECT_RECIPES",
+            "IMPROVE_SHOP",
+            "MODIFY_BUCKET"
+          ],
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "lCELPgUWwUr1VXaANya8c",
+          "type": "integer",
+          "name": "max_copies",
+          "defaultValue": 1,
+          "min": 1,
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "z_mhtIyF1xjoHJZ5uZ4X2",
+          "type": "integer",
+          "name": "max_level",
+          "defaultValue": 1,
+          "min": 1,
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "h-AHVvGxs4FXjaK25Z5J9",
+          "type": "ref",
+          "name": "aspect_affinity",
+          "defaultValue": "",
+          "refTableId": "JMr24o4E6yS4bePAIbggR",
+          "required": false,
+          "unique": false
+        }
+      ],
+      "rows": [],
+      "kind": "user",
+      "isSystemTable": false
+    },
+    {
+      "id": "RW4Qnc19FaX6h6fmZUcit",
+      "lastChangeAt": "2026-07-25T12:17:25.665Z",
+      "version": 3,
+      "name": "ShopItem",
+      "description": "Buyable shop entries for balls, pegs, and buildings.",
+      "columns": [
+        {
+          "id": "BueHIICd5VNTrj7payP6X",
+          "type": "ref",
+          "name": "ball",
+          "defaultValue": "",
+          "refTableId": "yh7aOYkekni1eI81UEqzn",
+          "required": false,
+          "unique": false
+        },
+        {
+          "id": "gX0TbdEhOgf3da7-IVQ8j",
+          "type": "ref",
+          "name": "peg",
+          "defaultValue": "",
+          "refTableId": "NwZ2PycvCtTXXvZUQWyXB",
+          "required": false,
+          "unique": false
+        },
+        {
+          "id": "9m0b0juW4xvBLHsSg17Zf",
+          "type": "ref",
+          "name": "building",
+          "defaultValue": "",
+          "refTableId": "3D2vwVj1UZD_4WoiWoczH",
+          "required": false,
+          "unique": false
+        },
+        {
+          "id": "ApP91cY3iVbjty_pCdPV6",
+          "type": "integer",
+          "name": "price",
+          "defaultValue": 0,
+          "min": 0,
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "75sftQWGACFiFZeFJU_zf",
+          "type": "enum",
+          "name": "rarity",
+          "defaultValue": "COMMON",
+          "possibleValues": [
+            "COMMON",
+            "UNCOMMON",
+            "RARE",
+            "EPIC",
+            "LEGENDARY"
+          ],
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "gNv4xcg0FjalMKKfdo1x5",
+          "type": "integer",
+          "name": "unlock_tier",
+          "defaultValue": 1,
+          "min": 1,
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "sgkClooIYiou5ADG-1Ei0",
+          "type": "integer",
+          "name": "shop_weight",
+          "defaultValue": 100,
+          "min": 0,
+          "required": true,
+          "unique": false
+        }
+      ],
+      "rows": [],
+      "kind": "user",
+      "isSystemTable": false
+    },
+    {
+      "id": "yh7aOYkekni1eI81UEqzn",
+      "lastChangeAt": "2026-07-25T12:17:25.665Z",
+      "version": 2,
       "name": "Ball",
       "description": "Balls",
       "columns": [
+        {
+          "id": "RApKUcl-cbADtkv08wwf5",
+          "type": "translationRef",
+          "name": "name",
+          "defaultValue": "",
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "j7I3lm6INwodVtcW2WKSD",
+          "type": "translationRef",
+          "name": "description",
+          "defaultValue": "",
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "YFqKtfvRUIexvt1NpMsba",
+          "type": "assetRef",
+          "name": "portrait",
+          "defaultValue": "",
+          "assetCategory": "UI_ICON",
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "_hpTdR7IZEurgiCgefHtv",
+          "type": "enum",
+          "name": "kind",
+          "defaultValue": "UNIT",
+          "possibleValues": [
+            "UNIT",
+            "ABILITY"
+          ],
+          "required": true,
+          "unique": false
+        },
         {
           "id": "A5znOVYXnijQKRgzhIHTi",
           "type": "ref",
@@ -757,14 +1077,6 @@
           "refTableId": "45RH7A6GsG12q-v78dmmN",
           "required": false,
           "unique": false
-        },
-        {
-          "id": "bd26Yy4xNlqoTiYYjBhJy",
-          "type": "enum",
-          "name": "special",
-          "defaultValue": "",
-          "required": false,
-          "unique": false
         }
       ],
       "rows": [],
@@ -773,8 +1085,8 @@
     },
     {
       "id": "JMr24o4E6yS4bePAIbggR",
-      "lastChangeAt": "2026-07-25T11:49:56.267Z",
-      "version": 1,
+      "lastChangeAt": "2026-07-25T12:17:25.665Z",
+      "version": 2,
       "name": "Aspect",
       "description": "Evolutionary recipe stuff",
       "columns": [
@@ -800,6 +1112,18 @@
           "name": "icon",
           "defaultValue": "",
           "assetCategory": "UI_ICON",
+          "required": true,
+          "unique": false
+        },
+        {
+          "id": "xYpLBSkQ5UxcHizujRkbC",
+          "type": "enum",
+          "name": "alignment",
+          "defaultValue": "HEROIC",
+          "possibleValues": [
+            "HEROIC",
+            "DARK"
+          ],
           "required": true,
           "unique": false
         }

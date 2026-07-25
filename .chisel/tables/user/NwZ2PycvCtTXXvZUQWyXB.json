@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "NwZ2PycvCtTXXvZUQWyXB",
-    "lastChangeAt": "2026-07-25T12:04:01.078Z",
-    "version": 11,
+    "lastChangeAt": "2026-07-25T12:17:25.665Z",
+    "version": 12,
     "name": "Peg",
     "description": "Definitions and looks for pegs",
     "columns": [
@@ -100,6 +100,15 @@
           "SEAL"
         ],
         "required": false,
+        "unique": false
+      },
+      {
+        "id": "R6kzDSrijkkFD9inspFXa",
+        "type": "integer",
+        "name": "max_level",
+        "defaultValue": 1,
+        "min": 1,
+        "required": true,
         "unique": false
       }
     ],

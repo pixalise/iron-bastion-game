@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "table": {
     "id": "7evuGaD29l7vxCpjEVxQf",
-    "lastChangeAt": "2026-07-25T11:51:40.000Z",
-    "version": 57,
+    "lastChangeAt": "2026-07-25T12:17:25.665Z",
+    "version": 58,
     "name": "RecipeStep",
-    "description": "Just a single step in the recipe (either ability, element or unit).",
+    "description": "Just a single step in the recipe (either ability, aspect, modifier or unit).",
     "columns": [
       {
         "id": "66vcudyl6-kNv2NIJXv0Q",

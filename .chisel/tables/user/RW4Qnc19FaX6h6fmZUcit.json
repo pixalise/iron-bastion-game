@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "RW4Qnc19FaX6h6fmZUcit",
+    "lastChangeAt": "2026-07-25T12:17:25.665Z",
+    "version": 3,
+    "name": "ShopItem",
+    "description": "Buyable shop entries for balls, pegs, and buildings.",
+    "columns": [
+      {
+        "id": "BueHIICd5VNTrj7payP6X",
+        "type": "ref",
+        "name": "ball",
+        "defaultValue": "",
+        "refTableId": "yh7aOYkekni1eI81UEqzn",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "gX0TbdEhOgf3da7-IVQ8j",
+        "type": "ref",
+        "name": "peg",
+        "defaultValue": "",
+        "refTableId": "NwZ2PycvCtTXXvZUQWyXB",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "9m0b0juW4xvBLHsSg17Zf",
+        "type": "ref",
+        "name": "building",
+        "defaultValue": "",
+        "refTableId": "3D2vwVj1UZD_4WoiWoczH",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "ApP91cY3iVbjty_pCdPV6",
+        "type": "integer",
+        "name": "price",
+        "defaultValue": 0,
+        "min": 0,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "75sftQWGACFiFZeFJU_zf",
+        "type": "enum",
+        "name": "rarity",
+        "defaultValue": "COMMON",
+        "possibleValues": [
+          "COMMON",
+          "UNCOMMON",
+          "RARE",
+          "EPIC",
+          "LEGENDARY"
+        ],
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "gNv4xcg0FjalMKKfdo1x5",
+        "type": "integer",
+        "name": "unlock_tier",
+        "defaultValue": 1,
+        "min": 1,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "sgkClooIYiou5ADG-1Ei0",
+        "type": "integer",
+        "name": "shop_weight",
+        "defaultValue": 100,
+        "min": 0,
+        "required": true,
+        "unique": false
+      }
+    ],
+    "rows": [],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}

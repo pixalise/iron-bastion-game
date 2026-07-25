@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "boRIG5F5aadgs1TVlDgLM",
-    "lastChangeAt": "2026-07-24T20:56:17.049Z",
-    "version": 22,
+    "lastChangeAt": "2026-07-25T12:17:25.665Z",
+    "version": 23,
     "name": "Recipe",
     "description": "A new card recipe connecting things together, literally just a sequence of fields and whatnot.",
     "columns": [
@@ -40,6 +40,60 @@
         "name": "step_2",
         "defaultValue": "",
         "refTableId": "7evuGaD29l7vxCpjEVxQf",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "XmUZmSpQfMDgXsg_QR1R3",
+        "type": "ref",
+        "name": "step_3",
+        "defaultValue": "",
+        "refTableId": "7evuGaD29l7vxCpjEVxQf",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "6yInavJeBdm65L0l7ImX9",
+        "type": "ref",
+        "name": "step_4",
+        "defaultValue": "",
+        "refTableId": "7evuGaD29l7vxCpjEVxQf",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "5mN5q1cp1naVMMk-hliPs",
+        "type": "ref",
+        "name": "step_5",
+        "defaultValue": "",
+        "refTableId": "7evuGaD29l7vxCpjEVxQf",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "VphUFug8E_lbq-9TEa_bc",
+        "type": "integer",
+        "name": "offer_priority",
+        "defaultValue": 0,
+        "min": 0,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "gMw6m_MdSWI9Ol7h6_vn9",
+        "type": "integer",
+        "name": "recipe_tier",
+        "defaultValue": 1,
+        "min": 1,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "ELQSmCT62WzJk1WXNLFlj",
+        "type": "integer",
+        "name": "command_cost_delta",
+        "defaultValue": 0,
+        "min": 0,
         "required": true,
         "unique": false
       }

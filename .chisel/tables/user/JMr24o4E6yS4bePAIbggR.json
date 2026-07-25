@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "JMr24o4E6yS4bePAIbggR",
-    "lastChangeAt": "2026-07-25T11:49:56.267Z",
-    "version": 1,
+    "lastChangeAt": "2026-07-25T12:17:25.665Z",
+    "version": 2,
     "name": "Aspect",
     "description": "Evolutionary recipe stuff",
     "columns": [
@@ -29,6 +29,18 @@
         "name": "icon",
         "defaultValue": "",
         "assetCategory": "UI_ICON",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "xYpLBSkQ5UxcHizujRkbC",
+        "type": "enum",
+        "name": "alignment",
+        "defaultValue": "HEROIC",
+        "possibleValues": [
+          "HEROIC",
+          "DARK"
+        ],
         "required": true,
         "unique": false
       }

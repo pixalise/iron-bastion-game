@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "3D2vwVj1UZD_4WoiWoczH",
+    "lastChangeAt": "2026-07-25T12:17:25.665Z",
+    "version": 1,
+    "name": "Building",
+    "description": "Bucket buildings that modify the result after a ball finishes its path.",
+    "columns": [
+      {
+        "id": "cKJ5yrO5D2fOBGmpoiOJP",
+        "type": "translationRef",
+        "name": "name",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "HXxMly1y_fxPGltIe5Hwy",
+        "type": "translationRef",
+        "name": "description",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "38LpBx7x4mpH0zaSNOTmE",
+        "type": "assetRef",
+        "name": "portrait",
+        "defaultValue": "",
+        "assetCategory": "UI_ICON",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "edqeVfoPCriTTgCQvca6O",
+        "type": "enum",
+        "name": "effect_key",
+        "defaultValue": "NONE",
+        "possibleValues": [
+          "NONE",
+          "ADD_CARD",
+          "COPY_RESULT",
+          "ADD_GOLD",
+          "ADD_MACHINE_XP",
+          "IMPROVE_ASPECT_RECIPES",
+          "IMPROVE_SHOP",
+          "MODIFY_BUCKET"
+        ],
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "lCELPgUWwUr1VXaANya8c",
+        "type": "integer",
+        "name": "max_copies",
+        "defaultValue": 1,
+        "min": 1,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "z_mhtIyF1xjoHJZ5uZ4X2",
+        "type": "integer",
+        "name": "max_level",
+        "defaultValue": 1,
+        "min": 1,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "h-AHVvGxs4FXjaK25Z5J9",
+        "type": "ref",
+        "name": "aspect_affinity",
+        "defaultValue": "",
+        "refTableId": "JMr24o4E6yS4bePAIbggR",
+        "required": false,
+        "unique": false
+      }
+    ],
+    "rows": [],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}
