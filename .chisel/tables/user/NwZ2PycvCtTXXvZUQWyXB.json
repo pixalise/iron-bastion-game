@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "NwZ2PycvCtTXXvZUQWyXB",
-    "lastChangeAt": "2026-07-24T18:33:38.449Z",
-    "version": 10,
+    "lastChangeAt": "2026-07-25T12:04:01.078Z",
+    "version": 11,
     "name": "Peg",
     "description": "Definitions and looks for pegs",
     "columns": [
@@ -28,22 +28,77 @@
         "id": "6hiBQmeanEWbn0NzIWAc-",
         "type": "enum",
         "name": "kind",
-        "defaultValue": "UNIT",
+        "defaultValue": "ASPECT",
         "possibleValues": [
-          "UNIT",
-          "ABILITY",
-          "GOLD",
-          "ELEMENT"
+          "ASPECT",
+          "MODIFIER",
+          "PHYSICS",
+          "UTILITY",
+          "SPECIAL"
         ],
         "required": true,
         "unique": false
       },
       {
-        "id": "glMnfR2szHccrBAWRcAVG",
+        "id": "22kzmlj2zJcZ6q6y2Hc1o",
         "type": "ref",
-        "name": "unit_ref",
+        "name": "aspect",
         "defaultValue": "",
-        "refTableId": "Jt3iVOYOqHl97phbZEpUi",
+        "refTableId": "JMr24o4E6yS4bePAIbggR",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "Nl6XfxbIGxp_rx5jZpXQ5",
+        "type": "ref",
+        "name": "modifier",
+        "defaultValue": "",
+        "refTableId": "4wJYRawBZV5Pm1v-_lxh5",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "wzMi7_4L-tI2cc8YyX_Qr",
+        "type": "enum",
+        "name": "physics_kind",
+        "defaultValue": "",
+        "possibleValues": [
+          "SPRING",
+          "PORTAL",
+          "SPLITTER",
+          "ACCELERATOR",
+          "REFLECTOR",
+          "MAGNET"
+        ],
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "XVIwfKt7L7j8H3Gq9CurO",
+        "type": "enum",
+        "name": "utility_kind",
+        "defaultValue": "",
+        "possibleValues": [
+          "GOLD",
+          "REPAIR",
+          "UPGRADE_TOKEN",
+          "RESEARCH"
+        ],
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "V8aPRjpnqlQLNZEfdK7r0",
+        "type": "enum",
+        "name": "special_kind",
+        "defaultValue": "",
+        "possibleValues": [
+          "ECHO",
+          "WILDCARD",
+          "MEMORY",
+          "REPEAT",
+          "SEAL"
+        ],
         "required": false,
         "unique": false
       }

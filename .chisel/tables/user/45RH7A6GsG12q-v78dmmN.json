@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "45RH7A6GsG12q-v78dmmN",
-    "lastChangeAt": "2026-07-24T20:34:08.776Z",
-    "version": 4,
+    "lastChangeAt": "2026-07-25T12:07:48.376Z",
+    "version": 6,
     "name": "Ability",
     "description": "The abilities table",
     "columns": [
@@ -29,6 +29,15 @@
         "name": "portrait",
         "defaultValue": "",
         "assetCategory": "UI_ICON",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "c1K9uXSNDv6bAbWSkAC-r",
+        "type": "integer",
+        "name": "command_cost",
+        "defaultValue": 1,
+        "min": 0,
         "required": true,
         "unique": false
       }

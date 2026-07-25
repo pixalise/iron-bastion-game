@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "Jt3iVOYOqHl97phbZEpUi",
-    "lastChangeAt": "2026-07-24T19:16:21.315Z",
-    "version": 111,
+    "lastChangeAt": "2026-07-25T12:07:48.376Z",
+    "version": 114,
     "name": "Unit",
     "description": "The actual ingame units that can be spawned via card",
     "columns": [
@@ -77,6 +77,24 @@
         "min": 1,
         "required": true,
         "unique": false
+      },
+      {
+        "id": "x8cFMR37F1bg5zTHoU71U",
+        "type": "integer",
+        "name": "command_cost",
+        "defaultValue": 1,
+        "min": 0,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "PVi5wIKQj2iA9owQx5Nc_",
+        "type": "integer",
+        "name": "base_unit_count",
+        "defaultValue": 1,
+        "min": 1,
+        "required": true,
+        "unique": false
       }
     ],
     "rows": [
@@ -123,6 +141,16 @@
             "columnId": "hBbKJ5jA00lDXHfztOQKV",
             "type": "decimal",
             "value": 6.4
+          },
+          {
+            "columnId": "x8cFMR37F1bg5zTHoU71U",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "PVi5wIKQj2iA9owQx5Nc_",
+            "type": "integer",
+            "value": 1
           }
         ]
       },
@@ -169,6 +197,16 @@
             "columnId": "hBbKJ5jA00lDXHfztOQKV",
             "type": "decimal",
             "value": 2.1
+          },
+          {
+            "columnId": "x8cFMR37F1bg5zTHoU71U",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "PVi5wIKQj2iA9owQx5Nc_",
+            "type": "integer",
+            "value": 1
           }
         ]
       },
@@ -215,6 +253,16 @@
             "columnId": "hBbKJ5jA00lDXHfztOQKV",
             "type": "decimal",
             "value": 1.7
+          },
+          {
+            "columnId": "x8cFMR37F1bg5zTHoU71U",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "PVi5wIKQj2iA9owQx5Nc_",
+            "type": "integer",
+            "value": 1
           }
         ]
       }
