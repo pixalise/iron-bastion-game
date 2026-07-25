@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "7evuGaD29l7vxCpjEVxQf",
-    "lastChangeAt": "2026-07-24T20:02:02.652Z",
-    "version": 56,
+    "lastChangeAt": "2026-07-25T11:51:40.000Z",
+    "version": 57,
     "name": "RecipeStep",
     "description": "Just a single step in the recipe (either ability, element or unit).",
     "columns": [
@@ -22,6 +22,24 @@
         "name": "ability",
         "defaultValue": "",
         "refTableId": "45RH7A6GsG12q-v78dmmN",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "BnCHt8RgHyrFjHEs4qexd",
+        "type": "ref",
+        "name": "modifier",
+        "defaultValue": "",
+        "refTableId": "4wJYRawBZV5Pm1v-_lxh5",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "uzDqdWW15Y72n9xq1FLH-",
+        "type": "ref",
+        "name": "aspect",
+        "defaultValue": "",
+        "refTableId": "JMr24o4E6yS4bePAIbggR",
         "required": false,
         "unique": false
       }

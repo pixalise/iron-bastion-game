@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "4wJYRawBZV5Pm1v-_lxh5",
-    "lastChangeAt": "2026-07-25T11:50:44.796Z",
-    "version": 3,
+    "lastChangeAt": "2026-07-25T11:30:51.575Z",
+    "version": 2,
     "name": "Modifiers",
     "description": "Modifiers as bolt-on for cards and recipes, need to be part of the sequence",
     "columns": [

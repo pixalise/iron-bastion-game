@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "table": {
-    "id": "4wJYRawBZV5Pm1v-_lxh5",
-    "lastChangeAt": "2026-07-25T11:50:44.796Z",
-    "version": 3,
-    "name": "Modifiers",
-    "description": "Modifiers as bolt-on for cards and recipes, need to be part of the sequence",
+    "id": "JMr24o4E6yS4bePAIbggR",
+    "lastChangeAt": "2026-07-25T11:49:56.267Z",
+    "version": 1,
+    "name": "Aspect",
+    "description": "Evolutionary recipe stuff",
     "columns": [
       {
-        "id": "8jJ3fk1yq-LPObUPu5EXv",
+        "id": "k3En0Faphms-90Ge_6Q1X",
         "type": "translationRef",
         "name": "name",
         "defaultValue": "",
@@ -16,7 +16,7 @@
         "unique": false
       },
       {
-        "id": "wItuw2dbananRby_Q867I",
+        "id": "X5RkEHt6y5rfGH4t8TSIM",
         "type": "translationRef",
         "name": "description",
         "defaultValue": "",
@@ -24,9 +24,9 @@
         "unique": false
       },
       {
-        "id": "TBBGFRplQ3O4w5ZPW8na1",
+        "id": "ZeRAP-fN1_A5fK3eF4dqo",
         "type": "assetRef",
-        "name": "portrait",
+        "name": "icon",
         "defaultValue": "",
         "assetCategory": "UI_ICON",
         "required": true,
