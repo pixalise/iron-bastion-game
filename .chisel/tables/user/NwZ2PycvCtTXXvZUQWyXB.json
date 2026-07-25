@@ -2,11 +2,27 @@
   "schemaVersion": 1,
   "table": {
     "id": "NwZ2PycvCtTXXvZUQWyXB",
-    "lastChangeAt": "2026-07-25T12:17:25.665Z",
-    "version": 12,
+    "lastChangeAt": "2026-07-25T12:54:52.783Z",
+    "version": 13,
     "name": "Peg",
     "description": "Definitions and looks for pegs",
     "columns": [
+      {
+        "id": "QnxQnAiCutORccXlZF__h",
+        "type": "translationRef",
+        "name": "name",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "i2Hx5hOWGVzmHf1O0t8mj",
+        "type": "translationRef",
+        "name": "description",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
       {
         "id": "6nVQmZKnh_Z2pxSqGLR3j",
         "type": "assetRef",
