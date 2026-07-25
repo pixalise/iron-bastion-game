@@ -484,10 +484,10 @@
     },
     {
       "id": "4wJYRawBZV5Pm1v-_lxh5",
-      "lastChangeAt": "2026-07-25T05:51:44.249Z",
-      "version": 1,
-      "name": "Upgrade",
-      "description": "Upgrade tied to pegs and for recipes",
+      "lastChangeAt": "2026-07-25T11:30:51.575Z",
+      "version": 2,
+      "name": "Modifiers",
+      "description": "Modifiers as bolt-on for cards and recipes, need to be part of the sequence",
       "columns": [
         {
           "id": "8jJ3fk1yq-LPObUPu5EXv",
@@ -513,17 +513,6 @@
           "assetCategory": "UI_ICON",
           "required": true,
           "unique": false
-        },
-        {
-          "id": "nkH8RY1EMpIxXoA2ntUsO",
-          "type": "enumArray",
-          "name": "tags",
-          "defaultValue": [],
-          "possibleValues": [
-            "EVOLUTION"
-          ],
-          "required": true,
-          "unique": false
         }
       ],
       "rows": [],
@@ -531,14 +520,14 @@
       "isSystemTable": false
     },
     {
-      "id": "RW4Qnc19FaX6h6fmZUcit",
-      "lastChangeAt": "2026-07-25T05:54:37.338Z",
-      "version": 2,
-      "name": "ShopItem",
-      "description": "Intermediary table for shop, allows adding price to things",
+      "id": "yh7aOYkekni1eI81UEqzn",
+      "lastChangeAt": "2026-07-25T11:17:12.991Z",
+      "version": 1,
+      "name": "Ball",
+      "description": "Balls",
       "columns": [
         {
-          "id": "DBB4eXXAZys0RhiNjfE00",
+          "id": "A5znOVYXnijQKRgzhIHTi",
           "type": "ref",
           "name": "unit",
           "defaultValue": "",
@@ -547,7 +536,7 @@
           "unique": false
         },
         {
-          "id": "0cCtfY8t8YJl-Xkhcetsb",
+          "id": "ok7wiEMsJkkscAWxk52DH",
           "type": "ref",
           "name": "ability",
           "defaultValue": "",
@@ -556,21 +545,11 @@
           "unique": false
         },
         {
-          "id": "KB-AeF2BlVcOwpk_i_Gco",
-          "type": "ref",
-          "name": "upgrade",
+          "id": "bd26Yy4xNlqoTiYYjBhJy",
+          "type": "enum",
+          "name": "special",
           "defaultValue": "",
-          "refTableId": "4wJYRawBZV5Pm1v-_lxh5",
           "required": false,
-          "unique": false
-        },
-        {
-          "id": "ShPsxxWpZJjVXj_rxXnM8",
-          "type": "integer",
-          "name": "price",
-          "defaultValue": 0,
-          "min": 0,
-          "required": true,
           "unique": false
         }
       ],
