@@ -2,12 +2,81 @@
 class_name ChiselRecipestep
 extends RefCounted
 
-enum Id { INVALID = -1, KNIGHT_STEP = 0, ARCHER_STEP = 1, PIKEMAN_STEP = 2 }
+enum Id {
+	INVALID = -1,
+	KNIGHT_STEP = 0,
+	ARCHER_STEP = 1,
+	PIKEMAN_STEP = 2,
+	TARGET_PRACTICE_STEP = 3,
+	METEOR_STRIKE_STEP = 4,
+	EMBER_STEP = 5,
+	LONGSHOT_TRAINING_STEP = 6,
+	REINFORCEMENT_CALL_STEP = 7,
+	WAR_DRUM_STEP = 8,
+	OVERCHARGE_STEP = 9
+}
 
 const TABLE_ID := "7evuGaD29l7vxCpjEVxQf"
 const TABLE_NAME := "RecipeStep"
 const TABLE_KIND := "user"
-const COUNT := 3
-const SLUGS := ["KNIGHT_STEP", "ARCHER_STEP", "PIKEMAN_STEP"]
-const UNIT := [ChiselUnit.Id.KNIGHT, ChiselUnit.Id.ARCHER, ChiselUnit.Id.PIKEMAN]
-const ABILITY := [ChiselAbility.Id.INVALID, ChiselAbility.Id.INVALID, ChiselAbility.Id.INVALID]
+const COUNT := 10
+const SLUGS := [
+	"KNIGHT_STEP",
+	"ARCHER_STEP",
+	"PIKEMAN_STEP",
+	"TARGET_PRACTICE_STEP",
+	"METEOR_STRIKE_STEP",
+	"EMBER_STEP",
+	"LONGSHOT_TRAINING_STEP",
+	"REINFORCEMENT_CALL_STEP",
+	"WAR_DRUM_STEP",
+	"OVERCHARGE_STEP"
+]
+const UNIT := [
+	ChiselUnit.Id.KNIGHT,
+	ChiselUnit.Id.ARCHER,
+	ChiselUnit.Id.PIKEMAN,
+	ChiselUnit.Id.INVALID,
+	ChiselUnit.Id.INVALID,
+	ChiselUnit.Id.INVALID,
+	ChiselUnit.Id.INVALID,
+	ChiselUnit.Id.INVALID,
+	ChiselUnit.Id.INVALID,
+	ChiselUnit.Id.INVALID
+]
+const ABILITY := [
+	ChiselAbility.Id.INVALID,
+	ChiselAbility.Id.INVALID,
+	ChiselAbility.Id.INVALID,
+	ChiselAbility.Id.TARGET_PRACTICE,
+	ChiselAbility.Id.METEOR_STRIKE,
+	ChiselAbility.Id.INVALID,
+	ChiselAbility.Id.INVALID,
+	ChiselAbility.Id.INVALID,
+	ChiselAbility.Id.INVALID,
+	ChiselAbility.Id.INVALID
+]
+const MODIFIER := [
+	ChiselModifier.Id.INVALID,
+	ChiselModifier.Id.INVALID,
+	ChiselModifier.Id.INVALID,
+	ChiselModifier.Id.INVALID,
+	ChiselModifier.Id.INVALID,
+	ChiselModifier.Id.INVALID,
+	ChiselModifier.Id.LONGSHOT_TRAINING,
+	ChiselModifier.Id.REINFORCEMENT_CALL,
+	ChiselModifier.Id.WAR_DRUM,
+	ChiselModifier.Id.OVERCHARGE
+]
+const ASPECT := [
+	ChiselAspect.Id.INVALID,
+	ChiselAspect.Id.INVALID,
+	ChiselAspect.Id.INVALID,
+	ChiselAspect.Id.INVALID,
+	ChiselAspect.Id.INVALID,
+	ChiselAspect.Id.EMBER,
+	ChiselAspect.Id.INVALID,
+	ChiselAspect.Id.INVALID,
+	ChiselAspect.Id.INVALID,
+	ChiselAspect.Id.INVALID
+]

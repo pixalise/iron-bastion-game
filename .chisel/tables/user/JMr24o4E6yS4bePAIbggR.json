@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "JMr24o4E6yS4bePAIbggR",
-    "lastChangeAt": "2026-07-25T12:17:25.665Z",
-    "version": 2,
+    "lastChangeAt": "2026-07-25T12:59:37.000Z",
+    "version": 3,
     "name": "Aspect",
     "description": "Evolutionary recipe stuff",
     "columns": [
@@ -45,7 +45,34 @@
         "unique": false
       }
     ],
-    "rows": [],
+    "rows": [
+      {
+        "id": "LJaf58Xv4TJHg-C-1sIcf",
+        "slug": "EMBER",
+        "values": [
+          {
+            "columnId": "k3En0Faphms-90Ge_6Q1X",
+            "type": "translationRef",
+            "value": "ASPECT.EMBER.NAME"
+          },
+          {
+            "columnId": "X5RkEHt6y5rfGH4t8TSIM",
+            "type": "translationRef",
+            "value": "ASPECT.EMBER.DESCRIPTION"
+          },
+          {
+            "columnId": "ZeRAP-fN1_A5fK3eF4dqo",
+            "type": "assetRef",
+            "value": "METEOR_STRIKE"
+          },
+          {
+            "columnId": "xYpLBSkQ5UxcHizujRkbC",
+            "type": "enum",
+            "value": "HEROIC"
+          }
+        ]
+      }
+    ],
     "kind": "user",
     "isSystemTable": false
   }

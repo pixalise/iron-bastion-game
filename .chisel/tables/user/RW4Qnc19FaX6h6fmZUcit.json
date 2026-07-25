@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "RW4Qnc19FaX6h6fmZUcit",
-    "lastChangeAt": "2026-07-25T12:17:25.665Z",
-    "version": 3,
+    "lastChangeAt": "2026-07-25T12:59:37.000Z",
+    "version": 4,
     "name": "ShopItem",
     "description": "Buyable shop entries for balls, pegs, and buildings.",
     "columns": [
@@ -77,7 +77,828 @@
         "unique": false
       }
     ],
-    "rows": [],
+    "rows": [
+      {
+        "id": "Xq9rNUkBSbxyM6GESY652",
+        "slug": "SHOP_ARCHER_BALL",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": "ARCHER_BALL"
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 12
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "COMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 120
+          }
+        ]
+      },
+      {
+        "id": "_gYyK-kwGl9FOaF1uFsVT",
+        "slug": "SHOP_PIKEMAN_BALL",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": "PIKEMAN_BALL"
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 12
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "COMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": "zmcMkq0wJI3D4d5l6lztm",
+        "slug": "SHOP_KNIGHT_BALL",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": "KNIGHT_BALL"
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 14
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "COMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 80
+          }
+        ]
+      },
+      {
+        "id": "H7j8D7dt4wfouRRooX1j6",
+        "slug": "SHOP_TARGET_PRACTICE_BALL",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": "TARGET_PRACTICE_BALL"
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 10
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "COMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 80
+          }
+        ]
+      },
+      {
+        "id": "9ULCxzuCyj204sDpwGwhQ",
+        "slug": "SHOP_METEOR_STRIKE_BALL",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": "METEOR_STRIKE_BALL"
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 18
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "UNCOMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 50
+          }
+        ]
+      },
+      {
+        "id": "W1cQsHNgH1zr7Kqfj8eVU",
+        "slug": "SHOP_EMBER_SIGIL",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": "EMBER_SIGIL"
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 22
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "UNCOMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 45
+          }
+        ]
+      },
+      {
+        "id": "jnf3m90pY3zXQ_cv7zyEV",
+        "slug": "SHOP_LONGSHOT_MARKER",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": "LONGSHOT_MARKER"
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 12
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "COMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 90
+          }
+        ]
+      },
+      {
+        "id": "vbtbEgaU1XkPWEAmXdZNn",
+        "slug": "SHOP_REINFORCEMENT_BANNER",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": "REINFORCEMENT_BANNER"
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 16
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "UNCOMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 60
+          }
+        ]
+      },
+      {
+        "id": "-8TigyUfuMxE4e1YPt5vQ",
+        "slug": "SHOP_WAR_DRUM_PEG",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": "WAR_DRUM_PEG"
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 18
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "UNCOMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 55
+          }
+        ]
+      },
+      {
+        "id": "UPP49WismaEaiEWhKq98L",
+        "slug": "SHOP_OVERCHARGE_RUNE",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": "OVERCHARGE_RUNE"
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 24
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "RARE"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": "wFCXtUlwrbqJhK7gIu3e0",
+        "slug": "SHOP_SPRING_PEG",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": "SPRING_PEG"
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 10
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "COMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 80
+          }
+        ]
+      },
+      {
+        "id": "gjaZ_tcETQgbgPoGssB9d",
+        "slug": "SHOP_SPLITTER_PEG",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": "SPLITTER_PEG"
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 18
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "UNCOMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 45
+          }
+        ]
+      },
+      {
+        "id": "vXQ67shOlIgjjBeGgT_mO",
+        "slug": "SHOP_GOLD_CACHE",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": "GOLD_CACHE"
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 12
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "COMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 70
+          }
+        ]
+      },
+      {
+        "id": "NG46LEuZBfA2wfJDSvY0I",
+        "slug": "SHOP_ECHO_SEAL",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": "ECHO_SEAL"
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 22
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "RARE"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "id": "Qa9FUh0uWJdLfHRBOlyHu",
+        "slug": "SHOP_BARRACKS",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": "BARRACKS"
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 35
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "UNCOMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": "MdajwqiPde1fw0HRWZBg_",
+        "slug": "SHOP_ARCHERY_RANGE",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": "ARCHERY_RANGE"
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 40
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "UNCOMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 35
+          }
+        ]
+      },
+      {
+        "id": "ewmR_KrtTcKIDg-mj5bL4",
+        "slug": "SHOP_TREASURY",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": "TREASURY"
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 30
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "COMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 45
+          }
+        ]
+      },
+      {
+        "id": "i-yn6QqizeOfDRD0NgwA8",
+        "slug": "SHOP_WORKSHOP",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": "WORKSHOP"
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 32
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "UNCOMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 35
+          }
+        ]
+      },
+      {
+        "id": "OaI9HgQSA0H5_KVXrfSDG",
+        "slug": "SHOP_EMBER_CHAPEL",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": "EMBER_CHAPEL"
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 45
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "RARE"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": "vdzFwpWuwF5DmWFxSBkrH",
+        "slug": "SHOP_MARKET_STALL",
+        "values": [
+          {
+            "columnId": "BueHIICd5VNTrj7payP6X",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "gX0TbdEhOgf3da7-IVQ8j",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "9m0b0juW4xvBLHsSg17Zf",
+            "type": "ref",
+            "value": "MARKET_STALL"
+          },
+          {
+            "columnId": "ApP91cY3iVbjty_pCdPV6",
+            "type": "integer",
+            "value": 28
+          },
+          {
+            "columnId": "75sftQWGACFiFZeFJU_zf",
+            "type": "enum",
+            "value": "COMMON"
+          },
+          {
+            "columnId": "gNv4xcg0FjalMKKfdo1x5",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sgkClooIYiou5ADG-1Ei0",
+            "type": "integer",
+            "value": 45
+          }
+        ]
+      }
+    ],
     "kind": "user",
     "isSystemTable": false
   }

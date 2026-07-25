@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "7evuGaD29l7vxCpjEVxQf",
-    "lastChangeAt": "2026-07-25T12:17:25.665Z",
-    "version": 58,
+    "lastChangeAt": "2026-07-25T12:59:37.000Z",
+    "version": 59,
     "name": "RecipeStep",
     "description": "Just a single step in the recipe (either ability, aspect, modifier or unit).",
     "columns": [
@@ -88,6 +88,188 @@
           },
           {
             "columnId": "oY63aNZsaN2MklKgGbN7V",
+            "type": "ref",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "id": "sknFyK8lyUgscn99biJ3j",
+        "slug": "TARGET_PRACTICE_STEP",
+        "values": [
+          {
+            "columnId": "66vcudyl6-kNv2NIJXv0Q",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "oY63aNZsaN2MklKgGbN7V",
+            "type": "ref",
+            "value": "TARGET_PRACTICE"
+          },
+          {
+            "columnId": "BnCHt8RgHyrFjHEs4qexd",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "uzDqdWW15Y72n9xq1FLH-",
+            "type": "ref",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "id": "_USnQKDUP5vvG9otSSSjb",
+        "slug": "METEOR_STRIKE_STEP",
+        "values": [
+          {
+            "columnId": "66vcudyl6-kNv2NIJXv0Q",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "oY63aNZsaN2MklKgGbN7V",
+            "type": "ref",
+            "value": "METEOR_STRIKE"
+          },
+          {
+            "columnId": "BnCHt8RgHyrFjHEs4qexd",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "uzDqdWW15Y72n9xq1FLH-",
+            "type": "ref",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "id": "cbP_w4BuSba169y2W31KX",
+        "slug": "EMBER_STEP",
+        "values": [
+          {
+            "columnId": "66vcudyl6-kNv2NIJXv0Q",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "oY63aNZsaN2MklKgGbN7V",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "BnCHt8RgHyrFjHEs4qexd",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "uzDqdWW15Y72n9xq1FLH-",
+            "type": "ref",
+            "value": "EMBER"
+          }
+        ]
+      },
+      {
+        "id": "FPuCsNOumskE46TBTazdK",
+        "slug": "LONGSHOT_TRAINING_STEP",
+        "values": [
+          {
+            "columnId": "66vcudyl6-kNv2NIJXv0Q",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "oY63aNZsaN2MklKgGbN7V",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "BnCHt8RgHyrFjHEs4qexd",
+            "type": "ref",
+            "value": "LONGSHOT_TRAINING"
+          },
+          {
+            "columnId": "uzDqdWW15Y72n9xq1FLH-",
+            "type": "ref",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "id": "hhy2rVTBJ0OSDqOUihPnh",
+        "slug": "REINFORCEMENT_CALL_STEP",
+        "values": [
+          {
+            "columnId": "66vcudyl6-kNv2NIJXv0Q",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "oY63aNZsaN2MklKgGbN7V",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "BnCHt8RgHyrFjHEs4qexd",
+            "type": "ref",
+            "value": "REINFORCEMENT_CALL"
+          },
+          {
+            "columnId": "uzDqdWW15Y72n9xq1FLH-",
+            "type": "ref",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "id": "r0ukT2pN-oFPqMJWYha6P",
+        "slug": "WAR_DRUM_STEP",
+        "values": [
+          {
+            "columnId": "66vcudyl6-kNv2NIJXv0Q",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "oY63aNZsaN2MklKgGbN7V",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "BnCHt8RgHyrFjHEs4qexd",
+            "type": "ref",
+            "value": "WAR_DRUM"
+          },
+          {
+            "columnId": "uzDqdWW15Y72n9xq1FLH-",
+            "type": "ref",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "id": "9CeI8a7x35ZqbQY1PF_LT",
+        "slug": "OVERCHARGE_STEP",
+        "values": [
+          {
+            "columnId": "66vcudyl6-kNv2NIJXv0Q",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "oY63aNZsaN2MklKgGbN7V",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "BnCHt8RgHyrFjHEs4qexd",
+            "type": "ref",
+            "value": "OVERCHARGE"
+          },
+          {
+            "columnId": "uzDqdWW15Y72n9xq1FLH-",
             "type": "ref",
             "value": ""
           }

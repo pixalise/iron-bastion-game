@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "boRIG5F5aadgs1TVlDgLM",
-    "lastChangeAt": "2026-07-25T12:17:25.665Z",
-    "version": 23,
+    "lastChangeAt": "2026-07-25T12:59:37.000Z",
+    "version": 24,
     "name": "Recipe",
     "description": "A new card recipe connecting things together, literally just a sequence of fields and whatnot.",
     "columns": [
@@ -98,7 +98,792 @@
         "unique": false
       }
     ],
-    "rows": [],
+    "rows": [
+      {
+        "id": "NMChbQcvdcf4Ww0Jog3LP",
+        "slug": "ARCHER_EMBER",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": "ASHEN_RANGER"
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "ARCHER_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "EMBER_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 100
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": "GxKzgbyVmZ1s_6S5nMa6H",
+        "slug": "PIKEMAN_EMBER",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": "CINDER_PIKEMAN"
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "PIKEMAN_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "EMBER_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 95
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": "aUdo72I2rmiHKm9PyVMnA",
+        "slug": "KNIGHT_EMBER",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": "FLAME_KNIGHT"
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "KNIGHT_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "EMBER_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 95
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": "7q5cwn4cp1NA8OpABLHSR",
+        "slug": "METEOR_EMBER",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": "CINDERFALL"
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "METEOR_STRIKE_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "EMBER_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 110
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 2
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": "QvbbH-8K6-E1Jf_bYhwn1",
+        "slug": "TARGET_PRACTICE_EMBER",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": "BLAZING_DRILL"
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "TARGET_PRACTICE_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "EMBER_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 100
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 2
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": "Tdk59yDcAitWkFjWfQyjy",
+        "slug": "ARCHER_LONGSHOT",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": "ARCHER"
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "ARCHER_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "LONGSHOT_TRAINING_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 35
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": "OJENPVwke3RaGdjdddDrK",
+        "slug": "PIKEMAN_REINFORCEMENTS",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": "PIKEMAN"
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "PIKEMAN_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "REINFORCEMENT_CALL_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 35
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": "v7aGNZ8uihSzCl4Fbsb6g",
+        "slug": "KNIGHT_WAR_DRUM",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": "KNIGHT"
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "KNIGHT_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "WAR_DRUM_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 35
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": "nNUDTYsfbctzIca9LEWQG",
+        "slug": "METEOR_OVERCHARGE",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": "METEOR_STRIKE"
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "METEOR_STRIKE_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "OVERCHARGE_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 45
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": "IGZcb31-d9t-0kBO-jzrw",
+        "slug": "ARCHER_EMBER_LONGSHOT",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": "ASHEN_RANGER"
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "ARCHER_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "EMBER_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": "LONGSHOT_TRAINING_STEP"
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 120
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 2
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": "JzJNDxNcI6Ze4MzQ9Tnpe",
+        "slug": "ARCHER_EMBER_REINFORCEMENTS",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": "ASHEN_RANGER"
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "ARCHER_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "EMBER_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": "REINFORCEMENT_CALL_STEP"
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 115
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 2
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": "fsHgxHSc3noLfj53YTyhL",
+        "slug": "PIKEMAN_EMBER_REINFORCEMENTS",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": "CINDER_PIKEMAN"
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "PIKEMAN_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "EMBER_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": "REINFORCEMENT_CALL_STEP"
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 110
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 2
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": "X24bl1wNVePhD2sNMr7rn",
+        "slug": "KNIGHT_EMBER_WAR_DRUM",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": "FLAME_KNIGHT"
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "KNIGHT_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "EMBER_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": "WAR_DRUM_STEP"
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 110
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 2
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": "rb0lftTinWstPuXvJ0JDE",
+        "slug": "METEOR_EMBER_OVERCHARGE",
+        "values": [
+          {
+            "columnId": "J2YBpuo0yWauq5T7hb_Pr",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "RqyKDFqhZjlpF8mKlDGCr",
+            "type": "ref",
+            "value": "CINDERFALL"
+          },
+          {
+            "columnId": "yaby8JNbFhv16GOsRwZyi",
+            "type": "ref",
+            "value": "METEOR_STRIKE_STEP"
+          },
+          {
+            "columnId": "ldzZ_fA0iLnPztNVmJcHZ",
+            "type": "ref",
+            "value": "EMBER_STEP"
+          },
+          {
+            "columnId": "XmUZmSpQfMDgXsg_QR1R3",
+            "type": "ref",
+            "value": "OVERCHARGE_STEP"
+          },
+          {
+            "columnId": "6yInavJeBdm65L0l7ImX9",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "5mN5q1cp1naVMMk-hliPs",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "VphUFug8E_lbq-9TEa_bc",
+            "type": "integer",
+            "value": 130
+          },
+          {
+            "columnId": "gMw6m_MdSWI9Ol7h6_vn9",
+            "type": "integer",
+            "value": 3
+          },
+          {
+            "columnId": "ELQSmCT62WzJk1WXNLFlj",
+            "type": "integer",
+            "value": 3
+          }
+        ]
+      }
+    ],
     "kind": "user",
     "isSystemTable": false
   }

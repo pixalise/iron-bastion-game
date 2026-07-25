@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "yh7aOYkekni1eI81UEqzn",
-    "lastChangeAt": "2026-07-25T12:17:25.665Z",
-    "version": 2,
+    "lastChangeAt": "2026-07-25T12:59:37.000Z",
+    "version": 3,
     "name": "Ball",
     "description": "Balls",
     "columns": [
@@ -63,7 +63,188 @@
         "unique": false
       }
     ],
-    "rows": [],
+    "rows": [
+      {
+        "id": "MYThzWeWue4_NFAWcB0Cu",
+        "slug": "ARCHER_BALL",
+        "values": [
+          {
+            "columnId": "RApKUcl-cbADtkv08wwf5",
+            "type": "translationRef",
+            "value": "BALL.ARCHER.NAME"
+          },
+          {
+            "columnId": "j7I3lm6INwodVtcW2WKSD",
+            "type": "translationRef",
+            "value": "BALL.ARCHER.DESCRIPTION"
+          },
+          {
+            "columnId": "YFqKtfvRUIexvt1NpMsba",
+            "type": "assetRef",
+            "value": "ARCHER"
+          },
+          {
+            "columnId": "_hpTdR7IZEurgiCgefHtv",
+            "type": "enum",
+            "value": "UNIT"
+          },
+          {
+            "columnId": "A5znOVYXnijQKRgzhIHTi",
+            "type": "ref",
+            "value": "ARCHER"
+          },
+          {
+            "columnId": "ok7wiEMsJkkscAWxk52DH",
+            "type": "ref",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "id": "o0EJDoRfr6wiWp6Vsa0dB",
+        "slug": "PIKEMAN_BALL",
+        "values": [
+          {
+            "columnId": "RApKUcl-cbADtkv08wwf5",
+            "type": "translationRef",
+            "value": "BALL.PIKEMAN.NAME"
+          },
+          {
+            "columnId": "j7I3lm6INwodVtcW2WKSD",
+            "type": "translationRef",
+            "value": "BALL.PIKEMAN.DESCRIPTION"
+          },
+          {
+            "columnId": "YFqKtfvRUIexvt1NpMsba",
+            "type": "assetRef",
+            "value": "PIKEMAN"
+          },
+          {
+            "columnId": "_hpTdR7IZEurgiCgefHtv",
+            "type": "enum",
+            "value": "UNIT"
+          },
+          {
+            "columnId": "A5znOVYXnijQKRgzhIHTi",
+            "type": "ref",
+            "value": "PIKEMAN"
+          },
+          {
+            "columnId": "ok7wiEMsJkkscAWxk52DH",
+            "type": "ref",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "id": "W2DfR5bgM6XgccJWtQ0_V",
+        "slug": "KNIGHT_BALL",
+        "values": [
+          {
+            "columnId": "RApKUcl-cbADtkv08wwf5",
+            "type": "translationRef",
+            "value": "BALL.KNIGHT.NAME"
+          },
+          {
+            "columnId": "j7I3lm6INwodVtcW2WKSD",
+            "type": "translationRef",
+            "value": "BALL.KNIGHT.DESCRIPTION"
+          },
+          {
+            "columnId": "YFqKtfvRUIexvt1NpMsba",
+            "type": "assetRef",
+            "value": "KNIGHT"
+          },
+          {
+            "columnId": "_hpTdR7IZEurgiCgefHtv",
+            "type": "enum",
+            "value": "UNIT"
+          },
+          {
+            "columnId": "A5znOVYXnijQKRgzhIHTi",
+            "type": "ref",
+            "value": "KNIGHT"
+          },
+          {
+            "columnId": "ok7wiEMsJkkscAWxk52DH",
+            "type": "ref",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "id": "EaDFbiIKXD6xbgjCjhmVK",
+        "slug": "TARGET_PRACTICE_BALL",
+        "values": [
+          {
+            "columnId": "RApKUcl-cbADtkv08wwf5",
+            "type": "translationRef",
+            "value": "BALL.TARGET_PRACTICE.NAME"
+          },
+          {
+            "columnId": "j7I3lm6INwodVtcW2WKSD",
+            "type": "translationRef",
+            "value": "BALL.TARGET_PRACTICE.DESCRIPTION"
+          },
+          {
+            "columnId": "YFqKtfvRUIexvt1NpMsba",
+            "type": "assetRef",
+            "value": "TARGET_PRACTICE"
+          },
+          {
+            "columnId": "_hpTdR7IZEurgiCgefHtv",
+            "type": "enum",
+            "value": "ABILITY"
+          },
+          {
+            "columnId": "A5znOVYXnijQKRgzhIHTi",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ok7wiEMsJkkscAWxk52DH",
+            "type": "ref",
+            "value": "TARGET_PRACTICE"
+          }
+        ]
+      },
+      {
+        "id": "Rop1NNIQzvFKb3psXGbp2",
+        "slug": "METEOR_STRIKE_BALL",
+        "values": [
+          {
+            "columnId": "RApKUcl-cbADtkv08wwf5",
+            "type": "translationRef",
+            "value": "BALL.METEOR_STRIKE.NAME"
+          },
+          {
+            "columnId": "j7I3lm6INwodVtcW2WKSD",
+            "type": "translationRef",
+            "value": "BALL.METEOR_STRIKE.DESCRIPTION"
+          },
+          {
+            "columnId": "YFqKtfvRUIexvt1NpMsba",
+            "type": "assetRef",
+            "value": "METEOR_STRIKE"
+          },
+          {
+            "columnId": "_hpTdR7IZEurgiCgefHtv",
+            "type": "enum",
+            "value": "ABILITY"
+          },
+          {
+            "columnId": "A5znOVYXnijQKRgzhIHTi",
+            "type": "ref",
+            "value": ""
+          },
+          {
+            "columnId": "ok7wiEMsJkkscAWxk52DH",
+            "type": "ref",
+            "value": "METEOR_STRIKE"
+          }
+        ]
+      }
+    ],
     "kind": "user",
     "isSystemTable": false
   }

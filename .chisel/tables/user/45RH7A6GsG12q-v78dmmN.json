@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "table": {
     "id": "45RH7A6GsG12q-v78dmmN",
-    "lastChangeAt": "2026-07-25T12:17:25.665Z",
-    "version": 7,
+    "lastChangeAt": "2026-07-25T12:59:37.000Z",
+    "version": 8,
     "name": "Ability",
     "description": "The abilities table",
     "columns": [
@@ -118,6 +118,36 @@
             "columnId": "YTrgAl1ByZnP7gIzyej9l",
             "type": "assetRef",
             "value": "TARGET_PRACTICE"
+          },
+          {
+            "columnId": "c1K9uXSNDv6bAbWSkAC-r",
+            "type": "integer",
+            "value": 1
+          },
+          {
+            "columnId": "sPC5LWRUpY5RNIot4aChk",
+            "type": "enum",
+            "value": "TARGET_PRACTICE"
+          },
+          {
+            "columnId": "gVCOkD9PHf7LhEFduBKTJ",
+            "type": "enum",
+            "value": "ALLY"
+          },
+          {
+            "columnId": "eGf_84mCxk10pUvFWTCAq",
+            "type": "integer",
+            "value": 0
+          },
+          {
+            "columnId": "nmg-Y9vcMGXwZi1yXmqXs",
+            "type": "decimal",
+            "value": 0
+          },
+          {
+            "columnId": "nJe2unfXMeiqZz2hESNF4",
+            "type": "decimal",
+            "value": 8
           }
         ]
       },
@@ -139,6 +169,138 @@
             "columnId": "YTrgAl1ByZnP7gIzyej9l",
             "type": "assetRef",
             "value": "METEOR_STRIKE"
+          },
+          {
+            "columnId": "c1K9uXSNDv6bAbWSkAC-r",
+            "type": "integer",
+            "value": 2
+          },
+          {
+            "columnId": "sPC5LWRUpY5RNIot4aChk",
+            "type": "enum",
+            "value": "METEOR_STRIKE"
+          },
+          {
+            "columnId": "gVCOkD9PHf7LhEFduBKTJ",
+            "type": "enum",
+            "value": "AREA"
+          },
+          {
+            "columnId": "eGf_84mCxk10pUvFWTCAq",
+            "type": "integer",
+            "value": 60
+          },
+          {
+            "columnId": "nmg-Y9vcMGXwZi1yXmqXs",
+            "type": "decimal",
+            "value": 2.4
+          },
+          {
+            "columnId": "nJe2unfXMeiqZz2hESNF4",
+            "type": "decimal",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "id": "9wvLX77rGwxx3e91bFIzp",
+        "slug": "CINDERFALL",
+        "values": [
+          {
+            "columnId": "kJwcO071TGKOq2eNEyu9-",
+            "type": "translationRef",
+            "value": "ABILITY.CINDERFALL.NAME"
+          },
+          {
+            "columnId": "2B4QMvLzDqMTWjHnS4mR_",
+            "type": "translationRef",
+            "value": "ABILITY.CINDERFALL.DESCRIPTION"
+          },
+          {
+            "columnId": "YTrgAl1ByZnP7gIzyej9l",
+            "type": "assetRef",
+            "value": "METEOR_STRIKE"
+          },
+          {
+            "columnId": "c1K9uXSNDv6bAbWSkAC-r",
+            "type": "integer",
+            "value": 3
+          },
+          {
+            "columnId": "sPC5LWRUpY5RNIot4aChk",
+            "type": "enum",
+            "value": "METEOR_STRIKE"
+          },
+          {
+            "columnId": "gVCOkD9PHf7LhEFduBKTJ",
+            "type": "enum",
+            "value": "AREA"
+          },
+          {
+            "columnId": "eGf_84mCxk10pUvFWTCAq",
+            "type": "integer",
+            "value": 90
+          },
+          {
+            "columnId": "nmg-Y9vcMGXwZi1yXmqXs",
+            "type": "decimal",
+            "value": 2.8
+          },
+          {
+            "columnId": "nJe2unfXMeiqZz2hESNF4",
+            "type": "decimal",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "id": "ACtHphOVokZjcM4yPphV6",
+        "slug": "BLAZING_DRILL",
+        "values": [
+          {
+            "columnId": "kJwcO071TGKOq2eNEyu9-",
+            "type": "translationRef",
+            "value": "ABILITY.BLAZING_DRILL.NAME"
+          },
+          {
+            "columnId": "2B4QMvLzDqMTWjHnS4mR_",
+            "type": "translationRef",
+            "value": "ABILITY.BLAZING_DRILL.DESCRIPTION"
+          },
+          {
+            "columnId": "YTrgAl1ByZnP7gIzyej9l",
+            "type": "assetRef",
+            "value": "TARGET_PRACTICE"
+          },
+          {
+            "columnId": "c1K9uXSNDv6bAbWSkAC-r",
+            "type": "integer",
+            "value": 2
+          },
+          {
+            "columnId": "sPC5LWRUpY5RNIot4aChk",
+            "type": "enum",
+            "value": "TARGET_PRACTICE"
+          },
+          {
+            "columnId": "gVCOkD9PHf7LhEFduBKTJ",
+            "type": "enum",
+            "value": "LANE"
+          },
+          {
+            "columnId": "eGf_84mCxk10pUvFWTCAq",
+            "type": "integer",
+            "value": 0
+          },
+          {
+            "columnId": "nmg-Y9vcMGXwZi1yXmqXs",
+            "type": "decimal",
+            "value": 0
+          },
+          {
+            "columnId": "nJe2unfXMeiqZz2hESNF4",
+            "type": "decimal",
+            "value": 10
           }
         ]
       }
