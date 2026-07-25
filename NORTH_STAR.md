@@ -8,10 +8,11 @@ Pachingod is a physics-based roguelite where players build a magical siege
 machine that manufactures a temporary deck of units and abilities before every
 battle.
 
-Players do not collect or draft cards directly. They engineer a pachinko
-machine by installing modules, elemental runes, physics components, and special
-balls. Every bounce contributes to a sequence, and every completed sequence
-creates cards for the upcoming battle.
+Players do not collect or draft cards directly. They buy unit balls and ability
+balls, then engineer a pachinko machine that enhances, transforms, copies, and
+resolves them. Pegs represent aspects, training, formations, physics, economy,
+and special rules. Every bounce changes what the ball can become, and every
+completed sequence creates cards for the upcoming battle.
 
 The better the machine, the better the army.
 
@@ -19,7 +20,7 @@ The better the machine, the better the army.
 
 The player never drafts cards. The player builds a machine that creates cards.
 
-Every bounce writes a sentence. Every sentence becomes a tactical option.
+Every ball is a recruit or spell core. Every bounce rewrites its fate.
 
 The strategic focus is preparation: understand the coming battle, engineer the
 right machine, and then use the deck that the machine produces.
@@ -41,10 +42,15 @@ The player knows exactly what they are preparing for.
 
 Spend Gold to improve the machine:
 
-- Buy new modules
-- Buy new balls
+- Buy new pegs
+- Buy new unit balls
+- Buy new ability balls
+- Buy aspect pegs
+- Buy enhancement pegs
 - Buy Kingdom buildings for bottom buckets
-- Upgrade modules
+- Upgrade pegs
+- Upgrade balls
+- Upgrade enhancements
 - Upgrade buildings
 - Modify the board
 - Reroll the shop
@@ -54,10 +60,10 @@ Spend Gold to improve the machine:
 
 Modify the board:
 
-- Install a module
-- Remove a module
-- Move a module
-- Upgrade a module
+- Install a peg
+- Remove a peg
+- Move a peg
+- Upgrade a peg
 - Replace the ball loadout
 - Unlock a socket
 - Place or upgrade a building in a bottom bucket
@@ -69,7 +75,7 @@ Pull one lever and release the entire batch of balls into the machine.
 During a launch:
 
 - Balls bounce
-- Modules activate
+- Pegs activate
 - Sequences are recorded
 - Cards are generated
 - Resources are earned
@@ -94,11 +100,11 @@ Every level presents three upgrade choices. Example upgrades include:
 - Chain Reactions
 - Better Splitters
 - Double Activation
-- Bonus Fire Balls
+- Bonus Unit Balls
 - Faster Ball Launcher
 - Recipe Multiplier
 - Bonus Portal
-- Elemental Echo
+- Aspect Echo
 - Critical Activations
 
 Machine progression is independent of Gold. Gold represents purchasing power;
@@ -114,8 +120,8 @@ across three independent lanes.
 Victory can grant:
 
 - Gold
-- A new module
-- A new ball
+- A new peg
+- A new unit or ability ball
 - A new building
 - An upgrade
 - A recipe
@@ -129,18 +135,18 @@ There are only two card types.
 
 ### Units
 
-Units are persistent battlefield pieces. Examples:
+Units are persistent battlefield pieces created by unit balls. Examples:
 
 - Militia
 - Archer
-- Fire Archer
-- Frost Knight
+- Ashen Ranger
+- Beast Warrior
 - Golem
 - Paladin
 
 ### Abilities
 
-Abilities are one-time effects. Examples:
+Abilities are one-time effects created by ability balls. Examples:
 
 - Burning Volley
 - Meteor
@@ -151,37 +157,86 @@ Abilities are one-time effects. Examples:
 
 ## Machine Language
 
-The machine is composed of symbols. Modules represent concepts rather than
-buildings, and each module hit appends its symbol to the current sequence.
+The machine is composed of balls and pegs. Balls carry identity. Pegs modify,
+transform, multiply, route, or reward that identity.
 
-### Class Modules
+### Unit Balls
 
-Class modules form the foundation of generated cards:
+Unit balls are recruits. They are the primary source of unit cards.
 
-- Soldier
-- Archer
-- Mage
-- Siege
-- Engineer
-- Priest
-- Beast
+Examples:
 
-### Element Modules
+- Soldier Ball
+- Archer Ball
+- Pikeman Ball
+- Knight Ball
 
-Elements modify classes:
+Unit balls can have rarity, unlock state, and upgrade tracks. A rare unit ball
+should feel like a better starting material, not just a larger number.
 
-- Fire
-- Ice
-- Earth
-- Storm
-- Nature
-- Shadow
-- Holy
-- Arcane
+### Ability Balls
 
-### Physics Modules
+Ability balls are spell cores. They are the primary source of ability cards.
 
-Physics modules change how balls route through the machine:
+Examples:
+
+- Meteor Strike Ball
+- Target Practice Ball
+- Reinforcements Ball
+- Barrage Ball
+
+Ability balls can be upgraded to improve spell power, targeting, area, repeat
+behavior, or special effects.
+
+### Aspect Pegs
+
+Aspects are authored fantasy forces. They do not create generic adjective-unit
+results by themselves. A unit or ability plus an aspect must resolve through an
+authored recipe, or the aspect only contributes through its explicit modifiers.
+
+Core aspect examples:
+
+- Ignivar: flame, fury, destruction
+- Solenne: light, law, restoration
+- Veyr: beasts, instinct, transformation
+- Aelith: fae bargains, illusions, fate
+- Nharos: shadow, decay, secrecy
+
+Examples:
+
+```text
+Soldier Ball + Veyr -> Beast Warrior
+Archer Ball + Solenne -> Elven Archer
+Meteor Strike Ball + Solenne -> Solar Judgment
+Target Practice Ball + Aelith -> Fae Drill
+```
+
+No generic "Veyr Soldier" or "Solenne Archer" is created unless that result is
+an authored unit or ability.
+
+### Enhancement Pegs
+
+Enhancements are simple, stackable modifiers applied to the final result after
+identity is resolved.
+
+Prototype enhancements:
+
+- Attack Range: increases unit attack range
+- Unit Increase: increases spawned unit count
+- Damage Multiplier: multiplies unit or ability damage
+
+Enhancements can be upgraded. Upgrades should make a peg meaningfully better or
+more specialized, not merely add flat numbers forever.
+
+Example upgrade paths:
+
+- Attack Range becomes stronger for ranged units
+- Unit Increase can create squad or battalion results
+- Damage Multiplier becomes stronger when matching an aspect
+
+### Physics Pegs
+
+Physics pegs change how balls route through the machine:
 
 - Spring
 - Portal
@@ -190,18 +245,18 @@ Physics modules change how balls route through the machine:
 - Reflector
 - Magnet
 
-### Utility Modules
+### Utility Pegs
 
-Utility modules produce economy:
+Utility pegs produce economy:
 
 - Gold
 - Repair
 - Upgrade Token
 - Research
 
-### Special Modules
+### Special Pegs
 
-Special modules introduce late-game mechanics:
+Special pegs introduce late-game mechanics:
 
 - Echo
 - Wild
@@ -211,20 +266,66 @@ Special modules introduce late-game mechanics:
 
 ## Sequence System
 
-Every module hit appends a symbol. Completed symbol sequences resolve into
-cards.
+Every relevant ball and peg hit contributes to a sequence. Completed sequences
+resolve into authored unit or ability results, then enhancements modify those
+results.
 
 Examples:
 
 ```text
-Fire -> Archer -> Fire Archer
-Ice -> Soldier -> Frost Knight
-Fire -> Archer -> Archer -> Burning Volley
-Earth -> Engineer -> Siege -> Fortified Bombardment
+Archer Ball + Solenne -> Elven Archer
+Soldier Ball + Veyr -> Beast Warrior
+Meteor Strike Ball + Solenne -> Solar Judgment
+Archer Ball + Unit Increase + Damage Multiplier -> stronger Archer Squad
 ```
 
-Longer sequences unlock more specialized cards, but longer is not always
-stronger. Different encounters require different recipes.
+Longer sequences unlock more specialized results, but longer is not always
+stronger. Different encounters require different recipes and enhancements.
+
+Recipes should stay authored. Aspects are not permutation generators. They are
+ingredients that resolve to specific units or abilities when the recipe exists.
+
+## Recipe Resolution
+
+Recipes always resolve to an authored unit or authored ability. A recipe should
+link to `result_unit` or `result_ability`, even when it uses a generic name and
+description template.
+
+The resolver works in this order:
+
+1. Start with the ball identity.
+2. Record aspect and enhancement peg hits.
+3. Match the ordered recipe sequence.
+4. Resolve to the authored unit or ability result.
+5. Apply enhancement modifiers to the result.
+6. Apply bottom bucket and building bonuses.
+
+Aspects do not create free permutations. If `Archer Ball + Solenne` should make
+Elven Archer, Elven Archer is an authored unit and the recipe points to it. If
+`Meteor Strike Ball + Solenne` should make Solar Judgment, Solar Judgment is an
+authored ability and the recipe points to it.
+
+Generic templates are still useful, but they describe result patterns rather
+than inventing identities. For example, a recipe can use a Squad template or
+Battalion template while still pointing to a specific authored unit.
+
+## Tags and Modifiers
+
+Tags are for eligibility and filtering, not for identity generation.
+
+Examples:
+
+- Ranged
+- Melee
+- Armored
+- Spell
+- Area
+- Summon
+- Aspect-born
+
+Enhancement pegs use tags to decide what they can affect. Attack Range might
+only affect Ranged units. Damage Multiplier might affect units and abilities.
+Unit Increase only affects unit results.
 
 ## Bottom Buckets
 
@@ -245,7 +346,7 @@ Examples:
 - Archery Range: copy the next Archer card generated this launch
 - Treasury: convert bucket hits into extra Gold
 - Workshop: add machine XP or upgrade tokens
-- Chapel: improve Holy or Priest recipes
+- Chapel: improve Solenne recipes
 - Market: improve shop rerolls or future building offers
 
 Players can own multiple copies of the same building up to a per-building copy
@@ -257,13 +358,13 @@ increase numbers. Example upgrades include:
 
 - Wider bucket
 - Double trigger on rare sequences
-- Better reward when the landing ball has a matching element
+- Better reward when the landing ball has a matching aspect
 - Add a specific symbol to the next sequence
 - Store one unused trigger for the next launch
 
-This makes the bottom of the board part of the machine. Pegs and modules define
-the sentence. Buckets and buildings decide how valuable the sentence becomes
-when the ball finally lands.
+This makes the bottom of the board part of the machine. Balls and pegs define
+the result. Buckets and buildings decide how valuable that result becomes when
+the ball finally lands.
 
 ## Combat
 
@@ -278,19 +379,25 @@ the encounter and preparing the deck-producing machine.
 
 ## Balls
 
-Balls are ammunition for the machine. Examples:
+Balls are the starting material for cards. A unit ball wants to become a unit
+card. An ability ball wants to become an ability card. Special balls bend the
+machine or create economy.
 
-- Basic Ball
-- Heavy Ball
-- Fire Ball
-- Ice Ball
+Examples:
+
+- Archer Ball
+- Soldier Ball
+- Pikeman Ball
+- Meteor Strike Ball
+- Target Practice Ball
 - Split Ball
 - Ghost Ball
 - Lucky Ball
 - Merchant Ball
 
 Players build a batch before every launch. Later in a run, dozens of balls may
-enter the machine simultaneously.
+enter the machine simultaneously. The board does not ask, "Did I hit an Archer
+peg?" It asks, "What happened to this Archer Ball while it traveled?"
 
 ## Economy and Progression
 
@@ -298,9 +405,11 @@ enter the machine simultaneously.
 
 Gold comes from combat and machine economy. The shop can sell:
 
-- Balls
-- Modules
-- Module upgrades
+- Unit balls
+- Ability balls
+- Special balls
+- Pegs
+- Peg upgrades
 - Buildings
 - Building upgrades
 - Bucket unlocks
@@ -321,10 +430,10 @@ of bouncing balls and cascading effects.
 
 Runs unlock possibilities rather than simple stat increases:
 
-- New modules
+- New pegs
 - New balls
 - New recipes
-- New elements
+- New aspects
 - New buildings
 - New building upgrades
 - New relics
@@ -351,7 +460,7 @@ Theme:
 
 Mechanics:
 
-- Blood modules
+- Blood pegs
 - Hellfire
 - Overheating
 - High-risk routing
@@ -382,7 +491,7 @@ Example units:
 - Paladin
 - Angel
 - Guardian
-- Holy Archer
+- Elven Archer
 
 ### Nature Board
 
@@ -441,21 +550,22 @@ The upcoming encounter contains:
 - Goblin Swarm
 - Demon Hunter Elite
 
-The player buys a Fire Ball, a Split Ball, a new Archer module, and an Archery
-Range building for one bottom bucket. Thirty balls flood the machine during the
-launch. Several split and begin a chain reaction. Two balls land in the upgraded
-Archery Range, copying the best Archer results.
+The player buys two Archer Balls, a Split Ball, an Ignivar aspect peg, a Damage
+Multiplier enhancement peg, and an Archery Range building for one bottom bucket.
+Thirty balls flood the machine during the launch. Several split and begin a
+chain reaction. Two Archer Balls hit Ignivar and the upgraded Archery Range
+copies the best Archer result.
 
 The machine generates:
 
-- Fire Archer
-- Fire Archer copy
-- Hell Knight
+- Ashen Ranger
+- Ashen Ranger copy
+- Beast Warrior
 - Burning Volley
 - Infernal Bombardment
 
 The machine levels up and the player chooses Chain Reactions. Combat begins, the
-generated deck defeats the wave, and the player earns Gold, new modules, and a
+generated deck defeats the wave, and the player earns Gold, new pegs, and a
 building upgrade. The machine becomes more powerful for the next encounter.
 
 ## Prototype Scope
@@ -467,10 +577,12 @@ The first prototype must prove one idea:
 Prototype content:
 
 - One board: Kingdom
-- Four class modules
-- Three elements
-- Three physics modules
-- Three ball types
+- Three unit ball identities
+- Two ability ball identities
+- Five aspects
+- Three enhancement pegs
+- Three physics pegs
+- Three special ball types
 - Four bottom buckets
 - Six Kingdom buildings
 - Approximately twelve recipes
@@ -491,6 +603,8 @@ Everything else comes after the core loop is validated.
   score bins.
 - Buildings should amplify machine results, not replace the machine as the
   source of cards.
+- Aspects should resolve through authored recipes, not create automatic
+  permutations.
 - Combat supports the machine-building decisions instead of competing with
   them for complexity.
 - New content should create routing, sequencing, or tactical possibilities

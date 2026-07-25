@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "RW4Qnc19FaX6h6fmZUcit",
+    "lastChangeAt": "2026-07-25T05:54:16.541Z",
+    "version": 1,
+    "name": "ShopItem",
+    "description": "Intermediary table for shop, allows adding price to things",
+    "columns": [
+      {
+        "id": "DBB4eXXAZys0RhiNjfE00",
+        "type": "ref",
+        "name": "unit",
+        "defaultValue": "",
+        "refTableId": "Jt3iVOYOqHl97phbZEpUi",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "0cCtfY8t8YJl-Xkhcetsb",
+        "type": "ref",
+        "name": "ability",
+        "defaultValue": "",
+        "refTableId": "45RH7A6GsG12q-v78dmmN",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "KB-AeF2BlVcOwpk_i_Gco",
+        "type": "ref",
+        "name": "upgrade",
+        "defaultValue": "",
+        "refTableId": "4wJYRawBZV5Pm1v-_lxh5",
+        "required": false,
+        "unique": false
+      }
+    ],
+    "rows": [],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}
