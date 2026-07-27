@@ -1,639 +1,472 @@
-# Pachingod North Star
-
-Design working title: **Deck the Keep**
+# Pachinko Kingdom North Star
 
 ## Elevator Pitch
 
-Pachingod is a physics-based roguelite where players build a magical siege
-machine that manufactures a temporary deck of units and abilities before every
-battle.
+Pachinko Kingdom is a real-time strategy roguelite where a pachinko machine is the kingdom's lifeline.
 
-Players do not collect or draft cards directly. They buy unit balls and ability
-balls, then engineer a pachinko machine that enhances, transforms, copies, and
-resolves them. Pegs represent aspects, training, formations, physics, economy,
-and special rules. Every bounce changes what the ball can become, and every
-completed sequence creates cards for the upcoming battle.
+Balls striking building pegs produce the resources needed to deploy units, construct defenses, complete kingdom projects, and charge active abilities. Those choices immediately affect a one-lane battlefield running beside the machine.
 
-The better the machine, the better the army.
+The player must constantly decide whether to aim the next balls at surviving the current attack or invest in a stronger kingdom for the next one.
 
 ## Core Promise
 
-The player never drafts cards. The player builds a machine that creates cards.
+The pachinko machine powers a living battlefield.
 
-Every ball is a recruit or spell core. Every bounce rewrites its fate.
+Every ball creates immediate, readable consequences. Where the player launches it determines what the kingdom can afford, and what the kingdom can afford determines whether it survives.
 
-The strategic focus is preparation: understand the coming battle, engineer the
-right machine, and then use the deck that the machine produces.
+The player is not building or drawing a deck. The player is operating a production machine under pressure.
 
-## Core Gameplay Loop
-
-### 1. Scout
-
-Preview the next enemy wave:
-
-- Enemy types
-- Lane assignments
-- Elite modifiers
-- Boss mechanics
-
-The player knows exactly what they are preparing for.
-
-### 2. Shop
-
-Spend Gold to improve the machine:
-
-- Buy new pegs
-- Buy new unit balls
-- Buy new ability balls
-- Buy aspect pegs
-- Buy enhancement pegs
-- Buy Kingdom buildings for bottom buckets
-- Upgrade pegs
-- Upgrade balls
-- Upgrade enhancements
-- Upgrade buildings
-- Modify the board
-- Reroll the shop
-- Buy consumable balls
-
-### 3. Engineer
-
-Modify the board:
-
-- Install a peg
-- Remove a peg
-- Move a peg
-- Upgrade a peg
-- Replace the ball loadout
-- Unlock a socket
-- Place or upgrade a building in a bottom bucket
-
-### 4. Launch
-
-Pull one lever and release the entire batch of balls into the machine.
-
-During a launch:
-
-- Balls bounce
-- Pegs activate
-- Sequences are recorded
-- Cards are generated
-- Resources are earned
-- Bottom buckets resolve building bonuses
-- The machine gains XP
-
-The machine should become increasingly chaotic as the run progresses.
-
-### 5. Level Up the Machine
-
-The machine gains XP from:
-
-- Peg hits
-- Sequence completions
-- Rare fusions
-- Cascades
-- Ball multipliers
-
-Every level presents three upgrade choices. Example upgrades include:
-
-- Extra Starting Balls
-- Chain Reactions
-- Better Splitters
-- Double Activation
-- Bonus Unit Balls
-- Faster Ball Launcher
-- Recipe Multiplier
-- Bonus Portal
-- Aspect Echo
-- Critical Activations
-
-Machine progression is independent of Gold. Gold represents purchasing power;
-XP rewards effective use of the machine.
-
-### 6. Combat
-
-The machine disappears and the player uses the generated deck in a battle
-across three independent lanes.
-
-### 7. Rewards
-
-Victory can grant:
-
-- Gold
-- A new peg
-- A new unit or ability ball
-- A new building
-- An upgrade
-- A recipe
-- A relic
-
-The player then scouts the next encounter and repeats the loop.
-
-## Cards
-
-There are only two card types.
-
-### Units
-
-Units are persistent battlefield pieces created by unit balls. Examples:
-
-- Militia
-- Archer
-- Ashen Ranger
-- Beast Warrior
-- Golem
-- Paladin
-
-### Abilities
-
-Abilities are one-time effects created by ability balls. Examples:
-
-- Burning Volley
-- Meteor
-- Reinforcements
-- Earthquake
-- Blizzard
-- Cannon Barrage
-
-## Machine Language
-
-The machine is composed of balls and pegs. Balls carry identity. Pegs modify,
-transform, multiply, route, or reward that identity.
-
-### Unit Balls
-
-Unit balls are recruits. They are the primary source of unit cards.
-
-Examples:
-
-- Soldier Ball
-- Archer Ball
-- Pikeman Ball
-- Knight Ball
-
-Unit balls can have rarity, unlock state, and upgrade tracks. A rare unit ball
-should feel like a better starting material, not just a larger number.
-
-### Ability Balls
-
-Ability balls are spell cores. They are the primary source of ability cards.
-
-Examples:
-
-- Meteor Strike Ball
-- Target Practice Ball
-- Reinforcements Ball
-- Barrage Ball
-
-Ability balls can be upgraded to improve spell power, targeting, area, repeat
-behavior, or special effects.
-
-### Aspect Pegs
-
-Aspects are authored fantasy forces. They do not create generic adjective-unit
-results by themselves. A unit or ability plus an aspect must resolve through an
-authored recipe, or the aspect only contributes through its explicit modifiers.
-
-Launch aspects start as a clear good-vs-dark structure: three Heroic Prime
-Aspects and three Dark Prime Aspects. Each aspect owns three gameplay roles, so
-the first set covers the fundamental launch space without implying these are
-the only powers in the world.
-
-Heroic Prime Aspects:
-
-- Ember: aggression, sacrifice, burst
-- Radiance: protection, restoration, order
-- Wild: growth, mobility, numbers
-
-Dark Prime Aspects:
-
-- Blight: decay, attrition, infection
-- Dread: fear, disruption, deception
-- Dominion: control, suppression, fortification
-
-Examples:
-
-```text
-Soldier Ball + Wild -> Beast Warrior
-Archer Ball + Radiance -> Elven Archer
-Meteor Strike Ball + Ember -> Cinderfall
-Target Practice Ball + Dread -> False Orders
-```
-
-No generic "Wild Soldier" or "Radiance Archer" is created unless that result is
-an authored unit or ability.
-
-### Enhancement Pegs
-
-Enhancements are simple, stackable modifiers applied to the final result after
-identity is resolved.
-
-Prototype enhancements:
-
-- Attack Range: increases unit attack range
-- Unit Increase: increases spawned unit count
-- Damage Multiplier: multiplies unit or ability damage
-
-Enhancements can be upgraded. Upgrades should make a peg meaningfully better or
-more specialized, not merely add flat numbers forever.
-
-Example upgrade paths:
-
-- Attack Range becomes stronger for ranged units
-- Unit Increase can create squad or battalion results
-- Damage Multiplier becomes stronger when matching an aspect
-
-### Physics Pegs
-
-Physics pegs change how balls route through the machine:
-
-- Spring
-- Portal
-- Splitter
-- Accelerator
-- Reflector
-- Magnet
-
-### Utility Pegs
-
-Utility pegs produce economy:
-
-- Gold
-- Repair
-- Upgrade Token
-- Research
-
-### Special Pegs
-
-Special pegs introduce late-game mechanics:
-
-- Echo
-- Wildcard
-- Memory
-- Repeat
-- Seal
-
-## Sequence System
-
-Every relevant ball and peg hit contributes to a sequence. Completed sequences
-resolve into authored unit or ability results, then enhancements modify those
-results.
-
-Examples:
-
-```text
-Archer Ball + Radiance -> Elven Archer
-Soldier Ball + Wild -> Beast Warrior
-Meteor Strike Ball + Ember -> Cinderfall
-Archer Ball + Unit Increase + Damage Multiplier -> stronger Archer Squad
-```
-
-Longer sequences unlock more specialized results, but longer is not always
-stronger. Different encounters require different recipes and enhancements.
-
-Recipes should stay authored. Aspects are not permutation generators. They are
-ingredients that resolve to specific units or abilities when the recipe exists.
-
-## Recipe Resolution
-
-Recipes always resolve to an authored unit or authored ability. A recipe should
-link to `result_unit` or `result_ability`, even when it uses a generic name and
-description template.
-
-The resolver works in this order:
-
-1. Start with the ball identity.
-2. Record aspect and enhancement peg hits.
-3. Match the ordered recipe sequence.
-4. Resolve to the authored unit or ability result.
-5. Apply enhancement modifiers to the result.
-6. Apply bottom bucket and building bonuses.
-
-Aspects do not create free permutations. If `Archer Ball + Radiance` should make
-Elven Archer, Elven Archer is an authored unit and the recipe points to it. If
-`Meteor Strike Ball + Ember` should make Cinderfall, Cinderfall is an
-authored ability and the recipe points to it.
-
-Generic templates are still useful, but they describe result patterns rather
-than inventing identities. For example, a recipe can use a Squad template or
-Battalion template while still pointing to a specific authored unit.
-
-## Tags and Modifiers
-
-Tags are for eligibility and filtering, not for identity generation.
-
-Examples:
-
-- Ranged
-- Melee
-- Armored
-- Spell
-- Area
-- Summon
-- Aspect-born
-
-Enhancement pegs use tags to decide what they can affect. Attack Range might
-only affect Ranged units. Damage Multiplier might affect units and abilities.
-Unit Increase only affects unit results.
-
-## Bottom Buckets
-
-The bottom of the board starts as a set of simple empty buckets. Early in a run,
-balls falling into buckets only resolve the cards and resources already created
-by the machine.
-
-As the player earns Gold, buckets become valuable real estate. The Kingdom sells
-buildings that can be installed in bottom buckets, turning the resolution layer
-into another engineering decision instead of wasted board space.
-
-Buildings do not replace the machine language. They modify the outcome after a
-ball finishes its path.
-
-Examples:
-
-- Barracks: add Militia cards when a ball lands here
-- Archery Range: copy the next Archer card generated this launch
-- Treasury: convert bucket hits into extra Gold
-- Workshop: add machine XP or upgrade tokens
-- Chapel: improve Radiance recipes
-- Market: improve shop rerolls or future building offers
-
-Players can own multiple copies of the same building up to a per-building copy
-cap. Copies let a player commit hard to a plan, while caps prevent one building
-from consuming the whole bottom row forever.
-
-Buildings can be upgraded. Upgrades should change behavior or scaling, not only
-increase numbers. Example upgrades include:
-
-- Wider bucket
-- Double trigger on rare sequences
-- Better reward when the landing ball has a matching aspect
-- Add a specific symbol to the next sequence
-- Store one unused trigger for the next launch
-
-This makes the bottom of the board part of the machine. Balls and pegs define
-the result. Buckets and buildings decide how valuable that result becomes when
-the ball finally lands.
-
-## Combat
-
-Combat takes place across three independent lanes:
-
-- Players spend generated cards
-- Units occupy lanes
-- Abilities create immediate effects
-
-Combat is intentionally simple. The strategic complexity comes from scouting
-the encounter and preparing the deck-producing machine.
-
-## Balls
-
-Balls are the starting material for cards. A unit ball wants to become a unit
-card. An ability ball wants to become an ability card. Special balls bend the
-machine or create economy.
-
-Examples:
-
-- Archer Ball
-- Soldier Ball
-- Pikeman Ball
-- Meteor Strike Ball
-- Target Practice Ball
-- Split Ball
-- Ghost Ball
-- Lucky Ball
-- Merchant Ball
-
-Players build a batch before every launch. Later in a run, dozens of balls may
-enter the machine simultaneously. The board does not ask, "Did I hit an Archer
-peg?" It asks, "What happened to this Archer Ball while it traveled?"
-
-## Economy and Progression
-
-### Gold
-
-Gold comes from combat and machine economy. The shop can sell:
-
-- Unit balls
-- Ability balls
-- Special balls
-- Pegs
-- Peg upgrades
-- Buildings
-- Building upgrades
-- Bucket unlocks
-- Sockets
-- Rerolls
-- Temporary buffs
-- Rare recipes
-
-This creates meaningful decisions before every battle.
-
-### Machine XP
-
-Machine XP rewards effective machine use and drives upgrades during a run. The
-goal is for every run to evolve from a small machine into a spectacular engine
-of bouncing balls and cascading effects.
-
-### Meta Progression
-
-Runs unlock possibilities rather than simple stat increases:
-
-- New pegs
-- New balls
-- New recipes
-- New aspects
-- New buildings
-- New building upgrades
-- New relics
-- New board archetypes
-
-## Board Archetypes
-
-Different boards replace traditional character selection. A board is not
-cosmetic: it changes layouts, mechanics, routing puzzles, and strategic
-identity.
-
-### Kingdom Board
-
-The balanced standard machine, focused on reliable routing and traditional
-fantasy units. This is the recommended beginner board.
-
-### Infernal Board
-
-Theme:
-
-- Sacrifice
-- Explosions
-- Chaos
-
-Mechanics:
-
-- Blood pegs
-- Hellfire
-- Overheating
-- High-risk routing
-
-Example units:
-
-- Demon Legionnaire
-- Hell Mage
-- Infernal Cannon
-
-### Celestial Board
-
-Theme:
-
-- Precision
-- Blessings
-- Harmony
-
-Mechanics:
-
-- Mirrors
-- Reflection
-- Combo multipliers
-- Repeated activations
-
-Example units:
-
-- Paladin
-- Angel
-- Guardian
-- Elven Archer
-
-### Nature Board
-
-Theme:
-
-- Growth
-- Adaptation
-- A living machine
-
-Mechanics:
-
-- Growing pegs
-- Moving vines
-- Seeds
-- Regeneration
-
-Example units:
-
-- Druid
-- Ent
-- Wolf Pack
-- Forest Guardian
-
-### Arcane Board
-
-Theme:
-
-- Magic
-- Space manipulation
-- Complex routing
-
-Mechanics:
-
-- Portals
-- Teleportation
-- Echoes
-- Sequence reversal
-- Time manipulation
-
-Example units:
-
-- Archmage
-- Arcane Construct
-- Void Knight
-- Spell Weaver
-
-The player chooses which machine they want to master.
-
-## Example Run
-
-The player selects the Infernal Board.
-
-The upcoming encounter contains:
-
-- Armored Knights
-- Goblin Swarm
-- Demon Hunter Elite
-
-The player buys two Archer Balls, a Split Ball, an Ember aspect peg, a Damage
-Multiplier enhancement peg, and an Archery Range building for one bottom bucket.
-Thirty balls flood the machine during the launch. Several split and begin a
-chain reaction. Two Archer Balls hit Ember and the upgraded Archery Range
-copies the best Archer result.
-
-The machine generates:
-
-- Ashen Ranger
-- Ashen Ranger copy
-- Beast Warrior
-- Burning Volley
-- Infernal Bombardment
-
-The machine levels up and the player chooses Chain Reactions. Combat begins, the
-generated deck defeats the wave, and the player earns Gold, new pegs, and a
-building upgrade. The machine becomes more powerful for the next encounter.
-
-## Prototype Scope
+## Prototype Experience Goal
 
 The first prototype must prove one idea:
 
-> Building a machine that manufactures a tactical deck is fun.
+> Producing resources through pachinko while making real-time battlefield decisions is fun.
 
-Prototype content:
+A successful prototype makes the player feel like they are operating the kingdom's lifeline. The machine and battlefield must form one feedback loop, not two unrelated games sharing a screen.
 
-- One board: Kingdom
-- Three unit ball identities
-- Two ability ball identities
-- Six aspects
-- Three enhancement pegs
-- Three physics pegs
-- Three special ball types
-- Four bottom buckets
-- Six Kingdom buildings
-- Approximately twelve recipes
-- Twenty cards
-- Three combat lanes
-- Six enemy types
-- Six battles
-- One boss
+The player should understand:
 
-Everything else comes after the core loop is validated.
+- Which building pegs produce which resources
+- Which battlefield actions those resources enable
+- Why the next enemy wave changes where they should aim
+- When manual dropping is worth spending stored balls
+- When auto-drop is sufficient
+- When to defend immediately and when to invest in future strength
+
+## The Central Decision
+
+At any moment, the player should be asking:
+
+> Do I use my next balls to survive the current pressure, or invest in a stronger kingdom for the next pressure spike?
+
+Immediate survival includes producing units, counters, repairs, and emergency ability charge. Longer-term investment includes projects, structures, peg improvements, and production upgrades. Neither choice should always be correct.
+
+## Core Gameplay Loop
+
+The machine and battlefield run at the same time.
+
+### 1. Read the Threat
+
+The player sees the active battle and a telegraph of the next enemy wave:
+
+- Enemy composition and arrival timing
+- Important traits and suggested counters
+- Boss mechanics when relevant
+
+Scouting exists to create deliberate production decisions.
+
+### 2. Aim and Launch
+
+The player moves a launcher above the pachinko board and releases balls. The launcher supports manual aiming, manual burst dropping, a limited magazine, passive regeneration, and optional auto-drop.
+
+Manual control is faster and more deliberate. Auto-drop prevents idle production but should not replace player judgment.
+
+### 3. Produce
+
+Balls strike building pegs and produce resources immediately. Every hit must clearly show which peg activated, what it produced, and which action became closer to affordable.
+
+### 4. Spend
+
+Without leaving the main screen, the player can:
+
+- Deploy a unit
+- Build or repair a defensive structure
+- Advance a kingdom project
+- Activate an ability when charged
+
+Spending must be fast. The strategy is deciding what to afford, not navigating menus.
+
+### 5. Fight
+
+Units enter one horizontal lane and fight automatically. The player chooses the composition, maintains a frontline, protects ranged units, counters enemy traits, and times active abilities.
+
+Combat creates the demand that gives pachinko production meaning.
+
+### 6. Improve
+
+Between waves and through level-ups, the player may move, upgrade, or replace a peg; improve ball capacity or regeneration; select a project; or choose a production specialization.
+
+Improvements must affect decisions within the same run.
+
+### 7. Survive
+
+A prototype run contains six escalating waves and a boss. Victory comes from defeating the boss before the castle is destroyed.
+
+```text
+Read threat -> Aim -> Produce -> Spend -> Fight -> Improve
+```
+
+## Screen and Attention Model
+
+The complete core game remains visible on one screen.
+
+### Left: Pachinko Machine
+
+Roughly 38 percent of the screen contains:
+
+- Sliding launcher
+- Eight peg rows
+- Productive and neutral pegs
+- Ball magazine and regeneration timer
+- Manual drop and auto-drop controls
+- Ball cleanup area
+
+### Right: Kingdom and Battlefield
+
+Roughly 62 percent contains:
+
+- Player castle and friendly deployment point
+- One combat lane and enemy spawn point
+- Fixed defensive structure slots
+- Unit deployment and ability controls
+- Current and upcoming threat information
+
+### Shared Status
+
+The shared interface shows Food, Gold, Weapons, Military Readiness, Construction, Ability Charge, XP, level, castle health, and wave timing.
+
+During normal pressure, pachinko aiming and dropping should receive about half of the player's attention. If players mostly watch combat, the machine lacks agency. If players ignore combat, battlefield feedback is not influencing production.
+
+## Pachinko Machine
+
+### Balls
+
+Balls are production opportunities, not identities or future units.
+
+Prototype rules:
+
+- The magazine starts with five balls
+- One ball regenerates every 2.5 seconds
+- Manual drops have a 0.25-second lockout
+- Auto-drop initially uses a 3.5-second cadence
+- Balls have a finite lifetime and cannot remain permanently stuck
+
+The base prototype uses one standard ball. One experimental Heavy Ball may be tested as an upgrade, but additional ball families are outside the first content lock.
+
+### Launcher
+
+The player moves horizontally to influence which peg clusters a ball reaches. Similar launches should feel learnable without becoming completely deterministic. Physics creates variation, but player intent must remain visible.
+
+### Board
+
+The prototype board contains eight rows and 36 positions:
+
+- 24 productive building pegs
+- 12 neutral physics pegs
+
+The starting productive layout is:
+
+- 6 Farm pegs
+- 6 Barracks pegs
+- 3 Blacksmith pegs
+- 3 Treasury pegs
+- 4 Workshop pegs
+- 2 Ability Shrine pegs
+
+The layout should create recognizable production neighborhoods so aiming has meaning.
+
+### Peg Management
+
+Between waves, the player receives one clear action:
+
+- Move one peg
+- Upgrade one peg
+- Replace one neutral peg with a basic building peg
+
+Peg management improves production control without introducing a separate engineering phase or inventory.
+
+## Building Pegs and Resources
+
+Building pegs are the machine's productive vocabulary.
+
+### Farm: Food
+
+Food supports frequent unit deployment and should be the most immediately understandable resource.
+
+### Barracks: Military Readiness
+
+Readiness represents the kingdom's ability to mobilize units.
+
+### Blacksmith: Weapons
+
+Weapons enable stronger or specialized units, especially counters to armored threats.
+
+### Treasury: Gold
+
+Gold supports advanced deployments, structures, and kingdom investments.
+
+### Workshop: Construction
+
+Construction repairs defenses, builds structures, and advances the active kingdom project.
+
+### Ability Shrine: Ability Charge
+
+Charge powers active interventions such as Arrow Rain and Heal.
+
+### Resource Guardrails
+
+- Every resource enables a visible battlefield or kingdom action
+- No resource exists only as an abstract score
+- Production updates when the peg is hit, not when the ball finishes
+- Costs create composition choices rather than routine accumulation
+- Telemetry must reveal consistently ignored or overproduced resources
+
+## One-Lane Combat
+
+Friendly and enemy units move, select targets, stop at attack range, attack, take damage, and die automatically. The castle loses health when enemies break through, and the run ends at zero castle health.
+
+Combat is intentionally legible and creates changing production needs. It rewards preparation and turns resource shortages into urgent decisions. It is not a separate tactical game competing with pachinko for complexity.
+
+## Friendly Units
+
+The prototype contains four one-click deployments:
+
+### Militia
+
+A cheap frontline body that primarily consumes Food and Readiness.
+
+### Swordsman
+
+A stronger, more expensive general-purpose melee unit.
+
+### Spearman
+
+A Weapon-dependent anti-armor unit and the obvious counter to armored soldiers.
+
+### Archer
+
+Ranged support that must be protected by a frontline and performs well against fast or lightly armored groups.
+
+The player chooses what to deploy but does not directly control individual units.
+
+## Enemies and Waves
+
+Core enemy roles are basic infantry, fast raiders, armored soldiers, siege threats, and ranged support. The first integrated implementation begins with Basic, Fast, and Armored enemies. Later waves recombine roles rather than constantly adding mechanics.
+
+The prototype sequence tests:
+
+1. Basic production and Militia deployment
+2. Fast pressure and manual burst dropping
+3. Weapon production and anti-armor counters
+4. Mixed-army composition
+5. Siege defense, structures, and abilities
+6. Full-system mastery
+7. Boss endurance and emergency response
+
+Each wave needs a clear purpose, advance telegraphing, and enough time to prepare. Intermissions initially last 12 seconds.
+
+## Defensive Structures
+
+The battlefield has two fixed structure slots.
+
+### Barricade
+
+Delays enemies and protects the castle or friendly formation. It can be repaired or replaced.
+
+### Archer Tower
+
+Provides automatic ranged support for a meaningful Gold and Construction cost. It must support unit deployment rather than replace it.
+
+Fixed slots preserve readability and prevent construction from becoming a second full strategy game.
+
+## Kingdom Projects
+
+The player pursues one project at a time. Workshop production advances it, and completion must visibly change the current run.
+
+Prototype projects:
+
+- Wall Reinforcement: improves castle defense or repair
+- Archer Tower: unlocks ranged defense
+- Blacksmith Upgrade: improves Weapon production or Weapon-dependent units
+
+Projects express the survival-versus-growth tension and must pay off soon enough to matter during the run.
+
+## Active Abilities
+
+### Arrow Rain
+
+Strong against enemy clusters, but not a solution to durable single targets.
+
+### Heal
+
+Preserves an expensive frontline and rewards good timing.
+
+Abilities are powered by Ability Charge. They solve emergencies but cannot carry a run without continued machine production.
+
+## Progression Within a Run
+
+Machine use and wave completion grant XP. Level-up choices briefly slow the battle and offer a small set of upgrades:
+
+- Improve or add a productive peg
+- Increase ball capacity
+- Improve regeneration
+- Add a rare production bonus
+- Unlock an experimental Heavy Ball
+- Adopt a broad production identity
+
+Example major choices:
+
+- War Economy: stronger Barracks and Blacksmith production at a Food cost
+- Fortified Kingdom: stronger Construction with higher deployment costs
+- Rapid Logistics: faster ball regeneration
+
+Upgrades should change priorities or rhythm, not only add invisible percentages. Meta progression, permanent research, and long-term unlock trees are outside the prototype.
+
+## Boss
+
+The prototype boss is an Ogre that advances slowly, has high health, deals heavy damage, periodically stuns friendly melee units, and summons basic enemies at health thresholds.
+
+Before the boss, time slows, the threat is explained, the magazine refills, the player receives one peg-management action, and the player chooses a temporary blessing.
+
+The boss tests production, deployment, frontline maintenance, and ability timing rather than introducing an unrelated puzzle.
+
+## Prototype Run Shape
+
+The target run lasts 10 to 12 minutes.
+
+| System | Initial Value |
+|---|---:|
+| Normal waves | 6 |
+| Boss waves | 1 |
+| Intermission | 12 seconds |
+| Ball capacity | 5 |
+| Ball regeneration | 2.5 seconds |
+| Auto-drop cadence | 3.5 seconds |
+| Manual drop lockout | 0.25 seconds |
+| Peg rows | 8 |
+| Productive pegs | 24 |
+| Neutral pegs | 12 |
+| Average contacts per ball | 7 |
+| Castle health | 100 |
+
+These values are playtest starting points, not final balance promises. The player should rarely go longer than three seconds without visible cause-and-effect feedback.
+
+## Prototype Definition of Done
+
+A new tester can, without developer explanation:
+
+1. Move the launcher and drop balls
+2. Understand that building pegs produce resources
+3. Change aim based on a battlefield need
+4. Deploy units using those resources
+5. Watch units fight automatically in one lane
+6. Use auto-drop and manual burst dropping
+7. Build or repair a defensive structure
+8. Cast an active ability
+9. Make a meaningful peg-layout decision
+10. Survive or lose a six-wave run and boss
+
+Visuals may remain graybox, but cause and effect cannot.
+
+## Prototype Milestones
+
+Development proceeds in this order:
+
+1. Shared-screen scene and run controller
+2. Pachinko magazine, regeneration, manual drop, and auto-drop
+3. Typed building pegs and immediate resource feedback
+4. One-lane automatic combat
+5. Resource costs and unit deployment
+6. Waves, telegraphs, victory, failure, and restart
+7. Peg management and one kingdom project
+8. Fixed defensive structures
+9. Active abilities
+10. Boss, results, and telemetry
+11. Readability and feel pass
+12. External playtest
+
+The first integrated playable is complete after deployment:
+
+```text
+Drop -> Produce -> Deploy -> Observe
+```
+
+Progression and polish must not delay testing that loop.
+
+## Required Telemetry
+
+Record total, manual, and automatic balls; hits by peg type; resources produced and unspent; units deployed; structures built; abilities cast; castle health; run duration; completed projects; chosen upgrades; most-hit peg; and largest resource shortage.
+
+Telemetry diagnoses the economy and attention loop. It is not an engagement-maximization system.
+
+## Playtest Hypotheses
+
+### Production Clarity
+
+After two minutes, players can explain which peg types create which battlefield options.
+
+### Manual and Automatic Drop Coexistence
+
+Players use auto-drop during stable periods and manual bursts under pressure.
+
+### Deployment Adds Agency
+
+Selecting units feels tactical without excessive micromanagement.
+
+### Growth Versus Survival Is Meaningful
+
+Players sometimes regret overinvesting in construction and sometimes regret ignoring it.
+
+### Peg Layout Matters
+
+Players can identify at least one board change they would make before another run.
+
+The concept is ready to expand only when most testers use both dropping modes, aim based on battlefield needs, and recall a meaningful growth-versus-survival choice.
+
+## Content Lock
+
+Do not add these before the first external playtest:
+
+- More resource types
+- Additional combat lanes
+- More than four friendly units
+- More than three core normal-enemy types
+- Multiple kingdoms or board archetypes
+- Shops, heroes, or equipment inventory
+- Free-form defensive placement
+- Procedural waves
+- Meta progression, permanent research, or story systems
+- More ball types beyond one experimental Heavy Ball
+
+New content cannot solve a weak core loop.
 
 ## Product Guardrails
 
-- The machine, not direct card drafting, is the deckbuilder.
-- Scouting must provide enough information to engineer deliberately.
-- Physics chaos must still produce understandable cause and effect.
-- Bottom buckets should become meaningful strategic real estate, not passive
-  score bins.
-- Buildings should amplify machine results, not replace the machine as the
-  source of cards.
-- Aspects should resolve through authored recipes, not create automatic
-  permutations.
-- Combat supports the machine-building decisions instead of competing with
-  them for complexity.
-- New content should create routing, sequencing, or tactical possibilities
-  rather than only increasing numbers.
-- Meta progression should unlock new possibilities instead of flattening the
-  challenge through permanent stat inflation.
-- The first prototype should remain narrow until the machine-to-deck loop is
-  demonstrably fun.
+- Pachinko remains the primary interaction
+- The machine and battlefield remain visible together
+- Every productive hit has an immediate, readable consequence
+- Battlefield pressure influences where the player aims
+- Physics variation preserves learnable player intent
+- Auto-drop prevents downtime but remains weaker than attentive manual play
+- Deployment adds decisions without becoming unit micromanagement
+- Combat creates demand rather than competing for complexity
+- Construction creates a real survival-versus-growth tradeoff
+- Structures support units rather than replacing them
+- Abilities solve emergencies rather than carrying the run
+- Board changes noticeably affect production
+- Values remain data-driven and easy to tune
+- The prototype stays narrow until the core loop is demonstrably fun
+
+## Explicitly Removed from the Previous Concept
+
+The following systems are no longer part of the core direction:
+
+- Cards and deck construction
+- Generated battle decks
+- Unit or ability balls that resolve into battle content
+- Aspect recipes and ordered transformation sequences
+- Recipe-authored unit identities
+- Separate machine and combat phases
+- Three independent combat lanes
+
+Existing data or code for these systems is legacy prototype material until migrated or removed.
 
 ## Vision Statement
 
-Pachingod combines the spectacle of pachinko with the strategic satisfaction of
-engine-building and deck construction.
+Pachinko Kingdom combines the physical satisfaction of pachinko with the pressure and planning of real-time kingdom defense.
 
-The player's greatest reward is not finding a rare card. It is watching a
-carefully engineered machine erupt into controlled chaos, completing perfect
-symbol chains and forging exactly the army they intended.
+The machine is the economy.
 
-The machine is the deckbuilder.
+The battlefield is the demand.
 
-The deck is the weapon.
-
-The battle is the payoff.
+The player's aim connects them.
