@@ -16,7 +16,11 @@ const TABLE_NAME := "Ball"
 const TABLE_KIND := "user"
 const COUNT := 5
 const SLUGS := [
-	"ARCHER_BALL", "PIKEMAN_BALL", "KNIGHT_BALL", "TARGET_PRACTICE_BALL", "METEOR_STRIKE_BALL"
+	"ARCHER_BALL",
+	"PIKEMAN_BALL",
+	"KNIGHT_BALL",
+	"TARGET_PRACTICE_BALL",
+	"METEOR_STRIKE_BALL"
 ]
 const NAME := [
 	ChiselLocalization.Id.BALL_ARCHER_NAME,
@@ -39,7 +43,13 @@ const PORTRAIT := [
 	ChiselAssets.Id.TARGET_PRACTICE,
 	ChiselAssets.Id.METEOR_STRIKE
 ]
-const KIND := ["UNIT", "UNIT", "UNIT", "ABILITY", "ABILITY"]
+const KIND := [
+	"UNIT",
+	"UNIT",
+	"UNIT",
+	"ABILITY",
+	"ABILITY"
+]
 const UNIT := [
 	ChiselUnit.Id.ARCHER,
 	ChiselUnit.Id.PIKEMAN,

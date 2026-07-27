@@ -2,14 +2,27 @@
 class_name ChiselAspect
 extends RefCounted
 
-enum Id { INVALID = -1, EMBER = 0 }
+enum Id {
+	INVALID = -1,
+	EMBER = 0
+}
 
 const TABLE_ID := "JMr24o4E6yS4bePAIbggR"
 const TABLE_NAME := "Aspect"
 const TABLE_KIND := "user"
 const COUNT := 1
-const SLUGS := ["EMBER"]
-const NAME := [ChiselLocalization.Id.ASPECT_EMBER_NAME]
-const DESCRIPTION := [ChiselLocalization.Id.ASPECT_EMBER_DESCRIPTION]
-const ICON := [ChiselAssets.Id.METEOR_STRIKE]
-const ALIGNMENT := ["HEROIC"]
+const SLUGS := [
+	"EMBER"
+]
+const NAME := [
+	ChiselLocalization.Id.ASPECT_EMBER_NAME
+]
+const DESCRIPTION := [
+	ChiselLocalization.Id.ASPECT_EMBER_DESCRIPTION
+]
+const ICON := [
+	ChiselAssets.Id.METEOR_STRIKE
+]
+const ALIGNMENT := [
+	"HEROIC"
+]

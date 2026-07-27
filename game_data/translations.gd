@@ -2,7 +2,6 @@
 class_name ChiselTranslations
 extends RefCounted
 
-
 class UnitArcherDescriptionParameters:
 	var attack_range: float = -1.0
 	var attack_damage: int = -1
@@ -15,7 +14,6 @@ class UnitArcherDescriptionParameters:
 
 	func to_arguments() -> Dictionary:
 		return {"attack_range": attack_range, "attack_damage": attack_damage}
-
 
 class UnitPikemanDescriptionParameters:
 	var attack_damage: int = -1
@@ -30,7 +28,6 @@ class UnitPikemanDescriptionParameters:
 	func to_arguments() -> Dictionary:
 		return {"attack_damage": attack_damage, "attack_range": attack_range}
 
-
 class UnitKnightDescriptionParameters:
 	var attack_damage: int = -1
 	var attack_range: float = -1.0
@@ -44,60 +41,41 @@ class UnitKnightDescriptionParameters:
 	func to_arguments() -> Dictionary:
 		return {"attack_damage": attack_damage, "attack_range": attack_range}
 
-
 class BuildingMarketStallTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BUILDING_MARKET_STALL_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.BUILDING_MARKET_STALL_DESCRIPTION, {}
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.BUILDING_MARKET_STALL_DESCRIPTION, {})
 
 class BuildingEmberChapelTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BUILDING_EMBER_CHAPEL_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.BUILDING_EMBER_CHAPEL_DESCRIPTION, {}
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.BUILDING_EMBER_CHAPEL_DESCRIPTION, {})
 
 class BuildingWorkshopTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BUILDING_WORKSHOP_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BUILDING_WORKSHOP_DESCRIPTION, {})
-
 
 class BuildingTreasuryTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BUILDING_TREASURY_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BUILDING_TREASURY_DESCRIPTION, {})
-
 
 class BuildingArcheryRangeTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BUILDING_ARCHERY_RANGE_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.BUILDING_ARCHERY_RANGE_DESCRIPTION, {}
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.BUILDING_ARCHERY_RANGE_DESCRIPTION, {})
 
 class BuildingBarracksTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BUILDING_BARRACKS_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BUILDING_BARRACKS_DESCRIPTION, {})
-
 
 class BuildingTranslations:
 	var barracks := BuildingBarracksTranslations.new()
@@ -107,80 +85,59 @@ class BuildingTranslations:
 	var ember_chapel := BuildingEmberChapelTranslations.new()
 	var market_stall := BuildingMarketStallTranslations.new()
 
-
 class PegEchoSealTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_ECHO_SEAL_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_ECHO_SEAL_DESCRIPTION, {})
-
 
 class PegGoldCacheTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_GOLD_CACHE_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_GOLD_CACHE_DESCRIPTION, {})
-
 
 class PegSplitterPegTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_SPLITTER_PEG_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_SPLITTER_PEG_DESCRIPTION, {})
-
 
 class PegSpringPegTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_SPRING_PEG_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_SPRING_PEG_DESCRIPTION, {})
-
 
 class PegOverchargeRuneTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_OVERCHARGE_RUNE_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_OVERCHARGE_RUNE_DESCRIPTION, {})
-
 
 class PegWarDrumTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_WAR_DRUM_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_WAR_DRUM_DESCRIPTION, {})
-
 
 class PegReinforcementBannerTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_REINFORCEMENT_BANNER_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.PEG_REINFORCEMENT_BANNER_DESCRIPTION, {}
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.PEG_REINFORCEMENT_BANNER_DESCRIPTION, {})
 
 class PegLongshotMarkerTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_LONGSHOT_MARKER_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_LONGSHOT_MARKER_DESCRIPTION, {})
-
 
 class PegEmberSigilTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_EMBER_SIGIL_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.PEG_EMBER_SIGIL_DESCRIPTION, {})
-
 
 class PegTranslations:
 	var ember_sigil := PegEmberSigilTranslations.new()
@@ -193,42 +150,29 @@ class PegTranslations:
 	var gold_cache := PegGoldCacheTranslations.new()
 	var echo_seal := PegEchoSealTranslations.new()
 
-
 class ModifierOverchargeTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.MODIFIER_OVERCHARGE_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.MODIFIER_OVERCHARGE_DESCRIPTION, {})
-
 
 class ModifierWarDrumTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.MODIFIER_WAR_DRUM_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.MODIFIER_WAR_DRUM_DESCRIPTION, {})
-
 
 class ModifierReinforcementCallTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.MODIFIER_REINFORCEMENT_CALL_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.MODIFIER_REINFORCEMENT_CALL_DESCRIPTION, {}
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.MODIFIER_REINFORCEMENT_CALL_DESCRIPTION, {})
 
 class ModifierLongshotTrainingTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.MODIFIER_LONGSHOT_TRAINING_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.MODIFIER_LONGSHOT_TRAINING_DESCRIPTION, {}
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.MODIFIER_LONGSHOT_TRAINING_DESCRIPTION, {})
 
 class ModifierTranslations:
 	var longshot_training := ModifierLongshotTrainingTranslations.new()
@@ -236,46 +180,35 @@ class ModifierTranslations:
 	var war_drum := ModifierWarDrumTranslations.new()
 	var overcharge := ModifierOverchargeTranslations.new()
 
-
 class BallMeteorStrikeTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BALL_METEOR_STRIKE_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BALL_METEOR_STRIKE_DESCRIPTION, {})
-
 
 class BallTargetPracticeTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BALL_TARGET_PRACTICE_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BALL_TARGET_PRACTICE_DESCRIPTION, {})
-
 
 class BallKnightTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BALL_KNIGHT_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BALL_KNIGHT_DESCRIPTION, {})
-
 
 class BallPikemanTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BALL_PIKEMAN_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BALL_PIKEMAN_DESCRIPTION, {})
-
 
 class BallArcherTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BALL_ARCHER_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.BALL_ARCHER_DESCRIPTION, {})
-
 
 class BallTranslations:
 	var archer := BallArcherTranslations.new()
@@ -284,56 +217,38 @@ class BallTranslations:
 	var target_practice := BallTargetPracticeTranslations.new()
 	var meteor_strike := BallMeteorStrikeTranslations.new()
 
-
 class AspectEmberTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.ASPECT_EMBER_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.ASPECT_EMBER_DESCRIPTION, {})
-
 
 class AspectTranslations:
 	var ember := AspectEmberTranslations.new()
 
-
 class AbilityBlazingDrillTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.ABILITY_BLAZING_DRILL_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.ABILITY_BLAZING_DRILL_DESCRIPTION, {}
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.ABILITY_BLAZING_DRILL_DESCRIPTION, {})
 
 class AbilityCinderfallTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.ABILITY_CINDERFALL_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.ABILITY_CINDERFALL_DESCRIPTION, {})
-
 
 class AbilityMeteorStrikeTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.ABILITY_METEOR_STRIKE_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.ABILITY_METEOR_STRIKE_DESCRIPTION, {}
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.ABILITY_METEOR_STRIKE_DESCRIPTION, {})
 
 class AbilityTargetPracticeTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.ABILITY_TARGET_PRACTICE_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.ABILITY_TARGET_PRACTICE_DESCRIPTION, {}
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.ABILITY_TARGET_PRACTICE_DESCRIPTION, {})
 
 class AbilityTranslations:
 	var target_practice := AbilityTargetPracticeTranslations.new()
@@ -341,99 +256,66 @@ class AbilityTranslations:
 	var cinderfall := AbilityCinderfallTranslations.new()
 	var blazing_drill := AbilityBlazingDrillTranslations.new()
 
-
 class TooltipRangeTranslations:
 	func title() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_RANGE_TITLE, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_RANGE_DESCRIPTION, {})
-
 
 class TooltipDamagePhyisicalTranslations:
 	func title() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_DAMAGE_PHYISICAL_TITLE, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.TOOLTIP_DAMAGE_PHYISICAL_DESCRIPTION, {}
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.TOOLTIP_DAMAGE_PHYISICAL_DESCRIPTION, {})
 
 class TooltipDamageTranslations:
 	var phyisical := TooltipDamagePhyisicalTranslations.new()
-
 
 class TooltipTranslations:
 	var damage := TooltipDamageTranslations.new()
 	var range := TooltipRangeTranslations.new()
 
-
 class UnitFlameKnightTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_FLAME_KNIGHT_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_FLAME_KNIGHT_DESCRIPTION, {})
-
 
 class UnitCinderPikemanTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_CINDER_PIKEMAN_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_CINDER_PIKEMAN_DESCRIPTION, {})
-
 
 class UnitAshenRangerTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_ASHEN_RANGER_NAME, {})
-
 	func description() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_ASHEN_RANGER_DESCRIPTION, {})
-
 
 class UnitKnightTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_KNIGHT_NAME, {})
-
-	func description(
-		parameters: UnitKnightDescriptionParameters = null
-	) -> ChiselLocalization.LocalizedText:
+	func description(parameters: UnitKnightDescriptionParameters = null) -> ChiselLocalization.LocalizedText:
 		if parameters == null:
 			parameters = UnitKnightDescriptionParameters.new()
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.UNIT_KNIGHT_DESCRIPTION, parameters.to_arguments()
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_KNIGHT_DESCRIPTION, parameters.to_arguments())
 
 class UnitPikemanTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_PIKEMAN_NAME, {})
-
-	func description(
-		parameters: UnitPikemanDescriptionParameters = null
-	) -> ChiselLocalization.LocalizedText:
+	func description(parameters: UnitPikemanDescriptionParameters = null) -> ChiselLocalization.LocalizedText:
 		if parameters == null:
 			parameters = UnitPikemanDescriptionParameters.new()
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.UNIT_PIKEMAN_DESCRIPTION, parameters.to_arguments()
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_PIKEMAN_DESCRIPTION, parameters.to_arguments())
 
 class UnitArcherTranslations:
 	func name() -> ChiselLocalization.LocalizedText:
 		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_ARCHER_NAME, {})
-
-	func description(
-		parameters: UnitArcherDescriptionParameters = null
-	) -> ChiselLocalization.LocalizedText:
+	func description(parameters: UnitArcherDescriptionParameters = null) -> ChiselLocalization.LocalizedText:
 		if parameters == null:
 			parameters = UnitArcherDescriptionParameters.new()
-		return ChiselLocalization.format(
-			ChiselLocalization.Id.UNIT_ARCHER_DESCRIPTION, parameters.to_arguments()
-		)
-
+		return ChiselLocalization.format(ChiselLocalization.Id.UNIT_ARCHER_DESCRIPTION, parameters.to_arguments())
 
 class UnitTranslations:
 	var archer := UnitArcherTranslations.new()
@@ -442,7 +324,6 @@ class UnitTranslations:
 	var ashen_ranger := UnitAshenRangerTranslations.new()
 	var cinder_pikeman := UnitCinderPikemanTranslations.new()
 	var flame_knight := UnitFlameKnightTranslations.new()
-
 
 static var unit := UnitTranslations.new()
 static var tooltip := TooltipTranslations.new()

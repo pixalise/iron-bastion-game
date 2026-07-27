@@ -16,7 +16,14 @@ const TABLE_ID := "Jt3iVOYOqHl97phbZEpUi"
 const TABLE_NAME := "Unit"
 const TABLE_KIND := "user"
 const COUNT := 6
-const SLUGS := ["ARCHER", "PIKEMAN", "KNIGHT", "ASHEN_RANGER", "CINDER_PIKEMAN", "FLAME_KNIGHT"]
+const SLUGS := [
+	"ARCHER",
+	"PIKEMAN",
+	"KNIGHT",
+	"ASHEN_RANGER",
+	"CINDER_PIKEMAN",
+	"FLAME_KNIGHT"
+]
 const NAME := [
 	ChiselLocalization.Id.UNIT_ARCHER_NAME,
 	ChiselLocalization.Id.UNIT_PIKEMAN_NAME,
@@ -41,10 +48,59 @@ const PORTRAIT := [
 	ChiselAssets.Id.PIKEMAN,
 	ChiselAssets.Id.KNIGHT
 ]
-const MAX_HEALTH := [80, 120, 100, 75, 125, 130]
-const PHYSICAL_ARMOR := [0, 0.1, 0.15, 0, 0.1, 0.15]
-const ATTACK_DAMAGE := [15, 30, 20, 22, 38, 30]
-const ATTACK_RATE := [1.2, 1, 1.3, 1, 0.95, 1.2]
-const ATTACK_RANGE := [6.4, 2.1, 1.7, 6.8, 2.2, 1.7]
-const COMMAND_COST := [1, 1, 1, 2, 2, 2]
-const BASE_UNIT_COUNT := [1, 1, 1, 1, 1, 1]
+const MAX_HEALTH := [
+	80,
+	120,
+	100,
+	75,
+	125,
+	130
+]
+const PHYSICAL_ARMOR := [
+	0,
+	0.1,
+	0.15,
+	0,
+	0.1,
+	0.15
+]
+const ATTACK_DAMAGE := [
+	15,
+	30,
+	20,
+	22,
+	38,
+	30
+]
+const ATTACK_RATE := [
+	1.2,
+	1,
+	1.3,
+	1,
+	0.95,
+	1.2
+]
+const ATTACK_RANGE := [
+	6.4,
+	2.1,
+	1.7,
+	6.8,
+	2.2,
+	1.7
+]
+const COMMAND_COST := [
+	1,
+	1,
+	1,
+	2,
+	2,
+	2
+]
+const BASE_UNIT_COUNT := [
+	1,
+	1,
+	1,
+	1,
+	1,
+	1
+]

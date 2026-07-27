@@ -152,6 +152,51 @@ const STEP_5 := [
 	ChiselRecipestep.Id.INVALID,
 	ChiselRecipestep.Id.INVALID
 ]
-const OFFER_PRIORITY := [100, 95, 95, 110, 100, 35, 35, 35, 45, 120, 115, 110, 110, 130]
-const RECIPE_TIER := [1, 1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2, 3]
-const COMMAND_COST_DELTA := [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3]
+const OFFER_PRIORITY := [
+	100,
+	95,
+	95,
+	110,
+	100,
+	35,
+	35,
+	35,
+	45,
+	120,
+	115,
+	110,
+	110,
+	130
+]
+const RECIPE_TIER := [
+	1,
+	1,
+	1,
+	2,
+	2,
+	1,
+	1,
+	1,
+	1,
+	2,
+	2,
+	2,
+	2,
+	3
+]
+const COMMAND_COST_DELTA := [
+	1,
+	1,
+	1,
+	1,
+	1,
+	1,
+	1,
+	1,
+	2,
+	2,
+	2,
+	2,
+	2,
+	3
+]

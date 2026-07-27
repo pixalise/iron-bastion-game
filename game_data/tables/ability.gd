@@ -2,13 +2,24 @@
 class_name ChiselAbility
 extends RefCounted
 
-enum Id { INVALID = -1, TARGET_PRACTICE = 0, METEOR_STRIKE = 1, CINDERFALL = 2, BLAZING_DRILL = 3 }
+enum Id {
+	INVALID = -1,
+	TARGET_PRACTICE = 0,
+	METEOR_STRIKE = 1,
+	CINDERFALL = 2,
+	BLAZING_DRILL = 3
+}
 
 const TABLE_ID := "45RH7A6GsG12q-v78dmmN"
 const TABLE_NAME := "Ability"
 const TABLE_KIND := "user"
 const COUNT := 4
-const SLUGS := ["TARGET_PRACTICE", "METEOR_STRIKE", "CINDERFALL", "BLAZING_DRILL"]
+const SLUGS := [
+	"TARGET_PRACTICE",
+	"METEOR_STRIKE",
+	"CINDERFALL",
+	"BLAZING_DRILL"
+]
 const NAME := [
 	ChiselLocalization.Id.ABILITY_TARGET_PRACTICE_NAME,
 	ChiselLocalization.Id.ABILITY_METEOR_STRIKE_NAME,
@@ -27,9 +38,39 @@ const PORTRAIT := [
 	ChiselAssets.Id.METEOR_STRIKE,
 	ChiselAssets.Id.TARGET_PRACTICE
 ]
-const COMMAND_COST := [1, 2, 3, 2]
-const EFFECT_KEY := ["TARGET_PRACTICE", "METEOR_STRIKE", "METEOR_STRIKE", "TARGET_PRACTICE"]
-const TARGETING := ["ALLY", "AREA", "AREA", "LANE"]
-const BASE_DAMAGE := [0, 60, 90, 0]
-const AREA_RADIUS := [0, 2.4, 2.8, 0]
-const DURATION := [8, 0, 0, 10]
+const COMMAND_COST := [
+	1,
+	2,
+	3,
+	2
+]
+const EFFECT_KEY := [
+	"TARGET_PRACTICE",
+	"METEOR_STRIKE",
+	"METEOR_STRIKE",
+	"TARGET_PRACTICE"
+]
+const TARGETING := [
+	"ALLY",
+	"AREA",
+	"AREA",
+	"LANE"
+]
+const BASE_DAMAGE := [
+	0,
+	60,
+	90,
+	0
+]
+const AREA_RADIUS := [
+	0,
+	2.4,
+	2.8,
+	0
+]
+const DURATION := [
+	8,
+	0,
+	0,
+	10
+]

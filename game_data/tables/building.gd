@@ -16,7 +16,14 @@ const TABLE_ID := "3D2vwVj1UZD_4WoiWoczH"
 const TABLE_NAME := "Building"
 const TABLE_KIND := "user"
 const COUNT := 6
-const SLUGS := ["BARRACKS", "ARCHERY_RANGE", "TREASURY", "WORKSHOP", "EMBER_CHAPEL", "MARKET_STALL"]
+const SLUGS := [
+	"BARRACKS",
+	"ARCHERY_RANGE",
+	"TREASURY",
+	"WORKSHOP",
+	"EMBER_CHAPEL",
+	"MARKET_STALL"
+]
 const NAME := [
 	ChiselLocalization.Id.BUILDING_BARRACKS_NAME,
 	ChiselLocalization.Id.BUILDING_ARCHERY_RANGE_NAME,
@@ -49,8 +56,22 @@ const EFFECT_KEY := [
 	"IMPROVE_ASPECT_RECIPES",
 	"IMPROVE_SHOP"
 ]
-const MAX_COPIES := [2, 2, 3, 2, 1, 1]
-const MAX_LEVEL := [3, 3, 3, 3, 3, 3]
+const MAX_COPIES := [
+	2,
+	2,
+	3,
+	2,
+	1,
+	1
+]
+const MAX_LEVEL := [
+	3,
+	3,
+	3,
+	3,
+	3,
+	3
+]
 const ASPECT_AFFINITY := [
 	ChiselAspect.Id.INVALID,
 	ChiselAspect.Id.INVALID,

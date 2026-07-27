@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bi50qkwdipgl2"]
 
 [ext_resource type="Script" uid="uid://biwalhnptpwn4" path="res://game/scenes/main_menu/main_menu.gd" id="1_trmxd"]
-[ext_resource type="PackedScene" uid="uid://dpanc0ml5pyca" path="res://game/scenes/pachinko/pachinko.tscn" id="2_aagy0"]
+[ext_resource type="PackedScene" uid="uid://dpanc0ml5pyca" path="res://game/scenes/game/pachinko.tscn" id="2_aagy0"]
 
 [node name="MainMenu" type="Control" unique_id=1782497639]
 layout_mode = 3

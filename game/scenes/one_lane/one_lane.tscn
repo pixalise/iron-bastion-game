@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://s82m6ifpl4c3"]
 
 [ext_resource type="PackedScene" uid="uid://4r448vovmq8w" path="res://game/prefabs/lighting_natural.tscn" id="1_646tt"]
-[ext_resource type="Texture2D" uid="uid://2ok6rj11vlc6" path="res://game_data/assets/hdri/forest_1_2_k.exr" id="2_mfcnr"]
-[ext_resource type="Script" uid="uid://ditocnh8cwlb5" path="res://game/scenes/one_lane/scripts/camera_target.gd" id="3_mfcnr"]
+[ext_resource type="Texture2D" uid="uid://c41xuqbp1hxbh" path="res://game_data/assets/hdri/forest_1_2_k.exr" id="2_mfcnr"]
+[ext_resource type="PackedScene" uid="uid://dl5el6vs14v3a" path="res://game/scenes/one_lane/temp/castle.glb" id="3_2lb43"]
+[ext_resource type="PackedScene" uid="uid://bnlbyu7fnqn1f" path="res://game/scenes/one_lane/temp/portal.glb" id="3_ctd5a"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_68ukh"]
 panorama = ExtResource("2_mfcnr")
@@ -18,7 +19,7 @@ sky_rotation = Vector3(0, 1.5149457, 0)
 ambient_light_energy = 2.15
 
 [sub_resource type="BoxMesh" id="BoxMesh_bhunq"]
-size = Vector3(8, 1, 72)
+size = Vector3(8, 1, 119.59192)
 
 [sub_resource type="BoxMesh" id="BoxMesh_646tt"]
 size = Vector3(40, 16, 40)
@@ -95,11 +96,19 @@ environment = SubResource("Environment_ucwe6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 84.60029)
 
 [node name="PathEstimate" type="MeshInstance3D" parent="Greybox" unique_id=429257135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31082153, 23.79596)
 mesh = SubResource("BoxMesh_bhunq")
 
+[node name="castle" parent="Greybox" unique_id=1279427375 instance=ExtResource("3_2lb43")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0.02779007, 13.057993, -52.589596)
+
 [node name="Castle" type="MeshInstance3D" parent="Greybox" unique_id=133489391]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.6889133, -56.09464)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02779007, 5.8211193, -55.98915)
+visible = false
 mesh = SubResource("BoxMesh_646tt")
+
+[node name="portal" parent="Greybox" unique_id=1341139315 instance=ExtResource("3_ctd5a")]
+transform = Transform3D(-6, 0, 9.0597484e-07, 0, 6, 0, -9.0597484e-07, 0, -6, 0, 4.883129, 83.282524)
 
 [node name="Terrain3D" type="Terrain3D" parent="." unique_id=1676012435]
 data_directory = "res://game/scenes/one_lane/terrains"
@@ -109,8 +118,7 @@ show_checkered = true
 top_level = true
 metadata/_edit_lock_ = true
 
-[node name="CameraTarget" type="Node3D" parent="." unique_id=1317186884]
-script = ExtResource("3_mfcnr")
-
 [node name="Camera" type="Camera3D" parent="." unique_id=1169643262]
+transform = Transform3D(-4.371139e-08, 0.7071068, -0.7071068, 0, 0.7071068, 0.7071068, 1, 3.090862e-08, -3.090862e-08, -23.316158, 20, 93.20625)
+keep_aspect = 0
 current = true

@@ -107,7 +107,47 @@ const MODIFIER := [
 	ChiselModifier.Id.INVALID,
 	ChiselModifier.Id.INVALID
 ]
-const PHYSICS_KIND := ["", "", "", "", "", "SPRING", "SPLITTER", "", ""]
-const UTILITY_KIND := ["", "", "", "", "", "", "", "GOLD", ""]
-const SPECIAL_KIND := ["", "", "", "", "", "", "", "", "ECHO"]
-const MAX_LEVEL := [3, 3, 3, 3, 3, 2, 2, 2, 2]
+const PHYSICS_KIND := [
+	"",
+	"",
+	"",
+	"",
+	"",
+	"SPRING",
+	"SPLITTER",
+	"",
+	""
+]
+const UTILITY_KIND := [
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"GOLD",
+	""
+]
+const SPECIAL_KIND := [
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"ECHO"
+]
+const MAX_LEVEL := [
+	3,
+	3,
+	3,
+	3,
+	3,
+	2,
+	2,
+	2,
+	2
+]

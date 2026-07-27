@@ -2,19 +2,13 @@
 class_name ChiselLocalization
 extends RefCounted
 
-
 class LocalizedText:
 	var plain_text: String
 	var bbcode_text: String
 	var spans: Array[Dictionary]
 	var _tooltips: Dictionary
 
-	func _init(
-		next_plain_text: String = "",
-		next_bbcode_text: String = "",
-		next_spans: Array[Dictionary] = [],
-		next_tooltips: Dictionary = {}
-	) -> void:
+	func _init(next_plain_text: String = "", next_bbcode_text: String = "", next_spans: Array[Dictionary] = [], next_tooltips: Dictionary = {}) -> void:
 		plain_text = next_plain_text
 		bbcode_text = next_bbcode_text
 		spans = next_spans
@@ -26,24 +20,17 @@ class LocalizedText:
 	func tooltip_content_for(tooltip_slug: StringName) -> TooltipContent:
 		return _tooltips.get(String(tooltip_slug), TooltipContent.new(tooltip_slug))
 
-
 class TooltipContent:
 	var slug: StringName
 	var icon_path: String
 	var title: LocalizedText
 	var description: LocalizedText
 
-	func _init(
-		next_slug: StringName = &"",
-		next_icon_path: String = "",
-		next_title: LocalizedText = null,
-		next_description: LocalizedText = null
-	) -> void:
+	func _init(next_slug: StringName = &"", next_icon_path: String = "", next_title: LocalizedText = null, next_description: LocalizedText = null) -> void:
 		slug = next_slug
 		icon_path = next_icon_path
 		title = next_title if next_title != null else LocalizedText.new()
 		description = next_description if next_description != null else LocalizedText.new()
-
 
 enum Id {
 	INVALID = -1,
@@ -125,454 +112,79 @@ enum Id {
 
 const DEFAULT_LOCALE := "en"
 const LOCALES := ["en"]
-const KEYS := [
-	"UNIT.ARCHER.NAME",
-	"UNIT.ARCHER.DESCRIPTION",
-	"TOOLTIP.DAMAGE.PHYISICAL.TITLE",
-	"TOOLTIP.DAMAGE.PHYISICAL.DESCRIPTION",
-	"TOOLTIP.RANGE.TITLE",
-	"TOOLTIP.RANGE.DESCRIPTION",
-	"UNIT.PIKEMAN.NAME",
-	"UNIT.PIKEMAN.DESCRIPTION",
-	"UNIT.KNIGHT.NAME",
-	"UNIT.KNIGHT.DESCRIPTION",
-	"ABILITY.TARGET_PRACTICE.NAME",
-	"ABILITY.TARGET_PRACTICE.DESCRIPTION",
-	"ABILITY.METEOR_STRIKE.NAME",
-	"ABILITY.METEOR_STRIKE.DESCRIPTION",
-	"ASPECT.EMBER.NAME",
-	"ASPECT.EMBER.DESCRIPTION",
-	"UNIT.ASHEN_RANGER.NAME",
-	"UNIT.ASHEN_RANGER.DESCRIPTION",
-	"UNIT.CINDER_PIKEMAN.NAME",
-	"UNIT.CINDER_PIKEMAN.DESCRIPTION",
-	"UNIT.FLAME_KNIGHT.NAME",
-	"UNIT.FLAME_KNIGHT.DESCRIPTION",
-	"ABILITY.CINDERFALL.NAME",
-	"ABILITY.CINDERFALL.DESCRIPTION",
-	"ABILITY.BLAZING_DRILL.NAME",
-	"ABILITY.BLAZING_DRILL.DESCRIPTION",
-	"BALL.ARCHER.NAME",
-	"BALL.ARCHER.DESCRIPTION",
-	"BALL.PIKEMAN.NAME",
-	"BALL.PIKEMAN.DESCRIPTION",
-	"BALL.KNIGHT.NAME",
-	"BALL.KNIGHT.DESCRIPTION",
-	"BALL.TARGET_PRACTICE.NAME",
-	"BALL.TARGET_PRACTICE.DESCRIPTION",
-	"BALL.METEOR_STRIKE.NAME",
-	"BALL.METEOR_STRIKE.DESCRIPTION",
-	"MODIFIER.LONGSHOT_TRAINING.NAME",
-	"MODIFIER.LONGSHOT_TRAINING.DESCRIPTION",
-	"MODIFIER.REINFORCEMENT_CALL.NAME",
-	"MODIFIER.REINFORCEMENT_CALL.DESCRIPTION",
-	"MODIFIER.WAR_DRUM.NAME",
-	"MODIFIER.WAR_DRUM.DESCRIPTION",
-	"MODIFIER.OVERCHARGE.NAME",
-	"MODIFIER.OVERCHARGE.DESCRIPTION",
-	"PEG.EMBER_SIGIL.NAME",
-	"PEG.EMBER_SIGIL.DESCRIPTION",
-	"PEG.LONGSHOT_MARKER.NAME",
-	"PEG.LONGSHOT_MARKER.DESCRIPTION",
-	"PEG.REINFORCEMENT_BANNER.NAME",
-	"PEG.REINFORCEMENT_BANNER.DESCRIPTION",
-	"PEG.WAR_DRUM.NAME",
-	"PEG.WAR_DRUM.DESCRIPTION",
-	"PEG.OVERCHARGE_RUNE.NAME",
-	"PEG.OVERCHARGE_RUNE.DESCRIPTION",
-	"PEG.SPRING_PEG.NAME",
-	"PEG.SPRING_PEG.DESCRIPTION",
-	"PEG.SPLITTER_PEG.NAME",
-	"PEG.SPLITTER_PEG.DESCRIPTION",
-	"PEG.GOLD_CACHE.NAME",
-	"PEG.GOLD_CACHE.DESCRIPTION",
-	"PEG.ECHO_SEAL.NAME",
-	"PEG.ECHO_SEAL.DESCRIPTION",
-	"BUILDING.BARRACKS.NAME",
-	"BUILDING.BARRACKS.DESCRIPTION",
-	"BUILDING.ARCHERY_RANGE.NAME",
-	"BUILDING.ARCHERY_RANGE.DESCRIPTION",
-	"BUILDING.TREASURY.NAME",
-	"BUILDING.TREASURY.DESCRIPTION",
-	"BUILDING.WORKSHOP.NAME",
-	"BUILDING.WORKSHOP.DESCRIPTION",
-	"BUILDING.EMBER_CHAPEL.NAME",
-	"BUILDING.EMBER_CHAPEL.DESCRIPTION",
-	"BUILDING.MARKET_STALL.NAME",
-	"BUILDING.MARKET_STALL.DESCRIPTION"
-]
+const KEYS := ["UNIT.ARCHER.NAME", "UNIT.ARCHER.DESCRIPTION", "TOOLTIP.DAMAGE.PHYISICAL.TITLE", "TOOLTIP.DAMAGE.PHYISICAL.DESCRIPTION", "TOOLTIP.RANGE.TITLE", "TOOLTIP.RANGE.DESCRIPTION", "UNIT.PIKEMAN.NAME", "UNIT.PIKEMAN.DESCRIPTION", "UNIT.KNIGHT.NAME", "UNIT.KNIGHT.DESCRIPTION", "ABILITY.TARGET_PRACTICE.NAME", "ABILITY.TARGET_PRACTICE.DESCRIPTION", "ABILITY.METEOR_STRIKE.NAME", "ABILITY.METEOR_STRIKE.DESCRIPTION", "ASPECT.EMBER.NAME", "ASPECT.EMBER.DESCRIPTION", "UNIT.ASHEN_RANGER.NAME", "UNIT.ASHEN_RANGER.DESCRIPTION", "UNIT.CINDER_PIKEMAN.NAME", "UNIT.CINDER_PIKEMAN.DESCRIPTION", "UNIT.FLAME_KNIGHT.NAME", "UNIT.FLAME_KNIGHT.DESCRIPTION", "ABILITY.CINDERFALL.NAME", "ABILITY.CINDERFALL.DESCRIPTION", "ABILITY.BLAZING_DRILL.NAME", "ABILITY.BLAZING_DRILL.DESCRIPTION", "BALL.ARCHER.NAME", "BALL.ARCHER.DESCRIPTION", "BALL.PIKEMAN.NAME", "BALL.PIKEMAN.DESCRIPTION", "BALL.KNIGHT.NAME", "BALL.KNIGHT.DESCRIPTION", "BALL.TARGET_PRACTICE.NAME", "BALL.TARGET_PRACTICE.DESCRIPTION", "BALL.METEOR_STRIKE.NAME", "BALL.METEOR_STRIKE.DESCRIPTION", "MODIFIER.LONGSHOT_TRAINING.NAME", "MODIFIER.LONGSHOT_TRAINING.DESCRIPTION", "MODIFIER.REINFORCEMENT_CALL.NAME", "MODIFIER.REINFORCEMENT_CALL.DESCRIPTION", "MODIFIER.WAR_DRUM.NAME", "MODIFIER.WAR_DRUM.DESCRIPTION", "MODIFIER.OVERCHARGE.NAME", "MODIFIER.OVERCHARGE.DESCRIPTION", "PEG.EMBER_SIGIL.NAME", "PEG.EMBER_SIGIL.DESCRIPTION", "PEG.LONGSHOT_MARKER.NAME", "PEG.LONGSHOT_MARKER.DESCRIPTION", "PEG.REINFORCEMENT_BANNER.NAME", "PEG.REINFORCEMENT_BANNER.DESCRIPTION", "PEG.WAR_DRUM.NAME", "PEG.WAR_DRUM.DESCRIPTION", "PEG.OVERCHARGE_RUNE.NAME", "PEG.OVERCHARGE_RUNE.DESCRIPTION", "PEG.SPRING_PEG.NAME", "PEG.SPRING_PEG.DESCRIPTION", "PEG.SPLITTER_PEG.NAME", "PEG.SPLITTER_PEG.DESCRIPTION", "PEG.GOLD_CACHE.NAME", "PEG.GOLD_CACHE.DESCRIPTION", "PEG.ECHO_SEAL.NAME", "PEG.ECHO_SEAL.DESCRIPTION", "BUILDING.BARRACKS.NAME", "BUILDING.BARRACKS.DESCRIPTION", "BUILDING.ARCHERY_RANGE.NAME", "BUILDING.ARCHERY_RANGE.DESCRIPTION", "BUILDING.TREASURY.NAME", "BUILDING.TREASURY.DESCRIPTION", "BUILDING.WORKSHOP.NAME", "BUILDING.WORKSHOP.DESCRIPTION", "BUILDING.EMBER_CHAPEL.NAME", "BUILDING.EMBER_CHAPEL.DESCRIPTION", "BUILDING.MARKET_STALL.NAME", "BUILDING.MARKET_STALL.DESCRIPTION"]
 const VALUES := {
-	"en":
-	[
-		"Archer",
-		"The backbone of every military. Has an outstanding <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range of {float:attack_range}</tooltip></style> and deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style>.",
-		"Physical Damage",
-		"<style:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> Physical damage</style> is any kind of damage that is dealt with regular weapons.",
-		"Range",
-		"<style:ATTACK_RANGE><icon:RANGE/> Range</style> is how far a unit can reach when attacking.",
-		"Pikeman",
-		"The frontline of the kings army. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in an area of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>.",
-		"Swordman",
-		"They are the first ones to engage the kings enemies. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in the vicinity of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>.",
-		"Target Practice",
-		"Sharpen aim and battlefield discipline. Improves unit <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> and <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range</tooltip></style>.",
-		"Meteor Strike",
-		"Call down a meteor on the target area, dealing heavy <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> to everything caught in the impact.",
-		"Ember",
-		"Aggression, sacrifice, and burst.",
-		"Ashen Ranger",
-		"Summons an ember-touched archer that deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> from long <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range</tooltip></style>.",
-		"Cinder Pikeman",
-		"Summons a burning frontline soldier that punishes clustered enemies with close <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style>.",
-		"Flame Knight",
-		"Summons a sturdy melee fighter that trades safety for aggressive <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style>.",
-		"Cinderfall",
-		"Call down a hotter meteor that deals heavy <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> in an area.",
-		"Blazing Drill",
-		"Drive a lane into formation, briefly improving attack focus with Ember discipline.",
-		"Archer Ball",
-		"Starts from Archer and can become ranged unit offers.",
-		"Pikeman Ball",
-		"Starts from Pikeman and can become frontline unit offers.",
-		"Knight Ball",
-		"Starts from Knight and can become durable melee offers.",
-		"Target Practice Ball",
-		"Starts from Target Practice and can become support ability offers.",
-		"Meteor Strike Ball",
-		"Starts from Meteor Strike and can become area damage offers.",
-		"Longshot Training",
-		"Adds attack <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range</tooltip></style> to unit offers and raises command cost.",
-		"Reinforcement Call",
-		"Adds more spawned units to unit offers and raises command cost.",
-		"War Drum",
-		"Multiplies <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> for unit or ability offers and raises command cost.",
-		"Overcharge",
-		"Greatly multiplies ability <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> at a steep command cost.",
-		"Ember Sigil",
-		"Adds Ember to a ball sequence for authored transformation recipes.",
-		"Longshot Marker",
-		"Adds Longshot Training to a ball sequence.",
-		"Reinforcement Banner",
-		"Adds Reinforcement Call to a ball sequence.",
-		"War Drum Peg",
-		"Adds War Drum to a ball sequence.",
-		"Overcharge Rune",
-		"Adds Overcharge to a ball sequence.",
-		"Spring Peg",
-		"A physics peg that kicks balls back into the board.",
-		"Splitter Peg",
-		"A physics peg that creates extra routing chances.",
-		"Gold Cache",
-		"A utility peg that adds gold value to a path.",
-		"Echo Seal",
-		"A special peg that marks a sequence for echo-style effects.",
-		"Barracks",
-		"Adds simple soldier value when a ball lands in this bucket.",
-		"Archery Range",
-		"Improves or copies strong Archer-family results.",
-		"Treasury",
-		"Converts bucket hits into extra gold.",
-		"Workshop",
-		"Turns bucket hits into machine progress and upgrade pressure.",
-		"Ember Chapel",
-		"Improves Ember recipes that finish in this bucket.",
-		"Market Stall",
-		"Improves future shop rolls and makes buying tempo smoother."
-	]
+	"en": ["Archer", "The backbone of every military. Has an outstanding <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range of {float:attack_range}</tooltip></style> and deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style>.", "Physical Damage", "<style:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> Physical damage</style> is any kind of damage that is dealt with regular weapons.", "Range", "<style:ATTACK_RANGE><icon:RANGE/> Range</style> is how far a unit can reach when attacking.", "Pikeman", "The frontline of the kings army. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in an area of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>.", "Swordman", "They are the first ones to engage the kings enemies. Deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> {int:attack_damage} of physical damage</tooltip></style> in the vicinity of <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> {float:attack_range}</tooltip></style>.", "Target Practice", "Sharpen aim and battlefield discipline. Improves unit <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> and <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range</tooltip></style>.", "Meteor Strike", "Call down a meteor on the target area, dealing heavy <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> to everything caught in the impact.", "Ember", "Aggression, sacrifice, and burst.", "Ashen Ranger", "Summons an ember-touched archer that deals <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> from long <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range</tooltip></style>.", "Cinder Pikeman", "Summons a burning frontline soldier that punishes clustered enemies with close <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style>.", "Flame Knight", "Summons a sturdy melee fighter that trades safety for aggressive <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style>.", "Cinderfall", "Call down a hotter meteor that deals heavy <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> in an area.", "Blazing Drill", "Drive a lane into formation, briefly improving attack focus with Ember discipline.", "Archer Ball", "Starts from Archer and can become ranged unit offers.", "Pikeman Ball", "Starts from Pikeman and can become frontline unit offers.", "Knight Ball", "Starts from Knight and can become durable melee offers.", "Target Practice Ball", "Starts from Target Practice and can become support ability offers.", "Meteor Strike Ball", "Starts from Meteor Strike and can become area damage offers.", "Longshot Training", "Adds attack <style:ATTACK_RANGE><tooltip:RANGE><icon:RANGE/> range</tooltip></style> to unit offers and raises command cost.", "Reinforcement Call", "Adds more spawned units to unit offers and raises command cost.", "War Drum", "Multiplies <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> for unit or ability offers and raises command cost.", "Overcharge", "Greatly multiplies ability <style:PHYSICAL_DAMAGE><tooltip:PHYSICAL_DAMAGE><icon:PHYSICAL_DAMAGE/> physical damage</tooltip></style> at a steep command cost.", "Ember Sigil", "Adds Ember to a ball sequence for authored transformation recipes.", "Longshot Marker", "Adds Longshot Training to a ball sequence.", "Reinforcement Banner", "Adds Reinforcement Call to a ball sequence.", "War Drum Peg", "Adds War Drum to a ball sequence.", "Overcharge Rune", "Adds Overcharge to a ball sequence.", "Spring Peg", "A physics peg that kicks balls back into the board.", "Splitter Peg", "A physics peg that creates extra routing chances.", "Gold Cache", "A utility peg that adds gold value to a path.", "Echo Seal", "A special peg that marks a sequence for echo-style effects.", "Barracks", "Adds simple soldier value when a ball lands in this bucket.", "Archery Range", "Improves or copies strong Archer-family results.", "Treasury", "Converts bucket hits into extra gold.", "Workshop", "Turns bucket hits into machine progress and upgrade pressure.", "Ember Chapel", "Improves Ember recipes that finish in this bucket.", "Market Stall", "Improves future shop rolls and makes buying tempo smoother."]
 }
-const ICON_SLUGS := [
-	[],
-	["RANGE", "PHYSICAL_DAMAGE"],
-	[],
-	["PHYSICAL_DAMAGE"],
-	[],
-	["RANGE"],
-	[],
-	["PHYSICAL_DAMAGE", "RANGE"],
-	[],
-	["PHYSICAL_DAMAGE", "RANGE"],
-	[],
-	["PHYSICAL_DAMAGE", "RANGE"],
-	[],
-	["PHYSICAL_DAMAGE"],
-	[],
-	[],
-	[],
-	["PHYSICAL_DAMAGE", "RANGE"],
-	[],
-	["PHYSICAL_DAMAGE"],
-	[],
-	["PHYSICAL_DAMAGE"],
-	[],
-	["PHYSICAL_DAMAGE"],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	["RANGE"],
-	[],
-	[],
-	[],
-	["PHYSICAL_DAMAGE"],
-	[],
-	["PHYSICAL_DAMAGE"],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[]
-]
+const ICON_SLUGS := [[], ["RANGE", "PHYSICAL_DAMAGE"], [], ["PHYSICAL_DAMAGE"], [], ["RANGE"], [], ["PHYSICAL_DAMAGE", "RANGE"], [], ["PHYSICAL_DAMAGE", "RANGE"], [], ["PHYSICAL_DAMAGE", "RANGE"], [], ["PHYSICAL_DAMAGE"], [], [], [], ["PHYSICAL_DAMAGE", "RANGE"], [], ["PHYSICAL_DAMAGE"], [], ["PHYSICAL_DAMAGE"], [], ["PHYSICAL_DAMAGE"], [], [], [], [], [], [], [], [], [], [], [], [], [], ["RANGE"], [], [], [], ["PHYSICAL_DAMAGE"], [], ["PHYSICAL_DAMAGE"], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]
 const ICONS := {
-	"KNIGHT":
-	{
+	"KNIGHT": {
 		"asset_id": "KNIGHT",
 		"path": "res://game_data/assets/ui_icon/knight.png",
 		"width": 256,
 		"height": 256
 	},
-	"ARCHER":
-	{
+	"ARCHER": {
 		"asset_id": "ARCHER",
 		"path": "res://game_data/assets/ui_icon/archer.png",
 		"width": 256,
 		"height": 256
 	},
-	"PHYSICAL_DAMAGE":
-	{
+	"PHYSICAL_DAMAGE": {
 		"asset_id": "PHYSICAL_DAMAGE",
 		"path": "res://game_data/assets/ui_icon/physical_damage.png",
 		"width": 256,
 		"height": 256
 	},
-	"PIKEMAN":
-	{
+	"PIKEMAN": {
 		"asset_id": "PIKEMAN",
 		"path": "res://game_data/assets/ui_icon/pikeman.png",
 		"width": 256,
 		"height": 256
 	},
-	"RANGE":
-	{
+	"RANGE": {
 		"asset_id": "RANGE",
 		"path": "res://game_data/assets/ui_icon/range.png",
 		"width": 256,
 		"height": 256
 	},
-	"TARGET_PRACTICE":
-	{
+	"TARGET_PRACTICE": {
 		"asset_id": "TARGET_PRACTICE",
 		"path": "res://game_data/assets/ui_icon/target_practice.png",
 		"width": 256,
 		"height": 256
 	},
-	"METEOR_STRIKE":
-	{
+	"METEOR_STRIKE": {
 		"asset_id": "METEOR_STRIKE",
 		"path": "res://game_data/assets/ui_icon/meteor_strike.png",
 		"width": 256,
 		"height": 256
 	}
 }
-const PLACEHOLDERS := [
-	[],
-	["attack_range", "attack_damage"],
-	[],
-	[],
-	[],
-	[],
-	[],
-	["attack_damage", "attack_range"],
-	[],
-	["attack_damage", "attack_range"],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[]
-]
-const PLACEHOLDER_TYPES := [
-	[],
-	["float", "int"],
-	[],
-	[],
-	[],
-	[],
-	[],
-	["int", "float"],
-	[],
-	["int", "float"],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[],
-	[]
-]
+const PLACEHOLDERS := [[], ["attack_range", "attack_damage"], [], [], [], [], [], ["attack_damage", "attack_range"], [], ["attack_damage", "attack_range"], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]
+const PLACEHOLDER_TYPES := [[], ["float", "int"], [], [], [], [], [], ["int", "float"], [], ["int", "float"], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]
 const STYLES := {
-	"ATTACK_RANGE": {"color": "#ffffff", "bold": false, "italic": true, "underline": false},
-	"PHYSICAL_DAMAGE": {"color": "#ff0000", "bold": true, "italic": false, "underline": false}
+	"ATTACK_RANGE": {
+		"color": "#ffffff",
+		"bold": false,
+		"italic": true,
+		"underline": false
+	},
+	"PHYSICAL_DAMAGE": {
+		"color": "#ff0000",
+		"bold": true,
+		"italic": false,
+		"underline": false
+	}
 }
 const TOOLTIPS := {
-	"PHYSICAL_DAMAGE":
-	{
+	"PHYSICAL_DAMAGE": {
 		"title_id": Id.TOOLTIP_DAMAGE_PHYISICAL_TITLE,
 		"description_id": Id.TOOLTIP_DAMAGE_PHYISICAL_DESCRIPTION,
 		"icon_asset_id": "PHYSICAL_DAMAGE",
 		"icon_path": "res://game_data/assets/ui_icon/physical_damage.png"
 	},
-	"RANGE":
-	{
+	"RANGE": {
 		"title_id": Id.TOOLTIP_RANGE_TITLE,
 		"description_id": Id.TOOLTIP_RANGE_DESCRIPTION,
 		"icon_asset_id": "RANGE",
@@ -581,16 +193,11 @@ const TOOLTIPS := {
 }
 const CSV_PATH := "res://game_data/localization/translations.csv"
 
-
 static func format(id: int, arguments: Dictionary = {}, locale: String = "") -> LocalizedText:
 	return _format(id, arguments, locale, 0)
 
-
-static func tooltip_content(
-	tooltip_slug: StringName, arguments: Dictionary = {}, locale: String = ""
-) -> TooltipContent:
+static func tooltip_content(tooltip_slug: StringName, arguments: Dictionary = {}, locale: String = "") -> TooltipContent:
 	return _tooltip_content(String(tooltip_slug), arguments, _locale_key(locale), 0)
-
 
 static func _format(id: int, arguments: Dictionary, locale: String, depth: int) -> LocalizedText:
 	if id < 0 or id >= KEYS.size():
@@ -599,12 +206,7 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 	var templates: Array = VALUES.get(locale_key, VALUES[DEFAULT_LOCALE])
 	var template := String(templates[id])
 	var regex := RegEx.new()
-	(
-		regex
-		. compile(
-			"<style:([A-Z][A-Z0-9_]*)>|</style>|<tooltip:([A-Z][A-Z0-9_]*)>|</tooltip>|<br\\s*/>|<icon:([A-Z][A-Z0-9_]*)\\s*/>|\\{(int|float|string):([a-z][a-z0-9_]*)\\}"
-		)
-	)
+	regex.compile("<style:([A-Z][A-Z0-9_]*)>|</style>|<tooltip:([A-Z][A-Z0-9_]*)>|</tooltip>|<br\\s*/>|<icon:([A-Z][A-Z0-9_]*)\\s*/>|\\{(int|float|string):([a-z][a-z0-9_]*)\\}")
 	var cursor := 0
 	var plain := ""
 	var bbcode := ""
@@ -621,21 +223,25 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 		var token := result.get_string(0)
 		if token.begins_with("<style:"):
 			var style_slug := result.get_string(1)
-			active_styles.append({"style": style_slug, "start": plain.length()})
+			active_styles.append({
+				"style": style_slug,
+				"start": plain.length()
+			})
 			bbcode += _style_open_bbcode(style_slug)
 		elif token == "</style>":
 			bbcode += _style_close_bbcode(_active_style_slug(active_styles))
 			_close_style(active_styles, spans, plain.length())
 		elif token.begins_with("<tooltip:"):
 			var tooltip_slug := result.get_string(2)
-			active_tooltips.append({"tooltip": tooltip_slug, "start": plain.length()})
+			active_tooltips.append({
+				"tooltip": tooltip_slug,
+				"start": plain.length()
+			})
 			bbcode += _tooltip_open_bbcode(tooltip_slug)
 		elif token == "</tooltip>":
 			if not active_tooltips.is_empty():
 				bbcode += _tooltip_close_bbcode()
-			_close_tooltip(
-				active_tooltips, spans, tooltips, plain.length(), arguments, locale_key, depth
-			)
+			_close_tooltip(active_tooltips, spans, tooltips, plain.length(), arguments, locale_key, depth)
 		elif token.begins_with("<br"):
 			plain += "\n"
 			bbcode += "\n"
@@ -645,21 +251,17 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 			plain += _icon_plain(icon_slug)
 			bbcode += _icon_fragment(icon_slug)
 			var icon: Dictionary = ICONS.get(icon_slug, {})
-			spans.append(
-				{
-					"type": "icon",
-					"icon": icon_slug,
-					"start": icon_start,
-					"end": plain.length(),
-					"path": String(icon.get("path", ""))
-				}
-			)
+			spans.append({
+				"type": "icon",
+				"icon": icon_slug,
+				"start": icon_start,
+				"end": plain.length(),
+				"path": String(icon.get("path", ""))
+			})
 		else:
 			var placeholder_type := result.get_string(4)
 			var placeholder := result.get_string(5)
-			var replacement := str(
-				arguments.get(placeholder, _placeholder_default(placeholder_type))
-			)
+			var replacement := str(arguments.get(placeholder, _placeholder_default(placeholder_type)))
 			plain += replacement
 			bbcode += _bbcode_escape(replacement)
 		cursor = end
@@ -669,69 +271,48 @@ static func _format(id: int, arguments: Dictionary, locale: String, depth: int) 
 	bbcode += _bbcode_escape(suffix)
 	while active_tooltips.size() > 0:
 		bbcode += _tooltip_close_bbcode()
-		_close_tooltip(
-			active_tooltips, spans, tooltips, plain.length(), arguments, locale_key, depth
-		)
+		_close_tooltip(active_tooltips, spans, tooltips, plain.length(), arguments, locale_key, depth)
 	while active_styles.size() > 0:
 		bbcode += _style_close_bbcode(_active_style_slug(active_styles))
 		_close_style(active_styles, spans, plain.length())
 	return LocalizedText.new(plain, bbcode, spans, tooltips)
 
-
-static func _close_style(
-	active_styles: Array[Dictionary], spans: Array[Dictionary], plain_length: int
-) -> void:
+static func _close_style(active_styles: Array[Dictionary], spans: Array[Dictionary], plain_length: int) -> void:
 	if active_styles.is_empty():
 		return
 	var span: Dictionary = active_styles.pop_back()
 	var style_slug := String(span.get("style", ""))
-	spans.append(
-		{
-			"type": "style",
-			"style": style_slug,
-			"start": int(span.get("start", 0)),
-			"end": plain_length,
-			"color": _style_color(style_slug),
-			"bold": _style_bold(style_slug),
-			"italic": _style_italic(style_slug),
-			"underline": _style_underline(style_slug)
-		}
-	)
+	spans.append({
+		"type": "style",
+		"style": style_slug,
+		"start": int(span.get("start", 0)),
+		"end": plain_length,
+		"color": _style_color(style_slug),
+		"bold": _style_bold(style_slug),
+		"italic": _style_italic(style_slug),
+		"underline": _style_underline(style_slug)
+	})
 
-
-static func _close_tooltip(
-	active_tooltips: Array[Dictionary],
-	spans: Array[Dictionary],
-	tooltips: Dictionary,
-	plain_length: int,
-	arguments: Dictionary,
-	locale_key: String,
-	depth: int
-) -> void:
+static func _close_tooltip(active_tooltips: Array[Dictionary], spans: Array[Dictionary], tooltips: Dictionary, plain_length: int, arguments: Dictionary, locale_key: String, depth: int) -> void:
 	if active_tooltips.is_empty():
 		return
 	var span: Dictionary = active_tooltips.pop_back()
 	var tooltip_slug := String(span.get("tooltip", ""))
 	var tooltip_content := _tooltip_content(tooltip_slug, arguments, locale_key, depth)
 	tooltips[tooltip_slug] = tooltip_content
-	spans.append(
-		{
-			"type": "tooltip",
-			"tooltip": tooltip_slug,
-			"start": int(span.get("start", 0)),
-			"end": plain_length,
-			"tooltip_text": tooltip_content.description.plain_text,
-			"tooltip_bbcode_text": tooltip_content.description.bbcode_text,
-			"tooltip_title_text": tooltip_content.title.plain_text,
-			"tooltip_title_bbcode_text": tooltip_content.title.bbcode_text,
-			"tooltip_icon_path": tooltip_content.icon_path
-		}
-	)
+	spans.append({
+		"type": "tooltip",
+		"tooltip": tooltip_slug,
+		"start": int(span.get("start", 0)),
+		"end": plain_length,
+		"tooltip_text": tooltip_content.description.plain_text,
+		"tooltip_bbcode_text": tooltip_content.description.bbcode_text,
+		"tooltip_title_text": tooltip_content.title.plain_text,
+		"tooltip_title_bbcode_text": tooltip_content.title.bbcode_text,
+		"tooltip_icon_path": tooltip_content.icon_path
+	})
 
-
-static func _tooltip_content(
-	tooltip_slug: String, arguments: Dictionary, locale_key: String, depth: int
-) -> TooltipContent:
+static func _tooltip_content(tooltip_slug: String, arguments: Dictionary, locale_key: String, depth: int) -> TooltipContent:
 	var tooltip_data: Dictionary = TOOLTIPS.get(tooltip_slug, {})
 	var title_text := LocalizedText.new()
 	var description_text := LocalizedText.new()
@@ -742,13 +323,7 @@ static func _tooltip_content(
 			title_text = _format(int(title_id), arguments, locale_key, depth + 1)
 		if description_id != null:
 			description_text = _format(int(description_id), arguments, locale_key, depth + 1)
-	return TooltipContent.new(
-		StringName(tooltip_slug),
-		String(tooltip_data.get("icon_path", "")),
-		title_text,
-		description_text
-	)
-
+	return TooltipContent.new(StringName(tooltip_slug), String(tooltip_data.get("icon_path", "")), title_text, description_text)
 
 static func _style_open_bbcode(style_slug: String) -> String:
 	var tags := ""
@@ -763,7 +338,6 @@ static func _style_open_bbcode(style_slug: String) -> String:
 		tags += "[u]"
 	return tags
 
-
 static func _style_close_bbcode(style_slug: String) -> String:
 	var tags := ""
 	if _style_underline(style_slug):
@@ -777,14 +351,11 @@ static func _style_close_bbcode(style_slug: String) -> String:
 		tags += "[/color]"
 	return tags
 
-
 static func _tooltip_open_bbcode(tooltip_slug: String) -> String:
 	return "[hint=%s]" % tooltip_slug
 
-
 static func _tooltip_close_bbcode() -> String:
 	return "[/hint]"
-
 
 static func _icon_fragment(icon_slug: String) -> String:
 	var icon: Dictionary = ICONS.get(icon_slug, {})
@@ -793,36 +364,29 @@ static func _icon_fragment(icon_slug: String) -> String:
 		return _bbcode_escape(_icon_plain(icon_slug))
 	return "[img=16x16]%s[/img]" % _bbcode_escape(icon_path)
 
-
 static func _icon_plain(icon_slug: String) -> String:
 	return "[%s]" % icon_slug
-
 
 static func _active_style_slug(active_styles: Array[Dictionary]) -> String:
 	if active_styles.is_empty():
 		return ""
 	return String(active_styles[active_styles.size() - 1].get("style", ""))
 
-
 static func _style_color(style_slug: String) -> String:
 	var style: Dictionary = STYLES.get(style_slug, {})
 	return String(style.get("color", ""))
-
 
 static func _style_bold(style_slug: String) -> bool:
 	var style: Dictionary = STYLES.get(style_slug, {})
 	return bool(style.get("bold", false))
 
-
 static func _style_italic(style_slug: String) -> bool:
 	var style: Dictionary = STYLES.get(style_slug, {})
 	return bool(style.get("italic", false))
 
-
 static func _style_underline(style_slug: String) -> bool:
 	var style: Dictionary = STYLES.get(style_slug, {})
 	return bool(style.get("underline", false))
-
 
 static func _placeholder_default(placeholder_type: String) -> Variant:
 	if placeholder_type == "int":
@@ -830,7 +394,6 @@ static func _placeholder_default(placeholder_type: String) -> Variant:
 	if placeholder_type == "float":
 		return -1.0
 	return "UNKNOWN"
-
 
 static func _locale_key(locale: String) -> String:
 	if not locale.is_empty() and VALUES.has(locale):
@@ -842,7 +405,6 @@ static func _locale_key(locale: String) -> String:
 	if VALUES.has(base_locale):
 		return base_locale
 	return DEFAULT_LOCALE
-
 
 static func _bbcode_escape(value: String) -> String:
 	return value.replace("[", "\\[").replace("]", "\\]")

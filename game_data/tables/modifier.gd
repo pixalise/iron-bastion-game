@@ -2,13 +2,24 @@
 class_name ChiselModifier
 extends RefCounted
 
-enum Id {INVALID = -1, LONGSHOT_TRAINING = 0, REINFORCEMENT_CALL = 1, WAR_DRUM = 2, OVERCHARGE = 3}
+enum Id {
+	INVALID = -1,
+	LONGSHOT_TRAINING = 0,
+	REINFORCEMENT_CALL = 1,
+	WAR_DRUM = 2,
+	OVERCHARGE = 3
+}
 
 const TABLE_ID := "4wJYRawBZV5Pm1v-_lxh5"
 const TABLE_NAME := "Modifier"
 const TABLE_KIND := "user"
 const COUNT := 4
-const SLUGS := ["LONGSHOT_TRAINING", "REINFORCEMENT_CALL", "WAR_DRUM", "OVERCHARGE"]
+const SLUGS := [
+	"LONGSHOT_TRAINING",
+	"REINFORCEMENT_CALL",
+	"WAR_DRUM",
+	"OVERCHARGE"
+]
 const NAME := [
 	ChiselLocalization.Id.MODIFIER_LONGSHOT_TRAINING_NAME,
 	ChiselLocalization.Id.MODIFIER_REINFORCEMENT_CALL_NAME,
@@ -27,11 +38,51 @@ const PORTRAIT := [
 	ChiselAssets.Id.PHYSICAL_DAMAGE,
 	ChiselAssets.Id.METEOR_STRIKE
 ]
-const TARGET_KIND := ["UNIT", "UNIT", "BOTH", "ABILITY"]
-const STAT := ["ATTACK_RANGE", "UNIT_COUNT", "DAMAGE_MULTIPLIER", "DAMAGE_MULTIPLIER"]
-const OPERATION := ["ADD", "ADD", "MULTIPLY", "MULTIPLY"]
-const VALUE := [1.2, 1, 1.25, 1.5]
-const VALUE_PER_LEVEL := [0.4, 1, 0.15, 0.25]
-const COMMAND_COST_DELTA := [1, 1, 1, 2]
-const MAX_STACKS := [2, 2, 3, 1]
-const MAX_LEVEL := [3, 3, 3, 3]
+const TARGET_KIND := [
+	"UNIT",
+	"UNIT",
+	"BOTH",
+	"ABILITY"
+]
+const STAT := [
+	"ATTACK_RANGE",
+	"UNIT_COUNT",
+	"DAMAGE_MULTIPLIER",
+	"DAMAGE_MULTIPLIER"
+]
+const OPERATION := [
+	"ADD",
+	"ADD",
+	"MULTIPLY",
+	"MULTIPLY"
+]
+const VALUE := [
+	1.2,
+	1,
+	1.25,
+	1.5
+]
+const VALUE_PER_LEVEL := [
+	0.4,
+	1,
+	0.15,
+	0.25
+]
+const COMMAND_COST_DELTA := [
+	1,
+	1,
+	1,
+	2
+]
+const MAX_STACKS := [
+	2,
+	2,
+	3,
+	1
+]
+const MAX_LEVEL := [
+	3,
+	3,
+	3,
+	3
+]

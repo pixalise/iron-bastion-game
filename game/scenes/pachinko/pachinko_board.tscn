@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://4r448vovmq8w" path="res://game/prefabs/lighting_natural.tscn" id="1_dbqkw"]
 [ext_resource type="Script" uid="uid://ds3yty8y5posa" path="res://game/scenes/pachinko/peg_manager.gd" id="2_57nb6"]
 [ext_resource type="Script" uid="uid://1laboe38rk2m" path="res://game/scenes/pachinko/ball_dropper.gd" id="2_ik8qh"]
-[ext_resource type="Texture2D" uid="uid://c2gebrjy2u8wb" path="res://game_data/assets/hdri/forest_1_2_k.exr" id="2_s73hd"]
+[ext_resource type="Texture2D" uid="uid://c41xuqbp1hxbh" path="res://game_data/assets/hdri/forest_1_2_k.exr" id="2_s73hd"]
 [ext_resource type="PackedScene" uid="uid://cutoimeaj7k3n" path="res://game/scenes/pachinko/peg.tscn" id="3_w5s82"]
 [ext_resource type="PackedScene" uid="uid://canhicqgb2bdm" path="res://game/scenes/pachinko/ball.tscn" id="4_57nb6"]
 [ext_resource type="Script" uid="uid://ciax474eq1xbj" path="res://game/scenes/pachinko/peg_collector.gd" id="5_55x8y"]
@@ -13,13 +13,13 @@
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_70mkt"]
 panorama = ExtResource("2_s73hd")
 
-[sub_resource type="Sky" id="Sky_u6n7n"]
+[sub_resource type="Sky" id="Sky_55x8y"]
 sky_material = SubResource("PanoramaSkyMaterial_70mkt")
 
 [sub_resource type="Environment" id="Environment_55x8y"]
 background_mode = 2
 background_energy_multiplier = 1.05
-sky = SubResource("Sky_u6n7n")
+sky = SubResource("Sky_55x8y")
 sky_rotation = Vector3(0, 1.5149457, 0)
 ambient_light_energy = 2.15
 
@@ -44,11 +44,11 @@ size = Vector3(50, 0.2, 50)
 environment = SubResource("Environment_55x8y")
 
 [node name="Rail" type="MeshInstance3D" parent="." unique_id=154313845]
-transform = Transform3D(7.9175053, 0, 0, 0, 0.12722117, 0, 0, 0, 1, 0, 4.0118914, 0.52308273)
+transform = Transform3D(7.9175053, 0, 0, 0, 0.12722117, 0, 0, 0, 1, 0, 72.7697, 0.52308273)
 mesh = SubResource("BoxMesh_vjcty")
 
 [node name="BallDropper" type="MeshInstance3D" parent="." unique_id=648420085 node_paths=PackedStringArray("muzzle", "movement_bounds")]
-transform = Transform3D(-0.678774, -4.941954e-08, 0, 5.934031e-08, -0.56529367, 0, 0, 0, 0.57865167, 0, 3.7312045, 0.5071318)
+transform = Transform3D(-0.678774, -4.941954e-08, 0, 5.934031e-08, -0.56529367, 0, 0, 0, 0.57865167, 0, 72.48901, 0.5071318)
 mesh = SubResource("PrismMesh_vjcty")
 script = ExtResource("2_ik8qh")
 muzzle = NodePath("Muzzle")
@@ -63,9 +63,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.9744873, 0)
 script = ExtResource("5_55x8y")
 
 [node name="Visualizaiton" type="MeshInstance3D" parent="PegCollector" unique_id=992527374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 68.75781, 0)
 mesh = SubResource("BoxMesh_ajglo")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="PegCollector" unique_id=1959072331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 68.75781, 0)
 shape = SubResource("BoxShape3D_vjcty")
 
 [node name="PegManager" type="Node3D" parent="." unique_id=1909878006 node_paths=PackedStringArray("peg_spawn_area")]
@@ -77,11 +79,11 @@ vertical_spacing = 0.5
 peg_z_offset = 0.2
 
 [node name="BoundingBox" type="MeshInstance3D" parent="PegManager" unique_id=557179314]
-transform = Transform3D(6.410542, 0, 0, 0, 6.197685, 0, 0, 0, 1, 0, -2.1648557, 0.52940714)
+transform = Transform3D(6.410542, 0, 0, 0, 6.197685, 0, 0, 0, 1, 0, 66.59296, 0.52940714)
 mesh = SubResource("BoxMesh_57nb6")
 
 [node name="LockedCamera" type="Camera3D" parent="." unique_id=1615541042]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22.047943)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 68.75781, 22.047943)
 projection = 1
 fov = 72.8
 size = 7.823
@@ -90,31 +92,31 @@ far = 4011.05
 [node name="SceneDressing" type="Node3D" parent="." unique_id=1486297615]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SceneDressing" unique_id=595044909]
-transform = Transform3D(10.877837, 0, 0, 0, 9.965059, 0, 0, 0, 1, 0, 0, -0.4820491)
+transform = Transform3D(10.877837, 0, 0, 0, 9.965059, 0, 0, 0, 1, 0, 68.75781, -0.4820491)
 material_override = ExtResource("5_w5s82")
 mesh = SubResource("BoxMesh_57nb6")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="SceneDressing" unique_id=358849268]
-transform = Transform3D(0.42373767, 0, 0.7070776, 0, 9.372193, 0, -0.4237028, 0, 0.7071358, 4.467101, 0, 0.14443672)
+transform = Transform3D(0.42373767, 0, 0.7070776, 0, 9.372193, 0, -0.4237028, 0, 0.7071358, 4.467101, 68.75781, 0.14443672)
 material_override = ExtResource("6_h4rr5")
 mesh = SubResource("BoxMesh_57nb6")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="SceneDressing" unique_id=1582344320]
-transform = Transform3D(0.42370278, 0, -0.70713586, 0, 9.372194, 0, 0.42373767, 0, 0.7070776, -4.4665537, 0, 0.14443672)
+transform = Transform3D(0.42370278, 0, -0.70713586, 0, 9.372194, 0, 0.42373767, 0, 0.7070776, -4.4665537, 68.75781, 0.14443672)
 material_override = ExtResource("6_h4rr5")
 mesh = SubResource("BoxMesh_57nb6")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="SceneDressing" unique_id=760891535]
-transform = Transform3D(0.4955657, -1.3577971, -3.406161e-05, 0.33688614, 1.9973446, -2.3155124e-05, 2.4676323e-05, 0, 0.99999994, -3.9175625, -4.085186, 0.26432288)
+transform = Transform3D(0.4955657, -1.3577971, -3.406161e-05, 0.33688614, 1.9973446, -2.3155124e-05, 2.4676323e-05, 0, 0.99999994, -3.9175625, 64.67262, 0.26432288)
 material_override = ExtResource("6_h4rr5")
 mesh = SubResource("BoxMesh_57nb6")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="SceneDressing" unique_id=595647541]
-transform = Transform3D(0.4956122, -1.3575212, -8.940697e-08, -0.33681768, -1.9975319, 1.6897541e-08, -1.4901161e-08, -5.9604645e-08, -0.9999999, 3.9293242, -4.085186, 0.26432288)
+transform = Transform3D(0.4956122, -1.3575212, -8.940697e-08, -0.33681768, -1.9975319, 1.6897541e-08, -1.4901161e-08, -5.9604645e-08, -0.9999999, 3.9293242, 64.67262, 0.26432288)
 material_override = ExtResource("6_h4rr5")
 mesh = SubResource("BoxMesh_57nb6")
 metadata/_edit_group_ = true
@@ -122,5 +124,5 @@ metadata/_edit_group_ = true
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="SceneDressing" unique_id=1218638541]
 
 [node name="Background" type="MeshInstance3D" parent="SceneDressing" unique_id=791099537]
-transform = Transform3D(7.2087493, 0, 0, 0, -8.689902e-08, -4.4890847, 0, 1.9880177, -1.9622414e-07, 0, 0, 0)
+transform = Transform3D(7.2087493, 0, 0, 0, -8.689902e-08, -4.4890847, 0, 1.9880177, -1.9622414e-07, 0, 68.75781, 0)
 mesh = SubResource("PlaneMesh_h4rr5")
