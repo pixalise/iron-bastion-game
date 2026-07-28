@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dpanc0ml5pyca"]
 
-[ext_resource type="PackedScene" uid="uid://clalgbajnquym" path="res://game/scenes/pachinko/pachinko_board.tscn" id="1_ud6w5"]
-[ext_resource type="PackedScene" uid="uid://s82m6ifpl4c3" path="res://game/scenes/one_lane/one_lane.tscn" id="2_4808s"]
+[ext_resource type="PackedScene" uid="uid://clalgbajnquym" path="res://game/scenes/pachinko/pachinko_board.tscn" id="1_juxi1"]
+[ext_resource type="PackedScene" uid="uid://s82m6ifpl4c3" path="res://game/scenes/one_lane/one_lane.tscn" id="2_bwsni"]
 
 [node name="Pachinko" type="Node3D" unique_id=978769730]
 
@@ -16,23 +16,23 @@ grow_vertical = 2
 [node name="PachinkoViewportContainer" type="SubViewportContainer" parent="Main" unique_id=782297777]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.33
-anchor_bottom = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.75
 grow_horizontal = 2
 grow_vertical = 2
 stretch = true
 
 [node name="GameViewport" type="SubViewport" parent="Main/PachinkoViewportContainer" unique_id=192120753]
 handle_input_locally = false
-size = Vector2i(380, 648)
+size = Vector2i(1152, 486)
 render_target_update_mode = 4
 
-[node name="PachinkoBoard" parent="Main/PachinkoViewportContainer/GameViewport" unique_id=1501171352 instance=ExtResource("1_ud6w5")]
+[node name="PachinkoBoard" parent="Main/PachinkoViewportContainer/GameViewport" unique_id=1501171352 instance=ExtResource("1_juxi1")]
 
 [node name="GameVieportContainer" type="SubViewportContainer" parent="Main" unique_id=905720009]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.33
+anchor_top = 0.75
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -41,7 +41,7 @@ stretch = true
 
 [node name="GameViewport" type="SubViewport" parent="Main/GameVieportContainer" unique_id=1096455020]
 handle_input_locally = false
-size = Vector2i(771, 648)
+size = Vector2i(1152, 162)
 render_target_update_mode = 4
 
-[node name="OneLane" parent="Main/GameVieportContainer/GameViewport" unique_id=543732529 instance=ExtResource("2_4808s")]
+[node name="OneLane" parent="Main/GameVieportContainer/GameViewport" unique_id=543732529 instance=ExtResource("2_bwsni")]

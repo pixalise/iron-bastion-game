@@ -97,6 +97,18 @@ material_override = ExtResource("5_w5s82")
 mesh = SubResource("BoxMesh_57nb6")
 metadata/_edit_group_ = true
 
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="SceneDressing" unique_id=1048580613]
+transform = Transform3D(10.877837, 0, 0, 0, 9.965059, 0, 0, 0, 1, 10.027391, 68.75781, 0.47980678)
+material_override = ExtResource("5_w5s82")
+mesh = SubResource("BoxMesh_57nb6")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="SceneDressing" unique_id=638619334]
+transform = Transform3D(10.877837, 0, 0, 0, 9.965059, 0, 0, 0, 1, -10.017593, 68.75781, 0.47980678)
+material_override = ExtResource("5_w5s82")
+mesh = SubResource("BoxMesh_57nb6")
+metadata/_edit_group_ = true
+
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="SceneDressing" unique_id=358849268]
 transform = Transform3D(0.42373767, 0, 0.7070776, 0, 9.372193, 0, -0.4237028, 0, 0.7071358, 4.467101, 68.75781, 0.14443672)
 material_override = ExtResource("6_h4rr5")

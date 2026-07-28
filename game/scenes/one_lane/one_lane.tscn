@@ -21,9 +21,6 @@ ambient_light_energy = 2.15
 [sub_resource type="BoxMesh" id="BoxMesh_bhunq"]
 size = Vector3(8, 1, 119.59192)
 
-[sub_resource type="BoxMesh" id="BoxMesh_646tt"]
-size = Vector3(40, 16, 40)
-
 [sub_resource type="Gradient" id="Gradient_646tt"]
 offsets = PackedFloat32Array(0.2, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -100,15 +97,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31082153, 23.79596)
 mesh = SubResource("BoxMesh_bhunq")
 
 [node name="castle" parent="Greybox" unique_id=1279427375 instance=ExtResource("3_2lb43")]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0.02779007, 13.057993, -52.589596)
-
-[node name="Castle" type="MeshInstance3D" parent="Greybox" unique_id=133489391]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02779007, 5.8211193, -55.98915)
-visible = false
-mesh = SubResource("BoxMesh_646tt")
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0.02779007, 13.057993, -36.1786)
 
 [node name="portal" parent="Greybox" unique_id=1341139315 instance=ExtResource("3_ctd5a")]
-transform = Transform3D(-6, 0, 9.0597484e-07, 0, 6, 0, -9.0597484e-07, 0, -6, 0, 4.883129, 83.282524)
+transform = Transform3D(-6, 0, 9.0597484e-07, 0, 6, 0, -9.0597484e-07, 0, -6, 0, 4.883129, 70.09542)
 
 [node name="Terrain3D" type="Terrain3D" parent="." unique_id=1676012435]
 data_directory = "res://game/scenes/one_lane/terrains"
@@ -119,6 +111,10 @@ top_level = true
 metadata/_edit_lock_ = true
 
 [node name="Camera" type="Camera3D" parent="." unique_id=1169643262]
-transform = Transform3D(-4.371139e-08, 0.7071068, -0.7071068, 0, 0.7071068, 0.7071068, 1, 3.090862e-08, -3.090862e-08, -23.316158, 20, 93.20625)
+transform = Transform3D(-4.371139e-08, 0.9063078, -0.42261824, 0, 0.42261824, 0.9063078, 1, 3.9615973e-08, -1.847323e-08, -13.501373, 27.849884, 105.99226)
 keep_aspect = 0
+projection = 1
 current = true
+fov = 58.3
+size = 100.0
+near = 0.001
