@@ -1,4 +1,53 @@
 {
   "schemaVersion": 1,
-  "assets": []
+  "assets": [
+    {
+      "category": "IMAGE",
+      "name": "MAP_1_ALBEDO",
+      "note": "",
+      "sizeBytes": 1305806,
+      "width": 2048,
+      "height": 2048,
+      "extension": "png",
+      "id": "MAP_1_ALBEDO",
+      "relativePath": ".chisel/assets/IMAGE/MAP_1_ALBEDO.png",
+      "formattedBytes": "1.2 MB"
+    },
+    {
+      "category": "IMAGE",
+      "name": "MAP_1_NORMAL",
+      "note": "",
+      "sizeBytes": 3261141,
+      "width": 2048,
+      "height": 2048,
+      "extension": "png",
+      "id": "MAP_1_NORMAL",
+      "relativePath": ".chisel/assets/IMAGE/MAP_1_NORMAL.png",
+      "formattedBytes": "3.1 MB"
+    },
+    {
+      "category": "IMAGE",
+      "name": "MAP_1_ROUGH",
+      "note": "",
+      "sizeBytes": 678571,
+      "width": 2048,
+      "height": 2048,
+      "extension": "png",
+      "id": "MAP_1_ROUGH",
+      "relativePath": ".chisel/assets/IMAGE/MAP_1_ROUGH.png",
+      "formattedBytes": "662.7 KB"
+    },
+    {
+      "category": "HDRI",
+      "name": "RURAL_EVENING_ROAD_2_K",
+      "note": "CC0: https://polyhaven.com/a/rural_evening_road",
+      "sizeBytes": 23803876,
+      "width": 0,
+      "height": 0,
+      "extension": "exr",
+      "id": "RURAL_EVENING_ROAD_2_K",
+      "relativePath": ".chisel/assets/HDRI/RURAL_EVENING_ROAD_2_K.exr",
+      "formattedBytes": "22.7 MB"
+    }
+  ]
 }

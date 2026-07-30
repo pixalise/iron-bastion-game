@@ -3,8 +3,50 @@ class_name ChiselAssets
 extends RefCounted
 
 enum Id {
-	INVALID = -1
+	INVALID = -1,
+	MAP_1_ALBEDO = 0,
+	MAP_1_NORMAL = 1,
+	MAP_1_ROUGH = 2,
+	RURAL_EVENING_ROAD_2_K = 3
 }
 
-const IDS := []
-const BY_ID := {}
+const IDS := [
+	"MAP_1_ALBEDO",
+	"MAP_1_NORMAL",
+	"MAP_1_ROUGH",
+	"RURAL_EVENING_ROAD_2_K"
+]
+const BY_ID := {
+	"MAP_1_ALBEDO": {
+		"category": "image",
+		"extension": "png",
+		"height": 2048,
+		"name": "map_1_albedo",
+		"path": "res://game_data/assets/image/map_1_albedo.png",
+		"width": 2048
+	},
+	"MAP_1_NORMAL": {
+		"category": "image",
+		"extension": "png",
+		"height": 2048,
+		"name": "map_1_normal",
+		"path": "res://game_data/assets/image/map_1_normal.png",
+		"width": 2048
+	},
+	"MAP_1_ROUGH": {
+		"category": "image",
+		"extension": "png",
+		"height": 2048,
+		"name": "map_1_rough",
+		"path": "res://game_data/assets/image/map_1_rough.png",
+		"width": 2048
+	},
+	"RURAL_EVENING_ROAD_2_K": {
+		"category": "hdri",
+		"extension": "exr",
+		"height": 0,
+		"name": "rural_evening_road_2_k",
+		"path": "res://game_data/assets/hdri/rural_evening_road_2_k.exr",
+		"width": 0
+	}
+}

@@ -2,13 +2,13 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-30T18:57:01.348Z"
+const GENERATED_AT := "2026-07-30T19:30:10.181Z"
 const PROJECT_ID := "QJa_4coVzYui9ux-uzBOT"
 const PROJECT_NAME := "Pachingod"
 const ASSETS := {
 	"class_name": "ChiselAssets",
 	"path": "res://game_data/assets.gd",
-	"count": 0
+	"count": 4
 }
 const LOCALIZATION := {
 	"class_name": "ChiselLocalization",
@@ -20,8 +20,8 @@ const LOCALIZATION := {
 	"locales": 1
 }
 const FILES := [{
-	"bytes": 141,
-	"hash": "469654db",
+	"bytes": 1070,
+	"hash": "c98e1cda",
 	"path": "res://game_data/assets.gd"
 }, {
 	"bytes": 9856,

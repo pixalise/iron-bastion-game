@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://djkb5ne8hexgy"]
+
+[ext_resource type="PackedScene" uid="uid://4r448vovmq8w" path="res://game/prefabs/lighting_natural.tscn" id="1_e02rd"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bhunq"]
+
+[node name="Map" type="Node3D" unique_id=37873298]
+
+[node name="LightingNatural" parent="." unique_id=1361342736 instance=ExtResource("1_e02rd")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2019312218]
+transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 1.3092451, 10.557752, 8.499338)
+fov = 35.0
+size = 4.191
+
+[node name="Terrain" type="Node3D" parent="." unique_id=1133635423]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain" unique_id=2006233918]
+transform = Transform3D(31001.107, 0, 0, 0, 1.0000006, 0, 0, 0, -26164.537, 0, -0.017267406, 0)
+mesh = SubResource("PlaneMesh_bhunq")

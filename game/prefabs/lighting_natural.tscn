@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://4r448vovmq8w"]
 
-[ext_resource type="Texture2D" uid="uid://c2gebrjy2u8wb" path="res://game_data/assets/hdri/forest_1_2_k.exr" id="1_t0wi6"]
+[ext_resource type="Texture2D" uid="uid://bse4v733oavyk" path="res://game_data/assets/hdri/rural_evening_road_2_k.exr" id="1_t0wi6"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_70mkt"]
 panorama = ExtResource("1_t0wi6")
