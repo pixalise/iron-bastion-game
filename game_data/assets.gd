@@ -7,14 +7,16 @@ enum Id {
 	MAP_1_ALBEDO = 0,
 	MAP_1_NORMAL = 1,
 	MAP_1_ROUGH = 2,
-	RURAL_EVENING_ROAD_2_K = 3
+	RURAL_EVENING_ROAD_2_K = 3,
+	MAP_TILE_1 = 4
 }
 
 const IDS := [
 	"MAP_1_ALBEDO",
 	"MAP_1_NORMAL",
 	"MAP_1_ROUGH",
-	"RURAL_EVENING_ROAD_2_K"
+	"RURAL_EVENING_ROAD_2_K",
+	"MAP_TILE_1"
 ]
 const BY_ID := {
 	"MAP_1_ALBEDO": {
@@ -47,6 +49,14 @@ const BY_ID := {
 		"height": 0,
 		"name": "rural_evening_road_2_k",
 		"path": "res://game_data/assets/hdri/rural_evening_road_2_k.exr",
+		"width": 0
+	},
+	"MAP_TILE_1": {
+		"category": "mesh",
+		"extension": "glb",
+		"height": 0,
+		"name": "map_tile_1",
+		"path": "res://game_data/assets/mesh/map_tile_1.glb",
 		"width": 0
 	}
 }

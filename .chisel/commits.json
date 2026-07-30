@@ -2,6 +2,320 @@
   "schemaVersion": 1,
   "commits": [
     {
+      "id": "vjn9x5GGtPfolaSZPVtTd",
+      "committedAt": "2026-07-30T19:34:43.722Z",
+      "project": {
+        "id": "QJa_4coVzYui9ux-uzBOT",
+        "name": "Pachingod",
+        "description": ""
+      },
+      "tables": [
+        {
+          "id": "input_bindings",
+          "lastChangeAt": "2026-07-27T20:05:00.000Z",
+          "version": 38,
+          "name": "Input Bindings",
+          "description": "Input bindings exported to Godot InputMap setup.",
+          "columns": [
+            {
+              "id": "input_sort_order00000",
+              "type": "integer",
+              "name": "sort_order",
+              "defaultValue": 0,
+              "min": 0,
+              "required": true,
+              "unique": false
+            },
+            {
+              "id": "input_bindings0000000",
+              "type": "enumArray",
+              "name": "bindings",
+              "defaultValue": [],
+              "max": 8,
+              "possibleValues": [
+                "KEY_A",
+                "KEY_B",
+                "KEY_C",
+                "KEY_D",
+                "KEY_E",
+                "KEY_F",
+                "KEY_G",
+                "KEY_H",
+                "KEY_I",
+                "KEY_J",
+                "KEY_K",
+                "KEY_L",
+                "KEY_M",
+                "KEY_N",
+                "KEY_O",
+                "KEY_P",
+                "KEY_Q",
+                "KEY_R",
+                "KEY_S",
+                "KEY_T",
+                "KEY_U",
+                "KEY_V",
+                "KEY_W",
+                "KEY_X",
+                "KEY_Y",
+                "KEY_Z",
+                "KEY_0",
+                "KEY_1",
+                "KEY_2",
+                "KEY_3",
+                "KEY_4",
+                "KEY_5",
+                "KEY_6",
+                "KEY_7",
+                "KEY_8",
+                "KEY_9",
+                "KEY_F1",
+                "KEY_F2",
+                "KEY_F3",
+                "KEY_F4",
+                "KEY_F5",
+                "KEY_F6",
+                "KEY_F7",
+                "KEY_F8",
+                "KEY_F9",
+                "KEY_F10",
+                "KEY_F11",
+                "KEY_F12",
+                "KEY_ESCAPE",
+                "KEY_SPACE",
+                "KEY_SHIFT",
+                "KEY_CTRL",
+                "KEY_ALT",
+                "KEY_TAB",
+                "KEY_ENTER",
+                "KEY_BACKSPACE",
+                "KEY_UP",
+                "KEY_DOWN",
+                "KEY_LEFT",
+                "KEY_RIGHT",
+                "KEY_MINUS",
+                "KEY_EQUAL",
+                "KEY_KP_ADD",
+                "KEY_KP_SUBTRACT",
+                "MOUSE_BUTTON_LEFT",
+                "MOUSE_BUTTON_RIGHT",
+                "MOUSE_BUTTON_MIDDLE",
+                "MOUSE_BUTTON_WHEEL_UP",
+                "MOUSE_BUTTON_WHEEL_DOWN"
+              ],
+              "required": true,
+              "unique": false
+            }
+          ],
+          "rows": [
+            {
+              "id": "j6xkcM9NVlQkQsQzdxj7h",
+              "slug": "ESCAPE",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 0
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_ESCAPE"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "5GiDUiigGywQV96FBycSj",
+              "slug": "ACTION",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 1
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_SPACE"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "6nuOJF2mvFfgI-72b0mgv",
+              "slug": "PADDLE_LEFT",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 2
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_A",
+                    "KEY_LEFT"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "JVbw6RParhAhZdHKKcHju",
+              "slug": "PADDLE_RIGHT",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 3
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "KEY_D",
+                    "KEY_RIGHT"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "cameraZoomInBinding01",
+              "slug": "CAMERA_ZOOM_IN",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 4
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "MOUSE_BUTTON_WHEEL_UP"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "cameraZoomOutBinding1",
+              "slug": "CAMERA_ZOOM_OUT",
+              "values": [
+                {
+                  "columnId": "input_sort_order00000",
+                  "type": "integer",
+                  "value": 5
+                },
+                {
+                  "columnId": "input_bindings0000000",
+                  "type": "enumArray",
+                  "value": [
+                    "MOUSE_BUTTON_WHEEL_DOWN"
+                  ]
+                }
+              ]
+            }
+          ],
+          "kind": "system",
+          "moduleId": "input",
+          "isSystemTable": true
+        }
+      ],
+      "assets": {
+        "schemaVersion": 1,
+        "assets": [
+          {
+            "category": "IMAGE",
+            "name": "MAP_1_ALBEDO",
+            "note": "",
+            "sizeBytes": 1305806,
+            "width": 2048,
+            "height": 2048,
+            "extension": "png",
+            "id": "MAP_1_ALBEDO",
+            "relativePath": ".chisel/assets/IMAGE/MAP_1_ALBEDO.png",
+            "formattedBytes": "1.2 MB"
+          },
+          {
+            "category": "IMAGE",
+            "name": "MAP_1_NORMAL",
+            "note": "",
+            "sizeBytes": 3261141,
+            "width": 2048,
+            "height": 2048,
+            "extension": "png",
+            "id": "MAP_1_NORMAL",
+            "relativePath": ".chisel/assets/IMAGE/MAP_1_NORMAL.png",
+            "formattedBytes": "3.1 MB"
+          },
+          {
+            "category": "IMAGE",
+            "name": "MAP_1_ROUGH",
+            "note": "",
+            "sizeBytes": 678571,
+            "width": 2048,
+            "height": 2048,
+            "extension": "png",
+            "id": "MAP_1_ROUGH",
+            "relativePath": ".chisel/assets/IMAGE/MAP_1_ROUGH.png",
+            "formattedBytes": "662.7 KB"
+          },
+          {
+            "category": "HDRI",
+            "name": "RURAL_EVENING_ROAD_2_K",
+            "note": "CC0: https://polyhaven.com/a/rural_evening_road",
+            "sizeBytes": 23803876,
+            "width": 0,
+            "height": 0,
+            "extension": "exr",
+            "id": "RURAL_EVENING_ROAD_2_K",
+            "relativePath": ".chisel/assets/HDRI/RURAL_EVENING_ROAD_2_K.exr",
+            "formattedBytes": "22.7 MB"
+          },
+          {
+            "category": "MESH",
+            "name": "MAP_TILE_1",
+            "note": "Just a terrain tile",
+            "sizeBytes": 5386984,
+            "width": 0,
+            "height": 0,
+            "extension": "glb",
+            "id": "MAP_TILE_1",
+            "relativePath": ".chisel/assets/MESH/MAP_TILE_1.glb",
+            "formattedBytes": "5.1 MB"
+          }
+        ]
+      },
+      "localization": {
+        "schemaVersion": 2,
+        "defaultLocale": "en",
+        "locales": [
+          "en"
+        ],
+        "keys": [],
+        "styles": [
+          {
+            "slug": "ATTACK_RANGE",
+            "color": "#ffffff",
+            "bold": false,
+            "italic": true,
+            "underline": false
+          },
+          {
+            "slug": "PHYSICAL_DAMAGE",
+            "color": "#ff0000",
+            "bold": true,
+            "italic": false,
+            "underline": false
+          }
+        ],
+        "tooltips": []
+      }
+    },
+    {
       "id": "i1nojU6v9O_qhHuB7T6mo",
       "committedAt": "2026-07-30T19:30:08.831Z",
       "project": {
@@ -22399,245 +22713,6 @@
             "descriptionKey": "TOOLTIP.DAMAGE.PHYISICAL.DESCRIPTION"
           }
         ]
-      }
-    },
-    {
-      "id": "iHLBwkC1FM_jh10j21ubb",
-      "committedAt": "2026-07-24T15:34:13.889Z",
-      "project": {
-        "id": "lwDBJkZEABItlP3UGvDll",
-        "name": "Pachingod",
-        "description": ""
-      },
-      "tables": [
-        {
-          "id": "input_bindings",
-          "lastChangeAt": "2026-07-24T15:31:04.321Z",
-          "version": 37,
-          "name": "Input Bindings",
-          "description": "Input bindings exported to Godot InputMap setup.",
-          "columns": [
-            {
-              "id": "input_sort_order00000",
-              "type": "integer",
-              "name": "sort_order",
-              "defaultValue": 0,
-              "min": 0,
-              "required": true,
-              "unique": false
-            },
-            {
-              "id": "input_bindings0000000",
-              "type": "enumArray",
-              "name": "bindings",
-              "defaultValue": [],
-              "max": 8,
-              "possibleValues": [
-                "KEY_A",
-                "KEY_B",
-                "KEY_C",
-                "KEY_D",
-                "KEY_E",
-                "KEY_F",
-                "KEY_G",
-                "KEY_H",
-                "KEY_I",
-                "KEY_J",
-                "KEY_K",
-                "KEY_L",
-                "KEY_M",
-                "KEY_N",
-                "KEY_O",
-                "KEY_P",
-                "KEY_Q",
-                "KEY_R",
-                "KEY_S",
-                "KEY_T",
-                "KEY_U",
-                "KEY_V",
-                "KEY_W",
-                "KEY_X",
-                "KEY_Y",
-                "KEY_Z",
-                "KEY_0",
-                "KEY_1",
-                "KEY_2",
-                "KEY_3",
-                "KEY_4",
-                "KEY_5",
-                "KEY_6",
-                "KEY_7",
-                "KEY_8",
-                "KEY_9",
-                "KEY_F1",
-                "KEY_F2",
-                "KEY_F3",
-                "KEY_F4",
-                "KEY_F5",
-                "KEY_F6",
-                "KEY_F7",
-                "KEY_F8",
-                "KEY_F9",
-                "KEY_F10",
-                "KEY_F11",
-                "KEY_F12",
-                "KEY_ESCAPE",
-                "KEY_SPACE",
-                "KEY_SHIFT",
-                "KEY_CTRL",
-                "KEY_ALT",
-                "KEY_TAB",
-                "KEY_ENTER",
-                "KEY_BACKSPACE",
-                "KEY_UP",
-                "KEY_DOWN",
-                "KEY_LEFT",
-                "KEY_RIGHT",
-                "KEY_MINUS",
-                "KEY_EQUAL",
-                "KEY_KP_ADD",
-                "KEY_KP_SUBTRACT",
-                "MOUSE_BUTTON_LEFT",
-                "MOUSE_BUTTON_RIGHT",
-                "MOUSE_BUTTON_MIDDLE",
-                "MOUSE_BUTTON_WHEEL_UP",
-                "MOUSE_BUTTON_WHEEL_DOWN"
-              ],
-              "required": true,
-              "unique": false
-            }
-          ],
-          "rows": [
-            {
-              "id": "j6xkcM9NVlQkQsQzdxj7h",
-              "slug": "ESCAPE",
-              "values": [
-                {
-                  "columnId": "input_sort_order00000",
-                  "type": "integer",
-                  "value": 0
-                },
-                {
-                  "columnId": "input_bindings0000000",
-                  "type": "enumArray",
-                  "value": [
-                    "KEY_ESCAPE"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "5GiDUiigGywQV96FBycSj",
-              "slug": "ACTION",
-              "values": [
-                {
-                  "columnId": "input_sort_order00000",
-                  "type": "integer",
-                  "value": 1
-                },
-                {
-                  "columnId": "input_bindings0000000",
-                  "type": "enumArray",
-                  "value": [
-                    "KEY_SPACE"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "6nuOJF2mvFfgI-72b0mgv",
-              "slug": "PADDLE_LEFT",
-              "values": [
-                {
-                  "columnId": "input_sort_order00000",
-                  "type": "integer",
-                  "value": 2
-                },
-                {
-                  "columnId": "input_bindings0000000",
-                  "type": "enumArray",
-                  "value": [
-                    "KEY_A",
-                    "KEY_LEFT"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "JVbw6RParhAhZdHKKcHju",
-              "slug": "PADDLE_RIGHT",
-              "values": [
-                {
-                  "columnId": "input_sort_order00000",
-                  "type": "integer",
-                  "value": 3
-                },
-                {
-                  "columnId": "input_bindings0000000",
-                  "type": "enumArray",
-                  "value": [
-                    "KEY_D",
-                    "KEY_RIGHT"
-                  ]
-                }
-              ]
-            }
-          ],
-          "kind": "system",
-          "moduleId": "input",
-          "isSystemTable": true
-        }
-      ],
-      "assets": {
-        "schemaVersion": 1,
-        "assets": [
-          {
-            "category": "TERRAIN_TEXTURE",
-            "name": "FOREST_SOIL_1",
-            "note": "Forest biome",
-            "sizeBytes": 6718779,
-            "width": 1024,
-            "height": 1024,
-            "extension": "gppt",
-            "id": "FOREST_SOIL_1",
-            "relativePath": ".chisel/assets/TERRAIN_TEXTURE/FOREST_SOIL_1.gppt",
-            "formattedBytes": "6.4 MB"
-          },
-          {
-            "category": "TERRAIN_TEXTURE",
-            "name": "FOREST_GRASS_1",
-            "note": "Forest biome",
-            "sizeBytes": 7396446,
-            "width": 1024,
-            "height": 1024,
-            "extension": "gppt",
-            "id": "FOREST_GRASS_1",
-            "relativePath": ".chisel/assets/TERRAIN_TEXTURE/FOREST_GRASS_1.gppt",
-            "formattedBytes": "7.1 MB"
-          },
-          {
-            "category": "HDRI",
-            "name": "FOREST_1_2_K",
-            "note": "CC0: https://polyhaven.com/a/citrus_orchard_road_puresky",
-            "sizeBytes": 18768273,
-            "width": 0,
-            "height": 0,
-            "extension": "exr",
-            "id": "FOREST_1_2_K",
-            "relativePath": ".chisel/assets/HDRI/FOREST_1_2K.exr",
-            "formattedBytes": "17.9 MB"
-          }
-        ]
-      },
-      "localization": {
-        "schemaVersion": 2,
-        "defaultLocale": "en",
-        "locales": [
-          "en"
-        ],
-        "keys": [],
-        "styles": [],
-        "tooltips": []
       }
     }
   ]

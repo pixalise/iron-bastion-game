@@ -48,6 +48,18 @@
       "id": "RURAL_EVENING_ROAD_2_K",
       "relativePath": ".chisel/assets/HDRI/RURAL_EVENING_ROAD_2_K.exr",
       "formattedBytes": "22.7 MB"
+    },
+    {
+      "category": "MESH",
+      "name": "MAP_TILE_1",
+      "note": "Just a terrain tile",
+      "sizeBytes": 5386984,
+      "width": 0,
+      "height": 0,
+      "extension": "glb",
+      "id": "MAP_TILE_1",
+      "relativePath": ".chisel/assets/MESH/MAP_TILE_1.glb",
+      "formattedBytes": "5.1 MB"
     }
   ]
 }
