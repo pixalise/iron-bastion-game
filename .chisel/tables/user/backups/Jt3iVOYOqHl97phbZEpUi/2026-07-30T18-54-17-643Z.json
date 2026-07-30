@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "Jt3iVOYOqHl97phbZEpUi",
+    "lastChangeAt": "2026-07-25T12:59:37.000Z",
+    "version": 115,
+    "name": "Unit",
+    "description": "The actual ingame units that can be spawned via card",
+    "columns": [
+      {
+        "id": "iw6oxD1p5T8OiA7HotHQo",
+        "type": "translationRef",
+        "name": "name",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "YEZczD_ighgRhMuR4IpWl",
+        "type": "translationRef",
+        "name": "description",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "LhoyLbck-c1ppGikN7Zfb",
+        "type": "assetRef",
+        "name": "portrait",
+        "defaultValue": "",
+        "assetCategory": "UI_ICON",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "4v0ct0ESkxzDSgbMX7GuB",
+        "type": "integer",
+        "name": "max_health",
+        "defaultValue": 100,
+        "min": 10,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "Jy1sZ_SgOrVRJ2rdPC45b",
+        "type": "range",
+        "name": "physical_armor",
+        "defaultValue": 0,
+        "max": 1,
+        "min": 0,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "XH8sfq3NulCYzj8oqSkW9",
+        "type": "integer",
+        "name": "attack_damage",
+        "defaultValue": 10,
+        "min": 1,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "aWJgKYK2dNl0Yk4gwBSx3",
+        "type": "decimal",
+        "name": "attack_rate",
+        "defaultValue": 2,
+        "min": 0,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "hBbKJ5jA00lDXHfztOQKV",
+        "type": "decimal",
+        "name": "attack_range",
+        "defaultValue": 1.2,
+        "min": 1,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "x8cFMR37F1bg5zTHoU71U",
+        "type": "integer",
+        "name": "command_cost",
+        "defaultValue": 1,
+        "min": 0,
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "PVi5wIKQj2iA9owQx5Nc_",
+        "type": "integer",
+        "name": "base_unit_count",
+        "defaultValue": 1,
+        "min": 1,
+        "required": true,
+        "unique": false
+      }
+    ],
+    "rows": [],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}

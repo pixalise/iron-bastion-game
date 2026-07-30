@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "JMr24o4E6yS4bePAIbggR",
+    "lastChangeAt": "2026-07-25T12:59:37.000Z",
+    "version": 3,
+    "name": "Aspect",
+    "description": "Evolutionary recipe stuff",
+    "columns": [
+      {
+        "id": "k3En0Faphms-90Ge_6Q1X",
+        "type": "translationRef",
+        "name": "name",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "X5RkEHt6y5rfGH4t8TSIM",
+        "type": "translationRef",
+        "name": "description",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "ZeRAP-fN1_A5fK3eF4dqo",
+        "type": "assetRef",
+        "name": "icon",
+        "defaultValue": "",
+        "assetCategory": "UI_ICON",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "xYpLBSkQ5UxcHizujRkbC",
+        "type": "enum",
+        "name": "alignment",
+        "defaultValue": "HEROIC",
+        "possibleValues": [
+          "HEROIC",
+          "DARK"
+        ],
+        "required": true,
+        "unique": false
+      }
+    ],
+    "rows": [],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}

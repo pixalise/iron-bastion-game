@@ -2,13 +2,13 @@
 class_name ChiselGameDataManifest
 extends RefCounted
 
-const GENERATED_AT := "2026-07-27T18:21:13.876Z"
+const GENERATED_AT := "2026-07-30T18:57:01.348Z"
 const PROJECT_ID := "QJa_4coVzYui9ux-uzBOT"
 const PROJECT_NAME := "Pachingod"
 const ASSETS := {
 	"class_name": "ChiselAssets",
 	"path": "res://game_data/assets.gd",
-	"count": 10
+	"count": 0
 }
 const LOCALIZATION := {
 	"class_name": "ChiselLocalization",
@@ -16,145 +16,35 @@ const LOCALIZATION := {
 	"typed_class_name": "ChiselTranslations",
 	"typed_path": "res://game_data/translations.gd",
 	"csv_path": "res://game_data/localization/translations.csv",
-	"translations": 74,
+	"translations": 0,
 	"locales": 1
 }
 const FILES := [{
-	"bytes": 2727,
-	"hash": "a2e9ea2e",
+	"bytes": 141,
+	"hash": "469654db",
 	"path": "res://game_data/assets.gd"
 }, {
-	"bytes": 21875,
-	"hash": "245b3aca",
+	"bytes": 9856,
+	"hash": "4261856e",
 	"path": "res://game_data/localization.gd"
 }, {
-	"bytes": 16374,
-	"hash": "350a3ce1",
+	"bytes": 89,
+	"hash": "6278cb2e",
 	"path": "res://game_data/translations.gd"
 }, {
-	"bytes": 6708,
-	"hash": "dfc3b00b",
+	"bytes": 11,
+	"hash": "a5689d92",
 	"path": "res://game_data/localization/translations.csv"
 }, {
 	"bytes": 3351,
 	"hash": "460034f1",
 	"path": "res://game_data/input.gd"
 }, {
-	"bytes": 2889,
-	"hash": "44192d1a",
-	"path": "res://game_data/tables/peg.gd"
-}, {
-	"bytes": 1605,
-	"hash": "ba5bb159",
-	"path": "res://game_data/tables/unit.gd"
-}, {
-	"bytes": 1342,
-	"hash": "75344f7a",
-	"path": "res://game_data/tables/ability.gd"
-}, {
-	"bytes": 4443,
-	"hash": "149a96a6",
-	"path": "res://game_data/tables/recipe.gd"
-}, {
-	"bytes": 1841,
-	"hash": "1da390c7",
-	"path": "res://game_data/tables/recipe_step.gd"
-}, {
-	"bytes": 1458,
-	"hash": "627b06f5",
-	"path": "res://game_data/tables/modifier.gd"
-}, {
-	"bytes": 1709,
-	"hash": "f37d01f3",
-	"path": "res://game_data/tables/building.gd"
-}, {
-	"bytes": 3447,
-	"hash": "4ca9ea8f",
-	"path": "res://game_data/tables/shop_item.gd"
-}, {
-	"bytes": 1495,
-	"hash": "49d5a4ea",
-	"path": "res://game_data/tables/ball.gd"
-}, {
-	"bytes": 476,
-	"hash": "3e625b13",
-	"path": "res://game_data/tables/aspect.gd"
-}, {
 	"bytes": 658,
 	"hash": "cda7252a",
 	"path": "res://game_data/tables/input_bindings.gd"
 }]
 const TABLES := {
-	"NwZ2PycvCtTXXvZUQWyXB": {
-		"name": "Peg",
-		"class_name": "ChiselPeg",
-		"path": "res://game_data/tables/peg.gd",
-		"rows": 9,
-		"columns": 11
-	},
-	"Jt3iVOYOqHl97phbZEpUi": {
-		"name": "Unit",
-		"class_name": "ChiselUnit",
-		"path": "res://game_data/tables/unit.gd",
-		"rows": 6,
-		"columns": 10
-	},
-	"45RH7A6GsG12q-v78dmmN": {
-		"name": "Ability",
-		"class_name": "ChiselAbility",
-		"path": "res://game_data/tables/ability.gd",
-		"rows": 4,
-		"columns": 9
-	},
-	"boRIG5F5aadgs1TVlDgLM": {
-		"name": "Recipe",
-		"class_name": "ChiselRecipe",
-		"path": "res://game_data/tables/recipe.gd",
-		"rows": 14,
-		"columns": 10
-	},
-	"7evuGaD29l7vxCpjEVxQf": {
-		"name": "RecipeStep",
-		"class_name": "ChiselRecipestep",
-		"path": "res://game_data/tables/recipe_step.gd",
-		"rows": 10,
-		"columns": 4
-	},
-	"4wJYRawBZV5Pm1v-_lxh5": {
-		"name": "Modifier",
-		"class_name": "ChiselModifier",
-		"path": "res://game_data/tables/modifier.gd",
-		"rows": 4,
-		"columns": 11
-	},
-	"3D2vwVj1UZD_4WoiWoczH": {
-		"name": "Building",
-		"class_name": "ChiselBuilding",
-		"path": "res://game_data/tables/building.gd",
-		"rows": 6,
-		"columns": 7
-	},
-	"RW4Qnc19FaX6h6fmZUcit": {
-		"name": "ShopItem",
-		"class_name": "ChiselShopitem",
-		"path": "res://game_data/tables/shop_item.gd",
-		"rows": 20,
-		"columns": 7
-	},
-	"yh7aOYkekni1eI81UEqzn": {
-		"name": "Ball",
-		"class_name": "ChiselBall",
-		"path": "res://game_data/tables/ball.gd",
-		"rows": 5,
-		"columns": 6
-	},
-	"JMr24o4E6yS4bePAIbggR": {
-		"name": "Aspect",
-		"class_name": "ChiselAspect",
-		"path": "res://game_data/tables/aspect.gd",
-		"rows": 1,
-		"columns": 4
-	},
 	"input_bindings": {
 		"name": "Input Bindings",
 		"class_name": "ChiselInputBindings",

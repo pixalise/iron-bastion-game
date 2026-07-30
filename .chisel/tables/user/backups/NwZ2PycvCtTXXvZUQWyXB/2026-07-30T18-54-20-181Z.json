@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "table": {
+    "id": "NwZ2PycvCtTXXvZUQWyXB",
+    "lastChangeAt": "2026-07-25T13:18:55.516Z",
+    "version": 15,
+    "name": "Peg",
+    "description": "Definitions and looks for pegs",
+    "columns": [
+      {
+        "id": "QnxQnAiCutORccXlZF__h",
+        "type": "translationRef",
+        "name": "name",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "i2Hx5hOWGVzmHf1O0t8mj",
+        "type": "translationRef",
+        "name": "description",
+        "defaultValue": "",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "6nVQmZKnh_Z2pxSqGLR3j",
+        "type": "assetRef",
+        "name": "symbol",
+        "defaultValue": "",
+        "assetCategory": "UI_ICON",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "Mpaljf75j2Ey-Q9pq6EkM",
+        "type": "color",
+        "name": "symbol_color",
+        "defaultValue": "#ff3d3d",
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "6hiBQmeanEWbn0NzIWAc-",
+        "type": "enum",
+        "name": "kind",
+        "defaultValue": "ASPECT",
+        "possibleValues": [
+          "ASPECT",
+          "MODIFIER",
+          "PHYSICS",
+          "UTILITY",
+          "SPECIAL"
+        ],
+        "required": true,
+        "unique": false
+      },
+      {
+        "id": "22kzmlj2zJcZ6q6y2Hc1o",
+        "type": "ref",
+        "name": "aspect",
+        "defaultValue": "",
+        "refTableId": "JMr24o4E6yS4bePAIbggR",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "Nl6XfxbIGxp_rx5jZpXQ5",
+        "type": "ref",
+        "name": "modifier",
+        "defaultValue": "",
+        "refTableId": "4wJYRawBZV5Pm1v-_lxh5",
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "wzMi7_4L-tI2cc8YyX_Qr",
+        "type": "enum",
+        "name": "physics_kind",
+        "defaultValue": "SPRING",
+        "possibleValues": [
+          "SPRING",
+          "PORTAL",
+          "SPLITTER",
+          "ACCELERATOR",
+          "REFLECTOR",
+          "MAGNET"
+        ],
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "XVIwfKt7L7j8H3Gq9CurO",
+        "type": "enum",
+        "name": "utility_kind",
+        "defaultValue": "GOLD",
+        "possibleValues": [
+          "GOLD",
+          "REPAIR",
+          "UPGRADE_TOKEN",
+          "RESEARCH"
+        ],
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "V8aPRjpnqlQLNZEfdK7r0",
+        "type": "enum",
+        "name": "special_kind",
+        "defaultValue": "ECHO",
+        "possibleValues": [
+          "ECHO",
+          "WILDCARD",
+          "MEMORY",
+          "REPEAT",
+          "SEAL"
+        ],
+        "required": false,
+        "unique": false
+      },
+      {
+        "id": "R6kzDSrijkkFD9inspFXa",
+        "type": "integer",
+        "name": "max_level",
+        "defaultValue": 1,
+        "min": 1,
+        "required": true,
+        "unique": false
+      }
+    ],
+    "rows": [],
+    "kind": "user",
+    "isSystemTable": false
+  }
+}
