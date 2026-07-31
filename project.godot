@@ -19,10 +19,6 @@ config/icon="res://icon.svg"
 
 project/assembly_name="Pachingod"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
-
 [physics]
 
 3d/physics_engine="Jolt Physics"
