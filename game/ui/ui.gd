@@ -2,7 +2,7 @@ extends RefCounted
 
 
 class Components:
-	const UI_THEME := preload("res://game/ui/ui_theme.gd")
+	const UI_THEME := preload("res://game/ui/theme/ui_theme.gd")
 	const LOCALIZED_RICH_TEXT_SCRIPT := preload("res://game/ui/components/localized_rich_text.gd")
 	const LOCALIZED_TOOLTIP_SCRIPT := preload("res://game/ui/components/localized_tooltip.gd")
 	const TOOLTIP_TARGET_SCRIPT := preload("res://game/ui/components/tooltip_target.gd")

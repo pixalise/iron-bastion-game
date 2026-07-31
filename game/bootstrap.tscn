@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://be7chddfpc36u"]
-
-[ext_resource type="Script" uid="uid://bjda3e550ncx8" path="res://game/bootstrap.gd" id="1_uxpcl"]
-[ext_resource type="PackedScene" uid="uid://bi50qkwdipgl2" path="res://game/scenes/main_menu/main_menu.tscn" id="2_frw4o"]
-
-[node name="Bootstrap" type="Node" unique_id=1684462396]
-script = ExtResource("1_uxpcl")
-load_in_scene = ExtResource("2_frw4o")

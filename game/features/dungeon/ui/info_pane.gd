@@ -2,7 +2,7 @@ extends Control
 
 enum InfoTab { INVENTORY, DECK, JOURNAL }
 
-const UI_THEME := preload("res://game/ui/ui_theme.gd")
+const UI_THEME := preload("res://game/ui/theme/ui_theme.gd")
 const TAB_NAMES: Array[String] = ["INVENTORY", "DECK", "JOURNAL"]
 
 var _selected_tab := InfoTab.INVENTORY

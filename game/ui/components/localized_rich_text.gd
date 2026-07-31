@@ -1,7 +1,7 @@
 class_name LocalizedRichText
 extends RichTextLabel
 
-const UI_THEME := preload("res://game/ui/ui_theme.gd")
+const UI_THEME := preload("res://game/ui/theme/ui_theme.gd")
 const LOCALIZED_TOOLTIP := preload("res://game/ui/components/localized_tooltip.gd")
 const UNDERLINE_Y_OFFSET := 1.0
 const FONT_THEME_KEYS := [

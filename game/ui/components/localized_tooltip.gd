@@ -1,7 +1,7 @@
 class_name LocalizedTooltip
 extends PanelContainer
 
-const UI_THEME := preload("res://game/ui/ui_theme.gd")
+const UI_THEME := preload("res://game/ui/theme/ui_theme.gd")
 const ICON_SIZE := Vector2(18.0, 18.0)
 const WIDTH := 280.0
 
