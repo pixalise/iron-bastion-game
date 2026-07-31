@@ -9,21 +9,14 @@ const CARDINAL_DIRECTIONS: Array[Vector2i] = [
 ]
 
 
-func generate(config: Dictionary) -> DungeonBoard:
-	var width := maxi(1, int(config.get("board_width", 8)))
-	var height := maxi(1, int(config.get("board_height", 8)))
+func generate(width: int, height: int) -> DungeonBoard:
 	var size := Vector2i(width, height)
 	var middle_x := floori(width / 2.0)
 	var player_cell := Vector2i(middle_x, height - 1)
 	var exit_cell := Vector2i(middle_x, 0)
 
 	var board := DungeonBoard.new()
-	board.initialize(
-		size,
-		int(config.get("floor", 1)),
-		int(config.get("seed", 0)),
-		StringName(config.get("dungeon_id", &"prototype_dungeon"))
-	)
+	board.initialize(size)
 	board.player_index = board.index_of(player_cell)
 	board.exit_index = board.index_of(exit_cell)
 

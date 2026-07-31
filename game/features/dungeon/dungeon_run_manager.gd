@@ -16,15 +16,13 @@ const PROTOTYPE_RUN_CONFIG := {
 signal player_died
 signal health_changed(current_health: int, maximum_health: int)
 signal floor_changed(current_floor: int)
-signal board_changed(board_data: Dictionary)
 
 @export var map_view: DungeonMapView
 
 var _floor_generator := PrototypeFloorGenerator.new()
-var _run_config: Dictionary = {}
 var _boards: Array[DungeonBoard] = []
 
-var _current_floor := 0
+var _current_floor := -1
 var _maximum_floors := 0
 var _current_health := 0
 var _maximum_health := 0
@@ -32,23 +30,14 @@ var _player_is_dead := false
 
 
 func _ready() -> void:
-	if map_view == null:
-		push_error("DungeonRunManager requires a map view.")
-		return
-	start_run(PROTOTYPE_RUN_CONFIG)
+	start_run()
 
+func start_run() -> void:
+	_maximum_floors = 10
+	_maximum_health = 10
 
-func start_run(config: Dictionary) -> void:
-	assert(_current_floor == 0, "This run has already started.")
-
-	_maximum_floors = int(config.get("maximum_floors", 0))
-	_maximum_health = int(config.get("starting_health", 0))
-	assert(_maximum_floors > 0, "maximum_floors must be greater than zero.")
-	assert(_maximum_health > 0, "starting_health must be greater than zero.")
-
-	_run_config = config.duplicate(true)
 	_boards.clear()
-	_current_floor = 1
+	_current_floor = 0
 	_current_health = _maximum_health
 	_player_is_dead = false
 
@@ -99,11 +88,6 @@ func heal_player(amount: int) -> void:
 	health_changed.emit(_current_health, _maximum_health)
 
 
-func get_current_board() -> DungeonBoard:
-	var board := _current_board()
-	return board.copy() if board != null else null
-
-
 func get_board_for_floor(floor_number: int) -> DungeonBoard:
 	if floor_number <= 0 or floor_number > _boards.size():
 		return null
@@ -131,29 +115,16 @@ func is_player_dead() -> bool:
 
 
 func _ensure_board_exists(floor_number: int) -> void:
-	assert(floor_number > 0 and floor_number <= _maximum_floors)
-
+	# Assert that it's a valid number
+	assert(floor_number >= 0 and floor_number < _maximum_floors)
+	
 	while _boards.size() < floor_number:
-		var floor_config := _run_config.duplicate(true)
-		floor_config["floor"] = _boards.size() + 1
-
-		var generated_board: DungeonBoard = _floor_generator.generate(floor_config)
+		var generated_board: DungeonBoard = _floor_generator.generate()
 		assert(generated_board != null, "The floor generator returned no board.")
 		_boards.append(generated_board)
 
 
-func _current_board() -> DungeonBoard:
-	if _current_floor <= 0 or _current_floor > _boards.size():
-		return null
-	return _boards[_current_floor - 1]
-
-
 func _render_current_board() -> void:
-	var board := _current_board()
-	if board == null:
-		return
-
+	var board := _boards[_current_floor]
 	var render_data := board.to_render_data()
-	if map_view != null:
-		map_view.render_board(render_data)
-	board_changed.emit(render_data.duplicate(true))
+	map_view.render_board(render_data)
