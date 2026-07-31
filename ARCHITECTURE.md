@@ -62,6 +62,7 @@ game/
 |   |-- overworld_map/               # Planned dungeon-selection map
 |   `-- dungeon/
 |       |-- dungeon_screen.tscn
+|       |-- dungeon_board.gd          # Runtime SoA board container
 |       |-- dungeon_run_manager.gd
 |       |-- exploration/
 |       |   `-- prototype_floor_generator.gd # Temporary bootstrap generator
@@ -171,15 +172,17 @@ Lifetime: immutable input to one dungeon run.
 
 For the prototype, this is a `Dictionary` containing the selected dungeon ID, deterministic run seed, maximum floors, starting player values, and the dungeon's map-generation values. The dungeon-selection flow creates it; UI nodes do not.
 
-Run configuration, generated board data, individual tiles, and map-action payloads remain dictionaries until their responsibilities are complex enough to justify dedicated types.
+The runtime board is a single `DungeonBoard` with packed parallel arrays for cell kinds and flags. It has no per-cell objects. Dictionaries remain at the configuration and rendering boundaries where flexibility is more useful than a fixed memory layout.
 
 ### DungeonRunManager
 
 Lifetime: exactly the lifetime of `DungeonScreen`.
 
-It owns the mutable truth needed by the dungeon feature: current floor, player life, immutable run configuration, and the authoritative raw board. The prototype intentionally keeps this state in the manager instead of introducing a separate expedition-state model.
+It owns the mutable truth needed by the dungeon feature: current floor, player life, immutable run configuration, and an ordered `Array[DungeonBoard]` containing every generated floor. The board at `current_floor - 1` is the current board.
 
-Its fields stay private. Other dungeon nodes issue commands through methods, read snapshots through getters, and listen to signals such as `player_died`. Generator scripts return raw board data to the manager; the map receives only a render copy.
+Its fields stay private. Other dungeon nodes issue commands through methods, read copied board snapshots through getters, and listen to signals such as `player_died`. The map receives only dictionary render data produced from the current board.
+
+Previous boards remain in the array with their mutations intact. Returning to an earlier floor reuses its existing board; advancing beyond the generated range creates exactly one new board.
 
 ### Encounter State
 
@@ -195,39 +198,35 @@ UI controls never become the authoritative store for profile, run, or encounter 
 
 Its narrow responsibility is to:
 
-- Store the run configuration, current floor, player life, and authoritative board
-- Call a supplied floor-generator `Callable`
+- Store the run configuration, current floor, player life, and ordered board history
+- Ask the floor generator for a board only when that floor has not been generated
 - Apply validated state changes through manager methods
-- Give the map a copied board snapshot for rendering
-- Receive map intent and expose it as manager-level signals
+- Convert the current board into copied render data for the map
 - Emit one-time events such as `player_died`
 
 The manager does not render tiles, interpret mouse input, or contain the floor-generation algorithm.
 
 ### Generator and Map Flow
 
-A generator is an ordinary script method. No inheritance hierarchy or framework interface is required. The caller can provide it as a `Callable`:
+Temporary prototype bootstrap: until dungeon selection exists, `DungeonRunManager._ready()` calls `start_run()` with a hardcoded configuration and owns a `PrototypeFloorGenerator`.
 
-```gdscript
-run_manager.start_run(run_config, floor_generator.generate)
-```
+A floor generator is stateless: `generate(config) -> DungeonBoard`. It receives the target floor's configuration and constructs a new board from scratch.
 
-Temporary prototype bootstrap: until dungeon selection exists, `DungeonRunManager._ready()` calls `start_run()` with a hardcoded config and `PrototypeFloorGenerator.generate`. Remove that bootstrap call and config when the real selection flow supplies them; the public `start_run()` API remains unchanged.
+It does not receive, inspect, or mutate the current board. If generation later needs transition constraints, the manager copies only the required values, such as the previous exit position, into the generation config.
 
-For each floor, the manager copies the run configuration, adds the current floor, calls the generator, and stores the returned `Dictionary` as its authoritative board. It then calls `map_view.render_board(board_snapshot)`.
-
-The map keeps only that copied render data. It emits `action_requested(action, payload)` when the player interacts with it. `DungeonRunManager` receives the signal and exposes `map_action_requested` for listeners. Gameplay code responds by calling a manager command; the map never edits or replaces the board itself.
+The map keeps only copied dictionary render data. It does not own board history or mutate authoritative board state.
 
 ```text
-Map input
-    -> action_requested
-    -> DungeonRunManager command
-    -> authoritative board mutation
-    -> render_board(copied snapshot)
+advance_floor()
+    -> board already in history?
+        -> yes: reuse stored DungeonBoard
+        -> no: derive floor config and generate one DungeonBoard
+    -> current board = boards[current_floor - 1]
+    -> current board.to_render_data()
     -> Map display
 ```
 
-This keeps the manager authoritative while allowing generation and gameplay rules to remain small callable scripts.
+`retreat_floor()` only changes the current floor index and renders the stored board. It never regenerates that floor.
 
 ## Ten-Floor Contract
 
@@ -366,7 +365,8 @@ A change follows this architecture when:
 - Its state has one clear owner and lifetime.
 - Mutable dungeon-run state is private to `DungeonRunManager`.
 - Only `DungeonRunManager` initiates floor generation and supplies its derived floor config.
-- The map stores only render data and emits player intent; it never mutates the authoritative board.
+- A generated floor is retained and reused instead of being regenerated.
+- The map stores only render data; it never owns board history or mutates the authoritative board.
 - Its scene lives with the feature that owns it.
 - Reusable UI is feature-agnostic before moving to the shared UI directory.
 - Visual constants come from the shared theme system.

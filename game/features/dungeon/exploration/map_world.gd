@@ -3,8 +3,6 @@ extends Node2D
 
 const UiTheme := preload("res://game/ui/theme/ui_theme.gd")
 
-signal action_requested(action: StringName, payload: Dictionary)
-
 @export var camera: DungeonMapCamera
 @export_range(16.0, 256.0, 1.0) var tile_size := 64.0
 @export_range(0.0, 16.0, 1.0) var tile_gap := 4.0
@@ -21,10 +19,6 @@ func render_board(board_data: Dictionary) -> void:
 	_board_data = board_data.duplicate(true)
 	queue_redraw()
 	_frame_board.call_deferred()
-
-
-func request_action(action: StringName, payload: Dictionary = {}) -> void:
-	action_requested.emit(action, payload.duplicate(true))
 
 
 func _draw() -> void:

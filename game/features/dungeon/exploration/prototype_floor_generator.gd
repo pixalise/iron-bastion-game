@@ -1,7 +1,7 @@
 class_name PrototypeFloorGenerator
 extends RefCounted
 
-const CARDINAL_DIRECTIONS := [
+const CARDINAL_DIRECTIONS: Array[Vector2i] = [
 	Vector2i.UP,
 	Vector2i.RIGHT,
 	Vector2i.DOWN,
@@ -9,43 +9,36 @@ const CARDINAL_DIRECTIONS := [
 ]
 
 
-func generate(config: Dictionary) -> Dictionary:
+func generate(config: Dictionary) -> DungeonBoard:
 	var width := maxi(1, int(config.get("board_width", 8)))
 	var height := maxi(1, int(config.get("board_height", 8)))
 	var size := Vector2i(width, height)
 	var middle_x := floori(width / 2.0)
 	var player_cell := Vector2i(middle_x, height - 1)
 	var exit_cell := Vector2i(middle_x, 0)
-	var tiles: Array[Dictionary] = []
+
+	var board := DungeonBoard.new()
+	board.initialize(
+		size,
+		int(config.get("floor", 1)),
+		int(config.get("seed", 0)),
+		StringName(config.get("dungeon_id", &"prototype_dungeon"))
+	)
+	board.player_index = board.index_of(player_cell)
+	board.exit_index = board.index_of(exit_cell)
 
 	for y in range(height):
 		for x in range(width):
 			var cell := Vector2i(x, y)
 			if _should_strip_cell(cell, size, player_cell, exit_cell):
 				continue
-
-			tiles.append(
-				{
-					"cell": cell,
-					"kind": &"floor",
-					"revealed": true,
-				}
-			)
+			board.set_cell(cell, DungeonBoard.CellKind.FLOOR)
 
 	assert(
-		_is_orthogonally_connected(tiles),
-		"Generated floor tiles must be connected through cardinal neighbors."
+		_is_orthogonally_connected(board),
+		"Generated floor cells must be connected through cardinal neighbors."
 	)
-
-	return {
-		"dungeon_id": config.get("dungeon_id", &"prototype_dungeon"),
-		"floor": int(config.get("floor", 1)),
-		"seed": int(config.get("seed", 0)),
-		"size": size,
-		"tiles": tiles,
-		"player_cell": player_cell,
-		"exit_cell": exit_cell,
-	}
+	return board
 
 
 func _should_strip_cell(
@@ -72,27 +65,38 @@ func _should_strip_cell(
 	return cell in cutouts
 
 
-func _is_orthogonally_connected(tiles: Array[Dictionary]) -> bool:
-	if tiles.is_empty():
+func _is_orthogonally_connected(board: DungeonBoard) -> bool:
+	var first_index := -1
+	for index in range(board.flags.size()):
+		if board.has_cell(index):
+			first_index = index
+			break
+
+	if first_index < 0:
 		return false
 
-	var available := {}
-	for tile in tiles:
-		available[tile["cell"]] = true
+	var visited := PackedByteArray()
+	visited.resize(board.flags.size())
 
-	var first_cell: Vector2i = tiles[0]["cell"]
-	var frontier: Array[Vector2i] = [first_cell]
-	var visited := {}
+	var frontier: Array[int] = [first_index]
+	var visited_count := 0
 
 	while not frontier.is_empty():
-		var cell: Vector2i = frontier.pop_back()
-		if visited.has(cell):
+		var index: int = frontier.pop_back()
+		if visited[index] != 0:
 			continue
-		visited[cell] = true
+
+		visited[index] = 1
+		visited_count += 1
+		var cell := board.cell_of(index)
 
 		for direction in CARDINAL_DIRECTIONS:
-			var neighbor: Vector2i = cell + direction
-			if available.has(neighbor) and not visited.has(neighbor):
-				frontier.append(neighbor)
+			var neighbor := cell + direction
+			if not board.has_cell_at(neighbor):
+				continue
 
-	return visited.size() == available.size()
+			var neighbor_index := board.index_of(neighbor)
+			if visited[neighbor_index] == 0:
+				frontier.append(neighbor_index)
+
+	return visited_count == board.active_cell_count()
