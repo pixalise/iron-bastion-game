@@ -11,12 +11,13 @@ It defines runtime ownership, scene flow, feature boundaries, file organization,
 - Use a feature-first project structure.
 - Build production UI with Godot scenes and reusable component scenes.
 - Keep visual tokens and shared control styles centralized.
-- Keep application, profile, expedition, and encounter state separate.
+- Use one scene-scoped `DungeonRunManager` as the authoritative owner of an active run.
+- Keep run state private; change it through manager methods and read it through getters.
 - Keep event and battle dialogs local to the active dungeon screen.
 - Keep pause and screen transitions in a global overlay layer.
 - Make dungeon rules data-driven, including the ten-floor limit.
 - Keep generated Chisel data isolated from handwritten code.
-- Prefer explicit controllers with narrow ownership over a global `GameManager`.
+- Avoid a project-wide `GameManager`; `DungeonRunManager` exists only for the lifetime of `DungeonScreen`.
 
 ## Application Flow
 
@@ -53,7 +54,6 @@ game/
 |   |-- scene_router.gd              # Planned screen navigation
 |   `-- session/                     # Planned runtime state models
 |       |-- profile_state.gd
-|       |-- expedition_state.gd
 |       `-- run_result.gd
 |
 |-- features/
@@ -62,8 +62,9 @@ game/
 |   |-- overworld_map/               # Planned dungeon-selection map
 |   `-- dungeon/
 |       |-- dungeon_screen.tscn
-|       |-- dungeon_run_controller.gd
+|       |-- dungeon_run_manager.gd
 |       |-- exploration/
+|       |   `-- prototype_floor_generator.gd # Temporary bootstrap generator
 |       |-- encounters/
 |       |   |-- event/
 |       |   `-- battle/
@@ -128,7 +129,7 @@ Town systems read and update `ProfileState`. They never mutate an active encount
 
 ### Dungeon Selection Map
 
-The overworld map presents available dungeon definitions. Selecting a destination creates a new `ExpeditionState` from a dungeon definition and then opens the dungeon screen.
+The overworld map presents available dungeon definitions. Selecting a destination creates a `DungeonRunConfig` from the selected definition, a deterministic seed, and the player's starting run values. The application flow injects that config into `DungeonRunManager` before starting the dungeon.
 
 Map markers reference dungeon IDs, not scene paths or hardcoded event pools.
 
@@ -164,53 +165,67 @@ Owns:
 - Permanent discoveries and codex knowledge
 - Settings that belong in the save profile
 
-### ExpeditionState
+### DungeonRunConfig
 
-Lifetime: from dungeon selection until extraction, defeat, or completion.
+Lifetime: immutable input to one dungeon run.
 
-Owns:
+It contains the selected dungeon ID, deterministic run seed, maximum floors, starting player values, and the dungeon's map-generation profile. The dungeon-selection flow creates it; UI nodes do not.
 
-- Dungeon ID and deterministic seed
-- Current floor, with a valid range of 1 through the dungeon maximum
-- Current health and run resources
-- Prepared deck and backpack placement
-- Secured and unsecured run rewards
-- Generated floor maps, fog state, room state, and run flags
-- Active extraction routes
+### DungeonRunManager
+
+Lifetime: exactly the lifetime of `DungeonScreen`.
+
+It owns the mutable truth needed by the dungeon feature: current floor, player life, immutable run configuration, and the authoritative raw board. The prototype intentionally keeps this state in the manager instead of introducing a separate expedition-state model.
+
+Its fields stay private. Other dungeon nodes issue commands through methods, read snapshots through getters, and listen to signals such as `player_died`. Generator scripts return raw board data to the manager; the map receives only a render copy.
 
 ### Encounter State
 
 Lifetime: one event or battle.
 
-Owns only the information needed to resolve that encounter. Its result is applied to `ExpeditionState`, after which the encounter state is discarded.
+Owns only the information needed to resolve that encounter. Its result is applied through `DungeonRunManager`, after which the encounter state is discarded.
 
-UI controls never become the authoritative store for profile, expedition, or encounter data.
+UI controls never become the authoritative store for profile, run, or encounter data.
 
-## Dungeon Run Controller
+## Dungeon Run Manager
 
-`DungeonRunController` is local to `DungeonScreen`. It coordinates the expedition without becoming a project-wide manager.
+`DungeonRunManager` is attached to the root of `DungeonScreen`. It is global only within that scene.
 
-Recommended modes:
+Its narrow responsibility is to:
 
-```text
-ENTERING_FLOOR
-EXPLORING
-EVENT
-BATTLE
-FLOOR_TRANSITION
-RESULTS
+- Store the run configuration, current floor, player life, and authoritative board
+- Call a supplied floor-generator `Callable`
+- Apply validated state changes through manager methods
+- Give the map a copied board snapshot for rendering
+- Receive map intent and expose it as manager-level signals
+- Emit one-time events such as `player_died`
+
+The manager does not render tiles, interpret mouse input, or contain the floor-generation algorithm.
+
+### Generator and Map Flow
+
+A generator is an ordinary script method. No inheritance hierarchy or framework interface is required. The caller can provide it as a `Callable`:
+
+```gdscript
+run_manager.start_run(run_config, floor_generator.generate)
 ```
 
-The controller is responsible for:
+Temporary prototype bootstrap: until dungeon selection exists, `DungeonRunManager._ready()` calls `start_run()` with a hardcoded config and `PrototypeFloorGenerator.generate`. Remove that bootstrap call and config when the real selection flow supplies them; the public `start_run()` API remains unchanged.
 
-- Entering and restoring floors
-- Enabling exploration input only while exploring
-- Opening one event or battle at a time
-- Applying encounter results
-- Offering extraction or descent when allowed
-- Ending the expedition with an explicit result
+For each floor, the manager copies the run configuration, adds the current floor, calls the generator, and stores the returned `Dictionary` as its authoritative board. It then calls `map_view.render_board(board_snapshot)`.
 
-Event and battle modes suspend exploration input, but they do not pause the entire SceneTree. The actual pause menu uses SceneTree pause and processes while paused.
+The map keeps only that copied render data. It emits `action_requested(action, payload)` when the player interacts with it. `DungeonRunManager` receives the signal and exposes `map_action_requested` for listeners. Gameplay code responds by calling a manager command; the map never edits or replaces the board itself.
+
+```text
+Map input
+    -> action_requested
+    -> DungeonRunManager command
+    -> authoritative board mutation
+    -> render_board(copied snapshot)
+    -> Map display
+```
+
+This keeps the manager authoritative while allowing generation and gameplay rules to remain small callable scripts.
 
 ## Ten-Floor Contract
 
@@ -238,7 +253,7 @@ The dialog must not directly award items, change floors, or edit profile state.
 
 The battle controller owns turn order, cards, energy, enemy intent, statuses, and battle resolution. `battle_dialog.tscn` renders combat and emits commands.
 
-Battle results are returned to `DungeonRunController`, which applies them to the expedition.
+Battle results are returned to `DungeonRunManager`, which applies them to the run.
 
 ## UI Architecture
 
@@ -299,7 +314,7 @@ Rules:
 
 ## Save Boundaries
 
-Save data is serialized from state models, not scene nodes.
+When run saving is added, `DungeonRunManager` must produce a plain-data snapshot. The save system serializes that snapshot rather than serializing the scene tree or UI nodes.
 
 Recommended checkpoints are:
 
@@ -318,7 +333,8 @@ Store deterministic seeds and unresolved choice state so loading cannot reroll p
 Dependencies flow inward toward stable data and systems:
 
 ```text
-Feature UI -> Feature Controller -> State Models / Content Definitions
+Dungeon UI -> DungeonRunManager -> Content Definitions / Map Generator
+Encounter UI -> Encounter Controller -> DungeonRunManager
 Shared UI -> Theme / Localization
 Features -> Cross-feature Systems
 Handwritten Code -> Chisel-Generated Data
@@ -337,15 +353,18 @@ Disallowed dependencies include:
 - Files and folders use `snake_case`.
 - Feature root scenes use a clear role suffix: `town_screen.tscn`, `dungeon_screen.tscn`.
 - Reusable UI scenes use the visual role: `tab_button.tscn`, `ornate_panel.tscn`.
-- Controllers describe their scope: `dungeon_run_controller.gd`, `battle_controller.gd`.
-- State and data classes use explicit suffixes: `ExpeditionState`, `DungeonDefinition`, `RunResult`.
-- Avoid generic names such as `Manager`, `Helper`, or `Utils` unless the responsibility is genuinely narrow and documented.
+- The scene-scoped run authority is named `dungeon_run_manager.gd`; controllers describe narrower workflows such as `battle_controller.gd`.
+- State and data classes use explicit suffixes: `DungeonRunConfig`, `FloorGenerationConfig`, `RunResult`.
+- Avoid generic names such as `Manager`, `Helper`, or `Utils` unless the responsibility and lifetime are narrow and documented. `DungeonRunManager` is the intentional scene-scoped exception.
 
 ## Architectural Completion Checks
 
 A change follows this architecture when:
 
 - Its state has one clear owner and lifetime.
+- Mutable dungeon-run state is private to `DungeonRunManager`.
+- Only `DungeonRunManager` initiates floor generation and supplies its derived floor config.
+- The map stores only render data and emits player intent; it never mutates the authoritative board.
 - Its scene lives with the feature that owns it.
 - Reusable UI is feature-agnostic before moving to the shared UI directory.
 - Visual constants come from the shared theme system.

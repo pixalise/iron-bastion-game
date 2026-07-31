@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://hkq6s1hy64f1"]
 
-[ext_resource type="Script" uid="uid://bqcvquf8ocwmw" path="res://game/features/dungeon/dungeon_run_controller.gd" id="1_run"]
+[ext_resource type="Script" uid="uid://bqcvquf8ocwmw" path="res://game/features/dungeon/dungeon_run_manager.gd" id="1_run"]
 [ext_resource type="Script" uid="uid://bux10hpa4cutv" path="res://game/features/dungeon/exploration/map_camera.gd" id="2_befho"]
 [ext_resource type="Script" uid="uid://drybn51dnklum" path="res://game/features/dungeon/exploration/map_world.gd" id="2_vmqe4"]
 [ext_resource type="Script" uid="uid://b2tlwubtdqy2k" path="res://game/features/dungeon/ui/info_pane.gd" id="3_info"]
 
-[node name="DungeonScreen" type="Control" unique_id=1175690635]
+[node name="DungeonScreen" type="Control" unique_id=1175690635 node_paths=PackedStringArray("map_view")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_run")
+map_view = NodePath("MapPane/MapContainer/MapViewport/MapWorld")
 
 [node name="MapPane" type="Control" parent="." unique_id=970908448]
 layout_mode = 1
@@ -20,15 +21,18 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 
 [node name="MapContainer" type="SubViewportContainer" parent="MapPane" unique_id=1793456223]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 stretch = true
 
 [node name="MapViewport" type="SubViewport" parent="MapPane/MapContainer" unique_id=2134954958]
 disable_3d = true
 handle_input_locally = false
-size = Vector2i(40, 40)
+size = Vector2i(640, 640)
 render_target_update_mode = 4
 
 [node name="MapWorld" type="Node2D" parent="MapPane/MapContainer/MapViewport" unique_id=1359159897 node_paths=PackedStringArray("camera")]
