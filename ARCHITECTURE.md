@@ -129,7 +129,7 @@ Town systems read and update `ProfileState`. They never mutate an active encount
 
 ### Dungeon Selection Map
 
-The overworld map presents available dungeon definitions. Selecting a destination creates a `DungeonRunConfig` from the selected definition, a deterministic seed, and the player's starting run values. The application flow injects that config into `DungeonRunManager` before starting the dungeon.
+The overworld map presents available dungeon definitions. Selecting a destination creates a run-configuration `Dictionary` from the selected definition, a deterministic seed, and the player's starting run values. The application flow passes that config to `DungeonRunManager` before starting the dungeon.
 
 Map markers reference dungeon IDs, not scene paths or hardcoded event pools.
 
@@ -165,11 +165,13 @@ Owns:
 - Permanent discoveries and codex knowledge
 - Settings that belong in the save profile
 
-### DungeonRunConfig
+### Run Configuration
 
 Lifetime: immutable input to one dungeon run.
 
-It contains the selected dungeon ID, deterministic run seed, maximum floors, starting player values, and the dungeon's map-generation profile. The dungeon-selection flow creates it; UI nodes do not.
+For the prototype, this is a `Dictionary` containing the selected dungeon ID, deterministic run seed, maximum floors, starting player values, and the dungeon's map-generation values. The dungeon-selection flow creates it; UI nodes do not.
+
+Run configuration, generated board data, individual tiles, and map-action payloads remain dictionaries until their responsibilities are complex enough to justify dedicated types.
 
 ### DungeonRunManager
 
@@ -354,7 +356,7 @@ Disallowed dependencies include:
 - Feature root scenes use a clear role suffix: `town_screen.tscn`, `dungeon_screen.tscn`.
 - Reusable UI scenes use the visual role: `tab_button.tscn`, `ornate_panel.tscn`.
 - The scene-scoped run authority is named `dungeon_run_manager.gd`; controllers describe narrower workflows such as `battle_controller.gd`.
-- State and data classes use explicit suffixes: `DungeonRunConfig`, `FloorGenerationConfig`, `RunResult`.
+- State and data classes use explicit suffixes when introduced: `ProfileState`, `FloorGenerationResult`, `RunResult`.
 - Avoid generic names such as `Manager`, `Helper`, or `Utils` unless the responsibility and lifetime are narrow and documented. `DungeonRunManager` is the intentional scene-scoped exception.
 
 ## Architectural Completion Checks
