@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bux10hpa4cutv" path="res://game/scenes/dungeon/map_camera.gd" id="2_befho"]
 [ext_resource type="Script" uid="uid://drybn51dnklum" path="res://game/scenes/dungeon/map_world.gd" id="2_vmqe4"]
-[ext_resource type="Script" path="res://game/scenes/dungeon/info_pane.gd" id="3_info"]
+[ext_resource type="Script" uid="uid://b2tlwubtdqy2k" path="res://game/scenes/dungeon/info_pane.gd" id="3_info"]
 
 [node name="Main" type="Control" unique_id=1175690635]
 layout_mode = 3
